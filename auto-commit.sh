@@ -8,5 +8,5 @@ do
     git add okuda-master-thesis/.
     git commit -m "`date`"
     git push origin master
-    sleep 1800
+    sleep 900
 done

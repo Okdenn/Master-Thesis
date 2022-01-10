@@ -128,7 +128,7 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
 
 本修士論文では，小林俊行氏による次の$\ha$射影の有界性に対する\Cref{yosou:1121}を，$G$の実階数や$H$の次元が低い場合に証明した ($\ha$射影の定義や記号は後述する)．
 
-\begin{yosou-a}\label{yosou:1121}
+\begin{yosou-a}(by T.~Kobayashi)\label{yosou:1121}
   
   $Y(\real X) \text{ is bounded in } \ha\cap \pe \iff   [X_1, X_2]\neq 0 \text{ or } X_1 = 0$，である．
 
@@ -161,14 +161,14 @@ $Y(X)$は図形的には，「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $�
 
 \cite{ber88}の内容はおおまかには次の通りである; \bluetext{$G/H$が$eH$を中心とする radial function $r$に対して「$\real^d $と同じ増大度」を持つとき，$G/H$のランクが$d$であると言い，$G$の既約ユニタリ表現$V$が$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\alpha$の「双対」を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．
 
-ここで$G$が$G = KAH$という Cartan 分解を持つときに，$G/H$がランク$d \defeq \dim A$となる可能性がある条件の1つを$X\in \ah$に対する$\ha$射影$Y(\real X) $の有界性として定式化することができる．これが本修士論文の背景である．\footnote{「」部分は 正確に定式化する予定 2022/01/10}}
+ここで$G$が$G = KAH$という Cartan 分解を持つときに，$G/H$がランク$d \defeq \dim A$となる可能性がある条件の1つを$X\in \ah$に対する$\ha$射影$Y(\real X) $の有界性として定式化することができる．これが本修士論文の背景である．\footnote{「」部分は 正確に定式化する予定です \& もうすこしちゃんと\cite{ber88}を復習します． 2022/01/10}}
 
 
 以下では$(G,H) $がどのような場合に，どのような証明方法でを示したかを具体的に述べる．
 
-$G$が実階数1の場合の\Cref{yosou:1121}の証明方針は$G = \SU(1,2) $，$H= \SO(1,1)$ (ないし$G = \Sp(1,2) $，$H = \SO(1,1) $) の場合の証明がトイモデルとなっている．
+$G$が実階数1の場合の\Cref{yosou:1121}の証明方針は$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明がトイモデルとなっている．
 
-$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; $G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，例えば$Y(t X) = s(t) Y $としたとき$s(t) \to \infty$，$t\to \infty $ならば，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}$が存在して，$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となり，$X$と$\ha\setminus\{0\} $のなす角度が非零であることに矛盾する．
+$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; 例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $のとき，$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}$が存在して$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度が非零であることに矛盾し，\Cref{yosou:1121}と同値な「$X = 0 \lor X\in \pe\setminus\ha \iff Y(\real X) $が有界」であることが言える．
 
 これを踏まえて$G$が実階数1の場合の証明には次の一般論を用いた．
 
@@ -178,25 +178,30 @@ $G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体�
   $M$が完備かつ非正曲率をもつ1-連結Riemann多様体であるとき，$M$をHadamard多様体といい，Hadamard多様体$M$が visibility manifold であるとは，$\forall p\in M, \forall \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が$d_{M}(p, \gamma(t))\geq r(p,\epsilon) $，$\forall t\in [t_0, t_1]$ならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
 \end{def-a}
 
-\begin{thm-a}{\cite[p.~296, 9.33~Theorem]{bh99} originally \cite[Theorem~4.1]{e72-2}}\label{thm:visibility-and-rank}
+\bluetext{$M$がvisibility manifold であるとは，幾何的に見れば}\footnote{図をつけようと思っています．2022/01/10}
+
+\begin{thm-a}{\cite[p.~296, 9.33~Theorem]{bh99}, originally \cite[Theorem~4.1]{e72-2}}\label{thm:visibility-and-rank}
   
   $\exists C\cptsub M\st M = \bigcup\{f(C)\mid f\in \isom(M) \}  $なるHadamard多様体$M$に対し，次は同値である．
   \vspace{-1em}
   \begin{enumerate}
+    \renewcommand{\labelenumi}{(\roman{enumi})}
   \item $M$はvisibility manifoldである．
   \item 全測地的な部分Riemann多様体$M'\subset M$で$\real^2$と等長同型なものが存在しない．
   \end{enumerate}
 \end{thm-a}
 
-ここでRiemann対称空間はHadamard多様体であり，\Cref{thm:visibility-and-rank}の (ii) は$G$の実階数が1以下であることと同値である．
+ここでRiemann対称空間はHadamard多様体であり，\Cref{thm:visibility-and-rank}の (ii) は$G$の実階数が1以下であることと同値である．したがって$G$の実階数が1の場合$G/K$はvisibility manifoldであり，$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明と全く同様にして背理法により\Cref{yosou:1121}が示される．
 
+\bluetext{$G$が実階数1のLie群の積である場合も，成分ごとに見れば$G$の実階数が1の場合と同様である．}\footnote{今から示します．2022/01/10}
 
-
+\clearpage
 \begin{thebibliography}{99}
+  \vspace{-0.5em}
 \bibitem[Ber88]{ber88} J.~N.~Bernstein, \textit{On the support of Plancherel measure}, J.~Geom.~Phys., Vol. 5, n. 4, 1988, pp. 663--710
-\bibitem[Ebe72-A]{e72-1}
-\bibitem[Ebe72-B]{e72-2}
-\bibitem[BH99]{bh99}
+\bibitem[Ebe72a]{e72-1} P.~Eberlien, \textit{Geodesic Flows on Negatively Curved Manifolds I}, Ann.~of~Math.~(2), Vol.~95, pp.~492--510, 1972
+\bibitem[Ebe72b]{e72-2} P.~Eberlien, \textit{Geodesic Flow in Certain Manifolds without Conjugate Points}, Trans.~Amer.~Math.~Soc., Vol.~167, pp.~151--70, 1972
+\bibitem[BH99]{bh99} M.~R.~Bridson and A.~Haefliger, Metric Spaces of Non-Positive Curvature, Grundlehren der mathematischen Wissensschaften, Vol.~319, Springer, 1999
 \bibitem[Kob89]{kob89} T.~Kobayashi, 
   \textit{Proper action on a homogeneous space of reductive type},
   Math.~Ann., Vol. 285, Issue. 2, 1989, pp. 249--263.  

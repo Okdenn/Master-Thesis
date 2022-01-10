@@ -7,6 +7,6 @@ do
     git add okuda-abstract/.
     git add okuda-master-thesis/.
     git commit -m "`date`"
-    git push --force-with-lease origin master
+    git push --f origin master
     sleep 900
 done

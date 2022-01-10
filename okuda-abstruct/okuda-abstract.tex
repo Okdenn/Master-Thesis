@@ -99,7 +99,14 @@
 
 % \setnewcounter{hoge}
 % \newtheorem{theorem}{Theorem}[hoge]
+\newcounter{countabst}
+\setcounter{countabst}{0}
+\newtheorem{yosou-a}[countabst]{予想}
+\newtheorem{nttdef-a}[countabst]{記号と定義}
+\newtheorem{thm-a}[countabst]{定理}
+% \newenvironment{yosou-a}[1]{\noindent \textbf{予想 #1}  \par}{}
 
+% \newenvironment{nttdef-a}[1]{\noindent \textbf{記号と定義 #1}  \par}{}
 
 \begin{document}
 
@@ -120,16 +127,18 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
 
 \vspace{1em}
 
-本修士論文は，小林俊行氏による次の\Cref{yosou:1121}を$G$の実階数や$H$の次元が低い場合に証明した (記号は後述する)．
+本修士論文では，小林俊行氏による次の\Cref{yosou:1121}を$G$の実階数や$H$の次元が低い場合に証明した (記号は後述する)．
 
-\begin{yosou}\label{yosou:1121}
+\begin{yosou-a}\label{yosou:1121}
   
   ベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に沿って$X = X_1 + X_2 $と分解すると，$\pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ or } X_1 = 0 \}$である．
-\end{yosou}
+\end{yosou-a}
 
 慣例的な記号や設定は以下の通りとする．
-\begin{nttdef}\textcolor{white}{hoge}
-
+\vspace{-1em}
+\begin{nttdef*}\textcolor{white}{hoge}
+  \vspace{-1em}
+  
   \begin{itemize}
   \item $G$を非コンパクト実半単純Lie 群，$H$を$G$のCartan対合$\Theta$に対する非コンパクトな簡約部分Lie群とする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
@@ -137,13 +146,13 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
   \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha}\cap \pe \defeq \{W\in \pe\mid B(Y, W) = 0 ,\forall Y\in \ha\cap \pe\} $とする．
   \end{itemize}
   
-\end{nttdef}
+\end{nttdef*}
 
 以下の \Cref{thm:kob89-lem6.1} を用いて，$X\in \pe$に対し，$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義する．
-\begin{thm}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
+\begin{thm-a}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
 
   $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
-\end{thm}
+\end{thm-a}
 
 
 

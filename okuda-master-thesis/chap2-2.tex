@@ -1,0 +1,65 @@
+\subsection{$\dim H =1$かつ$\ha$の基底が generic の場合}
+\begin{thm}\label{thm:0106-main}
+    $G$を非コンパクト実半単純Lie 群とするとき，
+    $\ha = \real Y$かつ$\ze_{\ge}(Y) = \emm + \ah$ならば \Cref{yosou:1121} が成り立つ．
+\end{thm}
+
+
+\begin{lem}\cite[Corollary~I.2.17]{borel-ji}\label{lem:bj-1.2.17}
+  
+  $\ah_{P}^{+}(\infty)\ni W\1to1arrow [e^{tW}\cdot o_K]\in G/K(\infty) $により$\ds G/K(\infty) = \bigsqcup_{P:\text{ psg}}\ah_{P}^{+}(\infty) $である．
+
+  以下，この主張を用いて$G/K(\infty) $の元と$\ah_{P}^{+}(\infty)$，あるいは$\bar{\ah_{P}^{+}(\infty)} $の元を同一視する．
+\end{lem}
+\begin{lem}\cite[Proposition~I.2.6, Corollary~I.2.17]{borel-ji}\label{lem:bj-1.2.6}
+
+  $G/K(\infty) $の任意の点の固定部分群は$G$ではない放物型部分群であり，放物型部分群$P$を固定部分群として持つ$G/K(\infty) $の元は$\bar{\ah_{P}^{+}(\infty)} $に一致する．
+  
+\end{lem}
+
+
+
+\begin{lem}(\cite[Proposition~6.7]{eo73}, \cite[2.8~Lemma]{bbe85})\label{lem:axis-isometry}
+  
+  任意の$p\in G/K(\infty) $と点列$\{t_n\}_{n\in \nat},\; t_n\to \infty $，$n\to \infty$に対し，$\{e^{t_nY}\cdot p\}_{n\in \nat} $の任意の集積点は$[\ah]$の元である．
+\end{lem}
+
+
+
+\begin{pfwn}{\Cref{lem:axis-isometry}}
+
+    必要ならば部分列に移って$\{e^{t_n Y}\cdot p \}_{n\in \nat} $は収束すると仮定する．
+  
+  任意の$I\subsetneq \Delta(\ge,\ah) $に対し，$P_0\subset P_I $とBruhat分解$G= \bigsqcup_{w\in W}\bar{N}wP_0 $より$G = \bigcup_{w\in W}\bar{N} k_wP_{I} $である．したがって$p \in \ah_{P}^{+} (\infty)$なる放物型部分群$P$を取ると，ある$I$と$\bar{n}\in \bar{N} $，$w\in \cal{W} $が存在して，$P = \bar{n}k_wP_{I}\inv{k_w}\inv{\bar{n}} $と書ける． 以下，$P_{I}'\defeq k_wP_{I}\inv{k_w}$とする．
+
+  $e^{t_n Y}\cdot p $の固定部分群は$P_{n} \defeq e^{t_n Y}Pe^{-t_n Y} $であり，【$k_n\in K $を$K/(K\cap P'_{I})\simeq G/P'_{I} $という同一視 % ($G=KP_{I}' $を用いた) 
+  のもとで，$k_n(K\cap P_{I}') = e^{t_n Y}\bar{n}e^{-t_n Y}P_{I}' $かつ$\norm{-}_{\theta} $から定まる$K/(K\cap P'_{I})$の計量に対して最も原点$\id_G(K\cap P'_{I}) $に近い元とすると，】\footnote{この$k_n$はもう少し単純に表せる気がします．} $\inv{k_w}e^{t_n Y}k_w\in P_{I} $より$P_n =  k_nP_{I}'\inv{k_n} $である．\Cref{lem:bj-1.2.6}より$e^{t_n Y}\cdot p\in \bar{\ah_{P_n}^{+}(\infty)} $であり$\bar{\ah_{P_n}^{+}(\infty)} \subset \Ad(k_n)\ah_{P_{I}'}  $より，ある一意的な$W_n\in \ah_{P_{I}'} $，$\norm{W_n}_{\theta} = 1 $が取れて，$e^{t_n Y}\cdot p $と$\ds\dfrac{\Ad(k_n)W_n}{\norm{\Ad(k_n)W_n}_{\theta}}$が\Cref{lem:bj-1.2.17}の意味で対応する．
+
+  
+  必要ならば再度部分列に移ると$\norm{W_n}_{\theta}=1 $より$\lim_{n\to \infty}W_n = \exists W \in \ah_{P_{I}'} $であり，$\lim_{n\to \infty}e^{t_n Y}\bar{n}e^{-t_n Y} = \id_G$であることと，$k_n$と原点の距離の最短性より$ \lim_{n\to \infty}k_n = \id_G $であるから$\lim_{n\to\infty} \dfrac{\Ad(k_n)W_n}{\norm{\Ad(k_n)W_n}_{\theta}}= W  $である．
+
+  収束する点列の部分列はもとの収束先に収束するから$\lim_{n\to \infty} e^{t_n Y}\cdot p$と$W\in \ah_{P_{I}'}$が\Cref{lem:bj-1.2.17}の意味で対応し，$\ah_{P_{I}'}\subset \Ad(k_w)\ah_I\subset \Ad(k_w)\ah\subset \ah $より$\lim_{n\to \infty} e^{t_n Y}\cdot p\in [\ah] $である．
+  % したがって任意のに対して$\ds \lim_{n\to\infty}\lbig\|W - \dfrac{\Ad(e^{t_n Y}\bar{n}e^{-t_n Y})W}{\norm{\Ad(e^{t_n Y}\bar{n}e^{-t_n Y})W}_{\theta}} \rbig\|_{\theta} = 0 $と\Cref{rem}より，
+  
+
+  したがって\Cref{lem:axis-isometry}が示された．
+
+\end{pfwn}
+
+\begin{pfwn}{\Cref{thm:0106-main}}
+
+  \Cref{yosou:1121} について，$\pe_{H,\bdd}\subset \{X\in \pe\mid [X_1,X_2] \neq 0\text{ or } X_1 =0 \}$は明らかであるから，\\
+  $\pe_{H,\bdd}\supset \{X\in \pe\mid [X_1,X_2] \neq 0\text{ or } X_1 =0 \}$を示せば良い．さらに$X_1 = 0\implies X\in \pe_{H,\bdd} $も明らかであるから，今示すべきは，$X\in \pe \st [X_1, X_2] \neq 0\implies X\in \pe_{H,\bdd} $である．
+
+  % $\ze_{\ge}(Y) $: amenable より，ある極小放物型部分 Lie 環$\qu_{0} = \emm_0 + \ah_0 + \enn_{0} $が存在して，$Y\in \ah^{+}_0 $である．さらに
+  $[X_1, X_2]\neq 0$より，$ [X, Y] = [X_2, Y]\neq 0 $であるから，$X\nin \ah $である．
+
+  ここで$\norm{Y(\real X)} $が非有界であると仮定する．このとき$X\nin \ha$であるから \cite[Lemma~5.4]{kobayashi97} より$\norm{Z(\real X)} $も非有界である．必要なら$Y$の符号を調整し，列$\{t_n\geq 0\}_{n\in\nat} $であって$s_n\to \infty$，ただし$Y(t_nX) = s_{n}Y $，$s_{n}\in \real $，かつ$e^{Z(t_nX)}\cdot o_K\to [Z]\in G/K(\infty) ,\; Z\in \per{\ha}\cap \pe $，$n\to \infty$なるものが取れる ($e^{Z(t_nX)}\cdot o_K $の収束は$\bar{G/K}^{c} $のコンパクト性による)．
+
+  ここで$U(\epsilon, r)\defeq \bigcup_{x\in [\ah]} C(x,\epsilon,r) $とすると，$U(\epsilon, r) $は$[\ah]$の任意の点の近傍であり，\Cref{lem:axis-isometry} より，任意の$r, \epsilon > 0$に対して$\{s_n\}_{n\in\nat} $の部分列を取り直せば，$\forall n> N$，$e^{s_nY}[Z] \cdot o_K\in U(r,\epsilon) $である．また$G\leftaction \bar{G/K}^{c}  $の連続性より，ある$C([Z],\epsilon',  r'  ) $を取ると，$e^{s_nY}\cdot C([Z],\epsilon',  r'  )\subset U(r,\epsilon)  $である．$e^{Z(t_nX)}\cdot o_K\to [Z]\in G/K(\infty) ,\; Z\in \per{\ha}\cap \pe $，$n\to \infty$であるから，必要ならばさらに$N$を大きく取り直すことで$\forall n > N$，$e^{Z(t_nX)}\cdot o_K\in C([Z],\epsilon',  r'  )$，したがって$e^{s_n Y}e^{Z(t_n Z)}\cdot o_K\in U(\epsilon, r) $である．
+  
+  しかし$e^{s_n Y}e^{Z(t_n X)}\cdot o_K= e^{t_n X}\cdot o_K $と$A\cdot o_K$上の$o_K$を通る測地線のなす角の最小値は$X$と$\ah\setminus\{0\} $のなす角で，非零であるから矛盾する．
+  % $\psi(X,\ah)\neq 0 $
+  
+\end{pfwn}
+

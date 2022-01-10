@@ -1,0 +1,154 @@
+\RequirePackage{plautopatch}
+\plautopatchdisable{eso-pic} % https://oku.edu.mie-u.ac.jp/tex/mod/forum/discuss.php?d=2956, pdfpages との相性を良くする
+\documentclass[12pt,dvipdfmx,uplatex]{jsarticle}
+% \documentclass[11pt,autodetect-engine,dvi=dvipdfmx,ja=standard,
+% label-section=modern, % モダーン！(Theorem Appendix A.3 みたいなアホがない)
+% a4paper]{bxjsarticle}
+
+\input{../../preamble-j}
+\input{../../pikachu}
+% \input{../../colorsforprint.tex}
+\usepackage{pdfpages} % at the final compile, delete the option "demo"
+\usepackage[top=10truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry} %DO NOT option ``a4paper", it changes the size of outputed PDF
+
+\DeclareMathOperator{\ballsub}{\underset{\text{ball}}{\subset}}
+\renewcommand{\dx}{\; dx}
+\newcommand{\uah}{\underline{\ah}}
+\newcommand{\MJ}{MJ}
+\newcommand{\img}{\sqrt{-1}}
+% \DeclareMathOperator{\MJ}{MJ}
+
+\newcommand{\bigzero}{\mbox{\Large\textbf{0}}}
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+\makeatletter
+\newcommand{\neutralize}[1]{\expandafter\let\csname c@#1\endcsname\count@}
+\makeatother
+
+\newenvironment{claimbis}[1]
+  {\renewcommand{\thethm}{\ref{#1}$'$}%
+   \neutralize{claim}\phantomsection
+   \begin{claim}}
+  {\end{claim}}
+
+% \begin{align*}
+%   \begin{array}{ccc}
+%     M & \stackrel{\phi}{\longrightarrow} & M' \\
+%     \rotatebox{90}{$\in$} & & \rotatebox{90}{$\in$} \\
+%     p & \longmapsto & \phi(p)
+%   \end{array}
+% \end{align*}
+
+% \begin{figure}[H]
+%   \centering
+%   \begin{tikzpicture}
+%     \node (ef) at (0, 1.2) {$E\times F$};
+%     \node (g) at (1.2, 1.2) {$G$};
+%     \node (m) at (0, 0) {$M$};
+%     \draw[->] (ef) to node[above] {$\scriptstyle b$} (g);
+%     \draw[->] (ef) to node[left] {$\scriptstyle \phi$} (m);
+%     \draw[->] (m) to node[right] {$\scriptstyle \exists !\tilde{b}$} (g);
+%     \node (a) at (0.4, 0.7) {$\scriptstyle \circlearrowleft$};
+%   \end{tikzpicture}
+% \end{figure}
+
+% \begin{empheq}[left={|x|=\empheqlbrace}]{alignat*=2}
+%   x & \quad (x\geq 0) \\
+%   -x & \quad (otherwise) 
+% \end{empheq}
+
+% easylist
+% \ListProperties(Margin2=2em,Space1*=0em,FinalMark={)}, Style2*=\textbullet, Hide2=2)
+
+% inline eqs. w/. numbering
+% e.g.
+% \inlineequation[eq:matsushima-p191-1]{\forall X\in\ge,\ \ad(X)\circ J = J\circ \ad(X)}
+
+% \begin{figure}[H]
+%   \centering
+%   %   \raggedleft
+%   %   \raggedrightp
+%   %   \includegraphics[scale=0.08]{graph/fig1.jpg}
+%   \includegraphics[scale=0.08]{graph/fig1-2.jpg}
+%   \label{fig:fig1}
+% \end{figure}
+
+
+% % \maketitleの余白を調整
+% \makeatletter
+% \renewcommand{\@maketitle}{\newpage
+%   % \null
+%   % \vskip 2em 
+%   \begin{center}
+%     {\LARGE \@title \par} % \vskip 1.5em
+%     {\large \lineskip .5em
+%       \begin{tabular}[t]{c}\@author
+%       \end{tabular}\par
+%     }
+%     % \vskip 1em
+%     % {\large \@date}
+%   \end{center}
+%   % \par
+%   % \vskip 0.5em
+% }
+% \makeatother
+
+\usepackage{advdate} % \AdvanceDate[-1]\today の進捗報告，みたいな
+
+
+
+\begin{document}
+
+% \input{okuda-title}
+\begin{center}
+論文内容の要旨
+\end{center}
+
+\noindent\underline{修士論文題目}
+
+\begin{center}
+Riemann 対称空間上における測地線の簡約部分 Lie 代数への射影に対する有界性
+
+---低階数・低次元の場合---
+\end{center}
+
+\noindent 氏名: 奥田 堯子
+
+\vspace{1em}
+
+本修士論文は，小林俊行氏による次の\Cref{yosou:1121}を$G$の実階数や$H$の次元が低い場合に証明した (記号は後述する)．
+
+\begin{yosou}\label{yosou:1121}
+  
+  ベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に沿って$X = X_1 + X_2 $と分解すると，$\pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ or } X_1 = 0 \}$である．
+\end{yosou}
+
+記号や設定は以下の通りとする．
+\begin{nttdef}\textcolor{white}{hoge}
+
+  \begin{itemize}
+  \item $G$を非コンパクト実半単純Lie 群，$H$を$G$のCartan対合$\Theta$に対する非コンパクトな簡約部分Lie群とする．
+  \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
+  \item  $e_G$を$G$の単位元とし，$o_K \defeq e_GK\in G/K$とする．
+  \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha} \defeq \{W\in \pe\mid B(Y, W) = 0 ,\forall Y\in \ha\} $とする．
+  \item 以下の \Cref{thm:kob89-lem6.1} を用いて，$X\in \pe$に対し，$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義する．
+    \begin{thm}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
+
+      % $\ge$の$G$-不変非退化双線型形式で$\ka$上負定値かつ$\pe$上正定値で$\ka\perp \pe$なる$B$を1つ固定するとき，
+      $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
+    \end{thm}
+
+  \end{itemize}
+  
+\end{nttdef}
+
+
+
+\begin{thebibliography}{99}
+\end{thebibliography}
+
+
+
+\end{document}

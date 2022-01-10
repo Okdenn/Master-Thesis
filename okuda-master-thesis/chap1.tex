@@ -7,7 +7,7 @@
 %%% End:
 
 \subsection{記号の設定}
-本論文の設定は次のとおりであり，必要な条件 (実階数1など) は都度宣言することとする．
+本論文の基本的な設定は次のとおりであり，必要な条件 (実階数1など) は都度宣言することとする．
 
 \begin{nttdef}\textcolor{white}{hoge}
 
@@ -15,21 +15,20 @@
   \item $G$を非コンパクト実半単純Lie 群，$H$を$G$のCartan対合$\Theta$に対する非コンパクトな簡約部分Lie群とする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e_G$を$G$の単位元とし，$o_K \defeq e_GK\in G/K$とする．
-  \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha} \defeq \{W\in \pe\mid B(Y, W) = 0 ,\forall Y\in \ha\} $とする．
-  \item 以下の \Cref{thm:kob89-lem6.1} を用いて，$X\in \pe$に対し，$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義する．
-    \begin{thm}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
-
-      % $\ge$の$G$-不変非退化双線型形式で$\ka$上負定値かつ$\pe$上正定値で$\ka\perp \pe$なる$B$を1つ固定するとき，
-      $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
-    \end{thm}
-
-  \end{itemize}
-  
+  \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha}\cap\pe \defeq \{W\in \pe\mid B(Y, W) = 0 ,\forall Y\in \ha\cap\pe\} $とする．
+  % \item 
+  \end{itemize}  
 \end{nttdef}
+
+以下の\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe$に対し，$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義する．
+\begin{thm}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
+
+  $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
+\end{thm}
 
 ここで，$Y(\real X) $の有界性について，次の予想が小林俊行氏によって立てられた．
 
-\begin{yosou}\label{yosou:1121}
+\begin{yosou}(by T.~Kobayashi)\label{yosou:1121}
   
   ベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に沿って$X = X_1 + X_2 $と分解すると，$\pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ or } X_1 = 0 \}$である．
 \end{yosou}

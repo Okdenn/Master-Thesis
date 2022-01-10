@@ -1,10 +1,25 @@
-\subsection{$\realrank G = 1$の場合}
+\subsection{$ G$の実階数が1の場合}
 
 \begin{thm}\label{thm:1216-main}
   $G$を実階数1の非コンパクト実半単純Lie 群とするとき，\Cref{yosou:1121} が成り立つ．
 \end{thm}
 
+\begin{defi}{\cite[Definition~1.3]{e72-1}}\label{def:visibility}
 
-\begin{lem}
+  $M$が完備かつ非正曲率をもつ1-連結Riemann多様体であるとき，$M$をHadamard多様体といい，Hadamard多様体$M$が visibility manifold であるとは，$\forall p\in M, \forall \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が$d_{M}(p, \gamma(t))\geq r(p,\epsilon) $，$\forall t\in [t_0, t_1]$ならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
+\end{defi}
+
+\bluetext{図を入れる}
+
+\begin{thm}{\cite[p.~296, 9.33~Theorem]{bh99}, originally \cite[Theorem~4.1]{e72-2}}\label{thm:visibility-and-rank}
   
-\end{lem}
+  $\exists C\cptsub M\st M = \bigcup\{f(C)\mid f\in \isom(M) \}  $なるHadamard多様体$M$に対し，次は同値である．
+  \vspace{-1em}
+  \begin{enumerate}
+    \renewcommand{\labelenumi}{(\roman{enumi})}
+  \item $M$はvisibility manifoldである．
+  \item 全測地的な部分Riemann多様体$M'\subset M$で$\real^2$と等長同型なものが存在しない．
+  \end{enumerate}
+\end{thm}
+
+ここでRiemann対称空間はHadamard多様体であり，\Cref{thm:visibility-and-rank}の (ii) は$G$の実階数が1以下であることと同値である．したがって$G$の実階数が1の場合$G/K$はvisibility manifoldであり，$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明と全く同様にして背理法により\Cref{yosou:1121}が示される．

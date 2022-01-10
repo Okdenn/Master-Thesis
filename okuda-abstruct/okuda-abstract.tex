@@ -5,7 +5,7 @@
 % label-section=modern, % モダーン！(Theorem Appendix A.3 みたいなアホがない)
 % a4paper]{bxjsarticle}
 
-\input{../../../preamble-j}
+\input{../../../preamble-j-a}
 \input{../../../pikachu}
 \input{../../../colorsforprint.tex}
 \usepackage{pdfpages} % at the final compile, delete the option "demo"
@@ -104,9 +104,6 @@
 \newtheorem{yosou-a}[countabst]{予想}
 \newtheorem{nttdef-a}[countabst]{記号と定義}
 \newtheorem{thm-a}[countabst]{定理}
-% \newenvironment{yosou-a}[1]{\noindent \textbf{予想 #1}  \par}{}
-
-% \newenvironment{nttdef-a}[1]{\noindent \textbf{記号と定義 #1}  \par}{}
 
 \begin{document}
 
@@ -135,10 +132,9 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
 \end{yosou-a}
 
 慣例的な記号や設定は以下の通りとする．
-\vspace{-1em}
 \begin{nttdef*}\textcolor{white}{hoge}
-  \vspace{-1em}
   
+  \vspace{-1em}
   \begin{itemize}
   \item $G$を非コンパクト実半単純Lie 群，$H$を$G$のCartan対合$\Theta$に対する非コンパクトな簡約部分Lie群とする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．

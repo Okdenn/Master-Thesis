@@ -7,7 +7,7 @@
 
 \input{../../../preamble-j}
 \input{../../../pikachu}
-% \input{../../../colorsforprint.tex}
+\input{../../../colorsforprint.tex}
 \usepackage{pdfpages} % at the final compile, delete the option "demo"
 \usepackage[top=10truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry} %DO NOT option ``a4paper", it changes the size of outputed PDF
 
@@ -97,6 +97,8 @@
 
 \usepackage{advdate} % \AdvanceDate[-1]\today の進捗報告，みたいな
 
+% \setnewcounter{hoge}
+% \newtheorem{theorem}{Theorem}[hoge]
 
 
 \begin{document}
@@ -125,15 +127,14 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
   ベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に沿って$X = X_1 + X_2 $と分解すると，$\pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ or } X_1 = 0 \}$である．
 \end{yosou}
 
-記号や設定は以下の通りとする．
+慣例的な記号や設定は以下の通りとする．
 \begin{nttdef}\textcolor{white}{hoge}
 
   \begin{itemize}
   \item $G$を非コンパクト実半単純Lie 群，$H$を$G$のCartan対合$\Theta$に対する非コンパクトな簡約部分Lie群とする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e_G$を$G$の単位元とし，$o_K \defeq e_GK\in G/K$とする．
-  \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha} \defeq \{W\in \pe\mid B(Y, W) = 0 ,\forall Y\in \ha\} $とする．
-  % \item 
+  \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha}\cap \pe \defeq \{W\in \pe\mid B(Y, W) = 0 ,\forall Y\in \ha\cap \pe\} $とする．
   \end{itemize}
   
 \end{nttdef}
@@ -147,8 +148,11 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
 
 
 \begin{thebibliography}{99}
+\bibitem[Kob89]{kob89} T.~Kobayashi, 
+  \textit{Proper action on a homogeneous space of reductive type},
+  Math.~Ann., Vol. 285, Issue. 2, 1989, pp. 249--263.  
+\bibitem[Kob97]{kob97} T.~Kobayashi, \textit{Invariant mesures on homogeneous manifolds of reductive type}, J.~Reine~Angew.~Math., Vol. 1997, No. 490--1, 1997, pp. 37--54
+
 \end{thebibliography}
-
-
 
 \end{document}

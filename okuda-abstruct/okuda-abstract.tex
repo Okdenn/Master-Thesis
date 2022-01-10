@@ -124,11 +124,11 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
 
 \vspace{1em}
 
-本修士論文では，小林俊行氏による次の$\ha$射影の有界性に対する\Cref{yosou:1121}を，$G$の実階数や$H$の次元が低い場合に証明した (記号は後述する)．
+本修士論文では，小林俊行氏による次の$\ha$射影の有界性に対する\Cref{yosou:1121}を，$G$の実階数や$H$の次元が低い場合に証明した ($\ha$射影の定義や記号は後述する)．
 
 \begin{yosou-a}\label{yosou:1121}
   
-  $\pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ or } X_1 = 0 \}$である．
+  $Y(\real X) \text{ is bounded in } \ha\cap \pe \iff   [X_1, X_2]\neq 0 \text{ or } X_1 = 0$，である．
 
   ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に沿った$X\in \pe$の分解とする．
 \end{yosou-a}
@@ -146,11 +146,15 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
   
 \end{nttdef*}
 
-本修士論文の主題は$X\in \pe$の$\ha$射影$Y(X)$であるが，それは以下のように \Cref{thm:kob89-lem6.1} を用いて$X\in \pe$に対し，$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義する．
+本修士論文の主題である$X\in \pe$の$\ha$射影$Y(X)\in \ha\cap \pe $は，次の\Cref{thm:kob89-lem6.1}により\\
+$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義される．
 \begin{thm-a}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
 
   $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
 \end{thm-a}
+
+$Y(X)$は図形的には，「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」と見ることができ，$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足の$t\in \real$での和集合が有界であるか」という問に対応する．
+
 
 
 

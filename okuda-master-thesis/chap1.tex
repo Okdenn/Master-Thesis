@@ -102,18 +102,60 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   $G = \SU(1,1) $，$H = \SO(1,1) $のとき\Cref{yosou:1121}は正しい．
 \end{prop}
 
-\bluetext{$\sulie(1,1) $のKilling形式と$r = \tanh t$の関係を明記せよ．}
+% \bluetext{$\sulie(1,1) $のKilling形式と$r = \tanh t$の関係を明記せよ．}
 
-\begin{lem}\label{lem:riem-metric-su(1,1)}
-  $\sulie(1,1)$のKilling形式から定まる{\Poincare}円板$G/K$の計量は
+\begin{lem}\label{lem:riem-metric-su11}
+  $\sulie(1,1)$のKilling形式から定まる{\Poincare}円板$G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \} $の計量は$ \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $である．
 \end{lem}
 
-% \begin{lem}\label{lem:1018}
-%   $W\in \pe$に対し，$e^W \cdot o_K $が$o_K$から Euclid 距離で$\tanh p$，$p \geq 0$の位置にある場合，$\norm{W} = \frac{p}{2} $である．
-% \end{lem}
+\begin{pfwn}{\Cref{lem:riem-metric-su11}}
+  
+$X' \defeq 
+\begin{pmatrix}
+  0 & 1 \\ 1 & 0
+\end{pmatrix} = \dfrac{\del}{\del x}
+$，$Y' \defeq 
+\begin{pmatrix}
+  0 & \sqrt{-1} \\ -\sqrt{-1} & 0
+\end{pmatrix} = \dfrac{\del}{\del y}
+$とすると，$\norm{X'}^2 = \norm{Y'}^2 = 8 $，$\lyama X', Y' \ryama = 0$であって，$0\in G'/K'$で主張が成り立つ．
+
+$k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$a_r\defeq
+\begin{pmatrix}
+  \cosh r & \sinh r \\  \sinh r & \cosh r
+\end{pmatrix}
+$とすると，
+\begin{align*}
+  &g(d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X')) \\
+  =&\ g (d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y')) \\
+  =&\ 8 \\
+  &g(d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y'))  = 0
+\end{align*}
+なるような計量$g $がKilling形式から誘導される計量であるが，それが主張の形であることを示せば良い (これらのベクトルが何を表しているかは\Cref{fig:riem-metric-su11}参照)．
+
+\begin{figure}[H]
+  \centering
+  % \raggedleft
+  % \raggedrightp
+  \includegraphics[scale=0.08]{../graph/riem-su11.png}
+  % \includegraphics[scale=0.3]{../graph/y-and-z.pdf}
+  \caption{}
+  \label{fig:riem-metric-su11}
+\end{figure}
+
+
+$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を与える曲線は$\gamma_x(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \cosh r} $であるから，$\lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_x(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X' = (1 - \tanh^2 r)\dfrac{\del}{\del x} = (1-x^2-y^2)\dfrac{\del}{\del x} $である．
+
+同様に$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y'$を与える曲線は\\
+$\gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \cosh r} $であるから，$\lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_y(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y' = (1 - \tanh^2 r)\dfrac{\del}{\del y} = (1-x^2-y^2)\dfrac{\del}{\del y} $である．
+
+以上より$g  =  \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $が示された．
+
+\end{pfwn}
 
 
 \begin{pfwn}{\Cref{prop:yosou-eg}}
+
 
   $k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$X_{\theta} \defeq k_{\theta/2}
   \begin{pmatrix}
@@ -141,7 +183,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
   さらに下の紫色の三角形に対して余弦定理を用いて$R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta  $を得，$\inlineequation[eq:1018-main]{\dfrac{2r\cos\theta}{r^2 + 1} = \dfrac{2h}{h^2 + 1} }$を得る．
 
-  ここで$r = \tanh t$，$h = \tanh s$であり\Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2s $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界$\iff \abs{\cos\theta}\neq 1 \iff  X\nin \ha  $である．
+  ここで\Cref{lem:riem-metric-su11}より$r = \tanh t$，$h = \tanh s$であり\Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2s $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界$\iff \abs{\cos\theta}\neq 1 \iff  X\nin \ha  $である．
 
 
 \end{pfwn}

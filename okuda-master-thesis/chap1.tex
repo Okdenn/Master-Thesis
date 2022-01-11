@@ -103,7 +103,36 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{prop}
 
 \begin{pfwn}{\Cref{prop:yosou-eg}}
-  
+
+  $X\defeq k_{\theta/2}
+  \begin{pmatrix}
+    \cosh t & \sinh t \\ \sinh t & \cosh t
+  \end{pmatrix}
+  k_{-\theta/2}$
+
+
+   
+  \begin{figure}[H]
+    \centering
+    % \raggedleft
+    % \raggedrightp
+    \includegraphics[scale=0.08]{../graph/yosou-eg-1.jpg}
+    % \includegraphics[scale=0.3]{../graph/y-and-z.pdf}
+    \caption{{\Poincare}円板における$Y(tX) $の幾何学的意味}
+    \label{fig:yosou-eg-1}
+  \end{figure}
+
+  右の円の Euclid 距離での半径を$R$とし，$e^{X}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \frac{1-h^2}{2h} , R+h = \frac{1+h^2}{2h}  $を得る．
+
+  さらに下の紫色の三角形に対して余弦定理を用いて$R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta  $，ただし$r\defeq (\sum_{i=1}^{n}x_i^2)^{1/2}$とする．
+
+  したがって$\inlineequation[eq:1018-main]{\dfrac{2r\cos\theta}{r^2 + 1} = \dfrac{2h}{h^2 + 1} }$を得る．
+
+  ここで，任意の$0\leq r, h < 1$に対し，ある$t,s\in \real_{\geq 0} $が存在して，$r = \tanh t$，$h = \tanh s$と書け，このとき \Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2s $と書き直せる．
+
+
 \end{pfwn}
 
-
+\begin{cor}
+  $G = \SO(1,n) $，$H = $
+\end{cor}

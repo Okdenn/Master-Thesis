@@ -142,10 +142,10 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
 \begin{calcof}{\Cref{prop:1127-main}}
   
-  具体的に計算すると，
+  $\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z} \tanh \abs{t_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{t_n} \sinh s_n) } - 1} = 0$を示せば主張が得られる．具体的に計算すると，
   \begin{align*}
     &\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z} \tanh \abs{t_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{t_n} \sinh s_n) } - 1}\\
-    &\qquad \text{($\text{(右辺)} = 0$を示せば良い)} \\
+    % &\qquad\qquad\qquad \text{($\text{(この極限)} = 0$を示せば良い)} \\
     = & \lim_{n\to \infty}\lbig|\frac{(\tanh s_n\pm \bar{z}\tanh \abs{t_n})(1 \pm z \tanh\abs{t_n}\tanh s_n )}{\abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}^2} - 1 \rbig|\\    
     = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z}\tanh \abs{t_n})z' - (1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )z' }}{\abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}^2}, \quad z'\defeq 1 \pm z\tanh\abs{t_n}\tanh s_n \\
     = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z}\tanh \abs{t_n} )z'}}{\abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}^2} \\

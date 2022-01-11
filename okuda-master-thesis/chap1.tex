@@ -111,15 +111,15 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 \begin{pfwn}{\Cref{prop:yosou-eg}}
 
-  $k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$X\defeq k_{\theta/2}
+  $k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$X_{\theta} \defeq k_{\theta/2}
   \begin{pmatrix}
-    \cosh t & \sinh t \\ \sinh t & \cosh t
+    0 & 1 \\ 0 & 1
   \end{pmatrix}
-  k_{-\theta/2}$とし，この$X$と$t\in \real$に対して$Y(tX) = s(t)
+  k_{-\theta/2}$とすると，$\pe\setminus\{0\} =  \{tX_{\theta}\mid t\in \real_{>0},\ 0\leq \theta\leq \pi\}$である．この$X_{\theta} $と$t\in \real$に対して$Y(tX_{\theta} ) = s
   \begin{pmatrix}
     0 & 1 \\ 1 & 0
   \end{pmatrix}
-  $を求める．
+  $なる$s\in \real $を求める．
 
 
    
@@ -133,13 +133,11 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     \label{fig:yosou-eg-1}
   \end{figure}
 
-  右の円の Euclid 距離での半径を$R$とし，$e^{X}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \frac{1-h^2}{2h} , R+h = \frac{1+h^2}{2h}  $を得る．
+  右の円の Euclid 距離での半径を$R$とし，$e^{tX_{\theta}}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \frac{1-h^2}{2h} , R+h = \frac{1+h^2}{2h}  $を得る．
 
-  さらに下の紫色の三角形に対して余弦定理を用いて$R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta  $，ただし$r\defeq (\sum_{i=1}^{n}x_i^2)^{1/2}$とする．
+  さらに下の紫色の三角形に対して余弦定理を用いて$R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta  $を得，$\inlineequation[eq:1018-main]{\dfrac{2r\cos\theta}{r^2 + 1} = \dfrac{2h}{h^2 + 1} }$を得る．
 
-  したがって$\inlineequation[eq:1018-main]{\dfrac{2r\cos\theta}{r^2 + 1} = \dfrac{2h}{h^2 + 1} }$を得る．
-
-  ここで$r = \tanh t$，$h = \tanh s$であり\Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2s $と書き直せる．したがって$Y(\real X) $が有界$\iff \abs{\cos\theta}\neq 1 \iff \theta \neq X\nin \ha  $
+  ここで$r = \tanh t$，$h = \tanh s$であり\Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2s $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界$\iff \abs{\cos\theta}\neq 1 \iff  X\nin \ha  $である．
 
 
 \end{pfwn}
@@ -149,16 +147,18 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{cor}
 
 
-\begin{pfwn}{\Cor{cor:yosou-eg}}
+\begin{pfwn}{\Cref{cor:yosou-eg}}
   「$e^X\cdot o_K $と$o_K$を結ぶ直線」と$H\cdot o_K$で張られる超平面で {\Poincare}球$\SO(1,n)/\SO(n)$を切った際の断面を考える．
   \begin{figure}[H]
     \centering
     % \raggedleft
     % \raggedrightp
-    % \includegraphics[scale=0.08]{graph/fig1.jpg}
-    \includegraphics[scale=0.07]{graph/son1.jpg}
+    % \includegraphics[scale=0.08]{../graph/fig1.jpg}
+    \includegraphics[scale=0.1]{../graph/son1.jpg}
     \caption{}
     \label{fig:son1}
   \end{figure}
-
+  
+  この断面に現れるのは\Cref{fig:yosou-eg-1}と同じであるから，同様の計算により\Cref{cor:yosou-eg}を得る．
+  
 \end{pfwn}

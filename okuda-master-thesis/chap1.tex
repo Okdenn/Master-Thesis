@@ -12,7 +12,7 @@
 \begin{nttdef}\textcolor{white}{hoge}
   \vspace{-1em}
   \begin{itemize}
-  \item $G$を非コンパクト実半単純Lie 群，$H$を$G$の部分Lie群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
+  \item $G$を非コンパクト実半単純Lie 群，$H$を$G$の非コンパクトな部分Lie群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
   \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha}\cap\pe \defeq \{W\in \pe\mid \text{任意の} Y\in \ha\cap\pe \text{に対して}  B(Y, W) = 0\} $とする．
@@ -47,16 +47,17 @@
 \end{lem}
 
 \begin{pfwn}{\Cref{lem:basic-yosou}}
-  \leavevmode\vspace{-1em}
+  \leavevmode
+  \vspace{-2em}
   \begin{enumerate}
-  \item 背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対し，
+  \item 背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対しては$[X_1,X_2 ] = 0$より$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$であり，$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
   \item $X_1 = 0\iff X\in \per{\ha}\cap\pe $より$Z(tX) = tX $，$Y(tX) = 0 $であることによる．
-  \item[4.] $X\in \pe$に対し，$[X_1,X_2] \neq 0 $あるいは$X_1 = 0\iff X = 0 $あるいは$X \in \pe\setminus\{0\} $を示せば良い．
+  \item[4.] 対偶を示す．$X\in \pe$に対し，$[X_1,X_2] = 0 $かつ$X_1 \neq 0\iff X \in \ha\setminus\{0\} $を示せば良い．$G$の実階数は1で，$H$は非コンパクトであるから，$\ha\subset \pe$であり，$\ha$は$\ge$の極大可換部分空間である．よって$X_1\neq 0$かつ$[X_1,X_2] = 0  \implies X_2 = 0 $であり，$X = X_1 + X_2\in \ha\setminus\{0\} $を得る．
   \end{enumerate}
   
 \end{pfwn}
 
-$Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみによる．
+$Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
 
 \begin{thm}\cite[Lemmma~5.4]{kob97}\label{thm:kob97}
   
@@ -70,3 +71,6 @@ $Z(\real X) $の有界性については次の定理が知られており，有�
 
 
 
+\begin{lem}
+  
+\end{lem}

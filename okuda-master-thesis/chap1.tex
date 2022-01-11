@@ -96,19 +96,24 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \begin{pmatrix}
   \cosh t & \sinh t\\ \sinh t & \cosh t
 \end{pmatrix}
-\rbig\} $の場合に\Cref{yosou:1121}が正しいことは直接計算により確かめられる．
+\relmiddle| t\in \real \rbig\} $の場合に\Cref{yosou:1121}が正しいことは直接計算により確かめられる．
 
 \begin{prop}\label{prop:yosou-eg}
   $G = \SU(1,1) $，$H = \SO(1,1) $のとき\Cref{yosou:1121}は正しい．
 \end{prop}
 
+\begin{lem}\label{lem:1018}
+  $W\in \pe$に対し，$e^W \cdot o_K $が$o_K$から Euclid 距離で$\tanh p$，$p \geq 0$の位置にある場合，$\norm{W} = \frac{p}{2} $である．
+\end{lem}
+
+
 \begin{pfwn}{\Cref{prop:yosou-eg}}
 
-  $X\defeq k_{\theta/2}
+  $k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$X\defeq k_{\theta/2}
   \begin{pmatrix}
     \cosh t & \sinh t \\ \sinh t & \cosh t
   \end{pmatrix}
-  k_{-\theta/2}$
+  k_{-\theta/2}$とし，この$X$と$t\in \real$に対して$Y(tX)$を求める．
 
 
    
@@ -118,7 +123,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     % \raggedrightp
     \includegraphics[scale=0.08]{../graph/yosou-eg-1.jpg}
     % \includegraphics[scale=0.3]{../graph/y-and-z.pdf}
-    \caption{{\Poincare}円板における$Y(tX) $の幾何学的意味}
+    \caption{}
     \label{fig:yosou-eg-1}
   \end{figure}
 
@@ -134,5 +139,5 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{pfwn}
 
 \begin{cor}
-  $G = \SO(1,n) $，$H = $
+  $G = \SO(1,n) $，$H = \SO(1,k) $に対して\Cref{yosou:1121}は正しい．
 \end{cor}

@@ -4,6 +4,7 @@ while true
 do
     git reset
     git add auto-commit.sh
+    git add graph/.
     git add okuda-abstract/.
     git add okuda-master-thesis/.
     git commit -m "`date`"

@@ -36,15 +36,25 @@
 
 \Cref{yosou:1121}についての基本的な事項を挙げる．
 
-\begin{enumerate}
-\item $\pe_{H,\bdd} \subset \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0 \}$である．
+\begin{lem}\label{lem:basic-yosou}
+  \leavevmode\vspace{-1em}
+  \begin{enumerate}
+  \item $\pe_{H,\bdd} \subset \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0 \}$である．    
+  \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
+  \item 1，2より\Cref{yosou:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
+  \item $G$が実階数1のとき，\Cref{yosou:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
+  \end{enumerate}
+\end{lem}
 
-  背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対し，
-\item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
-  $X_1 = 0\iff X\in \per{\ha}\cap\pe $より$Z(tX) = tX $，$Y(tX) = 0 $であることによる．
-\item 1，2より\Cref{yosou:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
-\item $G$が実階数1のとき，\Cref{yosou:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
-\end{enumerate}
+\begin{pfwn}{\Cref{lem:basic-yosou}}
+  \leavevmode\vspace{-1em}
+  \begin{enumerate}
+  \item 背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対し，
+  \item $X_1 = 0\iff X\in \per{\ha}\cap\pe $より$Z(tX) = tX $，$Y(tX) = 0 $であることによる．
+  \item[4.] $X\in \pe$に対し，$[X_1,X_2] \neq 0 $あるいは$X_1 = 0\iff X = 0 $あるいは$X \in \pe\setminus\{0\} $を示せば良い．
+  \end{enumerate}
+  
+\end{pfwn}
 
 $Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみによる．
 
@@ -55,6 +65,7 @@ $Z(\real X) $の有界性については次の定理が知られており，有�
   ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の元がなす角度の最小値$0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2} $であり，
   $X\in \pe\setminus \ha \iff \phi(X,\ha\cap \pe)\neq 0 $である．
 \end{thm}
+
 つまり$ X\in \pe\setminus \ha$ならば$\norm{Z(t X)}\to \infty $，$\abs{t}\to \infty $である．
 
 

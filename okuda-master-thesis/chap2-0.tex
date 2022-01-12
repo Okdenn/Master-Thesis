@@ -73,18 +73,22 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
   したがって，$Y (\real X) $が非有界であるとき，列$\{t_n \in \real \}_{n\in \nat} $で，$s_n\to \infty,\; n\to \infty$，ただし$Y(t_n X) = s_nA$，なるものが存在する．
 
-  このとき，\Cref{lem:} % $\{\abs{t_n}\}_{n\in \nat}$が有界$\iff \{e^{t_n X}\cdot o_K\}_{n\in \nat}  $が有界ならば，$G/K\ni e^{X}\cdot o_K\mapsto (Y(X), Z(X))\in (\ha\cap \pe)\oplus (\per{\ha}\cap \pe) $，$X\in \pe$が微分同相であることから$\{s_n\}_{n\in \nat} $も有界である．従って対偶より$\lim_{n\to\infty}s_n\to \infty $ならば$\lim_{n\to \infty}\abs{t_n}\to \infty $である．
-
-  任意の$\per{\ha}\cap\pe $の元はある$Z =
+  また，任意の$\per{\ha}\cap\pe $の元はある$Z =
   \begin{pmatrix}
     0 & z & w \\
     \bar{z} & 0 & 0 \\
     \bar{w} & 0 & 0 
-  \end{pmatrix} \in \per{\ha}\cap\pe $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $と$r\in \real$により$rZ$と表せる．$Z\in\pe\setminus \ha $より$\re z \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．$Z(t_n) = r_nZ_n$，$Z_n\defeq \begin{pmatrix}
+  \end{pmatrix} \in \per{\ha}\cap\pe $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $と$r\in \real$により$rZ$と表せる．$Z(t_nX) = r_nZ_n$，$Z_n\defeq \begin{pmatrix}
     0 & z_n & w_n \\
     \bar{z_n} & 0 & 0 \\
     \bar{w_n} & 0 & 0 
-  \end{pmatrix} $とする．\bluetext{部分列を取って$z_n,w_n$が収束するようにする．}
+  \end{pmatrix} $，$z_n,w_n\in \quat \st \abs{z_n}^2 +\abs{w_n}^2  = 1 $とすると，$X\nin\ha$であるから\Cref{thm:kob97}より$\abs{r_n}\to \infty $である．$z_n,w_n\in \quat \st \abs{z_n}^2 +\abs{w_n}^2  = 1 $より，$\{t_n\} $の部分列を取るとある$Z_{\infty} $が存在して$\lim_{n\to \infty}Z_n = Z_{\infty} =
+  \begin{pmatrix}
+    0 & z_{\infty} & w_{\infty} \\
+    \bar{z_{\infty}} & 0 & 0 \\
+    \bar{w_{\infty}} & 0 & 0 
+  \end{pmatrix}
+  \in \per{\ha}\cap\pe $なるようにできる．$Z\in\pe\setminus \ha $より$\re z_{\infty} \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．
 
   \Cref{lem:exp-quat}より， 
   \begin{align*}
@@ -101,7 +105,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
       \cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n \\ \sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n \\ \pm \bar{w_n} \tanh \abs{r_n}
     \end{pmatrix}\rbig],
   \end{align*}
-  複号は$r_n$の符号$\pm$と同順，である．このとき$\lim_{n\to \infty}\tanh s_n = 1 = \lim_{n\to \infty}\tanh \abs{r_n} $と$\lim_{n\to \infty} \re z_n = \re z \neq \pm 1$に注意すると次を得る．具体的な計算は後述する．
+  複号は$r_n$の符号$\pm$と同順，である．このとき$\lim_{n\to \infty}\tanh s_n = 1 = \lim_{n\to \infty}\tanh \abs{r_n} $と$\lim_{n\to \infty} \re z_n = \re z_{\infty} \neq \pm 1$に注意すると次を得る．具体的な計算は後述する．
   \begin{align}
     \lim_{n\to \infty}(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } = 1\label{eq:-1}
   \end{align}
@@ -157,12 +161,13 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     &\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } - 1}\\
     % &\qquad\qquad\qquad \text{($\text{(この極限)} = 0$を示せば良い)} \\
     = & \lim_{n\to \infty}\lbig|\frac{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})(1 \pm z_n \tanh\abs{r_n}\tanh s_n )}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} - 1 \rbig|\\    
-    = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}, \quad z_n'\defeq 1 \pm z_n\tanh\abs{r_n}\tanh s_n \\
+    = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}, \\
+    &\quad\text{ただし } z_n'\defeq 1 \pm z_n\tanh\abs{r_n}\tanh s_n\text{ とする．} \\
     = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )z_n'}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} \\
     = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}} 
   \end{align*}
   であり，
-  $0 < \min{\abs{1\pm \re z_n}}\leq  \abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}\leq \sqrt{2^2 + 1^2} = \sqrt{5} $と$\min\{\abs{-1\pm \re z_n } \}  \leq \abs{-1\pm\bar{z_n}\tanh \abs{r_n} } \leq \sqrt{5} $であることから，
+  $0 < \min{\abs{1\pm \re z_n}}\leq  \abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}\leq \sqrt{2^2 + 1^2} = \sqrt{5} $と$\min\{\abs{-1\pm \re z_n } \}  \leq \abs{-1\pm\bar{z_n}\tanh \abs{r_n} } \leq \sqrt{5} $であることと$\lim_{n\to \infty} \re z_n = \re z_{\infty} \neq \pm 1$より，
     \begin{align*}
       0 = \lim_{n\to \infty}(1-\tanh s_n)\frac{\min\{\abs{-1\pm \re z_n} \}}{\sqrt{5}}  &\leq \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}}\\
       &\leq \lim_{n\to \infty}(1-\tanh s_n)\frac{\sqrt{5}}{\min\{\abs{1\pm \re z_n} \}} = 0

@@ -80,30 +80,30 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     0 & z & w \\
     \bar{z} & 0 & 0 \\
     \bar{w} & 0 & 0 
-  \end{pmatrix} \in \per{\ha}\cap\pe $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $と$r\in \real$により$rZ$と表せる．$Z\in\pe\setminus \ha $より$\re z \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．$Z(t_n) = r_n\begin{pmatrix}
+  \end{pmatrix} \in \per{\ha}\cap\pe $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $と$r\in \real$により$rZ$と表せる．$Z\in\pe\setminus \ha $より$\re z \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．$Z(t_n) = r_nZ_n$，$Z_n\defeq \begin{pmatrix}
     0 & z_n & w_n \\
     \bar{z_n} & 0 & 0 \\
     \bar{w_n} & 0 & 0 
-  \end{pmatrix} $とする．
+  \end{pmatrix} $とする．\bluetext{部分列を取って$z_n,w_n$が収束するようにする．}
 
   \Cref{lem:exp-quat}より， 
   \begin{align*}
-    e^{s_n A}e^{Z(t_n X)}\cdot o_K &=
+    e^{s_n A}e^{r_n Z_n}\cdot o_K &=
     \begin{pmatrix}
       \cosh s_n & \sinh s_n & 0 \\
       \sinh s_n & \cosh s_n & 0 \\
       0 & 0 & 1 
     \end{pmatrix}
               \lbig[\begin{pmatrix}
-                1\\ \pm \bar{z} \tanh \abs{t_n}  \\ \pm \bar{w} \tanh \abs{t_n}
+                1\\ \pm \bar{z} \tanh \abs{r_n}  \\ \pm \bar{w} \tanh \abs{r_n}
               \end{pmatrix}\rbig]\\
     &=  \lbig[ \begin{pmatrix}
-      \cosh s_n \pm \bar{z} \tanh \abs{t_n} \sinh s_n \\ \sinh s_n \pm \bar{z} \tanh \abs{t_n} \cosh s_n \\ \pm \bar{w} \tanh \abs{t_n}
+      \cosh s_n \pm \bar{z} \tanh \abs{r_n} \sinh s_n \\ \sinh s_n \pm \bar{z} \tanh \abs{r_n} \cosh s_n \\ \pm \bar{w} \tanh \abs{r_n}
     \end{pmatrix}\rbig],
   \end{align*}
-  複号は$t_n$の符号$\pm$と同順，である．このとき$\lim_{n\to \infty}\tanh s_n = 1 = \lim_{n\to \infty}\tanh \abs{t_n} $と$\re z \neq \pm 1$に注意すると次を得る．具体的な計算は後述する．
+  複号は$r_n$の符号$\pm$と同順，である．このとき$\lim_{n\to \infty}\tanh s_n = 1 = \lim_{n\to \infty}\tanh \abs{r_n} $と$\lim_{n\to \infty} \re z_n = \re z \neq \pm 1$に注意すると次を得る．具体的な計算は後述する．
   \begin{align}
-    \lim_{n\to \infty}(\sinh s_n \pm \bar{z} \tanh \abs{t_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{t_n} \sinh s_n) } = 1\label{eq:-1}
+    \lim_{n\to \infty}(\sinh s_n \pm \bar{z} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{r_n} \sinh s_n) } = 1\label{eq:-1}
   \end{align}
   である．
 
@@ -121,8 +121,8 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   \end{pmatrix}
   \in \quat\mathbb{H}^2 $から\\
   $ \begin{pmatrix}
-    (\sinh s_n \pm \bar{z} \tanh \abs{t_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{t_n} \sinh s_n) } \\  \ast 
-  \end{pmatrix}\in \quat\mathbb{H}^2 $へのベクトルがなす Euclidean な内積の値を $I_n$とすると，$\lim_{n\to \infty}I_n = 1 $である．
+    (\sinh s_n \pm \bar{z} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{r_n} \sinh s_n) } \\  \ast 
+  \end{pmatrix}\in \quat\mathbb{H}^2 $へのベクトルがなすEuclideanな内積の値を $I_n$とすると，$\lim_{n\to \infty}I_n = 1 $である．
 
   しかし，$
   \begin{pmatrix}
@@ -136,14 +136,13 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   \begin{pmatrix}
     0 \\ 0 
   \end{pmatrix}
-  \in \quat\mathbb{H}^2 $から$e^{W(t_n X)}\cdot o_K \in \quat \mathbb{H}^2 $へのベクトルがなす Euclidean な内積の値$J_n$は，\\
-  $W(t_n X)\in \lbig\{
-  \begin{pmatrix}
-    0 & z_1 & z_2 \\
-    \bar{z_1} & 0 & 0\\
-    \bar{z_2} & 0 & 0
-  \end{pmatrix}
-  \relmiddle| z_1, z_2\in \quat,\ \& \ \re z_1 = 0 \rbig\} $であることと，\Cref{lem:exp-quat} から$\re J_n = 0$となり，$e^{s_n A}e^{Z(t_n X)}\cdot o_K = e^{t_n X}\cdot o_K\implies \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n = 1 $に矛盾する．
+  \in \quat\mathbb{H}^2 $から$e^{t_nX}\cdot o_K \in \quat \mathbb{H}^2 $へのベクトルがなすEuclideanな内積の値$J_n$は，$X \defeq   \begin{pmatrix}
+    0 & z_0 & w_0 \\
+    \bar{z_0} & 0 & 0 \\
+    \bar{w_0} & 0 & 0 
+  \end{pmatrix}$，$z_0,w_0\in \quat \st \abs{z_0}^2 +\abs{w_0}^2  = 1 $とするとき$J_n = \dfrac{\bar{z_0}}{r_0}\tanh (tr_0) $，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $であり，$\lim_{n\to \infty}J_n = \dfrac{\bar{z_0}}{r_0}\neq 1 $であり，
+
+  以上2つを合わせると$e^{s_n A}e^{r_n Z_n}\cdot o_K = e^{t_n X}\cdot o_K\implies \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n = 1 $となり矛盾する．
   
 
   以上より「$X\in \pe\setminus\ha \Rightarrow Y(\real X) $有界」，したがって \Cref{prop:1127-main} を得る．
@@ -153,19 +152,19 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
 \begin{calcof}{\Cref{prop:1127-main}}
   
-  $\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z} \tanh \abs{t_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{t_n} \sinh s_n) } - 1} = 0$を示せば主張が得られる．具体的に計算すると，
+  $\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{r_n} \sinh s_n) } - 1} = 0$を示せば主張が得られる．具体的に計算すると，
   \begin{align*}
-    &\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z} \tanh \abs{t_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{t_n} \sinh s_n) } - 1}\\
+    &\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z} \tanh \abs{r_n} \sinh s_n) } - 1}\\
     % &\qquad\qquad\qquad \text{($\text{(この極限)} = 0$を示せば良い)} \\
-    = & \lim_{n\to \infty}\lbig|\frac{(\tanh s_n\pm \bar{z}\tanh \abs{t_n})(1 \pm z \tanh\abs{t_n}\tanh s_n )}{\abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}^2} - 1 \rbig|\\    
-    = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z}\tanh \abs{t_n})z' - (1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )z' }}{\abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}^2}, \quad z'\defeq 1 \pm z\tanh\abs{t_n}\tanh s_n \\
-    = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z}\tanh \abs{t_n} )z'}}{\abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}^2} \\
-    = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z}\tanh \abs{t_n} )}}{\abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}} 
+    = & \lim_{n\to \infty}\lbig|\frac{(\tanh s_n\pm \bar{z}\tanh \abs{r_n})(1 \pm z \tanh\abs{r_n}\tanh s_n )}{\abs{(1 \pm \bar{z} \tanh\abs{r_n}\tanh s_n )}^2} - 1 \rbig|\\    
+    = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z}\tanh \abs{r_n})z' - (1 \pm \bar{z} \tanh\abs{r_n}\tanh s_n )z' }}{\abs{(1 \pm \bar{z} \tanh\abs{r_n}\tanh s_n )}^2}, \quad z'\defeq 1 \pm z\tanh\abs{r_n}\tanh s_n \\
+    = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z}\tanh \abs{r_n} )z'}}{\abs{(1 \pm \bar{z} \tanh\abs{r_n}\tanh s_n )}^2} \\
+    = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z} \tanh\abs{r_n}\tanh s_n )}} 
   \end{align*}
   であり，
-  $0 < \min{\abs{1\pm \re z}}\leq  \abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}\leq \sqrt{2^2 + 1^2} = \sqrt{5} $と$\min\{\abs{-1\pm \re z } \}  \leq \abs{-1\pm\bar{z}\tanh \abs{t_n} } \leq \sqrt{5} $であることから，
+  $0 < \min{\abs{1\pm \re z}}\leq  \abs{(1 \pm \bar{z} \tanh\abs{r_n}\tanh s_n )}\leq \sqrt{2^2 + 1^2} = \sqrt{5} $と$\min\{\abs{-1\pm \re z } \}  \leq \abs{-1\pm\bar{z}\tanh \abs{r_n} } \leq \sqrt{5} $であることから，
     \begin{align*}
-      0 = \lim_{n\to \infty}(1-\tanh s_n)\frac{\min\{\abs{-1\pm \re z} \}}{\sqrt{5}}  &\leq \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z}\tanh \abs{t_n} )}}{\abs{(1 \pm \bar{z} \tanh\abs{t_n}\tanh s_n )}}\\
+      0 = \lim_{n\to \infty}(1-\tanh s_n)\frac{\min\{\abs{-1\pm \re z} \}}{\sqrt{5}}  &\leq \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z} \tanh\abs{r_n}\tanh s_n )}}\\
       &\leq \lim_{n\to \infty}(1-\tanh s_n)\frac{\sqrt{5}}{\min\{\abs{1\pm \re z} \}} = 0
     \end{align*}
     より，\Cref{eq:-1} が成り立つ．

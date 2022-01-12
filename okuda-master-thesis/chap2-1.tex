@@ -210,15 +210,23 @@
 
     \Cref{cor:sub-lie-alg}により$X$と$\ha $を含む部分Lie環$\ge' \subset \ge $で$\sulie(1,1) $に同型なものが存在する．$\ge' $に対応する$G$の解析的部分群を$G'$とし，その岩澤分解を$G' = K'A'N' $とする．
     
-    $A_{\alpha}\in \ha $を任意の$H\in \ha \defeq  $に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とすると， 任意の固定した$\tau \in \real$に対し，$Y(\tau X) $に対応する$\ge_{\tau} $の元は$\dfrac{B(Y(\tau X), A_{\alpha}) }{\norm{A_{\alpha}}}
+    $A_{\alpha}\in \ha $を任意の$H\in \ha $に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とすると， 任意の固定した$\tau \in \real$に対し，$Y(\tau X) $に対応する$\ge_{\tau} $の元は$\inlineequation[eq:corresp]{\dfrac{B(Y(\tau X), A_{\alpha}) }{\norm{A_{\alpha}}}
     \begin{pmatrix}
       0 & 1 & 0\\
       1 & 0 & 0\\
       0 & 0 & 0\\
-    \end{pmatrix}
+    \end{pmatrix}}
     $である．
     
-    $Y(\real X) $の非有界性より，適当に列$\{t_{n}\in \real\}_{n\in \nat} $を取ると$0 <  \norm{Y(t_n X)} = s_n $，$\forall n\in \nat$かつ$s_n\to \infty$，$n\to \infty$とできる．さらに$Z(t_n X) = r_n Z_n $，$Z_n\in \per{\ha}\cap \pe $，$\norm{Z_n} = 1 $，$r_n\in \real$と書くと，必要ならpositive systemを取り替えることで$B(Y(t_n X), A_{\alpha_{t_n}}) > 0$と仮定する．
+    $Y(\real X) $の非有界性より，適当に列$\{t_{n}\in \real\}_{n\in \nat} $，$t_n\underset{n\to \infty}{\to} \infty$を取ると$0 <  \norm{Y(t_n X)} = s_n $，$\forall n\in \nat$かつ$s_n\to \infty$，$n\to \infty$とできる．さらに$Z(t_n X) = r_n Z_n $，$Z_n\in \per{\ha}\cap \pe $，$\norm{Z_n} = 1 $，$r_n\in \real$と書くと，\Cref{thm:kob97}より$\abs{r_n}\to \infty$，$n\to \infty$である．$\norm{Z_n} = 1 $より，必要なら$\{t_{n}\in \real\}_{n\in \nat} $の部分列を取ることで$\lim_{n\to \infty}Z_n = Z_{\infty}\in \per{\ha}\cap \pe $，$\norm{Z_{\infty} } = 1$なる$Z_{\infty}$が存在する．
+
+    必要ならpositive systemを取り替えることで$B(Y(t_n X), A_{\alpha}) > 0$と仮定する．このとき$B(Y(t_n X), A_{\alpha}) = s_n$であるから，\Cref{eq:corresp}より$\ge'\simeq \sulie(1,2) $の同型において$Y(t_n X)  $は$s_n\begin{pmatrix}
+      0 & 1 & 0\\
+      1 & 0 & 0\\
+      0 & 0 & 0\\
+    \end{pmatrix}$に対応する．
+
+    以上の性質を満たす$\{t_n\}_{n\in \nat} $，$\{s_n\}_{n\in \nat}  $，$\{r_n \}_{n\in \nat} $，$\{Z_{n} \}_{n\in \nat} $，$Z_{\infty} $に対して
 
     
     

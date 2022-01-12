@@ -145,7 +145,7 @@
 \end{lem}
 
 \begin{cor}\label{cor:sub-lie-alg}
-  任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$G$が実階数1ならば，極大分裂可換代数$\ah\defeq \real Y\subset \ge$に対し$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，\Cref{thm:0810}と\Cref{lem:su11}より，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,2) $か$\ge_0\simeq \sulie(1,1)$なるものが存在する．
+  任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$G$が実階数1ならば，極大分裂可換代数$\ah\defeq \real Y\subset \ge$に対し$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，それぞれ\Cref{thm:0810}と\Cref{lem:su11}より，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
 \end{cor}
 
 \begin{pfwn}{\Cref{cor:sub-lie-alg}}
@@ -206,9 +206,11 @@
   \begin{case}
     $\Sigma(\ge,\ah) = \{\pm\alpha \}$のとき
 
-    任意の固定した$\tau \in \real$に対し$\ah_{\tau} \defeq \real Y(\tau X)$が定める制限ルート系も，ある$\alpha_{\tau} \in \ah_{\tau}^{*}$，$ \norm{\alpha_{\tau}} = 1 $により$\Sigma(\ge,\ah_{\tau}) = \{\pm\alpha_{\tau} \}$となるが，$Y(\real X) $の非有界性より，ある$T\in \real$で$\abs{\alpha_{t}(Y(tX))} >  $\bluetext{埋めよ}，$\forall t \geq T$なるものが存在する．
+    任意の固定した$\tau \in \real$に対し$\ah_{\tau} \defeq \real Y(\tau X)$が定める制限ルート系も，ある$\alpha_{\tau} \in \ah_{\tau}^{*}$，$ \norm{\alpha_{\tau}} = 1 $により$\Sigma(\ge,\ah_{\tau}) = \{\pm\alpha_{\tau} \}$となるが，$Y(\real X) $の非有界性より，適当に列$\{t_{n}\} $$B(Y(\tau X), Y(\tau X))  > 0 $
 
-    $A_{\alpha_{t}}\in \ah $を，任意の$H\in \ah_{t}\defeq  $に対して$B(H,A_{\alpha_{t}}) = \alpha_t(H) $を満たす元とすると，$\abs{B(Y(tX), A_{\alpha_{t}})} =  \abs{\alpha_{t}(Y(tX))}$である．
+    \Cref{cor:sub-lie-alg}により$X$と$Y(\tau X) $を含む部分Lie環$\ge_{\tau} \subset \ge $で$\sulie(1,1) $に同型なものが存在する．$\ge_{\tau} $に対応する$G$の解析的部分群を$G_{\tau}$とし，その岩澤分解を$G_{\tau} = K_{\tau}A_{\tau}N_{\tau} $とする．
+
+    $A_{\alpha_{\tau}}\in \ah_{\tau} $を，任意の$H\in \ah_{\tau}\defeq  $に対して$B(H,A_{\alpha_{\tau}}) = \alpha_{\tau}(H) $を満たす元とすると，$\abs{B(Y(\tau X), A_{\alpha_{\tau}})} =  \abs{\alpha_{\tau}(Y(\tau X))}$である．
     
   \end{case}
 

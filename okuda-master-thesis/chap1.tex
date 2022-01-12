@@ -191,7 +191,31 @@ $\gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta
 
 \end{pfwn}
 
-\begin{rem}\laebl{rem:su11-by-angle}
+\begin{rem}\label{rem:su11-by-angle}
+
+  \Cref{prop:yosou-eg}は角度を用いた議論によっても示すことができる．具体的には，計算により次の\Cref{lem:0106}が示せる．
+  \begin{lem}\label{lem:0106}
+    $e^{tY}e^{s Z}\cdot o_K =
+    \begin{pmatrix}
+      \cosh t & \sinh t\\ \sinh t & \cosh t
+    \end{pmatrix}
+    \sqrt{-1}\tanh s \in \SU(1,1)/\U(1) $，$t > 0$，$s\in \real$に対し，$o_K $と$e^{tY}e^{sZ}\cdot o_K$を結ぶ測地線が$o_K$と$e^{tY}\cdot o_K $を結ぶ測地線となす角$\phi_{s,t} $は，$\tan \phi_{s,t} = \dfrac{\tanh 2s}{\sinh 2t} $を満たす．
+  \end{lem}
+  ただし，$Y \defeq
+  \begin{pmatrix}
+    0 & 1\\ 1 & 0
+  \end{pmatrix}
+  $，$Z \defeq \begin{pmatrix}
+    0 & \sqrt{-1} \\ -\sqrt{-1} & 0
+  \end{pmatrix}$とする．
+
+
+  任意の$s\in \real, 0\neq t\in \real $に対し，
+  \begin{align*}
+    \lim_{s\to -\infty}\tan \phi_{s,\abs{t}} = \dfrac{-1}{\sinh 2\abs{t}}  \leq \tan \phi_{s,t} \leq  \lim_{s\to \infty}\tan \phi_{s,\abs{t}} = \dfrac{1}{\sinh 2\abs{t}}
+  \end{align*}
+  であるから，$X\nin \real Y $の元に対して$Y(\real X) $が非有界であるとすると，$\ha$と$X$の角度未満のある数$\epsilon > 0$に対し，ある$r\in \real $が存在して，$Y(rX) = tY $，$Z(rX) = sZ $に対し$\abs{\tan \phi_{s,t}} < \tan \epsilon $となり，
+
   
 \end{rem}
 

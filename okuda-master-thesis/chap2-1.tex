@@ -14,12 +14,12 @@
   \leavevmode
   \vspace{-1em}
   \begin{itemize}
-  \item $\ah \subset \ge$を極大分裂可換代数，$\emm \defeq \zet_{\ka}(\ah) $とする．$B$を$\ge$のKilling 形式とする．
+  \item $\ah \subset \ge$を極大分裂可換代数，$\emm \defeq \zet_{\ka}(\ah) \defeq \{W\in \ka\mid [W,\ah] = \{0\} \} $とする．$B$を$\ge$のKilling 形式とする．
   \item $\Sigma(\ge,\ah) $を$\ah$に関する制限ルート系とする．$\ge_{\lambda} $を，$\lambda\in \ah^{*}$のルート空間とし，$0\neq X_{\alpha}\in \ge_{\alpha} $，$0\neq X_{2\alpha}\in \ge_{2\alpha} $を任意に固定する．$Y_{\alpha}\defeq [\theta X_{\alpha}, X_{2\alpha}] $とする．
   \item $A_{\alpha}\in \ah $を，任意の$H\in \ah$に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とする．
     
     このとき，任意の$H\in \ah$に対して$B(H, [X_{\alpha}, \theta X_{\alpha}]) = \alpha(H) B(X_{\alpha}, \theta X_{\alpha}) $より$[X_{\alpha}, \theta X_{\alpha}] = B(X_{\alpha}, \theta X_{\alpha})A_{\alpha} $ (同様に$[Y_{\alpha}, \theta Y_{\alpha}]  = B(Y_{\alpha}, \theta Y_{\alpha})A_{\alpha} $，$ [X_{2\alpha}, \theta X_{2\alpha}] = 2B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} $) である．
-    @ $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $，$ c_{2\alpha}  \defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})}} $とする．
+    \item $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $，$ c_{2\alpha}  \defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})}} $とする．
 
     また，$X_{\alpha}^{*}\defeq c_{\alpha}X_{\alpha} $，$X_{2\alpha}^{*}\defeq c_{2\alpha}X_{2\alpha} $，$Y_{\alpha}^{*} \defeq [\theta X_{\alpha}^{*}, X_{2\alpha}^{*} ] = c_{\alpha}c_{2\alpha}Y_{\alpha} $，$A_{\alpha}^{*}\defeq \dfrac{1}{12\alpha(A_{\alpha}) % \lyama \alpha, \alpha\ryama
     }A_{\alpha} $とする．
@@ -29,7 +29,7 @@
 \begin{lem}\label{lem:3.2}
   $c \defeq 2\alpha(A_{\alpha})B(X_{\alpha},\theta X_{\alpha}) $とすると，$[X_{\alpha}, Y_{\alpha}] = cX_{2\alpha} $である．特に$0\neq Y_{\alpha}\neq X_{\alpha} $である．
 
-  証明略，Jacobi identity と$3\alpha\nin \Sigma(\ge,\ah) $による．
+  証明略，Jacobi恒等式と$3\alpha\nin \Sigma(\ge,\ah) $による．
 \end{lem}
 
 \begin{lem}\label{lem:3.3}
@@ -68,7 +68,8 @@
 
 さらに，$B(Y_{\alpha}, \theta Y_{\alpha}) = B(Y_{\alpha},[X_{\alpha}, \theta X_{2\alpha}]) = -B([X_{\alpha}, Y_{\alpha}], \theta X_{2\alpha}) = -2\alpha(A_{\alpha})B(X_{\alpha},\theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})  $であるから，最終的に
 \begin{align*}
-[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] =  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} = -6\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha}
+  &[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] =  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} \\
+  =&\ -6\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha}
 \end{align*}
 を得る．
   
@@ -77,13 +78,13 @@
 \begin{lem}\label{lem:3.5}
   $[[X_{\alpha}, \theta Y_{\alpha}], X_{2\alpha}] = 0$である．
 
-  証明略．\Cref{lem:3.2}--\ref{lem:3.4} と Jacobi identity による．
+  証明略．\Cref{lem:3.2}--\ref{lem:3.4}とJacobi恒等式による．
 \end{lem}
 
 \begin{lem}\label{lem:3.6}
   $[Y_{\alpha},\theta X_{2\alpha}] = 2\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})\theta X_{\alpha} $である．
 
-  証明略．Jacobi identity を用いて与式を変形し計算することによる．
+  証明略．Jacobi恒等式を用いて与式を変形し計算することによる．
 \end{lem}
 
 

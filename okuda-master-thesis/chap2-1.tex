@@ -145,7 +145,7 @@
 \end{lem}
 
 \begin{cor}\label{cor:sub-lie-alg}
-  \Cref{thm:0810}と\Cref{lem:su11}より，$G$が実階数1ならば，極大分裂可換代数$\ah$に対し$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ha$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,2) $か$\ge_0\simeq \sulie(1,1)$なるものが存在する．
+  任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$G$が実階数1ならば，極大分裂可換代数$\ah\defeq \real Y\subset \ge$に対し$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，\Cref{thm:0810}と\Cref{lem:su11}より，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,2) $か$\ge_0\simeq \sulie(1,1)$なるものが存在する．
 \end{cor}
 
 \begin{pfwn}{\Cref{cor:sub-lie-alg}}
@@ -153,12 +153,14 @@
   \begin{case}
     $\Sigma(\ge,\ah) = \{\pm\alpha\} $の場合
 
-    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} $，$\ge_0 \defeq \ze_{\ge}(\ah) $であり，
+    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} $，$\ge_0 \defeq \ze_{\ge}(\ah) $より，$\pe = \ah \oplus (\ge_{\alpha}\cap\pe) \oplus (\ge_{-\alpha}\cap\pe) $である．$X \pe\setminus \ah$をこの分解に対応して$X = X_0 + X_{\alpha} + X_{-\alpha} $と分解すると，$X\in \pe\setminus \ah$より$ X_{-\alpha} = -\theta X_{\alpha}\neq 0 $である．したがってこの$X_{\alpha}\neq 0 $と$Y$に\Cref{lem:su11}を適用することにより$\ge_0\simeq \sulie(1,1)$で$X,Y\in \ge_0 $なるものが存在する．
+    
   \end{case}
   
   \begin{case}
     $\Sigma(\ge,\ah) = \{\pm\alpha, \pm 2\alpha\} $の場合
 
+    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} \oplus \ge_{2\alpha}\oplus \ge_{-2\alpha}  $，$\ge_0 \defeq \ze_{\ge}(\ah) $より，$\pe = \ah \oplus (\ge_{\alpha}\cap\pe) \oplus (\ge_{-\alpha}\cap\pe)\oplus (\ge_{2\alpha}\cap\pe) \oplus (\ge_{-2\alpha}\cap\pe) $である．$X \pe\setminus \ah$をこの分解に対応して$X = X_0 + X_{\alpha} + X_{-\alpha} + X_{2\alpha} + X_{-2\alpha} $と分解すると，$X\in \pe\setminus \ah$より$ X_{-\alpha} = - \theta X_{\alpha} $，$ X_{-2\alpha} = \theta X_{2\alpha} $である．したがってこの$X_{\alpha}\neq 0 $と$Y$に\Cref{lem:su11}を適用することにより$\ge_0\simeq \sulie(1,1)$で$X,Y\in \ge_0 $なるものが存在する．
     
   \end{case}
   

@@ -210,11 +210,40 @@ $\gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta
 \end{pfwn}
 
 
-\subsection{\Cref{yosou:1121} の観察: \Cref{yosou:1121}はなぜこの形か？}
+\subsection{\Cref{yosou:1121} の観察: \Cref{yosou:1121}はなぜこの形になったか}
 
 \Cref{yosou:1121}と次の\Cref{yosou:1121-2}は同値である．
 \begin{yosou}\label{yosou:1121-2}
 
-  $\pe_{H,\bdd} = \{X\in \pe\mid X\perp (\ha\cap\pe) \text{ あるいは } [X,(\ha\cap\pe)]\neq 0 \}  $
+  $\pe_{H,\bdd} = \{X\in \pe\mid [X,(\ha\cap\pe)]\neq \{0\} \text{ あるいは } X\perp (\ha\cap\pe)  \}  $
   
 \end{yosou}
+
+ここで似た予想として次の$\ha\cap\pe$を$\ha$に置き換えた予想が立てられる．
+\begin{yosou}\label{yosou:1101}
+  $\pe_{H,\bdd} = \{X\in \pe\mid  [X,\ha]\neq \{0\} \text{ あるいは } X\perp \ha\}  $
+\end{yosou}
+
+しかし\Cref{yosou:1101}には反例が存在する．
+\begin{lem}\label{lem:1118-main}
+  $G = \SL(3,\real) $，$Y_1\defeq \diag(1,1,-2)$，$Y_2 \defeq \begin{pmatrix}
+    0 & 1 & 0\\
+    -1 & 0 & 0 \\
+    0 & 0 & 0
+  \end{pmatrix}$，\\
+  $\ha = \real Y_1 \oplus \real Y_2 $，$X = \diag(1,0,-1) $に対し，$[X,\ha] \neq \{0\} $であるが$Y(\real X) = \real Y_1 $であり，非有界である．
+\end{lem}
+したがって\Cref{lem:1118-main}は\Cref{yosou:1101}の反例である．
+
+\begin{calcof}{\Cref{lem:1118-main}}
+
+  $\ha$は可換Lie環であり，$\ge = \slie(3,\real) $のCartan対合$\theta({W}) \defeq -\trans{W} $に対し$\ha = \theta \ha$である．
+
+  $[X,\ha]\neq 0 $は，$[X, Y_2] \neq 0$より従う．
+
+  ここで$Z_1\defeq \diag(1,-1,0)\in \per{\ha}\cap \pe $であり，任意の$t\in \real$に対し，$e^{2tX} = e^{tY_1}e^{tZ_1} $であるから，$Y(\real X) = \real Y_1 $となり，\Cref{lem:1118-main} が示された．
+  
+\end{calcof}
+
+\Cref{lem:1118-main}において$X$と$\ha$は，$[X,\ha] \neq \{0\} $だが$[X,(\ha\cap \pe)] = \{0\}$かつ$X\not\perp (\ha\cap \pe) $となるように取った．  
+

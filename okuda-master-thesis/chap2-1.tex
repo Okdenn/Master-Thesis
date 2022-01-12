@@ -4,7 +4,139 @@
   $G$を実階数1の実半単純Lie 群とするとき，\Cref{yosou:1121} が成り立つ．
 \end{thm}
 
-\bluetext{$\SU(1,2) $-reduction については2021/8/10のレポートを参考にせよ}
+\begin{thm}\label{thm:0810}\cite[p.~409, Theorem~3.1]{hel01}
+
+  $\ge = \ka \oplus \pe$を実半単純Lie環とそのCartan対合$\theta$に対する Cartan分解とし，$\alpha,2\alpha\in \Sigma(\ge,\ah) $と仮定する．このとき，$X_{\alpha},X_{2\alpha}, \theta X_{\alpha}, \theta X_{2\alpha} $から生成されるLie環$\ge^{*} $は$\sulie(2,1)$と同型である．
+  
+\end{thm}
+
+\begin{nttdef}
+  \leavevmode
+  \vspace{-1em}
+  \begin{itemize}
+  \item $\ah \subset \ge$を極大分裂可換代数，$\emm \defeq \zet_{\ka}(\ah) $とする．$B$を$\ge$のKilling 形式とする．
+  \item $\Sigma(\ge,\ah) $を$\ah$に関する制限ルート系とする．$\ge_{\lambda} $を，$\lambda\in \ah^{*}$のルート空間とし，$0\neq X_{\alpha}\in \ge_{\alpha} $，$0\neq X_{2\alpha}\in \ge_{2\alpha} $を任意に固定する．$Y_{\alpha}\defeq [\theta X_{\alpha}, X_{2\alpha}] $とする．
+  \item $A_{\alpha}\in \ah $を，任意の$H\in \ah$に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とする．
+    
+    このとき，任意の$H\in \ah$に対して$B(H, [X_{\alpha}, \theta X_{\alpha}]) = \alpha(H) B(X_{\alpha}, \theta X_{\alpha}) $より$[X_{\alpha}, \theta X_{\alpha}] = B(X_{\alpha}, \theta X_{\alpha})A_{\alpha} $ (同様に$[Y_{\alpha}, \theta Y_{\alpha}]  = B(Y_{\alpha}, \theta Y_{\alpha})A_{\alpha} $，$ [X_{2\alpha}, \theta X_{2\alpha}] = 2B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} $) である．
+    @ $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $，$ c_{2\alpha}  \defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})}} $とする．
+
+    また，$X_{\alpha}^{*}\defeq c_{\alpha}X_{\alpha} $，$X_{2\alpha}^{*}\defeq c_{2\alpha}X_{2\alpha} $，$Y_{\alpha}^{*} \defeq [\theta X_{\alpha}^{*}, X_{2\alpha}^{*} ] = c_{\alpha}c_{2\alpha}Y_{\alpha} $，$A_{\alpha}^{*}\defeq \dfrac{1}{12\alpha(A_{\alpha}) % \lyama \alpha, \alpha\ryama
+    }A_{\alpha} $とする．
+  \end{itemize}
+\end{nttdef}
+
+\begin{lem}\label{lem:3.2}
+  $c \defeq 2\alpha(A_{\alpha})B(X_{\alpha},\theta X_{\alpha}) $とすると，$[X_{\alpha}, Y_{\alpha}] = cX_{2\alpha} $である．特に$0\neq Y_{\alpha}\neq X_{\alpha} $である．
+
+  証明略，Jacobi identity と$3\alpha\nin \Sigma(\ge,\ah) $による．
+\end{lem}
+
+\begin{lem}\label{lem:3.3}
+  $[X_{\alpha},\theta Y_{\alpha}]\in \emm\setminus\{0\} $である．
+特に証明から$[[X_{\alpha}, \theta Y_{\alpha}], X_{\alpha}] = -3\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})Y_{\alpha} $がわかる．
+\end{lem}
+
+\begin{pfwn}{\Cref{lem:3.3}}
+  
+  $Y_{\alpha} \in \ge_{\alpha} $より$[X_{\alpha},\theta Y_{\alpha}]\in \emm+ \ah$であり，任意の$H\in \ah$に対して$B(H, [X_{\alpha},\theta Y_{\alpha}]) = B([H, X_{\alpha}], Y_{\alpha}) = \alpha(H) B(X_{\alpha}, [X_{\alpha}, \theta X_{2\alpha}]) = \alpha(H)B([X_{\alpha}, X_{\alpha}], X_{2\alpha}) = 0 $であることより$[X_{\alpha},\theta Y_{\alpha}]\in \emm$である．
+
+  さらに，$[[\theta X_{\alpha},Y_{\alpha}], X_{\alpha}] = -[[Y_{\alpha}, X_{\alpha}], \theta X_{\alpha}] - [[X_{\alpha}, \theta X_{\alpha}], Y_{\alpha}] = c[X_{2\alpha}, \theta X_{\alpha}] -  B(X_{\alpha},\theta X_{\alpha})\alpha(A_{\alpha})Y_{\alpha} = -cY_{\alpha}-  B(X_{\alpha},\theta X_{\alpha})\alpha(A_{\alpha})Y_{\alpha} = -3\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})Y_{\alpha} \neq 0 $より，$\theta [\theta X_{\alpha},Y_{\alpha}] = [X_{\alpha},\theta Y_{\alpha}]\in \emm\setminus\{0\} $である．
+  
+\end{pfwn}
+
+\vspace{-1em}
+\begin{lem}\label{lem:3.4}  
+  $\real X_{\alpha} + \real Y_{\alpha} $は$\ad_{\ge}([X_{\alpha}, \theta Y_{\alpha}]) $で不変である．\\
+  特に証明の途中で$[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] = -6\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} $，\\
+  $[Y_{\alpha}, \theta Y_{\alpha}] = -2\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} $がわかる．
+
+\end{lem}
+
+\begin{pfwn}{\Cref{lem:3.4}}
+
+  $[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}]  \in \real X_{\alpha} $を示せば，\Cref{lem:3.3} と併せて \Cref{lem:3.4} が従う．
+
+  
+  \begin{align*}
+    [[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] &= -[[\theta Y_{\alpha}, Y_{\alpha}], X_{\alpha}] - [[Y_{\alpha}, X_{\alpha}], \theta Y_{\alpha}] = B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} +c[X_{2\alpha},[X_{\alpha}, \theta X_{2\alpha}]] \\
+                                                  &= B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - c[X_{\alpha}, [\theta X_{2\alpha}, X_{2\alpha}]] - c[\theta X_{2\alpha},[X_{2\alpha},X_{\alpha}]] \\
+                                                  &= B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - cB(X_{2\alpha},\theta X_{2\alpha})\alpha(A_{2\alpha})X_{\alpha}
+  \end{align*}
+  であり ($\cbcs \ge_{3\alpha} = \{0\} $)，$A_{2\alpha} = 2A_{\alpha} $であるから，\\
+  $[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] =  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} $を得る．
+
+さらに，$B(Y_{\alpha}, \theta Y_{\alpha}) = B(Y_{\alpha},[X_{\alpha}, \theta X_{2\alpha}]) = -B([X_{\alpha}, Y_{\alpha}], \theta X_{2\alpha}) = -2\alpha(A_{\alpha})B(X_{\alpha},\theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})  $であるから，最終的に
+\begin{align*}
+[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] =  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} = -6\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha}
+\end{align*}
+を得る．
+  
+\end{pfwn}
+
+\begin{lem}\label{lem:3.5}
+  $[[X_{\alpha}, \theta Y_{\alpha}], X_{2\alpha}] = 0$である．
+
+  証明略．\Cref{lem:3.2}--\ref{lem:3.4} と Jacobi identity による．
+\end{lem}
+
+\begin{lem}\label{lem:3.6}
+  $[Y_{\alpha},\theta X_{2\alpha}] = 2\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})\theta X_{\alpha} $である．
+
+  証明略．Jacobi identity を用いて与式を変形し計算することによる．
+\end{lem}
+
+
+
+
+\begin{pfwn}{\Cref{thm:0810}}
+
+  % \Cref{lem:3.2}--\ref{lem:3.6} により，地道に確認することで
+
+  \Cref{lem:3.2}--\ref{lem:3.6}より，$\ge^{*} = \ge^{*}_{0} \oplus \ge^{*}_{\alpha}\oplus \ge^{*}_{-\alpha} \oplus \ge^{*}_{2\alpha} \oplus \ge^{*}_{-2\alpha} $，ただし$\ge^{*}_0 \defeq \real A_{\alpha}\oplus \real[X_{\alpha}, \theta Y_{\alpha}] $，$\ge^{*}_{\alpha} \defeq \real X_{\alpha}\oplus \real Y_{\alpha}  $，$\ge^{*}_{-\alpha} \defeq \real \theta X_{\alpha}\oplus \real \theta Y_{\alpha}  $，$\ge^{*}_{2\alpha} \defeq \real X_{2\alpha} $，$\ge^{*}_{-2\alpha} \defeq \real \theta X_{2\alpha}$，がわかる．
+
+  
+  非自明な$\ge^{*} $のLie括弧の関係として，$[X_{\alpha}^{*}, Y_{\alpha}^{*}] = -4X_{2\alpha}^{*} $ (by \Cref{lem:3.2})，$[X_{\alpha}^{*},[X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]]  = -6Y_{\alpha}^{*}$ (by \Cref{lem:3.3})，$[X_{\alpha}^{*}, \theta X_{\alpha}^{*}] = -24A_{\alpha}^{*} $ (by def.)，$[X_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ ($\bcs \ge_{3\alpha} = 0$)，$[X_{\alpha}^{*}, \theta X_{2\alpha}^{*}] = \theta Y_{\alpha}^{*} $，\\
+  $[Y_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ (by \Cref{lem:3.5})，$[Y_{\alpha}^{*},\theta X_{2\alpha}^{*}] = -4\theta X_{\alpha}^{*} $ (by \Cref{lem:3.6})，$[Y_{\alpha}^{*}, \theta Y_{\alpha}^{*}] = -96A_{\alpha}^{*} $ (by \Cref{lem:3.4})，$[Y_{\alpha}^{*}, [X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]] = 24X_{\alpha}^{*} $ (by \Cref{lem:3.4}) \\
+  $[[X_{\alpha}^{*}, \theta Y_{\alpha}], X_{2\alpha}^{*}] = [[X_{\alpha}^{*}, \theta Y_{\alpha}], \theta X_{2\alpha}^{*}] = 0$ (by \Cref{lem:3.6})，\\
+  $[X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] = -48A_{\alpha}^{*} $
+  が存在する (残りの関係式はこの両辺に$\theta$をつけることで得られる)．
+  
+  $\ge^{*} $と$\sulie(2,1) $の対応を，
+  \begin{align*}
+    X_{\alpha}^{*} & \leftrightarrow
+                     \begin{pmatrix}
+                       0 & 1 & 0\\ -1 & 0 & 1\\ 0 & 1 & 0
+                     \end{pmatrix},&   X_{2\alpha}^{*}  \leftrightarrow
+                     \begin{pmatrix}
+                       \img & 0 & -\img \\ 0 & 0 & 0\\ \img & 0 & -\img
+                     \end{pmatrix},\\
+    \theta X_{\alpha}^{*} & \leftrightarrow
+                     \begin{pmatrix}
+                       0 & 1 & 0\\ -1 & 0 & -1\\ 0 & -1 & 0
+                     \end{pmatrix},&   \theta X_{2\alpha}^{*}  \leftrightarrow
+                     \begin{pmatrix}
+                       \img & 0 & \img \\ 0 & 0 & 0\\ -\img & 0 & -\img
+                     \end{pmatrix},\\
+    Y_{\alpha}^{*} & \leftrightarrow
+                     -2 \begin{pmatrix}
+                       0 & \img & 0\\ \img & 0 & -\img \\ 0 & \img & 0
+                     \end{pmatrix},&   \theta Y_{\alpha}^{*}  \leftrightarrow
+                     \begin{pmatrix}
+                       0 & \img  & 0 \\ \img & 0 & \img \\ 0 & -\img & -0
+                     \end{pmatrix},\\
+    A_{\alpha}^{*} & \leftrightarrow
+                    \frac{1}{12} \begin{pmatrix}
+                       0 & 0 & 1\\ 0 & 0 & 0\\ 1 & 0 & 0
+                     \end{pmatrix},&   [X_{\alpha},\theta Y_{\alpha}^{*}] \leftrightarrow
+                    -4 \begin{pmatrix}
+                       \img & 0 & 0 \\ 0 & -2\img & 0\\  & 0 & \img
+                     \end{pmatrix}
+  \end{align*}
+  でつけ，この対応がLie環としての同型であること (上の関係式が満たされること) を愚直に計算して，\Cref{thm:0810}が示せる．
+  
+\end{pfwn}
+
 
 \subsubsection{補足: \Cref{thm:1216-main}の微分幾何的側面}
 \begin{defi}{\cite[Definition~1.3]{e72-1}}\label{def:visibility}

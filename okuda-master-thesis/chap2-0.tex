@@ -60,14 +60,14 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   %   1 & 0 & 0\\
   %   0 & 0 & 0
   % \end{pmatrix}$とする．
-  $X = 0\Rightarrow Y(\real X) = \{0\} $と$X\in \ha\setminus\{0\} $のときに$Y(\real X) $が非有界であることは明らかであるから，$X\nin \ha $の場合にのみ議論すればよい．つまり
-  $X =
-  \begin{pmatrix}
-    0 & z & w \\
-    \bar{z} & 0 & 0 \\
-    \bar{w} & 0 & 0 
-  \end{pmatrix}
-  \in \pe\setminus\ha $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $を任意に1つ固定して議論して一般性を失わない．このとき，$X\in\pe\setminus \ha $より$\re z \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．
+  $X = 0\Rightarrow Y(\real X) = \{0\} $と$X\in \ha\setminus\{0\} $のときに$Y(\real X) $が非有界であることは明らかであるから，$X\nin \ha $の場合にのみ議論すればよい．% つまり
+  % $X =
+  % \begin{pmatrix}
+  %   0 & z & w \\
+  %   \bar{z} & 0 & 0 \\
+  %   \bar{w} & 0 & 0 
+  % \end{pmatrix}
+  % \in \pe\setminus\ha $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $を任意に1つ固定して議論して一般性を失わない．このとき，$X\in\pe\setminus \ha $より$\re z \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．
 
   $G$の Cartan 対合を$\Theta(g) = \inv{(g^{*})} $ ($g^{*}$は$g$の共役転置) とするとき，$\Theta(e^{Y(tX)}e^{Z(tX)})\cdot o_K = e^{-Y(tX)}e^{-Z(tX)}\cdot o_K = \Theta(e^{X})\cdot o_K = e^{-X}\cdot o_K $より，「$Y(\real X) $が非有界$\iff Y(\real X)\subset \real A $が上に非有界」である．
 
@@ -75,7 +75,18 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
   このとき，$\{\abs{t_n}\}_{n\in \nat}$が有界$\iff \{e^{t_n X}\cdot o_K\}_{n\in \nat}  $が有界ならば，$G/K\ni e^{X}\cdot o_K\mapsto (Y(X), Z(X))\in (\ha\cap \pe)\oplus (\per{\ha}\cap \pe) $，$X\in \pe$が微分同相であることから$\{s_n\}_{n\in \nat} $も有界である．従って対偶より$\lim_{n\to\infty}s_n\to \infty $ならば$\lim_{n\to \infty}\abs{t_n}\to \infty $である．
 
-  \Cref{lem:exp-quat}より，  
+  任意の$\per{\ha}\cap\pe $の元はある$Z =
+  \begin{pmatrix}
+    0 & z & w \\
+    \bar{z} & 0 & 0 \\
+    \bar{w} & 0 & 0 
+  \end{pmatrix} \in \per{\ha}\cap\pe $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $と$r\in \real$により$rZ$と表せる．$Z\in\pe\setminus \ha $より$\re z \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．$Z(t_n) = r_n\begin{pmatrix}
+    0 & z_n & w_n \\
+    \bar{z_n} & 0 & 0 \\
+    \bar{w_n} & 0 & 0 
+  \end{pmatrix} $とする．
+
+  \Cref{lem:exp-quat}より， 
   \begin{align*}
     e^{s_n A}e^{Z(t_n X)}\cdot o_K &=
     \begin{pmatrix}

@@ -50,14 +50,12 @@
 \end{lem}
 
 \begin{npfwn}[\Cref{lem:basic-yosou}]
-  \leavevmode
-  \vspace{-2em}
+  \leavevmode\vspace{-1em}
   \begin{enumerate}
   \item 背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対しては$[X_1,X_2 ] = 0$より$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
   \item $X_1 = 0\iff X\in \per{\ha}\cap\pe $より$Z(tX) = tX $，$Y(tX) = 0 $であることによる．
   \item[4.] 同値な命題である「$X\in \pe$に対し，$[X_1,X_2] = 0 $かつ$X_1 \neq 0$であることと$f X \in \ha\setminus\{0\} $であることは同値である」を示せば良い．$G$の実階数は1で，$H$は非コンパクトかつ$\Theta H = H$であるから，$\ha\subset \pe$であり，$\ha$は$\ge$の極大可換部分空間である．よって$X_1\neq 0$かつ$[X_1,X_2] = 0  \implies X_2 = 0 $であり，$X = X_1 + X_2\in \ha\setminus\{0\} $を得る．
-  \end{enumerate}
-  
+  \end{enumerate}  
 \end{npfwn}
 
 $Y(\real X) $の有界性は$\Ad(k) $-不変である．つまり\Cref{lem:1101}が成り立つ．
@@ -65,17 +63,15 @@ $Y(\real X) $の有界性は$\Ad(k) $-不変である．つまり\Cref{lem:1101}
   $k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定めると，$Y(\real X)$が有界であることと$ Y'(\real X') $が有界であることは同値である．
 \end{lem}
 
-\begin{pfwn}{\Cref{lem:1101}}
-
+\begin{npfwn}[\Cref{lem:1101}]
   主張は$(X,\ha) $と$(X',\ha')$に対して対称的であるから，$Y(\real X) $が有界ならば$Y'(\real X') $が有界であることのみを示せば十分である．
 
   任意に$r\in \real$を取る．$e^{rX'}\cdot o_K = e^{Y'(r X')}e^{Z'(r X')}\cdot o_K  $であり，両辺に左から$\inv{k} $を掛けると，$e^{r X} = e^{\Ad(\inv{k})( Y'(r X'))}e^{\Ad(\inv{k})( Z'(r X'))}\cdot o_K  $を得る．ここで$Y'(rX')\in \ha'\cap \pe $，$Z'(r X')\in \per{\ha'}\cap \pe $であるから$\Ad(\inv{k})(Y'(r X'))\in \ha\cap \pe $，$\Ad(\inv{k})(Z'(r X')) \in \per{\ha}\cap \pe $である．
 
   \Cref{thm:kob89-lem6.1}により$\pi$は微分同相であるから任意の$r\in \real$に対して$\Ad(\inv{k})(Y'(r X')) = Y(rX)  $である．$Y'(\real X) = \Ad(k)(Y(\real X))  $であり，$\Ad(k) $は有限次元空間の間の線型写像であるから有界性を保つ．
 
-  以上から\Cref{lem:1101}が示された．
-  
-\end{pfwn}
+  以上から\Cref{lem:1101}が示された．  
+\end{npfwn}
 
 
 $Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
@@ -108,7 +104,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   $\ge\defeq \sulie(1,1)$のKilling形式から定まる{\Poincare}円板$G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \} $の計量は$ \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $である．
 \end{lem}
 
-\begin{pfwn}{\Cref{lem:riem-metric-su11}}
+\begin{npfwn}[\Cref{lem:riem-metric-su11}]
   
 $\ge$の元を$G/K$上の左不変ベクトル場と同一視すると$X' \defeq 
 \begin{pmatrix}
@@ -165,11 +161,10 @@ $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を
 である．
 
 以上より$g  =  \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $が示された．
+\end{npfwn}
 
-\end{pfwn}
 
-
-\begin{pfwn}{\Cref{prop:yosou-eg}}
+\begin{npfwn}[\Cref{prop:yosou-eg}]
 
 
   $k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$X_{\theta} \defeq k_{\theta/2}
@@ -203,8 +198,7 @@ $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を
   を得る．
 
   \bluetext{要確認: ここで\Cref{lem:riem-metric-su11}より$\dfrac{r}{2\sqrt{2}} = \tanh {2\sqrt{2}}t$，$\dfrac{h}{2\sqrt{2}} = \tanh {2\sqrt{2}}s$であり\Cref{eq:1018-main} は$\cos\theta \tanh \dfrac{t}{4\sqrt{2}} = \tanh \dfrac{s}{4\sqrt{2}} $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界$\iff \abs{\cos\theta}\neq 1 \iff  X\nin \ha  $である．}
-  
-\end{pfwn}
+\end{npfwn}
 
 \begin{rem}\label{rem:su11-by-angle}
 
@@ -239,7 +233,7 @@ $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を
 \end{cor}
 
 
-\begin{pfwn}{\Cref{cor:yosou-eg}}
+\begin{npfwn}[\Cref{cor:yosou-eg}]
   $\SO(1,n)/\SO(n)$の開球としての実現を考える．「$e^X\cdot o_K $と$o_K$を結ぶ直線」と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
   \begin{figure}[H]
     \centering
@@ -253,7 +247,7 @@ $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を
   
   この断面に現れるのは\Cref{fig:yosou-eg-1}と同じであるから，同様の計算により\Cref{cor:yosou-eg}を得る．
   
-\end{pfwn}
+\end{npfwn}
 
 
 \subsection{\Cref{yosou:1121} の観察: \Cref{yosou:1121}の仮定を外した場合の成り立たない例}
@@ -280,15 +274,14 @@ $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を
   $\ha = \real Y_1 \oplus \real Y_2 $，$X = \diag(1,0,-1) $に対し，$[X,\ha] \neq \{0\} $であるが$Y(\real X) = \real Y_1 $であり，非有界である．
 \end{lem}
 
-\begin{calcof}{\Cref{lem:1118-main}}
+\begin{ncalcof}[\Cref{lem:1118-main}]
 
   $\ha$は可換Lie環であり，$\ge = \slie(3,\real) $のCartan対合$\theta W \defeq -\trans{W} $に対し$\ha = \theta \ha$である．
 
   $[X,\ha]\neq 0 $は，$[X, Y_2] \neq 0$より従う．
 
   ここで$Z_1\defeq \diag(1,-1,0)\in \per{\ha}\cap \pe $であり，任意の$t\in \real$に対し，$e^{2tX} = e^{tY_1}e^{tZ_1} $であるから，$Y(\real X) = \real Y_1 $となり，\Cref{lem:1118-main} が示された．
-  
-\end{calcof}
+\end{ncalcof}
 
 \Cref{lem:1118-main}において$X$と$\ha$は，$[X,\ha] \neq \{0\} $だが$[X,(\ha\cap \pe)] = \{0\}$かつ$X\not\perp (\ha\cap \pe) $となるように取った．  
 

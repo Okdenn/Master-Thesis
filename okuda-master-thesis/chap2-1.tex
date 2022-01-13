@@ -14,14 +14,22 @@
   \vspace{-1em}
   \begin{itemize}
   \item $\ah \subset \ge$を極大分裂可換部分代数，$\emm \defeq \zet_{\ka}(\ah) \defeq \{W\in \ka\mid [W,\ah] = \{0\} \} $とする．$B$を$\ge$のKilling 形式とする．
-  \item $\Sigma(\ge,\ah) $を$\ah$に関する制限ルート系とする．$\ge_{\lambda} $を，$\lambda\in \ah^{*}$のルート空間とし，$Y_{\alpha}\defeq [\theta X_{\alpha}, X_{2\alpha}] $とする．
+  \item $\Sigma(\ge,\ah) $を$\ah$に関する制限ルート系とする．$\ge_{\lambda} $を$\lambda\in \ah^{*}$のルート空間とする
+  \item $Y_{\alpha}\defeq [\theta X_{\alpha}, X_{2\alpha}] $とする．
   \item $A_{\alpha}\in \ah $を，任意の$H\in \ah$に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とする．
     
-    このとき，任意の$H\in \ah$に対して$B(H, [X_{\alpha}, \theta X_{\alpha}]) = \alpha(H) B(X_{\alpha}, \theta X_{\alpha}) $より$[X_{\alpha}, \theta X_{\alpha}] = B(X_{\alpha}, \theta X_{\alpha})A_{\alpha} $ (同様に$[Y_{\alpha}, \theta Y_{\alpha}]  = B(Y_{\alpha}, \theta Y_{\alpha})A_{\alpha} $，$ [X_{2\alpha}, \theta X_{2\alpha}] = 2B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} $) である．
+    このとき，任意の$H\in \ah$に対して$B(H, [X_{\alpha}, \theta X_{\alpha}]) = \alpha(H) B(X_{\alpha}, \theta X_{\alpha}) $，したがって$[X_{\alpha}, \theta X_{\alpha}] = B(X_{\alpha}, \theta X_{\alpha})A_{\alpha} $ (同様に$[Y_{\alpha}, \theta Y_{\alpha}]  = B(Y_{\alpha}, \theta Y_{\alpha})A_{\alpha} $，$ [X_{2\alpha}, \theta X_{2\alpha}] = 2B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} $) である．
     \item $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $，$ c_{2\alpha}  \defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})}} $とする．
 
-    また，$X_{\alpha}^{*}\defeq c_{\alpha}X_{\alpha} $，$X_{2\alpha}^{*}\defeq c_{2\alpha}X_{2\alpha} $，$Y_{\alpha}^{*} \defeq [\theta X_{\alpha}^{*}, X_{2\alpha}^{*} ] = c_{\alpha}c_{2\alpha}Y_{\alpha} $，$A_{\alpha}^{*}\defeq \dfrac{1}{12\alpha(A_{\alpha}) % \lyama \alpha, \alpha\ryama
-    }A_{\alpha} $とする．
+    また，
+    \begin{itemize}
+    \item $X_{\alpha}^{*}\defeq c_{\alpha}X_{\alpha} $
+    \item $X_{2\alpha}^{*}\defeq c_{2\alpha}X_{2\alpha} $
+    \item $Y_{\alpha}^{*} \defeq [\theta X_{\alpha}^{*}, X_{2\alpha}^{*} ] = c_{\alpha}c_{2\alpha}Y_{\alpha} $
+      \item $A_{\alpha}^{*}\defeq \dfrac{1}{12\alpha(A_{\alpha}) % \lyama \alpha, \alpha\ryama
+      }A_{\alpha} $
+    \end{itemize}
+    とする．
   \end{itemize}
 \end{nttdef}
 
@@ -35,8 +43,7 @@
   $[X_{\alpha},\theta Y_{\alpha}]\in \emm\setminus\{0\} $である．また$[[X_{\alpha}, \theta Y_{\alpha}], X_{\alpha}] = -3\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})Y_{\alpha} $である．
 \end{lem}
 
-\begin{pfwn}{\Cref{lem:3.3}}
-  
+\begin{npfwn}[\Cref{lem:3.3}]
   $Y_{\alpha} \in \ge_{\alpha} $より$[X_{\alpha},\theta Y_{\alpha}]\in \emm+ \ah$であり，任意の$H\in \ah$に対して
   \begin{align*}
     B(H, [X_{\alpha},\theta Y_{\alpha}]) &= B([H, X_{\alpha}], Y_{\alpha}) = \alpha(H) B(X_{\alpha}, [X_{\alpha}, \theta X_{2\alpha}]) \\
@@ -53,8 +60,7 @@
                                                  &= -3\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})Y_{\alpha} \neq 0
   \end{align*}
   より，$\theta [\theta X_{\alpha},Y_{\alpha}] = [X_{\alpha},\theta Y_{\alpha}]\in \emm\setminus\{0\} $である．
-  
-\end{pfwn}
+\end{npfwn}
 
 \vspace{-1em}
 \begin{lem}\label{lem:3.4}  
@@ -68,8 +74,7 @@
 
 \end{lem}
 
-\begin{pfwn}{\Cref{lem:3.4}}
-
+\begin{npfwn}[\Cref{lem:3.4}]
   $[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}]  \in \real X_{\alpha} $を示せば，\Cref{lem:3.3} と併せて \Cref{lem:3.4} が従う．
 
   
@@ -95,9 +100,8 @@
     [[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] &=  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} \\
                                                   &= -6\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha}
   \end{align*}
-を得る．
-  
-\end{pfwn}
+を得る．  
+\end{npfwn}
 
 \begin{lem}\label{lem:3.5}
   $[[X_{\alpha}, \theta Y_{\alpha}], X_{2\alpha}] = 0$である．
@@ -114,18 +118,25 @@
 
 
 
-\begin{pfwn}{\Cref{thm:0810}}
-
-  % \Cref{lem:3.2}--\ref{lem:3.6} により，地道に確認することで
-
+\begin{npfwn}[\Cref{thm:0810}]
   $\ge^{*}_0 \defeq \real A_{\alpha}\oplus \real[X_{\alpha}, \theta Y_{\alpha}] $，$\ge^{*}_{\alpha} \defeq \real X_{\alpha}\oplus \real Y_{\alpha}  $，$\ge^{*}_{-\alpha} \defeq \real \theta X_{\alpha}\oplus \real \theta Y_{\alpha}  $，$\ge^{*}_{2\alpha} \defeq \real X_{2\alpha} $，$\ge^{*}_{-2\alpha} \defeq \real \theta X_{2\alpha}$とすると，\Cref{lem:3.2}--\ref{lem:3.6}より，$\ge^{*} = \ge^{*}_{0} \oplus \ge^{*}_{\alpha}\oplus \ge^{*}_{-\alpha} \oplus \ge^{*}_{2\alpha} \oplus \ge^{*}_{-2\alpha} $が示される．
 
   
   非自明な$\ge^{*} $のLie括弧の関係は以下の通りである (残りの関係式はこの両辺に$\theta$をつけることで得られる)．
 
-  $[X_{\alpha}^{*}, Y_{\alpha}^{*}] = -4X_{2\alpha}^{*} $ (\Cref{lem:3.2}による)，$[X_{\alpha}^{*},[X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]]  = -6Y_{\alpha}^{*}$ (\Cref{lem:3.3}による)，$[X_{\alpha}^{*}, \theta X_{\alpha}^{*}] = -24A_{\alpha}^{*} $ (定義による)，$[X_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ ($\ge_{3\alpha} = 0$による)，$[X_{\alpha}^{*}, \theta X_{2\alpha}^{*}] = \theta Y_{\alpha}^{*} $，\\
-  $[Y_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ (\Cref{lem:3.5}による)，$[Y_{\alpha}^{*},\theta X_{2\alpha}^{*}] = -4\theta X_{\alpha}^{*} $ (\Cref{lem:3.6}による)，$[Y_{\alpha}^{*}, \theta Y_{\alpha}^{*}] = -96A_{\alpha}^{*} $ (\Cref{lem:3.4}による)，$[Y_{\alpha}^{*}, [X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]] = 24X_{\alpha}^{*} $ (\Cref{lem:3.4}による) \\
-  $[[X_{\alpha}^{*}, \theta Y_{\alpha}], X_{2\alpha}^{*}] = [[X_{\alpha}^{*}, \theta Y_{\alpha}], \theta X_{2\alpha}^{*}] = 0$ ($\bcs$\Cref{lem:3.6})，$[X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] = -48A_{\alpha}^{*} $
+  \begin{itemize}
+  \item $[X_{\alpha}^{*}, Y_{\alpha}^{*}] = -4X_{2\alpha}^{*} $ (\Cref{lem:3.2}による)
+  \item $[X_{\alpha}^{*},[X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]]  = -6Y_{\alpha}^{*}$ (\Cref{lem:3.3}による)
+  \item $[X_{\alpha}^{*}, \theta X_{\alpha}^{*}] = -24A_{\alpha}^{*} $ (定義による)
+  \item $[X_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ ($\ge_{3\alpha} = 0$による)
+  \item$[X_{\alpha}^{*}, \theta X_{2\alpha}^{*}] = \theta Y_{\alpha}^{*} $
+  \item $[Y_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ (\Cref{lem:3.5}による)
+  \item $[Y_{\alpha}^{*},\theta X_{2\alpha}^{*}] = -4\theta X_{\alpha}^{*} $ (\Cref{lem:3.6}による)
+  \item $[Y_{\alpha}^{*}, \theta Y_{\alpha}^{*}] = -96A_{\alpha}^{*} $ (\Cref{lem:3.4}による)
+    \item $[Y_{\alpha}^{*}, [X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]] = 24X_{\alpha}^{*} $ (\Cref{lem:3.4}による)
+    \item $[[X_{\alpha}^{*}, \theta Y_{\alpha}], X_{2\alpha}^{*}] = [[X_{\alpha}^{*}, \theta Y_{\alpha}], \theta X_{2\alpha}^{*}] = 0$ (\Cref{lem:3.6}による)
+    \item $[X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] = -48A_{\alpha}^{*} $
+  \end{itemize}
   
   
   $\ge^{*} $と$\sulie(2,1) $の対応を，
@@ -161,9 +172,8 @@
   \end{align*}
   でつける．この対応がLie環としての同型であること (上の関係式が満たされること) は計算することにより従う．
 
-  以上より\Cref{thm:0810}が示された．
-  
-\end{pfwn}
+  以上より\Cref{thm:0810}が示された．  
+\end{npfwn}
 
 \begin{lem}\label{lem:su11}\bluetext{証明せよ}
   
@@ -174,19 +184,19 @@
   任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$G$が実階数1ならば，極大分裂可換部分代数$\ah\defeq \real Y\subset \ge$に対し$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，それぞれ\Cref{thm:0810}と\Cref{lem:su11}より，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
 \end{cor}
 
-\begin{pfwn}{\Cref{cor:sub-lie-alg}}
+\begin{npfwn}[\Cref{cor:sub-lie-alg}]
 
   \begin{case}
-    $\Sigma(\ge,\ah) = \{\pm\alpha\} $の場合
+    \textbf{$\Sigma(\ge,\ah) = \{\pm\alpha\} $の場合}
 
-    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} $，$\ge_0 \defeq \ze_{\ge}(\ah) $より，$\pe = \ah \oplus (\ge_{\alpha}\cap\pe) \oplus (\ge_{-\alpha}\cap\pe) $である．$X \pe\setminus \ah$をこの分解に対応して$X = X_0 + X_{\alpha} + X_{-\alpha} $と分解すると，$X\in \pe\setminus \ah$より$ X_{-\alpha} = -\theta X_{\alpha}\neq 0 $である．したがってこの$X_{\alpha}\neq 0 $と$Y$に\Cref{lem:su11}を適用することにより$\ge_0\simeq \sulie(1,1)$で$X,Y\in \ge_0 $なるものが存在する．
+    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} $，$\ge_0 \defeq \ze_{\ge}(\ah) $より$X \pe\setminus \ah$をこの分解に対応して$X = X_0 + X_{\alpha} + X_{-\alpha} $と分解すると，$X\in \pe\setminus \ah$より$ X_{-\alpha} = -\theta X_{\alpha}\neq 0 $である．したがってこの$X_{\alpha}\neq 0 $と$Y$に\Cref{lem:su11}を適用することにより$\ge_0\simeq \sulie(1,1)$で$X,Y\in \ge_0 $なるものが存在する．
     
   \end{case}
   
   \begin{case}
-    $\Sigma(\ge,\ah) = \{\pm\alpha, \pm 2\alpha\} $の場合
+    \textbf{$\Sigma(\ge,\ah) = \{\pm\alpha, \pm 2\alpha\} $の場合}
 
-    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} \oplus \ge_{2\alpha}\oplus \ge_{-2\alpha}  $，$\ge_0 \defeq \ze_{\ge}(\ah) $より，$\pe = \ah \oplus (\ge_{\alpha}\cap\pe) \oplus (\ge_{-\alpha}\cap\pe)\oplus (\ge_{2\alpha}\cap\pe) \oplus (\ge_{-2\alpha}\cap\pe) $である．$X \pe\setminus \ah$をこの分解に対応して$X = X_0 + X_{\alpha} + X_{-\alpha} + X_{2\alpha} + X_{-2\alpha} $と分解すると，$X\in \pe$より$ X_{-\alpha} = - \theta X_{\alpha} $，$ X_{-2\alpha} = - \theta X_{2\alpha} $である．
+    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} \oplus \ge_{2\alpha}\oplus \ge_{-2\alpha}  $，$\ge_0 \defeq \ze_{\ge}(\ah) $より$X \pe\setminus \ah$をこの分解に対応して$X = X_0 + X_{\alpha} + X_{-\alpha} + X_{2\alpha} + X_{-2\alpha} $と書くと，$X\in \pe$より$ X_{-\alpha} = - \theta X_{\alpha} $，$ X_{-2\alpha} = - \theta X_{2\alpha} $である．
 
     ここで$X\nin \ah$より，
     \begin{enumerate}
@@ -202,10 +212,8 @@
     \end{enumerate}
     \Cref{thm:0810}を適用することにより$\ge_0\simeq \sulie(2,1)$で$X,Y\in \ge_0 $なるものが存在する．
     
-  \end{case}
-  
-  
-\end{pfwn}
+  \end{case}   
+\end{npfwn}
 
 \Cref{cor:sub-lie-alg}で定めた$\ge_0$について次の3つが成り立つ．
 \begin{lem}\cite[p.~409, Lemma~2.2]{hel01}$\ge$のCartan対合$\theta$に対して$\ge_0 = \theta\ge_0$であり，$\ge_0 $への$\theta$の制限は$\ge_0$のCartan分解を与える．
@@ -225,9 +233,7 @@
 
 以上のことを用いて，$G$が実階数1の場合を$\SU(1,2) $ないし$\SU(1,1) $に帰着させることにより\Cref{thm:1216-main}を示す．
 
-\begin{pfwn}{\Cref{thm:1216-main}}
-
-  % $X\nin \ha$に対して$Y(\real X)$が有界であることを背理法により示す．
+\begin{npfwn}[\Cref{thm:1216-main}]
   $\ge$の極大分裂可換部分代数$\ha$の定めるルート系を$\Sigma(\ge,\ha) $とし，$\Sigma(\ge,\ha) $の形によって2通りに場合分けして証明する．
   
   \begin{case}
@@ -268,9 +274,8 @@
     % 場合1と同様に，任意の固定した$\tau \in \real$に対し$\ah_{\tau} \defeq \real Y(\tau X)$が定める制限ルート系も，ある$\alpha_{\tau} \in \ah_{\tau}^{*}$，$ \norm{\alpha_{\tau}} = 1 $により$\Sigma(\ge,\ah_{\tau}) = \{\pm\alpha_{\tau}, \pm 2\alpha_{\tau} \}$となるが，$Y(\real X) $の非有界性より，ある$T\in \real$で$\abs{\alpha_{t}(Y(tX))} >  $\bluetext{埋めよ}，$\forall t \geq T$なるものが存在する．
     
     
-  \end{case}
-  
-\end{pfwn}
+  \end{case}  
+\end{npfwn}
 
 
 \subsubsection{補足: \Cref{thm:1216-main}の微分幾何的側面}

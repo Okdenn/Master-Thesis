@@ -185,21 +185,22 @@
 
   以上より$X_{\alpha} $と$\theta X_{\alpha} $により生成される$\ge$の部分Lie環$\ge'$は$\ge' = \real A_{\alpha}\oplus \real X_{\alpha} + \real X_{-\alpha}  $である．
 
-  $\tr(\ad_{\ge'}A_{\alpha} \ad_{\ge'}A_{\alpha} ) = 2\alpha(A_{\alpha})^2\neq 0 $より，$c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $を用いて$\ge'$と$\sulie(1,1)$の対応を
+  % $\tr(\ad_{\ge'}A_{\alpha} \ad_{\ge'}A_{\alpha} ) = 2\alpha(A_{\alpha})^2\neq 0 $より，
+  $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $を用いて$\ge'$と$\sulie(1,1)$の対応を
   \begin{align*}
-    A_{\alpha} \leftrightarrow
+    \dfrac{1}{B(A_{\alpha}, A_{\alpha})} A_{\alpha} &\leftrightarrow
     \begin{pmatrix}
       0 & 1 \\ 1 & 0
-    \end{pmatrix}, & c_{\alpha} X_{\alpha} \leftrightarrow
+    \end{pmatrix},& c_{\alpha} X_{\alpha} \leftrightarrow
       \begin{pmatrix}
-        hoge
+        \sqrt{-1} & -\sqrt{-1} \\ \sqrt{-1} & -\sqrt{-1}
       \end{pmatrix},\\
-    c_{\alpha} X_{-\alpha}\leftrightarrow
+    c_{\alpha} X_{-\alpha} &\leftrightarrow
       \begin{pmatrix}
-        hoge
-      \end{pmatrix}
+        \sqrt{-1} & \sqrt{-1} \\ -\sqrt{-1} & -\sqrt{-1}
+      \end{pmatrix} 
   \end{align*}
-  により与えると，これは$\ge'$と$\sulie(1,1)$の間の同型になっている．
+  により与えると，\bluetext{これは$\ge'$と$\sulie(1,1)$の間の同型になっている．}チェックせよ
 \end{npfwn}
 
 \begin{cor}\label{cor:sub-lie-alg}

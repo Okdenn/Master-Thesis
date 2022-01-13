@@ -16,13 +16,12 @@
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
   \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha}\defeq \{W\in \ge\mid B(W, \ha) = \{0\} \} $とする．
-  % \item 
+  \item $X\in \pe$に対し，ベクトル空間としての分解$\pe =( \ha\cap \pe)\oplus(\per{\ha}\cap \pe) $に対応した分解を$X = X_1 + X_2 $，$X_1 \in \ha\cap \pe$，$X_2\in \per{\ha}\cap \pe$とする．
   \end{itemize}  
 \end{nttdef}
 
 以下の\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe$に対し，$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義する．
 \begin{thm}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
-
   $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
 \end{thm}
 
@@ -33,9 +32,8 @@
   $\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}  $と定める．
 \end{defi}
 
-\begin{yosou}(by T.~Kobayashi)\label{yosou:1121}
-  
-  ベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応して$X = X_1 + X_2 $と分解すると，$\pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0\text{ である．} \}$である．
+\begin{yosou}(by T.~Kobayashi)\label{yosou:1121}  
+  $\pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0\text{ である．} \}$である．
 \end{yosou}
 
 \Cref{yosou:1121}についての基本的な事項を挙げる．
@@ -43,7 +41,7 @@
 \begin{lem}\label{lem:basic-yosou}
   \leavevmode\vspace{-1em}
   \begin{enumerate}
-  \item $\pe_{H,\bdd} \subset \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0 \}$である．\bluetext{もっと書くことはあるはず．2022/01/11}
+  \item $\pe_{H,\bdd} \subset \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0 \}$である．
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
   \item 1，2より\Cref{yosou:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
   \item $G$が実階数1のとき，\Cref{yosou:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
@@ -54,18 +52,16 @@
   \leavevmode
   \vspace{-2em}
   \begin{enumerate}
-  \item 背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対しては$[X_1,X_2 ] = 0$より$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$であり，$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
+  \item 背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対しては$[X_1,X_2 ] = 0$より$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
   \item $X_1 = 0\iff X\in \per{\ha}\cap\pe $より$Z(tX) = tX $，$Y(tX) = 0 $であることによる．
-  \item[4.] 対偶を示す．$X\in \pe$に対し，$[X_1,X_2] = 0 $かつ$X_1 \neq 0\iff X \in \ha\setminus\{0\} $を示せば良い．$G$の実階数は1で，$H$は非コンパクトであるから，$\ha\subset \pe$であり，$\ha$は$\ge$の極大可換部分空間である．よって$X_1\neq 0$かつ$[X_1,X_2] = 0  \implies X_2 = 0 $であり，$X = X_1 + X_2\in \ha\setminus\{0\} $を得る．
+  \item[4.] 同値な命題である「$X\in \pe$に対し，$[X_1,X_2] = 0 $かつ$X_1 \neq 0$であることと$f X \in \ha\setminus\{0\} $であることは同値である」を示せば良い．$G$の実階数は1で，$H$は非コンパクトかつ$\Theta H = H$であるから，$\ha\subset \pe$であり，$\ha$は$\ge$の極大可換部分空間である．よって$X_1\neq 0$かつ$[X_1,X_2] = 0  \implies X_2 = 0 $であり，$X = X_1 + X_2\in \ha\setminus\{0\} $を得る．
   \end{enumerate}
   
 \end{pfwn}
 
-$Y(\real X) $の有界性は$\Ad(k) $-不変である;
+$Y(\real X) $の有界性は$\Ad(k) $-不変である．つまり\Cref{lem:1101}が成り立つ．
 \begin{lem}\label{lem:1101}
-  $k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とするとき，$Y(\real X)$が有界$\iff Y'(\real X') $が有界である．
-
-  ここで$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．
+  $k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定めると，$Y(\real X)$が有界$\iff Y'(\real X') $が有界である．
 \end{lem}
 
 \begin{pfwn}{\Cref{lem:1101}}
@@ -83,8 +79,7 @@ $Y(\real X) $の有界性は$\Ad(k) $-不変である;
 
 $Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
 
-\begin{thm}\cite[Lemmma~5.4]{kob97}\label{thm:kob97}
-  
+\begin{thm}\cite[Lemmma~5.4]{kob97}\label{thm:kob97}  
   $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$である．
 
   ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の元がなす角度の最小値$0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2} $であり，
@@ -109,12 +104,12 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 % \bluetext{$\sulie(1,1) $のKilling形式と$r = \tanh t$の関係を明記せよ．}
 
 \begin{lem}\label{lem:riem-metric-su11}
-  $\sulie(1,1)$のKilling形式から定まる{\Poincare}円板$G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \} $の計量は$ \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $である．
+  $\ge\defeq \sulie(1,1)$のKilling形式から定まる{\Poincare}円板$G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \} $の計量は$ \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $である．
 \end{lem}
 
 \begin{pfwn}{\Cref{lem:riem-metric-su11}}
   
-$X' \defeq 
+$\ge$の元を$G/K$上の左不変ベクトル場と同一視すると$X' \defeq 
 \begin{pmatrix}
   0 & 1 \\ 1 & 0
 \end{pmatrix} = \dfrac{\del}{\del x}
@@ -122,9 +117,9 @@ $，$Y' \defeq
 \begin{pmatrix}
   0 & \sqrt{-1} \\ -\sqrt{-1} & 0
 \end{pmatrix} = \dfrac{\del}{\del y}
-$とすると，$\norm{X'}^2 = \norm{Y'}^2 = 8 $，$\lyama X', Y' \ryama = 0$であって，$0\in G'/K'$で主張が成り立つ．
+$である．$\ge$のKilling形式$B$から定まる$\pe$上のノルム$\norm{-} $に対して$\norm{X'}^2 = \norm{Y'}^2 = 8 $，$B(X', Y' ) = 0$であって，$0\in G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \}  $で主張が成り立つ．
 
-$k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$a_r\defeq
+したがって$k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$a_r\defeq
 \begin{pmatrix}
   \cosh r & \sinh r \\  \sinh r & \cosh r
 \end{pmatrix}
@@ -148,10 +143,25 @@ $とすると，
 \end{figure}
 
 
-$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を与える曲線は$\gamma_x(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \cosh r} $であるから，$\lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_x(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X' = (1 - \tanh^2 r)\dfrac{\del}{\del x} = (1-x^2-y^2)\dfrac{\del}{\del x} $である．
+$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を与える曲線は
+\begin{align*}
+  \gamma_x(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \cosh r}
+\end{align*}
+であるから，
+\begin{align*}
+  \lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_x(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X' = (1 - \tanh^2 r)\dfrac{\del}{\del x} = (1-x^2-y^2)\dfrac{\del}{\del x}
+\end{align*}
+である．
 
-同様に$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y'$を与える曲線は\\
-$\gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \cosh r} $であるから，$\lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_y(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y' = (1 - \tanh^2 r)\dfrac{\del}{\del y} = (1-x^2-y^2)\dfrac{\del}{\del y} $である．
+同様に$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y'$を与える曲線は
+\begin{align*}
+\gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \cosh r}
+\end{align*}
+であるから，
+\begin{align*}
+\lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_y(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y' = (1 - \tanh^2 r)\dfrac{\del}{\del y} = (1-x^2-y^2)\dfrac{\del}{\del y}
+\end{align*}
+である．
 
 以上より$g  =  \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $が示された．
 
@@ -185,7 +195,11 @@ $\gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta
 
   右の円の Euclid 距離での半径を$R$とし，$e^{tX_{\theta}}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \frac{1-h^2}{2h} , R+h = \frac{1+h^2}{2h}  $を得る．
 
-  さらに下の紫色の三角形に対して余弦定理を用いて$R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta  $を得，$\inlineequation[eq:1018-main]{\dfrac{2r\cos\theta}{r^2 + 1} = \dfrac{2h}{h^2 + 1} }$を得る．
+  さらに下の紫色の三角形に対して余弦定理を用いて$R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta  $を得，
+  \begin{align}
+    {\dfrac{2r\cos\theta}{r^2 + 1} = \dfrac{2h}{h^2 + 1} }\label{eq:1018-main}
+  \end{align}
+  を得る．
 
   \bluetext{要確認: ここで\Cref{lem:riem-metric-su11}より$\dfrac{r}{2\sqrt{2}} = \tanh {2\sqrt{2}}t$，$\dfrac{h}{2\sqrt{2}} = \tanh {2\sqrt{2}}s$であり\Cref{eq:1018-main} は$\cos\theta \tanh \dfrac{t}{4\sqrt{2}} = \tanh \dfrac{s}{4\sqrt{2}} $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界$\iff \abs{\cos\theta}\neq 1 \iff  X\nin \ha  $である．}
   
@@ -225,7 +239,7 @@ $\gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta
 
 
 \begin{pfwn}{\Cref{cor:yosou-eg}}
-  「$e^X\cdot o_K $と$o_K$を結ぶ直線」と$H\cdot o_K$で張られる超平面で {\Poincare}球$\SO(1,n)/\SO(n)$を切った際の断面を考える．
+  $\SO(1,n)/\SO(n)$の開球としての実現を考える．「$e^X\cdot o_K $と$o_K$を結ぶ直線」と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
   \begin{figure}[H]
     \centering
     % \raggedleft

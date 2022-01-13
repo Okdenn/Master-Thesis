@@ -20,7 +20,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
 \begin{nttdef}
   
-  $\quat$を四元数体とする．$\Sp(1,2)/\Sp(1)\times \Sp(2) \simeq \{(z_1, z_2)\mid z_1,z_2\in \quat ,\; \abs{z_1}^2 + \abs{z_2}^2   < 1 \} =: \quat\mathbb{H}^2 $である．これは自然表現$\Sp(1,2)\leftaction \quat^2 $の$\trans{(1,0,0)} $軌道を考え，第2，第3成分に第1成分の逆数を右からかけた空間が$\quat\mathbb{H}^2$と微分同相であるためであり，$\Sp(1,2)\leftaction \quat^3 $の$\trans{(1,0,0)} $軌道の点$
+  $\quat$を四元数体とする．$\Sp(1,2)/\Sp(1)\times \Sp(2) \simeq \{(z_1, z_2)\mid z_1,z_2\in \quat ,\; \abs{z_1}^2 + \abs{z_2}^2   < 1 \} =: \quat\mathbb{H}^2 $である．なぜならば$\trans{(1,0,0)} $の自然表現$\Sp(1,2)\leftaction \quat^2 $による軌道を考え，第2，第3成分に第1成分の逆数を右からかけた空間が$\quat\mathbb{H}^2$と微分同相であるためであり，$\Sp(1,2)\leftaction \quat^3 $の$\trans{(1,0,0)} $軌道の点$
   \begin{pmatrix}
     z_0 \\ z_1 \\ z_2 
   \end{pmatrix}
@@ -161,8 +161,11 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     &\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } - 1}\\
     % &\qquad\qquad\qquad \text{($\text{(この極限)} = 0$を示せば良い)} \\
     = & \lim_{n\to \infty}\lbig|\frac{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})(1 \pm z_n \tanh\abs{r_n}\tanh s_n )}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} - 1 \rbig|\\    
-    = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}, \\
-    &(\text{ただし } z_n'\defeq 1 \pm z_n\tanh\abs{r_n}\tanh s_n\text{ とする．}) \\
+    = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}
+  \end{align*}
+  である．ここで$ z_n'\defeq 1 \pm z_n\tanh\abs{r_n}\tanh s_n$とすると，
+  \begin{align*}
+    & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}\\
     = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )z_n'}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} \\
     = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}} 
   \end{align*}

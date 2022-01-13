@@ -80,14 +80,22 @@
                                                   &= B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - c[X_{\alpha}, [\theta X_{2\alpha}, X_{2\alpha}]] - c[\theta X_{2\alpha},[X_{2\alpha},X_{\alpha}]] \\
                                                   &= B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - cB(X_{2\alpha},\theta X_{2\alpha})\alpha(A_{2\alpha})X_{\alpha}
   \end{align*}
-  であり ($ \ge_{3\alpha} = \{0\} $による)，$A_{2\alpha} = 2A_{\alpha} $であるから，\\
-  $[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] =  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} $を得る．
+  であり ($ \ge_{3\alpha} = \{0\} $による)，$A_{2\alpha} = 2A_{\alpha} $であるから，
+  \begin{align*}
+[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] =  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha}
+  \end{align*}
+  を得る．
 
-さらに，$B(Y_{\alpha}, \theta Y_{\alpha}) = B(Y_{\alpha},[X_{\alpha}, \theta X_{2\alpha}]) = -B([X_{\alpha}, Y_{\alpha}], \theta X_{2\alpha}) = -2\alpha(A_{\alpha})B(X_{\alpha},\theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})  $であるから，最終的に
-\begin{align*}
-  &[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] =  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} \\
-  =&\ -6\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha}
-\end{align*}
+  さらに，
+  \begin{align*}
+    B(Y_{\alpha}, \theta Y_{\alpha}) &= B(Y_{\alpha},[X_{\alpha}, \theta X_{2\alpha}]) = -B([X_{\alpha}, Y_{\alpha}], \theta X_{2\alpha}) \\
+                                     &= -2\alpha(A_{\alpha})B(X_{\alpha},\theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})
+  \end{align*}
+  であるから，最終的に
+  \begin{align*}
+    [[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}] &=  B(Y_{\alpha}, \theta Y_{\alpha})\alpha(A_{\alpha})X_{\alpha} - 4\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha} \\
+                                                  &= -6\alpha(A_{\alpha})^2B(X_{\alpha}, \theta X_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})X_{\alpha}
+  \end{align*}
 を得る．
   
 \end{pfwn}
@@ -111,14 +119,15 @@
 
   % \Cref{lem:3.2}--\ref{lem:3.6} により，地道に確認することで
 
-  \Cref{lem:3.2}--\ref{lem:3.6}より，$\ge^{*} = \ge^{*}_{0} \oplus \ge^{*}_{\alpha}\oplus \ge^{*}_{-\alpha} \oplus \ge^{*}_{2\alpha} \oplus \ge^{*}_{-2\alpha} $，ただし$\ge^{*}_0 \defeq \real A_{\alpha}\oplus \real[X_{\alpha}, \theta Y_{\alpha}] $，$\ge^{*}_{\alpha} \defeq \real X_{\alpha}\oplus \real Y_{\alpha}  $，$\ge^{*}_{-\alpha} \defeq \real \theta X_{\alpha}\oplus \real \theta Y_{\alpha}  $，$\ge^{*}_{2\alpha} \defeq \real X_{2\alpha} $，$\ge^{*}_{-2\alpha} \defeq \real \theta X_{2\alpha}$，がわかる．
+  $\ge^{*}_0 \defeq \real A_{\alpha}\oplus \real[X_{\alpha}, \theta Y_{\alpha}] $，$\ge^{*}_{\alpha} \defeq \real X_{\alpha}\oplus \real Y_{\alpha}  $，$\ge^{*}_{-\alpha} \defeq \real \theta X_{\alpha}\oplus \real \theta Y_{\alpha}  $，$\ge^{*}_{2\alpha} \defeq \real X_{2\alpha} $，$\ge^{*}_{-2\alpha} \defeq \real \theta X_{2\alpha}$とすると，\Cref{lem:3.2}--\ref{lem:3.6}より，$\ge^{*} = \ge^{*}_{0} \oplus \ge^{*}_{\alpha}\oplus \ge^{*}_{-\alpha} \oplus \ge^{*}_{2\alpha} \oplus \ge^{*}_{-2\alpha} $が示される．
 
   
-  非自明な$\ge^{*} $のLie括弧の関係として，$[X_{\alpha}^{*}, Y_{\alpha}^{*}] = -4X_{2\alpha}^{*} $ ($\bcs$\Cref{lem:3.2})，$[X_{\alpha}^{*},[X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]]  = -6Y_{\alpha}^{*}$ ($\bcs$\Cref{lem:3.3})，$[X_{\alpha}^{*}, \theta X_{\alpha}^{*}] = -24A_{\alpha}^{*} $ ($\bcs$定義による)，$[X_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ ($\bcs \ge_{3\alpha} = 0$)，$[X_{\alpha}^{*}, \theta X_{2\alpha}^{*}] = \theta Y_{\alpha}^{*} $，\\
-  $[Y_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ ($\bcs$\Cref{lem:3.5})，$[Y_{\alpha}^{*},\theta X_{2\alpha}^{*}] = -4\theta X_{\alpha}^{*} $ ($\bcs$\Cref{lem:3.6})，$[Y_{\alpha}^{*}, \theta Y_{\alpha}^{*}] = -96A_{\alpha}^{*} $ ($\bcs$\Cref{lem:3.4})，$[Y_{\alpha}^{*}, [X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]] = 24X_{\alpha}^{*} $ ($\bcs$\Cref{lem:3.4}) \\
-  $[[X_{\alpha}^{*}, \theta Y_{\alpha}], X_{2\alpha}^{*}] = [[X_{\alpha}^{*}, \theta Y_{\alpha}], \theta X_{2\alpha}^{*}] = 0$ ($\bcs$\Cref{lem:3.6})，\\
-  $[X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] = -48A_{\alpha}^{*} $
-  が存在する (残りの関係式はこの両辺に$\theta$をつけることで得られる)．
+  非自明な$\ge^{*} $のLie括弧の関係は以下の通りである (残りの関係式はこの両辺に$\theta$をつけることで得られる)．
+
+  $[X_{\alpha}^{*}, Y_{\alpha}^{*}] = -4X_{2\alpha}^{*} $ (\Cref{lem:3.2}による)，$[X_{\alpha}^{*},[X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]]  = -6Y_{\alpha}^{*}$ (\Cref{lem:3.3}による)，$[X_{\alpha}^{*}, \theta X_{\alpha}^{*}] = -24A_{\alpha}^{*} $ (定義による)，$[X_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ ($\ge_{3\alpha} = 0$による)，$[X_{\alpha}^{*}, \theta X_{2\alpha}^{*}] = \theta Y_{\alpha}^{*} $，\\
+  $[Y_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ (\Cref{lem:3.5}による)，$[Y_{\alpha}^{*},\theta X_{2\alpha}^{*}] = -4\theta X_{\alpha}^{*} $ (\Cref{lem:3.6}による)，$[Y_{\alpha}^{*}, \theta Y_{\alpha}^{*}] = -96A_{\alpha}^{*} $ (\Cref{lem:3.4}による)，$[Y_{\alpha}^{*}, [X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]] = 24X_{\alpha}^{*} $ (\Cref{lem:3.4}による) \\
+  $[[X_{\alpha}^{*}, \theta Y_{\alpha}], X_{2\alpha}^{*}] = [[X_{\alpha}^{*}, \theta Y_{\alpha}], \theta X_{2\alpha}^{*}] = 0$ ($\bcs$\Cref{lem:3.6})，$[X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] = -48A_{\alpha}^{*} $
+  
   
   $\ge^{*} $と$\sulie(2,1) $の対応を，
   \begin{align*}
@@ -151,7 +160,9 @@
                        \img & 0 & 0 \\ 0 & -2\img & 0\\  & 0 & \img
                      \end{pmatrix}
   \end{align*}
-  でつけ，この対応がLie環としての同型であること (上の関係式が満たされること) を愚直に計算して，\Cref{thm:0810}が示せる．
+  でつける．この対応がLie環としての同型であること (上の関係式が満たされること) は計算することにより従う．
+
+  以上より\Cref{thm:0810}が示された．
   
 \end{pfwn}
 

@@ -12,7 +12,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   $G = \Sp(1,2) $，$H = \SO(1,1)$，$X\in \pe$に対し，$Y(\real X) $が有界$\iff X\in \pe\setminus \ha  $ or $X = 0$である．
 \end{prop}
 
-ただし，$H$は$G$の左上に入っている．すなわち，$\Lie H = \ha = \real A $，$A\defeq \begin{pmatrix}
+ただし，$H$は$G$の左上に入っている．すなわち，$\Lie H = \ha = \real Y $，$Y\defeq \begin{pmatrix}
   0 & 1 & 0 \\
   1 & 0 & 0\\
   0 & 0 & 0
@@ -20,7 +20,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
 \begin{nttdef}
   
-  $\quat$を四元数体とする．\bluetext{$\Sp(1,2) $の定義}$\Sp(1,2)/\Sp(1)\times \Sp(2) \simeq \{(z_1, z_2)\mid z_1,z_2\in \quat ,\; \abs{z_1}^2 + \abs{z_2}^2   < 1 \} =: \quat\mathbb{H}^2 $である．なぜならば$\trans{(1,0,0)} $の自然表現$\Sp(1,2)\leftaction \quat^2 $による軌道を考え，第2，第3成分に第1成分の逆数を右からかけた空間が$\quat\mathbb{H}^2$と微分同相であるためであり，$\Sp(1,2)\leftaction \quat^3 $の$\trans{(1,0,0)} $軌道の点$
+  $\quat$を四元数体とする．\bluetext{$\Sp(1,2) $の定義と自然表現の定義}$\Sp(1,2)/\Sp(1)\times \Sp(2) \simeq \{(z_1, z_2)\mid z_1,z_2\in \quat ,\; \abs{z_1}^2 + \abs{z_2}^2   < 1 \} =: \quat\mathbb{H}^2 $である．なぜならば$\trans{(1,0,0)} $の自然表現$\Sp(1,2)\leftaction \quat^2 $による軌道を考え，第2，第3成分に第1成分の逆数を右からかけた空間が$\quat\mathbb{H}^2$と微分同相であるためであり，$\Sp(1,2)\leftaction \quat^3 $の$\trans{(1,0,0)} $軌道の点$
   \begin{pmatrix}
     z_0 \\ z_1 \\ z_2 
   \end{pmatrix}
@@ -69,9 +69,9 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   % \end{pmatrix}
   % \in \pe\setminus\ha $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $を任意に1つ固定して議論して一般性を失わない．このとき，$X\in\pe\setminus \ha $より$\re z \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．
 
-  $G$の Cartan 対合を$\Theta(g) = \inv{(g^{*})} $ ($g^{*}$は$g$の共役転置) とするとき，$\Theta(e^{Y(tX)}e^{Z(tX)})\cdot o_K = e^{-Y(tX)}e^{-Z(tX)}\cdot o_K = \Theta(e^{X})\cdot o_K = e^{-X}\cdot o_K $より，「$Y(\real X) $が非有界$\iff Y(\real X)\subset \real A $が上に非有界」である．
+  $G$の Cartan 対合を$\Theta(g) = \inv{(g^{*})} $ ($g^{*}$は$g$の共役転置) とするとき，$\Theta(e^{Y(tX)}e^{Z(tX)})\cdot o_K = e^{-Y(tX)}e^{-Z(tX)}\cdot o_K = \Theta(e^{X})\cdot o_K = e^{-X}\cdot o_K $より，「$Y(\real X) $が非有界$\iff Y(\real X)\subset \real Y $が上に非有界」である．
 
-  したがって，$Y (\real X) $が非有界であるとき，列$\{t_n \in \real \}_{n\in \nat} $で，$s_n\to \infty,\; n\to \infty$，ただし$Y(t_n X) = s_nA$，なるものが存在する．
+  したがって，$Y (\real X) $が非有界であるとき，列$\{t_n \in \real \}_{n\in \nat} $で，$s_n\to \infty,\; n\to \infty$，ただし$Y(t_n X) = s_n Y$，なるものが存在する．
 
   また，任意の$\per{\ha}\cap\pe $の元はある$Z =
   \begin{pmatrix}
@@ -92,7 +92,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
   \Cref{lem:exp-quat}より， 
   \begin{align*}
-    e^{s_n A}e^{r_n Z_n}\cdot o_K &=
+    e^{s_n Y}e^{r_n Z_n}\cdot o_K &=
     \begin{pmatrix}
       \cosh s_n & \sinh s_n & 0 \\
       \sinh s_n & \cosh s_n & 0 \\
@@ -144,9 +144,9 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     0 & z_0 & w_0 \\
     \bar{z_0} & 0 & 0 \\
     \bar{w_0} & 0 & 0 
-  \end{pmatrix}$，$z_0,w_0\in \quat \st \abs{z_0}^2 +\abs{w_0}^2  = 1 $とするとき$J_n = \dfrac{\bar{z_0}}{r_0}\tanh (tr_0) $，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $であり，$X\nin ha \iff z_0\neq 1$より$\lim_{n\to \infty}J_n = \dfrac{\bar{z_0}}{r_0}\neq 1 $である．
+  \end{pmatrix}$，$z_0,w_0\in \quat \st \abs{z_0}^2 +\abs{w_0}^2  = 1 $とするとき$J_n = \dfrac{\bar{z_0}}{r_0}\tanh (tr_0) $，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $であり，$X\nin \ha \iff z_0\neq 1$より$\lim_{n\to \infty}J_n = \dfrac{\bar{z_0}}{r_0}\neq 1 $である．
 
-  以上2つの議論を合わせると$e^{s_n A}e^{r_n Z_n}\cdot o_K = e^{t_n X}\cdot o_K\implies 1 = \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n \neq 1 $となり矛盾する．
+  以上2つの議論を合わせると$e^{s_n Y}e^{r_n Z_n}\cdot o_K = e^{t_n X}\cdot o_K\implies 1 = \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n \neq 1 $となり矛盾する．
   
 
   以上より「$X\in \pe\setminus\ha \Rightarrow Y(\real X) $有界」，したがって \Cref{prop:1127-main} を得る．

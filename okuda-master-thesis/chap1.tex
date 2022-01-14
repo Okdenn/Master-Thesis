@@ -71,7 +71,7 @@ $Y(\real X) $の有界性は$\Ad(k) $-不変である．具体的には\Cref{lem
 
   任意に$r\in \real$を取る．$e^{rX'}\cdot o_K = e^{Y'(r X')}e^{Z'(r X')}\cdot o_K  $であり，両辺に左から$\inv{k} $を掛けると，$e^{r X} = e^{\Ad(\inv{k})( Y'(r X'))}e^{\Ad(\inv{k})( Z'(r X'))}\cdot o_K  $を得る．ここで$Y'(rX')\in \ha'\cap \pe $，$Z'(r X')\in \per{\ha'}\cap \pe $であるから$\Ad(\inv{k})(Y'(r X'))\in \ha\cap \pe $，$\Ad(\inv{k})(Z'(r X')) \in \per{\ha}\cap \pe $である．
 
-  \Cref{thm:kob89-lem6.1}により$\pi$は微分同相であるから任意の$r\in \real$に対して$\Ad(\inv{k})(Y'(r X')) = Y(rX)  $である．$Y'(\real X) = \Ad(k)(Y(\real X))  $であり，$\Ad(k) $は有限次元空間の間の線型写像であるから有界性を保つ．
+  \Cref{thm:kob89-lem6.1}により$\pi$は微分同相であるから，任意の$r\in \real$に対して$\Ad(\inv{k})(Y'(r X')) = Y(rX)  $である．$Y'(\real X) = \Ad(k)(Y(\real X))  $であり，$\Ad(k) $は有限次元空間の間の線型写像であるから有界性を保つ．
 
   以上から\Cref{lem:1101}が示された．  
 \end{npfwn}
@@ -80,9 +80,7 @@ $Y(\real X) $の有界性は$\Ad(k) $-不変である．具体的には\Cref{lem
 $Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
 
 \begin{thm}(\cite[Lemmma~5.4]{kob97})\label{thm:kob97}  
-  $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$である．
-
-  ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の元がなす角度の最小値$0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2} $であり，
+  $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$である．ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の元がなす角度の最小値$0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2} $であり，
   $X\in \pe\setminus \ha \iff \phi(X,\ha\cap \pe)\neq 0 $である．
 \end{thm}
 
@@ -104,7 +102,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 % \bluetext{$\sulie(1,1) $のKilling形式と$r = \tanh t$の関係を明記せよ．}
 
 \begin{lem}\label{lem:riem-metric-su11}
-  $\ge\defeq \sulie(1,1)$のKilling形式から定まる{\Poincare}円板$G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \} $の計量は$ \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $である．
+  $\ge\defeq \sulie(1,1)$のKilling形式から定まる{\Poincare}円板${G/K =\{x+\sqrt{-1}y\mid  x^2 + y^2 < 1 \} }$の計量は$ \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $である．
 \end{lem}
 
 \begin{npfwn}[\Cref{lem:riem-metric-su11}]
@@ -214,15 +212,14 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     \begin{pmatrix}
       \cosh t & \sinh t\\ \sinh t & \cosh t
     \end{pmatrix}
-    \sqrt{-1}\tanh s \in \SU(1,1)/\U(1) $，$t > 0$，$s\in \real$に対し，$o_K $と$e^{tY}e^{sZ}\cdot o_K$を結ぶ測地線が$o_K$と$e^{tY}\cdot o_K $を結ぶ測地線と$o_K$でなす角$\phi_{s,t} $は，$\tan \phi_{s,t} = \dfrac{\tanh 2s}{\sinh 2t} $を満たす．
-  \end{lem}
-  ただし，$Y \defeq
+    \sqrt{-1}\tanh s \in \SU(1,1)/\U(1) $，$t > 0$，$s\in \real$に対し，$o_K $と$e^{tY}e^{sZ}\cdot o_K$を結ぶ測地線が$o_K$と$e^{tY}\cdot o_K $を結ぶ測地線と$o_K$でなす角$\phi_{s,t} $は，$\tan \phi_{s,t} = \dfrac{\tanh 2s}{\sinh 2t} $を満たす．ただし$Y \defeq
   \begin{pmatrix}
     0 & 1\\ 1 & 0
   \end{pmatrix}
   $，$Z \defeq \begin{pmatrix}
     0 & \sqrt{-1} \\ -\sqrt{-1} & 0
   \end{pmatrix}$とする．
+  \end{lem}  
 
   \Cref{lem:0106}により\Cref{prop:yosou-eg}は次のように証明できる．
   任意の$s\in \real, 0\neq t\in \real $に対し，

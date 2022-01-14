@@ -5,7 +5,7 @@
 \end{thm}
 
 \begin{thm}\label{thm:0810}(\cite[p.~409, Theorem~3.1]{hel01})
-  $\ge = \ka \oplus \pe$を実半単純Lie環とそのCartan対合$\theta$に対する Cartan分解とし，$\alpha,2\alpha\in \Sigma(\ge,\ah) $と仮定する．$0\neq X_{\alpha}\in \ge_{\alpha} $，$0\neq X_{2\alpha}\in \ge_{2\alpha} $を任意に固定したとき，$X_{\alpha},X_{2\alpha}, \theta X_{\alpha}, \theta X_{2\alpha} $から生成されるLie環$\ge^{*} $は$\sulie(2,1)$と同型である．
+  $\ge = \ka \oplus \pe$を実半単純Lie環$\ge$のCartan対合$\theta$に対する Cartan分解とし，$\alpha,2\alpha\in \Sigma(\ge,\ah) $と仮定する．$0\neq X_{\alpha}\in \ge_{\alpha} $，$0\neq X_{2\alpha}\in \ge_{2\alpha} $を任意に固定したとき，$X_{\alpha},X_{2\alpha}, \theta X_{\alpha}, \theta X_{2\alpha} $から生成されるLie環$\ge^{*} $は$\sulie(2,1)$と同型である．
   
 \end{thm}
 以下で\Cref{thm:0810}を示すための補題や記号を設定し，\Cref{thm:0810}を示す．
@@ -14,11 +14,16 @@
   \vspace{-1em}
   \begin{itemize}
   \item $\ah \subset \ge$を極大分裂可換部分代数，$\emm \defeq \zet_{\ka}(\ah) \defeq \{W\in \ka\mid [W,\ah] = \{0\} \} $とする．$B$を$\ge$のKilling 形式とする．
-  \item $\Sigma(\ge,\ah) $を$\ah$に関する制限ルート系とする．$\ge_{\lambda} $を$\lambda\in \ah^{*}$のルート空間とする
+  \item $\Sigma(\ge,\ah) $を$\ah$に関する制限ルート系とする．$\ge_{\lambda} $を$\lambda\in \ah^{*}$のルート空間とする．
   \item $Y_{\alpha}\defeq [\theta X_{\alpha}, X_{2\alpha}] $とする．
   \item $A_{\alpha}\in \ah $を，任意の$H\in \ah$に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とする．
     
-    このとき，任意の$H\in \ah$に対して$B(H, [X_{\alpha}, \theta X_{\alpha}]) = \alpha(H) B(X_{\alpha}, \theta X_{\alpha}) $，したがって$[X_{\alpha}, \theta X_{\alpha}] = B(X_{\alpha}, \theta X_{\alpha})A_{\alpha} $ (同様に$[Y_{\alpha}, \theta Y_{\alpha}]  = B(Y_{\alpha}, \theta Y_{\alpha})A_{\alpha} $，$ [X_{2\alpha}, \theta X_{2\alpha}] = 2B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} $) である．
+    このとき，任意の$H\in \ah$に対して$B(H, [X_{\alpha}, \theta X_{\alpha}]) = \alpha(H) B(X_{\alpha}, \theta X_{\alpha}) $，したがって
+    \begin{itemize}
+    \item $[X_{\alpha}, \theta X_{\alpha}] = B(X_{\alpha}, \theta X_{\alpha})A_{\alpha} $，
+    \item $[Y_{\alpha}, \theta Y_{\alpha}]  = B(Y_{\alpha}, \theta Y_{\alpha})A_{\alpha} $，$ [X_{2\alpha}, \theta X_{2\alpha}] = 2B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} $
+    \end{itemize}
+    である．
     \item $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $，$ c_{2\alpha}  \defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})}} $とする．
 
     また，

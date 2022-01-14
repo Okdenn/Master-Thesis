@@ -21,27 +21,55 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
   0 & -\sqrt{2} & 0
 \end{pmatrix} \neq 0$より$X$は\Cref{yosou:1121}の右辺の集合には入っているが，$X\nin \pe_{H,\bdd} $であるから，\Cref{prop:0114}は\Cref{yosou:1121}の反例となっている．
 
+1つ補題を用意してから\Cref{prop:0114}を証明する．
+\begin{lem}\label{lem:0114}
+  $ \theta > 0 $を$\tan 2\theta = -2\sqrt{2} $を満たす実数として1つ固定する．$k =
+  \begin{pmatrix}
+    \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
+  \end{pmatrix}
+  $とすると，$t\in \real$に対し
+  \begin{align*}
+    k\exp\lbig(2t\begin{pmatrix}
+      0 & \sqrt{2} \\
+      \sqrt{2} & -1 
+    \end{pmatrix}\rbig)\inv{k} =
+                 \begin{pmatrix}
+                   \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
+                   \\
+                   \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                 \end{pmatrix}
+  \end{align*}
+  である．
+\end{lem}
+
+\begin{npfwn}[\Cref{lem:0114}]
+
+  $\tan 2\theta = -2\sqrt{2} $のとき，
+  \begin{align*}
+    \cos 2\theta = 
+  \end{align*}
+  \begin{align*}
+    k
+    \begin{pmatrix}
+      0 & \sqrt{2} \\
+      \sqrt{2} & -1 
+    \end{pmatrix}\inv{k} &=
+                           \begin{pmatrix}
+                             -2\sqrt{2}\sin\theta \cos\theta  - \sin^2\theta & \sqrt{2}(\cos^2 \theta - \sin^2\theta) + \cos\theta \sin\theta \\
+                             \sqrt{2}(\cos^2 \theta - \sin^2\theta) + \cos\theta \sin\theta  & -2\sqrt{2}\sin\theta \cos\theta  - \sin^2\theta
+                           \end{pmatrix}\\
+        &=
+          \begin{pmatrix}
+            -\sqrt{2}\sin 2\theta -   &
+          \end{pmatrix}
+  \end{align*} 
+\end{npfwn}
+
 \begin{npfwn}[\Cref{prop:0114}]
   行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$と$G/K$は$gK \mapsto gI_2\trans{g} $により微分同相である．
   
   $e^{2tX} $を計算するための補題を用意する．
   
-  \begin{lem}
-    $\cos^2 \theta = \frac{2}{3} $を満たす$\theta$に対し，$k =
-    \begin{pmatrix}
-      \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
-    \end{pmatrix}
-    $とすると，$t\in \real$に対し
-    \begin{align*}
-      k\exp\lbig(2t\begin{pmatrix}
-        0 & \sqrt{2} \\
-        \sqrt{2} & -1 
-      \end{pmatrix}\rbig)\inv{k} =
-                   \begin{pmatrix}
-                     \dfrac{2e^{2t} + }
-                   \end{pmatrix}
-    \end{align*}
-    である．
-  \end{lem}
+  
   
 \end{npfwn}

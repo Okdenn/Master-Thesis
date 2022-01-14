@@ -1,20 +1,47 @@
-\begin{prop}
+$G$の実階数が2のとき\Cref{yosou:1121}には反例が存在する．
+
+\begin{prop}\label{prop:0114}
   $G = \SL(3,\real) $，$H = \{\diag(e^a,e^b,e^c)\mid a,b,c\in \real,\ a+ b + c = 1 \} $，$X\defeq
   \begin{pmatrix}
     1 & 0 & 0 \\
-    0 & 0 & 1 \\
-    0 & 1 & -1
+    0 & 0 & \sqrt{2} \\
+    0 & \sqrt{2} & -1
   \end{pmatrix}
   $に対し$Y(\real X) $は非有界である．
 \end{prop}
 
 
 $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1 = \diag(1,0,-1)$，$X_2 = \begin{pmatrix}
-    0 & 0 & 0 \\
-    0 & 0 & 1 \\
-    0 & 1 & 0
-  \end{pmatrix}$であり，$[X_1, X_2] = \begin{pmatrix}
-    0 & 0 & 0 \\
-    0 & 0 & 1 \\
-    0 & -1 & 0
-  \end{pmatrix} \neq 0$より$X$は\Cref{yosou:1121}の右辺の集合には入っているが，$X\nin \pe_{H,\bdd} $であるから，
+  0 & 0 & 0 \\
+  0 & 0 & \sqrt{2} \\
+  0 & \sqrt{2} & 0
+\end{pmatrix}$であり，$[X_1, X_2] = \begin{pmatrix}
+  0 & 0 & 0 \\
+  0 & 0 & \sqrt{2} \\
+  0 & -\sqrt{2} & 0
+\end{pmatrix} \neq 0$より$X$は\Cref{yosou:1121}の右辺の集合には入っているが，$X\nin \pe_{H,\bdd} $であるから，\Cref{prop:0114}は\Cref{yosou:1121}の反例となっている．
+
+\begin{npfwn}[\Cref{prop:0114}]
+  行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$と$G/K$は$gK \mapsto gI_2\trans{g} $により微分同相である．
+  
+  $e^{2tX} $を計算するための補題を用意する．
+  
+  \begin{lem}
+    $\cos^2 \theta = \frac{2}{3} $を満たす$\theta$に対し，$k =
+    \begin{pmatrix}
+      \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
+    \end{pmatrix}
+    $とすると，$t\in \real$に対し
+    \begin{align*}
+      k\exp\lbig(2t\begin{pmatrix}
+        0 & \sqrt{2} \\
+        \sqrt{2} & -1 
+      \end{pmatrix}\rbig)\inv{k} =
+                   \begin{pmatrix}
+                     \dfrac{2e^{2t} + }
+                   \end{pmatrix}
+    \end{align*}
+    である．
+  \end{lem}
+  
+\end{npfwn}

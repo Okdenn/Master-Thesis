@@ -30,9 +30,9 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
       \sqrt{2} & -1 
     \end{pmatrix}\rbig) &=
                  \begin{pmatrix}
-                   \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
+                   \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3}\\
                    \\
-                   \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                   \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3} & \dfrac{e^{2t} + 2e^{-4t}}{3}
                  \end{pmatrix}
   \end{align*}
   である．
@@ -106,24 +106,28 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
             e^{2t}\cos^2\theta + e^{-4t}\sin^2 \theta  & (e^{-4t} - e^{2t})\sin\theta \cos\theta \\ (e^{-4t} - e^{2t})\sin\theta \cos\theta  & e^{2t}\sin^2\theta +e^{-4t}\cos^2\theta
           \end{pmatrix}\\
         &= \begin{pmatrix}
-          \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
+          \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3}\\
           \\
-          \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+          \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3} & \dfrac{e^{2t} + 2e^{-4t}}{3}
                  \end{pmatrix}
   \end{align*}
 \end{npfwn}
 
 \begin{npfwn}[\Cref{prop:0114}]
-  行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$と$G/K$は$gK \mapsto gI_2\trans{g} $により微分同相である．
+  行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$と$G/K$は$gK \mapsto g
+  \begin{pmatrix}
+    1 & 0\\ 0 & 1
+  \end{pmatrix}
+  \trans{g} $により微分同相である．
   
   \Cref{lem:0114}より
   \begin{align}
     e^{tX}\cdot o_K &= e^{tX}\; \trans{(e^{tX})} = e^{2tX}\notag\\
                     &= \begin{pmatrix}
                       e^{2t} & 0 & 0 \\
-                      0 & \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
+                      0 & \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3}\\
                       % \\
-                      0 & \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                      0 & \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3} & \dfrac{e^{2t} + 2e^{-4t}}{3}
                     \end{pmatrix}\label{eq:0114-1}
   \end{align}
   である．
@@ -134,9 +138,9 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
     0 & 0 & 1\\
     0 & 1 & 0
   \end{pmatrix}
-  $とすると，$s\in \real$に対し，
+  $とすると，$r\in \real$に対し，
   \begin{align}
-    e^{Y}e^{sZ}\cdot o_K &= e^{Y}e^{2sZ}e^{Y}\notag\\
+    e^{Y}e^{rZ}\cdot o_K &= e^{Y}e^{2rZ}e^{Y}\notag\\
                          &=
                            \begin{pmatrix}
                              e^{a} & 0 & 0 \\
@@ -145,8 +149,8 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
                            \end{pmatrix}
                                      \begin{pmatrix}
                                        1 & 0 & 0\\
-                                       0 & \cosh 2s & \sinh 2s \\
-                                       0 & \sinh 2s & \cosh 2s
+                                       0 & \cosh 2r & \sinh 2r \\
+                                       0 & \sinh 2r & \cosh 2r
                                      \end{pmatrix}
                                                       \begin{pmatrix}
                                                         e^{a} & 0 & 0 \\
@@ -156,29 +160,29 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
                          &=
                            \begin{pmatrix}
                              e^{2a} & 0 & 0\\
-                             0 & e^{2b}\cosh 2s & e^{b+c}\sinh 2s \\
-                             0 & e^{b+c}\sinh 2s & e^{2c}\cosh 2s
+                             0 & e^{2b}\cosh 2r & e^{b+c}\sinh 2r \\
+                             0 & e^{b+c}\sinh 2r & e^{2c}\cosh 2r
                            \end{pmatrix}\notag\\
                          &= \begin{pmatrix}
                              e^{2a} & 0 & 0\\
-                             0 & e^{2b}\cosh 2s & e^{-a}\sinh 2s \\
-                             0 & e^{-a}\sinh 2s & e^{-a-b}\cosh 2s
+                             0 & e^{2b}\cosh 2r & e^{-a}\sinh 2r \\
+                             0 & e^{-a}\sinh 2r & e^{-a-b}\cosh 2r
                            \end{pmatrix}\label{eq:0114-2}
   \end{align}
-  である．
+  である．ただし最後の変形には$a + b + c = 0$を用いた．
 
   \Cref{eq:0114-1}と\Cref{eq:0114-2}を見比べると，
   \begin{align*}
     a &= t,\\
-    \sinh 2s &= \dfrac{2\sqrt{2}}{3}\sinh 3t, \\
+    \sinh 2r &= \dfrac{2\sqrt{2}}{3}\sinh 3t, \\
     e^{2b} &= \dfrac{2e^{2t} + e^{-4t}}{\sqrt{9 + 8\sinh^2 3t}}
   \end{align*}
-  に対し$e^{Y}e^{sZ}\cdot o_K = e^{tX}\cdot o_K $を得る．つまり
+  とすると$e^{Y}e^{rZ}\cdot o_K = e^{tX}\cdot o_K $を得る．つまり
   \begin{itemize}
   \item $Y(tX) = \diag(a(t) ,b(t) ,-a(t) -b(t) ) $
 
-    ただし$a(t) = t$，$b(t) =\dfrac{1}{2} \log \dfrac{2e^{2t} + e^{-4t}}{\sqrt{9 + 8\sinh^2 3t}} $，
-  \item $Z(tX) = s(t)Z  $ただし$s(t) = \dfrac{1}{2} \inv{\sinh}\dfrac{2\sqrt{2}}{3}\sinh 3t $
+    ただし$a(t) = t$，$b(t) =\dfrac{1}{2} \log \lbig(\dfrac{2e^{2t} + e^{-4t}}{\sqrt{9 + 8\sinh^2 3t}}\rbig) $，
+  \item $Z(tX) = r(t)Z  $ただし$r(t) = \dfrac{1}{2} \inv{\sinh}\lbig( \dfrac{2\sqrt{2}}{3}\sinh 3t\rbig) $
   \end{itemize}
   であるから，$Y(\real X) $は非有界である．  
 \end{npfwn}

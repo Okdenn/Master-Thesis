@@ -142,7 +142,7 @@
     [Y_{\alpha}^{*}, \theta Y_{\alpha}^{*}] &= -96A_{\alpha}^{*} , &\text{(\Cref{lem:3.4}による)},\\
     [Y_{\alpha}^{*}, [X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]] &= 24X_{\alpha}^{*},  &\text{(\Cref{lem:3.4}による)},\\
     [[X_{\alpha}^{*}, \theta Y_{\alpha}], X_{2\alpha}^{*}] &= [[X_{\alpha}^{*}, \theta Y_{\alpha}], \theta X_{2\alpha}^{*}] = 0, &\text{(\Cref{lem:3.6}による)},\\
-    [X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] &= -48A_{\alpha}^{*} 
+    [X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] &= -48A_{\alpha}^{*}, & (定義による)
   \end{align*}
 
   これらを踏まえて$\ge^{*} $と$\sulie(2,1) $の対応を，
@@ -244,7 +244,7 @@
   \end{case}   
 \end{npfwn}
 
-\Cref{cor:sub-lie-alg}で定めた$\ge_0$について次の3つが成り立つ．
+\Cref{cor:sub-lie-alg}で定めた$\ge_0$とその$G$における解析部分群$G_0$について次の3つが成り立つ．
 \begin{lem}\cite[p.~409, Lemma~2.2]{hel01}$\ge$のCartan対合$\theta$に対して$\ge_0 = \theta\ge_0$であり，$\ge_0 $への$\theta$の制限は$\ge_0$のCartan分解を与える．
 \end{lem}
 
@@ -262,7 +262,7 @@
 
 以上のことを用いて，$G$が実階数1の場合を$\SU(1,2) $ないし$\SU(1,1) $に帰着させることにより\Cref{thm:1216-main}を示す．
 
-\begin{npfwn}[\Cref{thm:1216-main}]
+\begin{npfwn}[\Cref{thm:1216-main}]\bluetext{おそらく$\dim H = 1$出ない場合も背理法で示せる気がする．}
   $\ge$の極大分裂可換部分代数$\ha$の定めるルート系を$\Sigma(\ge,\ha) $とし，$\Sigma(\ge,\ha) $の形によって2通りに場合分けして証明する．
   
   \begin{case}
@@ -313,7 +313,7 @@
   $M$が完備かつ非正曲率をもつ1-連結Riemann多様体であるとき，$M$をHadamard多様体といい，Hadamard多様体$M$が visibility manifold であるとは，$\forall p\in M, \forall \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が任意の$ t\in [t_0, t_1]$に対し$d_{M}(p, \gamma(t))\geq r(p,\epsilon) $を満たすならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
 \end{defi}
 
-後に示すように{\Poincare}円板はvisibility manifoldであるが，\Cref{lem:0106}よりその片鱗を見ることはできる．具体的には$\frac{\pi}{2} >  \epsilon > 0$に対し$t_{\epsilon} \defeq \dfrac{1}{2}\inv{\sinh}\dfrac{1}{\abs{\tan \epsilon}} $とし，測地線$\gamma_{\epsilon}(s) = e^{t_{\epsilon} Y}e^{sZ}\cdot o_K $とすると，\Cref{lem:0106}より任意の$s_0,s_1\in \real$に対し$\measuredangle_{o_K}(\gamma_{\epsilon} (s_0), \gamma_{\epsilon} (s_1)) \leq \epsilon $である．この様子を図示すると\Cref{fig:visibility}のようになる．
+後に示すように{\Poincare}円板はvisibility manifoldであるが，\Cref{lem:0106}よりその片鱗を見ることはできる．具体的には$ 0 <  \epsilon  < \frac{\pi}{2} $に対し$t_{\epsilon} \defeq \dfrac{1}{2}\inv{\sinh}\dfrac{1}{\abs{\tan \epsilon}} $とし，測地線$\gamma_{\epsilon}(s) = e^{t_{\epsilon} Y}e^{sZ}\cdot o_K $とすると，\Cref{lem:0106}より任意の$s_0,s_1\in \real$に対し$\measuredangle_{o_K}(\gamma_{\epsilon} (s_0), \gamma_{\epsilon} (s_1)) \leq \epsilon $である．この様子を図示すると\Cref{fig:visibility}のようになる．
 
 \begin{figure}[H]
   \centering

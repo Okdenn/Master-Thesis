@@ -23,16 +23,12 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
 
 1つ補題を用意してから\Cref{prop:0114}を証明する．
 \begin{lem}\label{lem:0114}
-  $ \theta > 0 $を$\tan 2\theta = -2\sqrt{2} $を満たす実数として1つ固定する．$k =
-  \begin{pmatrix}
-    \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
-  \end{pmatrix}
-  $とすると，$t\in \real$に対し
+  任意の$t\in \real$に対し
   \begin{align*}
-    k\exp\lbig(2t\begin{pmatrix}
+    \exp\lbig(2t\begin{pmatrix}
       0 & \sqrt{2} \\
       \sqrt{2} & -1 
-    \end{pmatrix}\rbig)\inv{k} =
+    \end{pmatrix}\rbig) &=
                  \begin{pmatrix}
                    \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
                    \\
@@ -44,10 +40,16 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
 
 \begin{npfwn}[\Cref{lem:0114}]
 
-  $\tan 2\theta = -2\sqrt{2} $のとき，
+  $ \theta $を$\cos 2\theta = \frac{1}{3} $，$\sin 2\theta = \frac{-2\sqrt{2}}{3} $を満たす実数として1つ固定する．$k =
+  \begin{pmatrix}
+    \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
+  \end{pmatrix}
+  $とすると，
   \begin{align*}
-    \cos 2\theta = 
+    \cos^2 \theta &= \dfrac{1 +\cos 2\theta}{2} = \dfrac{2}{3},\\
+    \sin^2 \theta &= \dfrac{1-\cos 2\theta}{2} = \dfrac{1}{3}
   \end{align*}
+  である．
   \begin{align*}
     k
     \begin{pmatrix}
@@ -56,13 +58,47 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
     \end{pmatrix}\inv{k} &=
                            \begin{pmatrix}
                              -2\sqrt{2}\sin\theta \cos\theta  - \sin^2\theta & \sqrt{2}(\cos^2 \theta - \sin^2\theta) + \cos\theta \sin\theta \\
-                             \sqrt{2}(\cos^2 \theta - \sin^2\theta) + \cos\theta \sin\theta  & -2\sqrt{2}\sin\theta \cos\theta  - \sin^2\theta
+                             \sqrt{2}(\cos^2 \theta - \sin^2\theta) + \cos\theta \sin\theta  & 2\sqrt{2}\sin\theta \cos\theta  - \cos^2\theta
                            \end{pmatrix}\\
         &=
           \begin{pmatrix}
-            -\sqrt{2}\sin 2\theta -   &
+            -\sqrt{2}\sin 2\theta  - \sin^2\theta & \sqrt{2}\cos 2\theta + \dfrac{\sin 2\theta}{2} \\
+            \sqrt{2}\cos 2\theta + \dfrac{\sin 2\theta}{2}  &\sqrt{2}\sin 2 \theta - \cos^2\theta
+          \end{pmatrix}\\
+        &=
+          \begin{pmatrix}
+            1  &  0\\ 0 & -2
           \end{pmatrix}
-  \end{align*} 
+  \end{align*}
+  である．
+
+  したがって
+  \begin{align*}
+    k\exp\lbig(2t\begin{pmatrix}
+      0 & \sqrt{2} \\
+      \sqrt{2} & -1 
+    \end{pmatrix}\rbig)\inv{k} &= \exp\lbig(
+                                 \begin{pmatrix}
+                                   2t & 0 \\ 0 & -4t
+                                 \end{pmatrix}\rbig)
+  \end{align*}
+  であるから，
+  \begin{align*}
+    \exp\lbig(2t\begin{pmatrix}
+      0 & \sqrt{2} \\
+      \sqrt{2} & -1 
+    \end{pmatrix}\rbig) &= \inv{k} \exp\lbig(
+                                 \begin{pmatrix}
+                                   2t & 0 \\ 0 & -4t
+                                 \end{pmatrix}\rbig)k\\
+        &=
+          \begin{pmatrix}
+            \cos \theta  & \sin \theta \\ -\sin \theta & \cos \theta
+          \end{pmatrix}
+                                                         \begin{pmatrix}
+                                                           e^{2t} & 0 \\ 0 & -4t
+                                                         \end{pmatrix}
+  \end{align*}
 \end{npfwn}
 
 \begin{npfwn}[\Cref{prop:0114}]

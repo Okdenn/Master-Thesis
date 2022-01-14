@@ -40,16 +40,16 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
 
 \begin{npfwn}[\Cref{lem:0114}]
 
-  $ \theta $を$\cos 2\theta = \dfrac{1}{3} $，$\sin 2\theta = \dfrac{-2\sqrt{2}}{3} $を満たす実数として1つ固定する．$k =
-  \begin{pmatrix}
-    \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
-  \end{pmatrix}
-  $とすると，
+  $ \theta $を$\cos 2\theta = \dfrac{1}{3} $，$\sin 2\theta = \dfrac{-2\sqrt{2}}{3} $を満たす実数として任意に1つ固定する．このとき
   \begin{align*}
     \cos^2 \theta &= \dfrac{1 +\cos 2\theta}{2} = \dfrac{2}{3},\\
     \sin^2 \theta &= \dfrac{1-\cos 2\theta}{2} = \dfrac{1}{3}
   \end{align*}
-  である．このとき
+  である．$k \defeq
+  \begin{pmatrix}
+    \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
+  \end{pmatrix}
+  $とすると，
   \begin{align*}
     k
     \begin{pmatrix}
@@ -77,10 +77,10 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
     k\exp\lbig(2t\begin{pmatrix}
       0 & \sqrt{2} \\
       \sqrt{2} & -1 
-    \end{pmatrix}\rbig)\inv{k} &= \exp\lbig(
+    \end{pmatrix}\rbig)\inv{k} &= \exp
                                  \begin{pmatrix}
                                    2t & 0 \\ 0 & -4t
-                                 \end{pmatrix}\rbig)
+                                 \end{pmatrix}
   \end{align*}
   であるから，
   \begin{align*}

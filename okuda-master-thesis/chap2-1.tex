@@ -18,31 +18,31 @@
   \item $Y_{\alpha}\defeq [\theta X_{\alpha}, X_{2\alpha}] $とする．
   \item $A_{\alpha}\in \ah $を，任意の$H\in \ah$に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とする．
     
-    このとき，任意の$H\in \ah$に対して$B(H, [X_{\alpha}, \theta X_{\alpha}]) = \alpha(H) B(X_{\alpha}, \theta X_{\alpha}) $，したがって
-    \begin{itemize}
-    \item $[X_{\alpha}, \theta X_{\alpha}] = B(X_{\alpha}, \theta X_{\alpha})A_{\alpha} $，
-    \item $[Y_{\alpha}, \theta Y_{\alpha}]  = B(Y_{\alpha}, \theta Y_{\alpha})A_{\alpha} $，$ [X_{2\alpha}, \theta X_{2\alpha}] = 2B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} $
-    \end{itemize}
+    このとき，任意の$H\in \ah$に対して$B(H, [X_{\alpha}, \theta X_{\alpha}]) = \alpha(H) B(X_{\alpha}, \theta X_{\alpha}) $である．したがって
+      \begin{align*}
+        [X_{\alpha}, \theta X_{\alpha}] &= B(X_{\alpha}, \theta X_{\alpha})A_{\alpha} ,\\
+        [Y_{\alpha}, \theta Y_{\alpha}] &= B(Y_{\alpha}, \theta Y_{\alpha})A_{\alpha}, \\
+        [X_{2\alpha}, \theta X_{2\alpha}] &= 2B(X_{2\alpha}, \theta X_{2\alpha})A_{\alpha} 
+      \end{align*}
     である．
-    \item $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $，$ c_{2\alpha}  \defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})}} $とする．
-
-    また，
-    \begin{itemize}
-    \item $X_{\alpha}^{*}\defeq c_{\alpha}X_{\alpha} $
-    \item $X_{2\alpha}^{*}\defeq c_{2\alpha}X_{2\alpha} $
-    \item $Y_{\alpha}^{*} \defeq [\theta X_{\alpha}^{*}, X_{2\alpha}^{*} ] = c_{\alpha}c_{2\alpha}Y_{\alpha} $
-      \item $A_{\alpha}^{*}\defeq \dfrac{1}{12\alpha(A_{\alpha}) % \lyama \alpha, \alpha\ryama
-      }A_{\alpha} $
-    \end{itemize}
+    \item $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $，$ c_{2\alpha}  \defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})}} $とし，
+      \begin{align*}
+        X_{\alpha}^{*} &\defeq c_{\alpha}X_{\alpha}, \\
+        X_{2\alpha}^{*} &\defeq c_{2\alpha}X_{2\alpha},\\ 
+        Y_{\alpha}^{*} &\defeq [\theta X_{\alpha}^{*}, X_{2\alpha}^{*} ] = c_{\alpha}c_{2\alpha}Y_{\alpha} ,\\
+        A_{\alpha}^{*} &\defeq \dfrac{1}{12\alpha(A_{\alpha}) % \lyama \alpha, \alpha\ryama
+      }A_{\alpha} 
+      \end{align*}
     とする．
   \end{itemize}
 \end{nttdef}
 
 \begin{lem}\label{lem:3.2}
   $c \defeq 2\alpha(A_{\alpha})B(X_{\alpha},\theta X_{\alpha}) $とすると，$[X_{\alpha}, Y_{\alpha}] = cX_{2\alpha} $である．特に$0\neq Y_{\alpha}\neq X_{\alpha} $である．
-
-  証明略，Jacobi恒等式と$3\alpha\nin \Sigma(\ge,\ah) $による．
 \end{lem}
+\begin{npfwn}[\Cref{lem:3.2}]
+  Jacobi恒等式と$3\alpha\nin \Sigma(\ge,\ah) $による．
+\end{npfwn}
 
 \begin{lem}\label{lem:3.3}
   $[X_{\alpha},\theta Y_{\alpha}]\in \emm\setminus\{0\} $である．また$[[X_{\alpha}, \theta Y_{\alpha}], X_{\alpha}] = -3\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})Y_{\alpha} $である．
@@ -110,16 +110,17 @@
 
 \begin{lem}\label{lem:3.5}
   $[[X_{\alpha}, \theta Y_{\alpha}], X_{2\alpha}] = 0$である．
-
-  証明略．\Cref{lem:3.2}--\ref{lem:3.4}とJacobi恒等式による．
 \end{lem}
+\begin{npfwn}[\Cref{lem:3.5}]
+  \Cref{lem:3.2}--\ref{lem:3.4}とJacobi恒等式による．
+\end{npfwn}
 
 \begin{lem}\label{lem:3.6}
-  $[Y_{\alpha},\theta X_{2\alpha}] = 2\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})\theta X_{\alpha} $である．
-
-  証明略．Jacobi恒等式を用いて与式を変形し計算することによる．
+  $[Y_{\alpha},\theta X_{2\alpha}] = 2\alpha(A_{\alpha})B(X_{2\alpha}, \theta X_{2\alpha})\theta X_{\alpha} $である．  
 \end{lem}
-
+\begin{npfwn}[\Cref{lem:3.6}]
+  Jacobi恒等式を用いて与式を変形し計算することによる．
+\end{npfwn}
 
 
 
@@ -129,22 +130,22 @@
   
   非自明な$\ge^{*} $のLie括弧の関係は以下の通りである (残りの関係式はこの両辺に$\theta$をつけることで得られる)．
 
-  \begin{itemize}
-  \item $[X_{\alpha}^{*}, Y_{\alpha}^{*}] = -4X_{2\alpha}^{*} $ (\Cref{lem:3.2}による)
-  \item $[X_{\alpha}^{*},[X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]]  = -6Y_{\alpha}^{*}$ (\Cref{lem:3.3}による)
-  \item $[X_{\alpha}^{*}, \theta X_{\alpha}^{*}] = -24A_{\alpha}^{*} $ (定義による)
-  \item $[X_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ ($\ge_{3\alpha} = 0$による)
-  \item$[X_{\alpha}^{*}, \theta X_{2\alpha}^{*}] = \theta Y_{\alpha}^{*} $
-  \item $[Y_{\alpha}^{*},X_{2\alpha}^{*}] = 0$ (\Cref{lem:3.5}による)
-  \item $[Y_{\alpha}^{*},\theta X_{2\alpha}^{*}] = -4\theta X_{\alpha}^{*} $ (\Cref{lem:3.6}による)
-  \item $[Y_{\alpha}^{*}, \theta Y_{\alpha}^{*}] = -96A_{\alpha}^{*} $ (\Cref{lem:3.4}による)
-    \item $[Y_{\alpha}^{*}, [X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]] = 24X_{\alpha}^{*} $ (\Cref{lem:3.4}による)
-    \item $[[X_{\alpha}^{*}, \theta Y_{\alpha}], X_{2\alpha}^{*}] = [[X_{\alpha}^{*}, \theta Y_{\alpha}], \theta X_{2\alpha}^{*}] = 0$ (\Cref{lem:3.6}による)
-    \item $[X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] = -48A_{\alpha}^{*} $
-  \end{itemize}
   
-  
-  $\ge^{*} $と$\sulie(2,1) $の対応を，
+  \begin{align*}
+    [X_{\alpha}^{*}, Y_{\alpha}^{*}] &= -4X_{2\alpha}^{*}, &\text{(\Cref{lem:3.2}による)},\\
+    [X_{\alpha}^{*},[X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]]  &= -6Y_{\alpha}^{*}, &\text{(\Cref{lem:3.3}による)},\\
+    [X_{\alpha}^{*}, \theta X_{\alpha}^{*}] &= -24A_{\alpha}^{*}, & (定義による),\\
+    [X_{\alpha}^{*},X_{2\alpha}^{*}] &= 0, &\text{($\ge_{3\alpha} = 0$による)},\\
+    [X_{\alpha}^{*}, \theta X_{2\alpha}^{*}] &= \theta Y_{\alpha}^{*} ,\\
+    [Y_{\alpha}^{*},X_{2\alpha}^{*}] &= 0, &\text{(\Cref{lem:3.5}による)},\\
+    [Y_{\alpha}^{*},\theta X_{2\alpha}^{*}] &= -4\theta X_{\alpha}^{*} , &\text{(\Cref{lem:3.6}による)},\\
+    [Y_{\alpha}^{*}, \theta Y_{\alpha}^{*}] &= -96A_{\alpha}^{*} , &\text{(\Cref{lem:3.4}による)},\\
+    [Y_{\alpha}^{*}, [X_{\alpha}^{*}, \theta Y_{\alpha}^{*}]] &= 24X_{\alpha}^{*},  &\text{(\Cref{lem:3.4}による)},\\
+    [[X_{\alpha}^{*}, \theta Y_{\alpha}], X_{2\alpha}^{*}] &= [[X_{\alpha}^{*}, \theta Y_{\alpha}], \theta X_{2\alpha}^{*}] = 0, &\text{(\Cref{lem:3.6}による)},\\
+    [X_{2\alpha}^{*} ,\theta X_{2\alpha}^{*} ] &= -48A_{\alpha}^{*} 
+  \end{align*}
+
+  これらを踏まえて$\ge^{*} $と$\sulie(2,1) $の対応を，
   \begin{align*}
     X_{\alpha}^{*} & \leftrightarrow
                      \begin{pmatrix}
@@ -209,7 +210,7 @@
 \end{npfwn}
 
 \begin{cor}\label{cor:sub-lie-alg}
-  任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$G$が実階数1ならば，極大分裂可換部分代数$\ah\defeq \real Y\subset \ge$に対し$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，それぞれ\Cref{thm:0810}と\Cref{lem:su11}より，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
+  $G$を実階数1の実半単純Lie群とする．任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，極大分裂可換部分代数$\ah\defeq \real Y\subset \ge$に対し$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，それぞれ\Cref{thm:0810}と\Cref{lem:su11}より，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
 \end{cor}
 
 \begin{npfwn}[\Cref{cor:sub-lie-alg}]

@@ -18,8 +18,11 @@
   \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
   \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha}\defeq \{W\in \ge\mid B(W, \ha) = \{0\} \} $とする．
   \item $X\in \pe$に対し，ベクトル空間としての分解$\pe =( \ha\cap \pe)\oplus(\per{\ha}\cap \pe) $に対応した分解を$X = X_1 + X_2 $，$X_1 \in \ha\cap \pe$，$X_2\in \per{\ha}\cap \pe$とする．
-  \item Riemann多様体$M$上の点$p,q,r \in M$に対し，
-  \item Riemann多様体$M$上の点$p,q,r \in M$に対し，$\measuredangle_{p}(q, r)$を，
+  \item $(M,d_M)$を$M$の上の任意の2点に対し一意的な測地線が存在するRiemann多様体と$M$上の計量から定まる距離とする．相異なる点$p,q,r \in M$に対し，
+    \begin{itemize}
+    \item $\gamma_{p,q}\colon [0, d_{M}(p,q)] \to M$を，$\gamma(0) =  p$，$\gamma(d_{M}(p,q)) = q $なる測地線とする．
+    \item $\measuredangle_{p}(q, r)$を$\gamma_{p,q} $と$\gamma_{p,r} $が$p$においてなす角とする．
+    \end{itemize}
   \end{itemize}  
 \end{nttdef}
 
@@ -209,11 +212,11 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
   \Cref{prop:yosou-eg}は角度を用いた議論によっても示すことができる．具体的には，計算により次の\Cref{lem:0106}が示せる．
   \begin{lem}\label{lem:0106}
-    $e^{tY}e^{s Z}\cdot o_K =
+    $e^{sY}e^{rZ}\cdot o_K =
     \begin{pmatrix}
-      \cosh t & \sinh t\\ \sinh t & \cosh t
+      \cosh s & \sinh s\\ \sinh s & \cosh s
     \end{pmatrix}
-    \sqrt{-1}\tanh s \in \SU(1,1)/\U(1) $，$t > 0$，$s\in \real$に対し，$o_K $と$e^{tY}e^{sZ}\cdot o_K$を結ぶ測地線が$o_K$と$e^{tY}\cdot o_K $を結ぶ測地線と$o_K$でなす角$\phi_{s,t} $は，$\tan \phi_{s,t} = \dfrac{\tanh 2s}{\sinh 2t} $を満たす．ただし$Y \defeq
+    \sqrt{-1}\tanh r \in \SU(1,1)/\U(1) $，$s > 0$，$r\in \real$に対し，$\phi_{s,r}\defeq \measuredangle_{o_K}(e^{sY}e^{rZ}\cdot o_K, e^{sY}\cdot o_K) $は，$\tan \phi_{s,r} = \dfrac{\tanh 2r}{\sinh 2s} $を満たす．ただし$Y \defeq
   \begin{pmatrix}
     0 & 1\\ 1 & 0
   \end{pmatrix}
@@ -223,11 +226,11 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \end{lem}  
 
   \Cref{lem:0106}により\Cref{prop:yosou-eg}は次のように証明できる．
-  任意の$s\in \real, 0\neq t\in \real $に対し，
+  任意の$s\in \real, 0\neq r\in \real $に対し，
   \begin{align*}
-    \lim_{s\to -\infty}\tan \phi_{s,\abs{t}} = \dfrac{-1}{\sinh 2\abs{t}}  \leq \tan \phi_{s,t} \leq  \lim_{s\to \infty}\tan \phi_{s,\abs{t}} = \dfrac{1}{\sinh 2\abs{t}}
+    \lim_{s\to -\infty}\tan \phi_{s,\abs{r}} = \dfrac{-1}{\sinh 2\abs{r}}  \leq \tan \phi_{s,r} \leq  \lim_{s\to \infty}\tan \phi_{s,\abs{r}} = \dfrac{1}{\sinh 2\abs{r}}
   \end{align*}
-  であるから，$X\nin \real Y $の元に対して$Y(\real X) $が非有界であるとすると，$\phi(X,\ha) >  \epsilon > 0$なる$\epsilon$に対し，ある$r\in \real $が存在して，$Y(rX) = tY $，$Z(rX) = sZ $に対し$\abs{\tan \phi_{s,t}} < \tan \epsilon $となり，$o_K$と$e^{tY}e^{sZ}\cdot o_K$を結ぶ測地線が$o_K$と$e^{tY}\cdot o_K $を結ぶ測地線と$o_K$でなす角が$\epsilon$未満，つまり$\ha$と$X$の角度未満となって矛盾する ($o_K$と$e^{tX}\cdot o_K (= e^{tY}e^{sZ}\cdot o_K)  $を結ぶ測地線が$o_K$と$e^{tY}\cdot o_K $を結ぶ測地線と$o_K$でなす角は$\phi(X,\ha)$である)．
+  であるから，$X\nin \real Y $の元に対して$Y(\real X) $が非有界であるとすると，$\phi(X,\ha) >  \epsilon > 0$なる$\epsilon$に対し，ある$t\in \real $が存在して，$Y(tX) = sY $，$Z(tX) = rZ $に対し$\abs{\tan \phi_{s,r}} < \tan \epsilon $となる．しかし$\measuredangle_{o_K}(e^{tX}\cdot o_K) $$\phi(X,\ha)$未満となって矛盾する．
 
   
 \end{rem}

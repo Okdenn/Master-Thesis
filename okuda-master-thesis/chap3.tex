@@ -49,7 +49,7 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
     \cos^2 \theta &= \dfrac{1 +\cos 2\theta}{2} = \dfrac{2}{3},\\
     \sin^2 \theta &= \dfrac{1-\cos 2\theta}{2} = \dfrac{1}{3}
   \end{align*}
-  である．
+  である．このとき
   \begin{align*}
     k
     \begin{pmatrix}
@@ -96,15 +96,38 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
             \cos \theta  & \sin \theta \\ -\sin \theta & \cos \theta
           \end{pmatrix}
                                                          \begin{pmatrix}
-                                                           e^{2t} & 0 \\ 0 & -4t
+                                                           e^{2t} & 0 \\ 0 & e^{-4t}
                                                          \end{pmatrix}
+                                                                             \begin{pmatrix}
+                                                                               \cos \theta  & -\sin \theta \\ \sin \theta & \cos \theta
+                                                                             \end{pmatrix}\\
+        &=
+          \begin{pmatrix}
+            e^{2t}\cos^2\theta + e^{-4t}\sin^2 \theta  & (e^{-4t} - e^{2t})\sin\theta \cos\theta \\ (e^{-4t} - e^{2t})\sin\theta \cos\theta  & e^{2t}\sin^2\theta +e^{-4t}\cos^2\theta
+          \end{pmatrix}\\
+        &= \begin{pmatrix}
+          \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
+          \\
+          \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                 \end{pmatrix}
   \end{align*}
 \end{npfwn}
 
 \begin{npfwn}[\Cref{prop:0114}]
   行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$と$G/K$は$gK \mapsto gI_2\trans{g} $により微分同相である．
   
-  $e^{2tX} $を計算するための補題を用意する．
+  \Cref{lem:0114}より
+  \begin{align*}
+    e^{tX}\cdot o_K &= e^{tX}\; \trans{(e^{tX})} = e^{2tX}\\
+                    &= \begin{pmatrix}
+                      \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
+                      \\
+                      \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                    \end{pmatrix}
+  \end{align*}
+  である．
+
+  $Y \defeq \diag(a,b,c)  $，$a + b + c = 0$，
   
   
   

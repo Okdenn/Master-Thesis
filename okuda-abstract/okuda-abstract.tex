@@ -105,6 +105,8 @@
 \newtheorem{nttdef-a}[countabst]{記号と定義}
 \newtheorem{thm-a}[countabst]{定理}
 \newtheorem{lem-a}[countabst]{補題}
+\newtheorem{prop-a}[countabst]{命題}
+\newtheorem{cor-a}[countabst]{系}
 \newtheorem{def-a}[countabst]{定義}
 
 \begin{document}
@@ -130,9 +132,9 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
 
 \begin{yosou-a}(by T.~Kobayashi)\label{yosou:1121}
   
-  $Y(\real X)$は$ \ha\cap \pe$の有界な部分集合である$ \iff   [X_1, X_2]\neq 0 $であるか$X_1 = 0$である．
+  $Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと「$   [X_1, X_2]\neq 0 $あるいは$X_1 = 0$である」ことは同値である．
 
-  ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
+  ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\ha\cap\pe)\oplus(\per{\ha}\cap\pe) $に対応する$X\in \pe$の分解とする．
 \end{yosou-a}
 
 この論文の基本設定は以下の通りである．
@@ -143,12 +145,12 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
   \item $G$を非コンパクト実半単純Lie 群，$H$は$G$の非コンパクトな閉部分実半単純Lie群で，$G$のCartan対合$\Theta$に対して$H = \Theta H$を満たすものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
-  \item $B({-}, {-}) $を$\ge$のKilling形式とし，$\per{\ha}\cap \pe \defeq \{W\in \pe\mid B(W, \ha\cap \pe) = \{0\}\} $とする．
+  \item $B$を$\ge$のKilling形式とし，$\per{\ha}\cap \pe \defeq \{W\in \pe\mid B(W, \ha\cap \pe) = \{0\}\} $とする．
   \end{itemize}
   
 \end{nttdef*}
 
-本修士論文の主題である$X\in \pe$の$\ha$射影$Y(X)\in \ha\cap \pe $は，次の\Cref{thm:kob89-lem6.1}により$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義される．
+本修士論文の主題である$X\in \pe$の$\ha$射影$Y(X)\in \ha\cap \pe $は，次の\Cref{thm:kob89-lem6.1}により${(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)}$と定義される．
 \begin{thm-a}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
 
   $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
@@ -165,9 +167,16 @@ $Y(X)$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂�
 
 $G$が実階数1の場合の\Cref{yosou:1121}の証明方針は$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明がトイモデルとなっている．
 
-$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; 例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $のとき，$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度が非零であることに矛盾し，\Cref{yosou:1121}と同値な「$X = 0 \lor X\in \pe\setminus\ha \iff Y(\real X) $が有界」であることが言える．
+$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; 例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $なるとき，$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度の最小値が非零であることに矛盾し，\Cref{yosou:1121}と同値な「$X = 0 \lor X\in \pe\setminus\ha $であることと$ Y(\real X) $が有界であることが同値である」ということが証明できる．
 
-これを踏まえて$G$が実階数1の場合の証明には$\SU(2,1) $-reductionを用いた．
+これを踏まえて$G$が実階数1の場合には次の命題を用いて証明した．
+
+この命題は{$\SU(2,1) $-reduction}，\cite{hel01}と\cite{yos38}の定理を用いて証明した．
+\begin{prop-a}
+  $G$を実階数1の実半単純Lie群とする．任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
+
+  また，$\ge_0$の$G$における解析的部分群$G_0$は$G$の閉部分群である．
+\end{prop-a}
 
 
 
@@ -178,15 +187,16 @@ $G$が実階数1のLie群の積である場合も，成分ごとに見れば$G$�
 \clearpage
 \begin{thebibliography}{99}
   \vspace{-0.5em}
-\bibitem[Ber88]{ber88} J.~N.~Bernstein, \textit{On the support of Plancherel measure}, J.~Geom.~Phys., Vol. 5, n. 4, 1988, pp. 663--710
-\bibitem[BH99]{bh99} M.~R.~Bridson and A.~Haefliger, Metric Spaces of Non-Positive Curvature, Grundlehren der mathematischen Wissensschaften, Vol.~319, Springer, 1999
-\bibitem[Ebe72a]{e72-1} P.~Eberlien, \textit{Geodesic Flows on Negatively Curved Manifolds I}, Ann.~of~Math.~(2), Vol.~95, pp.~492--510, 1972
-\bibitem[Ebe72b]{e72-2} P.~Eberlien, \textit{Geodesic Flow in Certain Manifolds without Conjugate Points}, Trans.~Amer.~Math.~Soc., Vol.~167, pp.~151--70, 1972
+\bibitem[Ber88]{ber88} J.~N.~Bernstein, \textit{On the support of Plancherel measure}, J.~Geom.~Phys., Vol. 5, n. 4, 1988, pp. 663--710.
+\bibitem[BH99]{bh99} M.~R.~Bridson and A.~Haefliger, Metric Spaces of Non-Positive Curvature, Grundlehren der mathematischen Wissensschaften, Vol.~319, Springer, 1999.
+\bibitem[Ebe72a]{e72-1} P.~Eberlien, \textit{Geodesic Flows on Negatively Curved Manifolds I}, Ann.~of~Math.~(2), Vol.~95, 1972, pp.~492--510.
+\bibitem[Ebe72b]{e72-2} P.~Eberlien, \textit{Geodesic Flow in Certain Manifolds without Conjugate Points}, Trans.~Amer.~Math.~Soc., Vol.~167, 1972, pp.~151--70.
+\bibitem[Hel01]{hel01} S. Helgason, Differential Geometry, Lie Groups, and Symmetric Spaces, GSM, Vol. 34, AMS, 2001.
 \bibitem[Kob89]{kob89} T.~Kobayashi, 
   \textit{Proper action on a homogeneous space of reductive type},
   Math.~Ann., Vol. 285, Issue. 2, 1989, pp. 249--263.  
-\bibitem[Kob97]{kob97} T.~Kobayashi, \textit{Invariant mesures on homogeneous manifolds of reductive type}, J.~Reine~Angew.~Math., Vol. 1997, No. 490--1, 1997, pp. 37--54
-
+\bibitem[Kob97]{kob97} T.~Kobayashi, \textit{Invariant mesures on homogeneous manifolds of reductive type}, J.~Reine~Angew.~Math., Vol. 1997, No. 490--1, 1997, pp. 37--54.
+\bibitem[Yos38]{yos38} K.~Yosida, \textit{A Theorem concerning the Semi-Simple Lie Groups}, \\Tohoku~Mathematical~Journal, First Series, Vol.~44, 1938, pp.~81--84.
 \end{thebibliography}
 
 

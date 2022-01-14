@@ -117,14 +117,15 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
   行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$と$G/K$は$gK \mapsto gI_2\trans{g} $により微分同相である．
   
   \Cref{lem:0114}より
-  \begin{align*}
-    e^{tX}\cdot o_K &= e^{tX}\; \trans{(e^{tX})} = e^{2tX}\\
+  \begin{align}
+    e^{tX}\cdot o_K &= e^{tX}\; \trans{(e^{tX})} = e^{2tX}\notag\\
                     &= \begin{pmatrix}
-                      \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
-                      \\
-                      \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}} & \dfrac{e^{2t} + 2e^{-4t}}{3}
-                    \end{pmatrix}
-  \end{align*}
+                      e^{2t} & 0 & 0 \\
+                      0 & \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}}\\
+                      % \\
+                      0 & \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{\sqrt{3}} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                    \end{pmatrix}\label{eq:0114-1}
+  \end{align}
   である．
 
   $Y \defeq \diag(a,b,c)  $，$a + b + c = 0$，$Z =
@@ -134,8 +135,8 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
     0 & 1 & 0
   \end{pmatrix}
   $とすると，$s\in \real$に対し，
-  \begin{align*}
-    e^{Y}e^{sZ}\cdot o_K &= e^{Y}e^{2sZ}e^{Y}\\
+  \begin{align}
+    e^{Y}e^{sZ}\cdot o_K &= e^{Y}e^{2sZ}e^{Y}\notag\\
                          &=
                            \begin{pmatrix}
                              e^{a} & 0 & 0 \\
@@ -151,24 +152,33 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
                                                         e^{a} & 0 & 0 \\
                                                         0 & e^{b} & 0\\
                                                         0 & 0 & e^{c}
-                                                      \end{pmatrix}\\
+                                                      \end{pmatrix}\notag\\
                          &=
                            \begin{pmatrix}
                              e^{2a} & 0 & 0\\
                              0 & e^{2b}\cosh 2s & e^{b+c}\sinh 2s \\
                              0 & e^{b+c}\sinh 2s & e^{2c}\cosh 2s
-                           \end{pmatrix}
-  \end{align*}
-  であるから，$a,b,s$を
+                           \end{pmatrix}\notag\\
+                         &= \begin{pmatrix}
+                             e^{2a} & 0 & 0\\
+                             0 & e^{2b}\cosh 2s & e^{-a}\sinh 2s \\
+                             0 & e^{-a}\sinh 2s & e^{-a-b}\cosh 2s
+                           \end{pmatrix}\label{eq:0114-2}
+  \end{align}
+  である．
+
+  \Cref{eq:0114-1}と\Cref{eq:0114-1}を見比べると，
   \begin{align*}
     a &= t,\\
     \sinh 2s &= \dfrac{2\sqrt{2}}{3}\sinh 3t, \\
     e^{2b} &= \dfrac{2e^{2t} + e^{-4t}}{\sqrt{9 + 8\sinh^2 3t}}
   \end{align*}
-  とすると，$e^{Y}e^{sZ}\cdot o_K = e^{tX}\cdot o_K $を得る．つまり
+  に対し$e^{Y}e^{sZ}\cdot o_K = e^{tX}\cdot o_K $を得る．つまり
   \begin{itemize}
-  \item $Y(tX) = \diag(a(t) ,b(t) ,-a(t) -b(t) ) $，ただし$a(t) = t$，$b(t) =\dfrac{1}{2} \log \dfrac{2e^{2t} + e^{-4t}}{\sqrt{9 + 8\sinh^2 3t}} $，
-  \item $Z(tX) = s(t)Z  $，ただし$s(t) = \dfrac{1}{2} \inv{\sinh}\dfrac{2\sqrt{2}}{3}\sinh 3t $
+  \item $Y(tX) = \diag(a(t) ,b(t) ,-a(t) -b(t) ) $
+
+    ただし$a(t) = t$，$b(t) =\dfrac{1}{2} \log \dfrac{2e^{2t} + e^{-4t}}{\sqrt{9 + 8\sinh^2 3t}} $，
+  \item $Z(tX) = s(t)Z  $ただし$s(t) = \dfrac{1}{2} \inv{\sinh}\dfrac{2\sqrt{2}}{3}\sinh 3t $
   \end{itemize}
   であるから，$Y(\real X) $は非有界である．  
 \end{npfwn}

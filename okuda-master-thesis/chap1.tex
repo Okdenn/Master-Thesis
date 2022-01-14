@@ -27,14 +27,15 @@
 \end{thm}
 
 
-
 ここで，$Y(\real X) $の有界性について，次の\Cref{yosou:1121}が小林俊行氏によって立てられた．
-\begin{defi}
-  $\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}  $と定める．
-\end{defi}
+
 
 \begin{yosou}(by T.~Kobayashi)\label{yosou:1121}  
-  $\pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0\text{ である．} \}$である．
+  $\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}  $と定めるとき，
+  \begin{align}
+    \pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0\text{ である．} \}\label{eq:yosou-1121}
+  \end{align}
+  である．
 \end{yosou}
 
 \Cref{yosou:1121}についての基本的な事項を挙げる．
@@ -58,9 +59,11 @@
   \end{enumerate}  
 \end{npfwn}
 
-$Y(\real X) $の有界性は$\Ad(k) $-不変である．つまり\Cref{lem:1101}が成り立つ．
+$Y(\real X) $の有界性は$\Ad(k) $-不変である．具体的には\Cref{lem:1101}が成り立つ．
 \begin{lem}\label{lem:1101}
-  $k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定めると，$Y(\real X)$が有界であることと$ Y'(\real X') $が有界であることは同値である．
+  $k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．
+
+  このとき$Y(\real X)$が有界であることと$ Y'(\real X') $が有界であることは同値である．
 \end{lem}
 
 \begin{npfwn}[\Cref{lem:1101}]
@@ -106,61 +109,64 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 \begin{npfwn}[\Cref{lem:riem-metric-su11}]
   
-$\ge$の元を$G/K$上の左不変ベクトル場と同一視すると$X' \defeq 
-\begin{pmatrix}
-  0 & 1 \\ 1 & 0
-\end{pmatrix} = \dfrac{\del}{\del x}
-$，$Y' \defeq 
-\begin{pmatrix}
-  0 & \sqrt{-1} \\ -\sqrt{-1} & 0
-\end{pmatrix} = \dfrac{\del}{\del y}
-$である．$\ge$のKilling形式$B$から定まる$\pe$上のノルム$\norm{-} $に対して$\norm{X'}^2 = \norm{Y'}^2 = 8 $，$B(X', Y' ) = 0$であって，$0\in G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \}  $で主張が成り立つ．
+  $\ge$の元を$G/K$上の左不変ベクトル場と同一視すると
+  \begin{align*}
+    X' &\defeq 
+         \begin{pmatrix}
+           0 & 1 \\ 1 & 0
+         \end{pmatrix} = \dfrac{\del}{\del x},\\
+    Y' &\defeq 
+         \begin{pmatrix}
+           0 & \sqrt{-1} \\ -\sqrt{-1} & 0
+         \end{pmatrix} = \dfrac{\del}{\del y}
+  \end{align*}
+  である．$\ge$のKilling形式$B$から定まる$\pe$上のノルム$\norm{-} $に対して$\norm{X'}^2 = \norm{Y'}^2 = 8 $，$B(X', Y' ) = 0$であって，$0\in G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \}  $で主張が成り立つ．
 
-したがって$k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$a_r\defeq
-\begin{pmatrix}
-  \cosh r & \sinh r \\  \sinh r & \cosh r
-\end{pmatrix}
-$とすると，
-\begin{align*}
-  &g(d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X')) \\
-  =&\ g (d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y')) \\
-  =&\ 8, \\
-  &g(d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y'))  = 0
-\end{align*}
-なるような計量$g $がKilling形式から誘導される計量であるが，それが主張の形であることを示せば良い (これらのベクトルが何を表しているかは\Cref{fig:riem-metric-su11}参照)．
+  したがって$k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$a_r\defeq
+  \begin{pmatrix}
+    \cosh r & \sinh r \\  \sinh r & \cosh r
+  \end{pmatrix}
+  $とすると，
+  \begin{align*}
+    &g(d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X')) \\
+    =&\ g (d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y')) \\
+    =&\ 8, \\
+    &g(d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y'))  = 0
+  \end{align*}
+  なるような計量$g $がKilling形式から誘導される計量であるが，それが主張の形であることを示せば良い (これらのベクトルが何を表しているかは\Cref{fig:riem-metric-su11}参照)．
 
-\begin{figure}[H]
-  \centering
-  % \raggedleft
-  % \raggedrightp
-  \includegraphics[scale=0.08]{../graph/riem-su11.png}
-  % \includegraphics[scale=0.3]{../graph/y-and-z.pdf}
-  \caption{}
-  \label{fig:riem-metric-su11}
-\end{figure}
+  \begin{figure}[H]
+    \centering
+    % \raggedleft
+    % \raggedrightp
+    \includegraphics[scale=0.08]{../graph/riem-su11.png}
+    % \includegraphics[scale=0.3]{../graph/y-and-z.pdf}
+    \caption{}
+    \label{fig:riem-metric-su11}
+  \end{figure}
 
 
-$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を与える曲線は
-\begin{align*}
-  \gamma_x(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \cosh r}
-\end{align*}
-であるから，
-\begin{align*}
-  \lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_x(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X' = (1 - \tanh^2 r)\dfrac{\del}{\del x} = (1-x^2-y^2)\dfrac{\del}{\del x}
-\end{align*}
-である．
+  $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を与える曲線は
+  \begin{align*}
+    \gamma_x(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \cosh r}
+  \end{align*}
+  であるから，
+  \begin{align*}
+    \lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_x(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X' = (1 - \tanh^2 r)\dfrac{\del}{\del x} = (1-x^2-y^2)\dfrac{\del}{\del x}
+  \end{align*}
+  である．
 
-同様に$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y'$を与える曲線は
-\begin{align*}
-\gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \cosh r}
-\end{align*}
-であるから，
-\begin{align*}
-\lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_y(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y' = (1 - \tanh^2 r)\dfrac{\del}{\del y} = (1-x^2-y^2)\dfrac{\del}{\del y}
-\end{align*}
-である．
+  同様に$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y'$を与える曲線は
+  \begin{align*}
+    \gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \cosh r}
+  \end{align*}
+  であるから，
+  \begin{align*}
+    \lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_y(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y' = (1 - \tanh^2 r)\dfrac{\del}{\del y} = (1-x^2-y^2)\dfrac{\del}{\del y}
+  \end{align*}
+  である．
 
-以上より$g  =  \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $が示された．
+  以上より$g  =  \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $が示された．
 \end{npfwn}
 
 
@@ -178,7 +184,7 @@ $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を
   $なる$s\in \real $を求める．
 
 
-   
+  
   \begin{figure}[H]
     \centering
     % \raggedleft
@@ -189,9 +195,9 @@ $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を
     \label{fig:yosou-eg-1}
   \end{figure}
 
-  右の円の Euclid 距離での半径を$R$とし，$e^{tX_{\theta}}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \frac{1-h^2}{2h} , R+h = \frac{1+h^2}{2h}  $を得る．
+  右の円の Euclid 距離での半径を$R$とし，$e^{tX_{\theta}}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \dfrac{1-h^2}{2h}$，$R+h = \dfrac{1+h^2}{2h}  $を得る．
 
-  さらに下の紫色の三角形に対して余弦定理を用いて$R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta  $を得，
+  さらに下の紫色の三角形に対して余弦定理を用いて${R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta }$を得，
   \begin{align}
     {\dfrac{2r\cos\theta}{r^2 + 1} = \dfrac{2h}{h^2 + 1} }\label{eq:1018-main}
   \end{align}

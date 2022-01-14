@@ -194,7 +194,7 @@
   % $\tr(\ad_{\ge'}A_{\alpha} \ad_{\ge'}A_{\alpha} ) = 2\alpha(A_{\alpha})^2\neq 0 $より，
   $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $を用いて$\ge'$と$\sulie(1,1)$の対応を
   \begin{align*}
-    \dfrac{1}{B(A_{\alpha}, A_{\alpha})} A_{\alpha} &\leftrightarrow
+    \dfrac{1}{\alpha(A_{\alpha})} A_{\alpha} &\leftrightarrow
     \begin{pmatrix}
       0 & 1 \\ 1 & 0
     \end{pmatrix},& c_{\alpha} X_{\alpha} \leftrightarrow
@@ -210,11 +210,11 @@
 \end{npfwn}
 
 \begin{cor}\label{cor:sub-lie-alg}
-  $G$を実階数1の実半単純Lie群とする．任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，極大分裂可換部分代数$\ah\defeq \real Y\subset \ge$に対し$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，それぞれ\Cref{thm:0810}と\Cref{lem:su11}より，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
+  $G$を実階数1の実半単純Lie群とする．任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
 \end{cor}
 
 \begin{npfwn}[\Cref{cor:sub-lie-alg}]
-
+  $G$は実階数1より，極大分裂可換部分代数$\ah\defeq \real Y\subset \ge$に対しある$\alpha\in \ah^{*} $が存在して$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，それぞれ\Cref{thm:0810}と\Cref{lem:su11}より\Cref{cor:sub-lie-alg}の主張が従う．以下で$\Sigma(\ge,\ah)$の形で場合分けしてこの議論をを確認する．
   \begin{case}
     \textbf{$\Sigma(\ge,\ah) = \{\pm\alpha\} $の場合}
 
@@ -239,8 +239,7 @@
     \item[2] の場合はこの$X_{\alpha}$と，適当な$0\neq X_{2\alpha}'\in \ge_{2\alpha} $と$Y$に，
     \item[3] の場合はこの$X_{2\alpha}$と，適当な$0\neq X_{\alpha}'\in \ge_{\alpha} $と$Y$に，
     \end{enumerate}
-    \Cref{thm:0810}を適用することにより$\ge_0\simeq \sulie(2,1)$で$X,Y\in \ge_0 $なるものが存在する．
-    
+    \Cref{thm:0810}を適用することにより$\ge_0\simeq \sulie(2,1)$で$X,Y\in \ge_0 $なるものが存在する．    
   \end{case}   
 \end{npfwn}
 
@@ -248,7 +247,7 @@
 \begin{lem}\cite[p.~409, Lemma~2.2]{hel01}$\ge$のCartan対合$\theta$に対して$\ge_0 = \theta\ge_0$であり，$\ge_0 $への$\theta$の制限は$\ge_0$のCartan分解を与える．
 \end{lem}
 
-\begin{lem}(\cite[p.~82]{yos38}) \Cref{cor:sub-lie-alg}の$\ge_0$の$G$における解析的部分群を$G_0$とする．$G_0 $は$G$の閉部分群である．
+\begin{lem}(\cite[p.~82]{yos38})\Cref{cor:sub-lie-alg}の$\ge_0$の$G$における解析的部分群を$G_0$とする．$G_0 $は$G$の閉部分群である．
 \end{lem}
 
 

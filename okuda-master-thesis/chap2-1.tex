@@ -181,7 +181,7 @@
   以上より\Cref{thm:0810}が示された．  
 \end{npfwn}
 
-\begin{lem}\label{lem:su11}\bluetext{証明せよ}
+\begin{lem}\label{lem:su11}
   
   $\Sigma(\ge,\ah) = \{\pm\alpha\}$の場合，任意に固定した$0\neq X_{\alpha}\in \ge_{\alpha}$と$\theta X_{\alpha}$により生成される部分Lie環$\ge'$は$\sulie(1,1)$と同型である．
 \end{lem}
@@ -192,21 +192,22 @@
   以上より$X_{\alpha} $と$\theta X_{\alpha} $により生成される$\ge$の部分Lie環$\ge'$は$\ge' = \real A_{\alpha}\oplus \real X_{\alpha} \oplus \real X_{-\alpha}  $である．
 
   % $\tr(\ad_{\ge'}A_{\alpha} \ad_{\ge'}A_{\alpha} ) = 2\alpha(A_{\alpha})^2\neq 0 $より，
-  $c_{\alpha}\defeq \sqrt{\dfrac{-2}{\alpha(A_{\alpha})B(X_{\alpha}, \theta X_{\alpha})}} $を用いて$\ge'$と$\sulie(1,1)$の対応を
+  $c_{\alpha}\defeq \dfrac{2}{\alpha(A_{\alpha})} $を用いて$\ge'$と$\sulie(1,1)$の対応を
   \begin{align*}
-    \dfrac{1}{\alpha(A_{\alpha})} A_{\alpha} &\leftrightarrow
+    % \dfrac{1}{\alpha(A_{\alpha})}
+    A_{\alpha} &\leftrightarrow
     \begin{pmatrix}
       0 & 1 \\ 1 & 0
-    \end{pmatrix},& c_{\alpha} X_{\alpha} \leftrightarrow
+    \end{pmatrix},&  c_{\alpha} X_{\alpha} \leftrightarrow
       \begin{pmatrix}
         \sqrt{-1} & -\sqrt{-1} \\ \sqrt{-1} & -\sqrt{-1}
       \end{pmatrix},\\
-    c_{\alpha} X_{-\alpha} &\leftrightarrow
+    c_{\alpha}X_{-\alpha} &\leftrightarrow
       \begin{pmatrix}
         \sqrt{-1} & \sqrt{-1} \\ -\sqrt{-1} & -\sqrt{-1}
       \end{pmatrix} 
   \end{align*}
-  により与えると，\bluetext{これは$\ge'$と$\sulie(1,1)$の間の同型になっている．チェックせよ}
+  により与えると，これは$\ge'$と$\sulie(1,1)$の間の同型になっている．
 \end{npfwn}
 
 \begin{cor}\label{cor:sub-lie-alg}

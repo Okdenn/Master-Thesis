@@ -39,11 +39,11 @@
   $\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}  $と定めるとき，
   \begin{enumerate}
   \item \begin{align}
-          \pe_{H,\bdd} = \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \ze_{\ze(\ha)}(X)  = 0\text{ である．} \}\label{eq:prob-1121}
+          \pe_{H,\bdd} = (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \ze_{\ze(\ha)}(X)  = 0\text{ である．} \}\label{eq:prob-1121}
         \end{align}
-      \item
+        であるか？
+      \item $G$が実半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $は測度0であるか？
       \end{enumerate}
-  であるか？
 \end{prob}
 
 \Cref{prob:1121}についての基本的な事項を挙げる．
@@ -51,9 +51,9 @@
 \begin{lem}\label{lem:basic-prob}
   \leavevmode\vspace{-1em}
   \begin{enumerate}
-  \item $\pe_{H,\bdd} \subset \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0 \}$である．
+  \item $\pe_{H,\bdd} \subset (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \ze_{\ze(\ha)}(X)  = 0\text{ である．} \}$が成り立つ．
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
-  \item 1，2より\Cref{prob:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
+  % \item 1，2より\Cref{prob:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
   \item $G$が実階数1のとき，\Cref{prob:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
   \end{enumerate}
 \end{lem}
@@ -61,9 +61,11 @@
 \begin{npfwn}[\Cref{lem:basic-prob}]
   \leavevmode\vspace{-1em}
   \begin{enumerate}
-  \item 背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対しては$[X_1,X_2 ] = 0$より$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
-  \item $X_1 = 0\iff X\in \per{\ha}\cap\pe $より$Z(tX) = tX $，$Y(tX) = 0 $であることによる．
-  \item[4.] 同値な命題である「$X\in \pe$に対し，$[X_1,X_2] = 0 $かつ$X_1 \neq 0$であることと$f X \in \ha\setminus\{0\} $であることは同値である」を示せば良い．$G$の実階数は1で，$H$は非コンパクトかつ$\Theta H = H$であるから，$\ha\subset \pe$であり，$\ha$は$\ge$の極大可換部分空間である．よって$X_1\neq 0$かつ$[X_1,X_2] = 0  \implies X_2 = 0 $であり，$X = X_1 + X_2\in \ha\setminus\{0\} $を得る．
+  \item 背理法による．$X\nin\per{\ha}\cap \pe $なる$X$に対し，$[X_1,X_2] = 0$ならば$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
+
+    また，$X\nin\per{\ha}\cap \pe $なる$X$に対し，$\ze_{\ze(\ha)}(X) \neq 0$ならば，ある$W\in \ze(\ha) $が存在して$[W, X] = [W, X_1 + X_2] = [W, X_2] = 0 $である．
+  \item $X_1 = 0$であることと$ X\in \per{\ha}\cap\pe $であることは同値であることから従う．
+  \item 
   \end{enumerate}  
 \end{npfwn}
 

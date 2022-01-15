@@ -77,7 +77,7 @@
     \end{align*}
     であり，\Cref{eq:basic-prob}が示された．
 
-    $\ze(\ha) \neq \{0\} $のとき，$\ha\cap\pe\neq \{0\} $と$G$の実階数が1であることにより，ある極大分裂可換部分代数$\ah\subset \pe$に対して$\ha \subset \ze_{\ka}(\ah) + \ah $である．このとき$X\in \pe\setminus\ha$を任意に1つ固定する．$X\in\per{\ha}\cap\pe $ならば\Cref{eq:basic-prob}の右辺に含まれるから，$X\nin \per{\ha} $とする．このとき$X_1\neq 0 $，$X_2\neq 0 $であり，$G$の実階数が1であるから$[X_1,X_2]\neq 0 $である．$X\nin \ha $より$\ze_{\ze(\ha)}(X)\subset \ze_{\ze_{\ka}(\ah) + \ah}(X) =   $
+    $\ze(\ha) \neq \{0\} $のとき，$\ha\cap\pe\neq \{0\} $と$G$の実階数が1であることにより，ある極大分裂可換部分代数$\ah\subset \pe$に対して$\ha \subset \ze_{\ka}(\ah) + \ah $である．このとき$X\in \pe\setminus\ha$を任意に1つ固定する．$X\in\per{\ha}\cap\pe $ならば\Cref{eq:basic-prob}の右辺に含まれるから，$X\nin \per{\ha} $とする．このとき$X_1\neq 0 $，$X_2\neq 0 $であり，$G$の実階数が1であるから$[X_1,X_2]\neq 0 $である．$X\nin \ha $より$\ze_{\ze(\ha)}(X)0$
     
   \end{enumerate}  
 \end{npfwn}

@@ -54,7 +54,7 @@
   \item $\pe_{H,\bdd} \subset (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \ze_{\ze(\ha)}(X)  = 0\text{ である．} \}$が成り立つ．
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
   % \item 1，2より\Cref{prob:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
-  \item $G$が実階数1のとき，\Cref{prob:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
+  \item $G$が実階数1の実半単純Lie群ならば\Cref{prob:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
   \end{enumerate}
 \end{lem}
 
@@ -65,7 +65,18 @@
 
     また，$X\nin\per{\ha}\cap \pe $なる$X$に対し，$\ze_{\ze(\ha)}(X) \neq 0$ならば，ある$0\neq W\in \ze(\ha) $が存在して，$W = W_1 + W_2 $
   \item $X_1 = 0$であることと$ X\in \per{\ha}\cap\pe $であることは同値であることから従う．
-  \item 
+  \item 次を示せばよい．
+    \begin{align}
+      \{0\}\cup \pe\setminus \ha = (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \ze_{\ze(\ha)}(X)  = 0\text{ である．} \}\label{eq:basic-prob}
+    \end{align}
+    % $G$の実階数が1であるから$\ze(\ha) = 0 $であることと$\dim \ha\geq 2$であることは同値である．
+    $\ze(\ha) = 0 $ならば\Cref{eq:basic-prob}の右辺は$\{X\in \pe\mid X_1 = 0\text{ あるいは } [X_1, X_2]\neq 0 \} $と一致する．$G$の実階数が1であることにより$X\in \ha\setminus\{0\} $であることと$X_1\neq 0 $かつ$[X_1, X_2] = 0 $であることは同値であるから，
+    \begin{align*}
+      \{0\}\cup \pe\setminus \ha = \{X\in \pe\mid X_1 = 0\text{ あるいは } [X_1, X_2]\neq 0 \} 
+    \end{align*}
+    であり，\Cref{eq:basic-prob}が示された．
+
+    $\ze(\ha) =  $$X\in \pe\setminus\ha$を任意に1つ固定する．$X\in\per{\ha}\cap\pe $ならば\Cref{eq:basic-prob}の右辺に含まれるから，$X\nin \per{\ha} $とする．このとき$X_1\neq 0 $，$X_2\neq 0 $であり，$G$の実階数が1であるから$[X_1,X_2]\neq 0 $である．
   \end{enumerate}  
 \end{npfwn}
 

@@ -32,30 +32,30 @@
 \end{thm}
 
 
-ここで，$Y(\real X) $の有界性について，次の\Cref{yosou:1121}が小林俊行氏によって立てられた．
+ここで，$Y(\real X) $の有界性について，次の\Cref{prob:1121}が小林俊行氏によって立てられた．
 
 
-\begin{yosou}(by T.~Kobayashi)\label{yosou:1121}  
+\begin{prob}(by T.~Kobayashi)\label{prob:1121}  
   $\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}  $と定めるとき，
   \begin{align}
-    \pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0\text{ である．} \}\label{eq:yosou-1121}
+    \pe_{H,\bdd} = \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0\text{ である．} \}\label{eq:prob-1121}
   \end{align}
   である．
-\end{yosou}
+\end{prob}
 
-\Cref{yosou:1121}についての基本的な事項を挙げる．
+\Cref{prob:1121}についての基本的な事項を挙げる．
 
-\begin{lem}\label{lem:basic-yosou}
+\begin{lem}\label{lem:basic-prob}
   \leavevmode\vspace{-1em}
   \begin{enumerate}
   \item $\pe_{H,\bdd} \subset \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X_1 = 0 \}$である．
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
-  \item 1，2より\Cref{yosou:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
-  \item $G$が実階数1のとき，\Cref{yosou:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
+  \item 1，2より\Cref{prob:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
+  \item $G$が実階数1のとき，\Cref{prob:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
   \end{enumerate}
 \end{lem}
 
-\begin{npfwn}[\Cref{lem:basic-yosou}]
+\begin{npfwn}[\Cref{lem:basic-prob}]
   \leavevmode\vspace{-1em}
   \begin{enumerate}
   \item 背理法による．$[X_1,X_2 ] = 0$かつ$X_1\neq 0$なる$X  \in \pe $に対しては$[X_1,X_2 ] = 0$より$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
@@ -91,16 +91,16 @@ $Z(\real X) $の有界性については次の定理が知られており，有�
 \Cref{thm:kob97}より，$X\in \ha $と$Z(\real X) $が有界であることが同値である．
 
 
-\subsection{\Cref{yosou:1121}の観察: $G = \SU(1,1) $，$H = \SO(1,1) $の場合}
+\subsection{\Cref{prob:1121}の観察: $G = \SU(1,1) $，$H = \SO(1,1) $の場合}
 
 $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \begin{pmatrix}
   \cosh t & \sinh t\\ \sinh t & \cosh t
 \end{pmatrix}
-\relmiddle| t\in \real \rbig\} $の場合に\Cref{yosou:1121}が正しいことは直接計算により確かめられる．
+\relmiddle| t\in \real \rbig\} $の場合に\Cref{prob:1121}が正しいことは直接計算により確かめられる．
 
-\begin{prop}\label{prop:yosou-eg}
-  $G = \SU(1,1) $，$H = \SO(1,1) $のとき\Cref{yosou:1121}は正しい．
+\begin{prop}\label{prop:prob-eg}
+  $G = \SU(1,1) $，$H = \SO(1,1) $のとき\Cref{prob:1121}は正しい．
 \end{prop}
 
 % \bluetext{$\sulie(1,1) $のKilling形式と$r = \tanh t$の関係を明記せよ．}
@@ -172,7 +172,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{npfwn}
 
 
-\begin{npfwn}[\Cref{prop:yosou-eg}]
+\begin{npfwn}[\Cref{prop:prob-eg}]
 
 
   $k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$X_{\theta} \defeq k_{\theta/2}
@@ -191,10 +191,10 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     \centering
     % \raggedleft
     % \raggedrightp
-    \includegraphics[scale=0.08]{../graph/yosou-eg-1.jpg}
+    \includegraphics[scale=0.08]{../graph/prob-eg-1.jpg}
     % \includegraphics[scale=0.3]{../graph/y-and-z.pdf}
     \caption{}
-    \label{fig:yosou-eg-1}
+    \label{fig:prob-eg-1}
   \end{figure}
 
   右の円の Euclid 距離での半径を$R$とし，$e^{tX_{\theta}}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \dfrac{1-h^2}{2h}$，$R+h = \dfrac{1+h^2}{2h}  $を得る．
@@ -210,7 +210,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 \begin{rem}\label{rem:su11-by-angle}
 
-  \Cref{prop:yosou-eg}は角度を用いた議論によっても示すことができる．具体的には，計算により次の\Cref{lem:0106}が示せる．
+  \Cref{prop:prob-eg}は角度を用いた議論によっても示すことができる．具体的には，計算により次の\Cref{lem:0106}が示せる．
   \begin{lem}\label{lem:0106}
     $e^{sY}e^{rZ}\cdot o_K =
     \begin{pmatrix}
@@ -225,7 +225,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \end{pmatrix}$とする．
   \end{lem}  
 
-  \Cref{lem:0106}により\Cref{prop:yosou-eg}は次のように証明できる．
+  \Cref{lem:0106}により\Cref{prop:prob-eg}は次のように証明できる．
   任意の$0\neq s\in \real, r\in \real $に対し，
   \begin{align}
     \lim_{r\to -\infty}\tan \phi_{\abs{s},r} = \dfrac{-1}{\sinh 2\abs{s}}  \leq \tan \phi_{s,r} \leq  \lim_{r\to \infty}\tan \phi_{\abs{s},r} = \dfrac{1}{\sinh 2\abs{s}}\label{eq:0106}
@@ -239,12 +239,12 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   
 \end{rem}
 
-\begin{cor}\label{cor:yosou-eg}
-  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$に対して\Cref{yosou:1121}は正しい．
+\begin{cor}\label{cor:prob-eg}
+  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$に対して\Cref{prob:1121}は正しい．
 \end{cor}
 
 
-\begin{npfwn}[\Cref{cor:yosou-eg}]\bluetext{より正確に記述せよ}
+\begin{npfwn}[\Cref{cor:prob-eg}]\bluetext{より正確に記述せよ}
   $\SO(1,n)/\SO(n)$の開球としての実現を考える．「$e^X\cdot o_K $と$o_K$を結ぶ直線」と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
   \begin{figure}[H]
     \centering
@@ -256,26 +256,26 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     \label{fig:son1}
   \end{figure}
   
-  この断面に現れるのは\Cref{fig:yosou-eg-1}と同じであるから，同様の計算により\Cref{cor:yosou-eg}を得る．
+  この断面に現れるのは\Cref{fig:prob-eg-1}と同じであるから，同様の計算により\Cref{cor:prob-eg}を得る．
   
 \end{npfwn}
 
 
-\subsection{\Cref{yosou:1121} の観察: \Cref{yosou:1121}の仮定を外した場合の成り立たない例}
+\subsection{\Cref{prob:1121} の観察: \Cref{prob:1121}の仮定を外した場合の成り立たない例}
 
-\Cref{yosou:1121}と次の\Cref{yosou:1121-2}は同値である．
-\begin{yosou}\label{yosou:1121-2}
+\Cref{prob:1121}と次の\Cref{prob:1121-2}は同値である．
+\begin{prob}\label{prob:1121-2}
 
   $\pe_{H,\bdd} = \{X\in \pe\mid [X,(\ha\cap\pe)]\neq \{0\} \text{ あるいは } X\perp (\ha\cap\pe)\text{ である．}  \}  $
   
-\end{yosou}
+\end{prob}
 
 ここで似た予想として$\ha\cap\pe$を$\ha$に置き換えた次の予想が立てられる．
-\begin{yosou}\label{yosou:1101}
+\begin{prob}\label{prob:1101}
   $\pe_{H,\bdd} = \{X\in \pe\mid  [X,\ha]\neq \{0\} \text{ あるいは } X\perp \ha \text{ である．}\}  $
-\end{yosou}
+\end{prob}
 
-しかし\Cref{yosou:1101}には反例が存在する．
+しかし\Cref{prob:1101}には反例が存在する．
 \begin{lem}\label{lem:1118-main}
   $G = \SL(3,\real) $，$Y_1\defeq \diag(1,1,-2)$，$Y_2 \defeq \begin{pmatrix}
     0 & 1 & 0\\
@@ -296,7 +296,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 \Cref{lem:1118-main}において$X$と$\ha$は，$[X,\ha] \neq \{0\} $だが$[X,(\ha\cap \pe)] = \{0\}$かつ$X\not\perp (\ha\cap \pe) $となるように取った．  
 
-つまり\Cref{yosou:1101}の右辺を次の\Cref{yosou:1101-2}のように少し弱めても\Cref{lem:1118-main}はその反例になっている．
-\begin{yosou}\label{yosou:1101-2}
+つまり\Cref{prob:1101}の右辺を次の\Cref{prob:1101-2}のように少し弱めても\Cref{lem:1118-main}はその反例になっている．
+\begin{prob}\label{prob:1101-2}
   $\pe_{H,\bdd} = \{X\in \pe\mid  [X,\ha]\neq \{0\} \text{ あるいは } X\perp (\ha\cap\pe) \text{ である．} \}  $
-\end{yosou}
+\end{prob}

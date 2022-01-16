@@ -9,7 +9,7 @@
 \input{../../../pikachu}
 \input{../../../colorsforprint.tex}
 \usepackage{pdfpages} % at the final compile, delete the option "demo"
-\usepackage[top=10truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry} %DO NOT option ``a4paper", it changes the size of outputed PDF
+\usepackage[top=10truemm,bottom=20truemm,left=18truemm,right=18truemm]{geometry} %DO NOT option ``a4paper", it changes the size of outputed PDF
 
 \DeclareMathOperator{\ballsub}{\underset{\text{ball}}{\subset}}
 \renewcommand{\dx}{\; dx}
@@ -137,7 +137,7 @@
 
   ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
 \end{prob-a}
-
+\vspace{-0.5em}
 ここで$G$が実階数1のとき，「$X\in \per{\ha}\cap\pe $もしくは『$ [X_1, X_2]\neq 0 $かつ$\ze_{\ze(\ha)}(X) = 0$であること』」と$X\in \{0\}\cup\pe\setminus\ha $は同値である．
 
 
@@ -148,7 +148,7 @@
   \item $G$を非コンパクト実簡約Lie 群，$H$は$G$の非コンパクトな閉部分群で，$G$のCartan対合$\Theta$に対して$H = \Theta H$を満たすものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
-  \item $B$を$\ge$のKilling形式とし，$\per{\ha}\ \defeq \{W\in \pe\mid B(W, \ha) = \{0\}\} $とする．
+  \item $\lyama{-},{-} \ryama$を，$\ge$上の$G$-不変な非退化対称双線型形式で，「$\ka$上負定値，$\pe$上正定値で$\ka\perp \pe$」なるものとし，$\per{\ha}\ \defeq \{W\in \ge\mid \lyama W, \ha\ryama = \{0\}\} $とする．
   \end{itemize}  
 \end{nttdef-a}
 \vspace{-0.5em}
@@ -171,6 +171,7 @@ $G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．例え�
 \begin{prop-a}\label{prop:reduction}
   $G$を実階数1の実半単純Lie群とする．任意の$0\neq Y\in \ha\cap\pe $と任意の$X\in \pe\setminus \real Y$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $あるいは$\ge_0\simeq \sulie(2,1)$なるものが存在する．また$\ge_0$の$G$における解析的部分群$G_0$は$G$の閉部分群である．
 \end{prop-a}
+\vspace{-0.5em}
 \Cref{prop:reduction}は{$\SU(2,1) $-reduction}，\cite{hel01}と\cite{yos38}の定理を併せて示される．
 
 $G$が実階数1のLie群の積であり，$\ha\cap \pe $の各成分が1次元であるときも，成分ごとに見ることで$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $
@@ -198,7 +199,7 @@ $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解�
   $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．同型写像$\Hom_{G}((C_c(G/H))^{\infty}, V )\to \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V$ただし任意の$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $に対し$ \lyama v,\alpha_V(\phi)\ryama_{V} = \dint_{G/H}\beta_V(v)\phi d\mu_X  $が存在する．
 \end{prop-a}
 
-$G$を実簡約Lie群，$H$を$G$の閉部分群とし，ある可換部分群$B\subset G$が存在して$G = KBH $というCartan分解を持つとする．任意の$X\in \Lie B$に対して$Y(\real X) $が有界であれば，$G/H$がランク$d \defeq \dim B $となるための条件のうちの1つである，「ある定数$C > 0$が存在して，任意の$X\in \be$に対し，$d_{G/K}(\exp(-X)\cdot o_K, o_K )  - \inf\{d_{G/K}(\exp(-X)\cdot o_K,h\cdot o_K ) \mid h\in H\}\leq C$であること」が満たされる．
+$G$を実簡約Lie群，$H$を$G$の閉部分群とし，ある可換部分群$B\subset G$が存在して$G = KBH $というCartan分解を持つとする．任意の$X\in \Lie B$に対して$Y(\real X) $が有界であれば，$G/H$がランク$d \defeq \dim B $となるための条件のうちの1つである，「ある定数$C > 0$が存在して，任意の$X\in \Lie B$に対し，$d_{G/K}(\exp(-X)\cdot o_K, o_K )  - \inf\{d_{G/K}(\exp(-X)\cdot o_K,h\cdot o_K ) \mid h\in H\}\leq C$であること」が満たされる．
 
 以上が本修士論文の表現論的な背景である．
 
@@ -207,14 +208,15 @@ $G$を実簡約Lie群，$H$を$G$の閉部分群とし，ある可換部分群$B
 \begin{thebibliography}{99}
   \vspace{-0.5em}
 \bibitem[Ber88]{ber88} J.~N.~Bernstein, \textit{On the support of Plancherel measure}, J.~Geom.~Phys., Vol. 5, n. 4, 1988, pp. 663--710.
-\bibitem[BH99]{bh99} M.~R.~Bridson and A.~Haefliger, Metric Spaces of Non-Positive Curvature, Grundlehren der mathematischen Wissensschaften, Vol.~319, Springer, 1999.
-\bibitem[Ebe72a]{e72-1} P.~Eberlien, \textit{Geodesic Flows on Negatively Curved Manifolds I}, Ann.~of~Math.~(2), Vol.~95, 1972, pp.~492--510.
-\bibitem[Ebe72b]{e72-2} P.~Eberlien, \textit{Geodesic Flow in Certain Manifolds without Conjugate Points}, Trans.~Amer.~Math.~Soc., Vol.~167, 1972, pp.~151--70.
+% \bibitem[BH99]{bh99} M.~R.~Bridson and A.~Haefliger, Metric Spaces of Non-Positive Curvature, Grundlehren der mathematischen Wissensschaften, Vol.~319, Springer, 1999.
+% \bibitem[Ebe72a]{e72-1} P.~Eberlien, \textit{Geodesic Flows on Negatively Curved Manifolds I}, Ann.~of~Math.~(2), Vol.~95, 1972, pp.~492--510.
+% \bibitem[Ebe72b]{e72-2} P.~Eberlien, \textit{Geodesic Flow in Certain Manifolds without Conjugate Points}, Trans.~Amer.~Math.~Soc., Vol.~167, 1972, pp.~151--70.
 \bibitem[Hel01]{hel01} S. Helgason, Differential Geometry, Lie Groups, and Symmetric Spaces, GSM, Vol. 34, AMS, 2001.
 \bibitem[KK16]{kk16} F. Kassel and T. Kobayashi, \textit{{\Poincare} series for non-Riemannian locally symmetric spaces}, Adv. Math., Vol. 287, 2016, pp. 123--236.
 \bibitem[Kob89]{kob89} T.~Kobayashi, 
   \textit{Proper action on a homogeneous space of reductive type},
-  Math.~Ann., Vol. 285, Issue. 2, 1989, pp. 249--263.  
+  Math.~Ann., Vol. 285, Issue. 2, 1989, pp. 249--263.
+\bibitem[小林95]{kobayashi95} 小林俊行，球等質多様体上の調和解析入門，第3回整数論サマースクール `等質空間と保型形式' 所収，佐藤文広 編，長野，1995，pp. 22-41．
 \bibitem[Kob97]{kob97} T.~Kobayashi, \textit{Invariant mesures on homogeneous manifolds of reductive type}, J.~Reine~Angew.~Math., Vol. 1997, No. 490--1, 1997, pp. 37--54.
 \bibitem[Yos38]{yos38} K.~Yosida, \textit{A Theorem concerning the Semi-Simple Lie Groups}, \\Tohoku~Mathematical~Journal, First Series, Vol.~44, 1938, pp.~81--84.
 \end{thebibliography}

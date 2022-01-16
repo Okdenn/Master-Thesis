@@ -40,7 +40,7 @@
   $\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}  $と定めるとき，
   \begin{enumerate}
   \item \begin{align}
-          \pe_{H,\bdd} = (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \ze_{\ze(\ha)\cap\pe}(X)  = \{0\} \text{ である．} \}\label{eq:prob-1121}
+          \pe_{H,\bdd} = (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ }\pe\cap \ze_{\ze(\ha)}(X)  = \{0\} \text{ である．} \}\label{eq:prob-1121}
         \end{align}
         であるか？
       \item $G$が実半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $は測度0であるか？
@@ -52,25 +52,25 @@
 \begin{lem}\label{lem:basic-prob}
   \leavevmode\vspace{-1em}
   \begin{enumerate}
-  \item $\pe_{H,\bdd} \subset (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \ze_{\ze(\ha)\cap\pe}(X)  = \{0\}  \text{ である．} \}$が成り立つ．
+  \item $\pe_{H,\bdd} \subset (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ }\pe\cap \ze_{\ze(\ha)}(X) = \{0\}  \text{ である．} \}$が成り立つ．
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
   % \item 1，2より\Cref{prob:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
-  \item $G$が実階数1ならば\Cref{prob:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
+  \item $G$が実階数1ならば，\Cref{prob:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
   \end{enumerate}
 \end{lem}
 
 \begin{npfwn}[\Cref{lem:basic-prob}]
   \leavevmode\vspace{-1em}
   \begin{enumerate}
-  \item 背理法による．$X\nin\per{\ha}\cap \pe $なる$X$に対し，$[X_1,X_2] = 0$ならば$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
+  \item $X\nin\per{\ha}\cap \pe $なる$X\in \pe$に対し，$[X_1,X_2] = 0$ならば$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
 
-    また，$X\nin\per{\ha}\cap \pe $なる$X$で$\ze_{\ze(\ha)\cap\pe}(X) \neq 0$なるものが存在するならば，ある$0\neq W \in \ze(\ha)\cap\pe\subset \ha\cap \pe $で$[X, W] = [X_2, W] = 0 $である．$W\in \pe\cap(\ha\setminus\{0\}) $であるから，$W + X_2\nin \per{\ha}\cap \pe $である．以上より任意の$t$に対し$e^{t(W+X_2)}\cdot o_K = e^{tW}e^{tX_2}\cdot o_K $であるから$Y(t(W+X_2)) = \real W $となり，
+    また，$X\nin\per{\ha}\cap \pe $なる$X$で$\pe\cap \ze_{\ze(\ha)}(X) \neq 0$なるものが存在するならば，ある$0\neq W \in \ze(\ha)\cap\pe\subset \ha\cap \pe $で$[X, W] = [X_2, W] = 0 $である．$W\in \pe\cap(\ha\setminus\{0\}) $であるから，$W + X_2\nin \per{\ha}\cap \pe $である．以上より任意の$t$に対し$e^{t(W+X_2)}\cdot o_K = e^{tW}e^{tX_2}\cdot o_K $であるから$Y(t(W+X_2)) = \real W $となり，
   \item $X_1 = 0$であることと$ X\in \per{\ha}\cap\pe $であることが同値であることから従う．
   \item 次を示せばよい．
     \begin{align}
-      \{0\}\cup \pe\setminus \ha = (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \ze_{\ze(\ha)\cap\pe}(X)  = \{0\}  \text{ である．} \}\label{eq:basic-prob}
+      \{0\}\cup \pe\setminus \ha = (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \pe\cap \ze_{\ze(\ha)}(X) = \{0\}  \text{ である．} \}\label{eq:basic-prob}
     \end{align}
-    $G$の実階数が1かつ$H$が非コンパクトであるから$\ha\cap\pe$は極大分裂可換部分代数であり，右辺の2つ目の集合は$\ze(\ha)\cap\pe \subset \real X_{1}\neq \{0\} $より$\{X\in \pe\mid  [X_1, X_2]\neq 0 \}$となる．よって\Cref{eq:basic-prob}の右辺$\{X\in \pe\mid X_1 = 0\text{ または }  [X_1, X_2]\neq 0 \text{ である．} \}$は$X\in \{0\}\cup\pe\setminus\{0\} $と同値であり，\Cref{eq:basic-prob}が示された．
+    $G$の実階数が1かつ$H$が非コンパクトであるから$\ha\cap\pe$は極大分裂可換部分代数であり，右辺の2つ目の集合は$\ze(\ha)\cap\pe \subset \real X_{1}\neq \{0\} $より$\{X\in \pe\mid  [X_1, X_2]\neq 0 \}$となる．よって\Cref{eq:basic-prob}の右辺は$\{X\in \pe\mid X_1 = 0\text{ または }  [X_1, X_2]\neq 0 \text{ である．} \}$と同値である．この集合はさらに$X\in \{0\}\cup\pe\setminus\{0\} $と同値であるから\Cref{eq:basic-prob}が示された．
   \end{enumerate}  
 \end{npfwn}
 

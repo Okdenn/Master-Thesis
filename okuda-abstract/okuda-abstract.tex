@@ -28,9 +28,9 @@
 \makeatother
 
 \newenvironment{claimbis}[1]
-  {\renewcommand{\thethm}{\ref{#1}$'$}%
-   \neutralize{claim}\phantomsection
-   \begin{claim}}
+{\renewcommand{\thethm}{\ref{#1}$'$}%
+  \neutralize{claim}\phantomsection
+  \begin{claim}}
   {\end{claim}}
 
 % \begin{align*}
@@ -81,19 +81,19 @@
 % \renewcommand{\@maketitle}{\newpage
 %   % \null
 %   % \vskip 2em 
-%   \begin{center}
-%     {\LARGE \@title \par} % \vskip 1.5em
-%     {\large \lineskip .5em
-%       \begin{tabular}[t]{c}\@author
-%       \end{tabular}\par
-%     }
-%     % \vskip 1em
-%     % {\large \@date}
-%   \end{center}
+% \begin{center}
+%   {\LARGE \@title \par} % \vskip 1.5em
+%   {\large \lineskip .5em
+%   \begin{tabular}[t]{c}\@author
+%   \end{tabular}\par
+% }
+%     %   \vskip 1em
+%     %   {\large \@date}
+% \end{center}
 %   % \par
 %   % \vskip 0.5em
 % }
-% \makeatother
+%   \makeatother
 
 \usepackage{advdate} % \AdvanceDate[-1]\today の進捗報告，みたいな
 
@@ -114,20 +114,21 @@
 
 % \input{okuda-title}
 \begin{center}
-論文内容の要旨
+  論文内容の要旨
 \end{center}
 
 \noindent\underline{修士論文題目}
-
+\vspace{-1em}
 \begin{center}
-Riemann対称空間上における測地線の簡約部分Lie代数への射影に対する有界性
+  Riemann対称空間上における測地線の簡約部分Lie代数への射影に対する有界性
 
----低階数・低次元の場合---
+  ---低階数・低次元の場合---
 \end{center}
+\vspace{-0.5em}
 
 \noindent 氏名: 奥田 堯子
 
-\vspace{1em}
+\vspace{0.5em}
 
 本修士論文では，小林俊行氏による$\ha$射影の有界性に対する次の\Cref{prob:1121}について，$G$の実階数や$H$の次元が低い場合に肯定的な結果を得た ($\ha$射影の定義や記号は後述する)．
 
@@ -162,39 +163,40 @@ $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下�
 
 $G = \SU(1,2) $，$H= \SO(1,1)$の場合がトイモデルとなって$G$が実階数1の場合の\Cref{prob:1121}に対する肯定的な結果が得られた．
 
-$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; 例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $なるとき，$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度の最小値が非零であることに矛盾し，\Cref{prob:1121}と同値な「$X\in \{0\}\cup \pe\setminus\ha $であることと$ Y(\real X) $が有界であることが同値である」ということが証明できる．
+$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $なるとする．$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して「$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線」が「$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線」が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度の最小値が非零であることに矛盾し，\Cref{prob:1121}と同値な「$X\in \{0\}\cup \pe\setminus\ha $であることと$ Y(\real X) $が有界であることが同値である」ということが証明できる．
 
 これを踏まえて$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて\Cref{prob:1121}に対して肯定的な結果を得た．
 
-\begin{prop-a}
+\begin{prop-a}\label{prop:reduction}
   $G$を実階数1の実半単純Lie群とする．任意の$0\neq Y\in \ha\cap\pe $と任意の$X\in \pe\setminus \real Y$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
 
   また，$\ge_0$の$G$における解析的部分群$G_0$は$G$の閉部分群である．
 \end{prop-a}
-この命題は{$\SU(2,1) $-reduction}，\cite{hel01}と\cite{yos38}の定理を併せて示される．
+\Cref{prop:reduction}は{$\SU(2,1) $-reduction}，\cite{hel01}と\cite{yos38}の定理を併せて示される．
 
 $G$が実階数1のLie群の積であり，$\ha\cap \pe $の各成分が1次元であるときも，成分ごとに見ることで$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $
 の場合に帰着でき，\Cref{prob:1121}に対する肯定的な結果を得られる．
 
 \Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．
 
-まずいくつか用語を準備する．$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次を満たすことである．
-  \begin{enumerate}
-  \item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}
-  \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
-  \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
-  \item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
-  \end{enumerate}
-  properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
+まずいくつか用語を準備する．$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次の4条件を満たすことである．
+\vspace{-1em}
+\begin{enumerate}
+\item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}\footnote{これは\cite{ber88}には明示されていません．}
+\item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
+\item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
+\item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
+\end{enumerate}
+properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
 
-  $G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．単位元のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X$，$ \inv{C_B} < m_X(Bx) < C_{B}$である．
-  
-  $d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
-  
-  $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$-絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
-  \begin{prop-a}(\cite[p.~678]{ber88})
-    $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．このとき，$\Hom_{G}((C_c(G/H))^{\infty}, V )\to \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V\st \lyama v,\alpha_V(\phi)\ryama_{V} = \lyama \beta_{V}(v)\mu_X , \phi\ryama_{} $，$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $
-  \end{prop-a}
+$G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．単位元のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X$，$ \inv{C_B} < m_X(Bx) < C_{B}$である．
+
+$d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
+
+$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$-絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
+\begin{prop-a}(\cite[p.~678]{ber88})
+  $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．このとき，$\Hom_{G}((C_c(G/H))^{\infty}, V )\to \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V\st \lyama v,\alpha_V(\phi)\ryama_{V} = \dint_{G/H}\beta_V(v)\phi d\mu_X  $，$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $は同型写像である．
+\end{prop-a}
 
 ここで$G$が$G = KAH$という Cartan 分解を持つときに，$G/H$がランク$d \defeq \dim A$となる可能性がある条件の1つを$X\in \ah$に対する$\ha$射影$Y(\real X) $の有界性として定式化することができる．これが本修士論文の表現論的な背景である．
 
@@ -219,22 +221,22 @@ $G$が実階数1のLie群の積であり，$\ha\cap \pe $の各成分が1次元�
 \begin{comment}
   \begin{def-a}{\cite[Definition~1.3]{e72-1}}\label{def:visibility}
 
-  $M$が完備かつ非正曲率をもつ1-連結Riemann多様体であるとき，$M$をHadamard多様体といい，Hadamard多様体$M$が visibility manifold であるとは，任意の$ p\in M$と任意の$ \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が$d_{M}(p, \gamma(t))\geq r(p,\epsilon) $，$t\in [t_0, t_1]$ならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
-\end{def-a}
+    $M$が完備かつ非正曲率をもつ1-連結Riemann多様体であるとき，$M$をHadamard多様体といい，Hadamard多様体$M$が visibility manifold であるとは，任意の$ p\in M$と任意の$ \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が$d_{M}(p, \gamma(t))\geq r(p,\epsilon) $，$t\in [t_0, t_1]$ならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
+  \end{def-a}
 
-\bluetext{$M$がvisibility manifold であるとは，幾何的に見れば}\footnote{図をつけようと思っています．2022/01/10}
+  \bluetext{$M$がvisibility manifold であるとは，幾何的に見れば}\footnote{図をつけようと思っています．2022/01/10}
 
-\begin{thm-a}{\cite[p.~296, 9.33~Theorem]{bh99}, originally \cite[Theorem~4.1]{e72-2}}\label{thm:visibility-and-rank}
-  
-  ある$C\cptsub M$が存在して$ M = \bigcup\{f(C)\mid f\in \isom(M) \}  $なるHadamard多様体$M$に対し，次は同値である．
-  \vspace{-1em}
-  \begin{enumerate}
-    \renewcommand{\labelenumi}{(\roman{enumi})}
-  \item $M$はvisibility manifoldである．
-  \item 全測地的な部分Riemann多様体$M'\subset M$で$\real^2$と等長同型なものが存在しない．
-  \end{enumerate}
-\end{thm-a}
+  \begin{thm-a}{\cite[p.~296, 9.33~Theorem]{bh99}, originally \cite[Theorem~4.1]{e72-2}}\label{thm:visibility-and-rank}
+    
+    ある$C\cptsub M$が存在して$ M = \bigcup\{f(C)\mid f\in \isom(M) \}  $なるHadamard多様体$M$に対し，次は同値である．
+    \vspace{-1em}
+    \begin{enumerate}
+      \renewcommand{\labelenumi}{(\roman{enumi})}
+    \item $M$はvisibility manifoldである．
+    \item 全測地的な部分Riemann多様体$M'\subset M$で$\real^2$と等長同型なものが存在しない．
+    \end{enumerate}
+  \end{thm-a}
 
-ここでRiemann対称空間はHadamard多様体であり，\Cref{thm:visibility-and-rank}の (ii) は$G$の実階数が1以下であることと同値である．したがって$G$の実階数が1の場合$G/K$はvisibility manifoldであり，$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明と全く同様にして背理法により\Cref{prob:1121}が示される．
+  ここでRiemann対称空間はHadamard多様体であり，\Cref{thm:visibility-and-rank}の (ii) は$G$の実階数が1以下であることと同値である．したがって$G$の実階数が1の場合$G/K$はvisibility manifoldであり，$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明と全く同様にして背理法により\Cref{prob:1121}が示される．
 \end{comment}
 \end{document}

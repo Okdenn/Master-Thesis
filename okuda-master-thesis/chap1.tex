@@ -227,13 +227,18 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
   右の円の Euclid 距離での半径を$R$とし，$e^{tX_{\theta}}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \dfrac{1-h^2}{2h}$，$R+h = \dfrac{1+h^2}{2h}  $を得る．
 
-  さらに下の紫色の三角形に対して余弦定理を用いて${R^2 = (R+h)^2 + r^2 - 2(R+h) \cos\theta }$を得，
+  さらに下の紫色の三角形に対して余弦定理を用いて${R^2 = (R+h)^2 + r^2 - 2r(R+h)\cos\theta }$を得，
+  \begin{align*}
+    R^2 &= (R+h)^2 + r^2 - 2(R+h) \cos\theta = R^2 +  1 + r^2 - 2r(R+h) \cos\theta                                   \\
+                                            &= R^2 +  1 + r^2 - 2r\dfrac{1+h^2}{2h} \cos\theta  
+  \end{align*}
+  より
   \begin{align}
     {\dfrac{2r\cos\theta}{r^2 + 1} = \dfrac{2h}{h^2 + 1} }\label{eq:1018-main}
   \end{align}
   を得る．
 
-  $r = \tanh t$，$h = \tanh s$であるから\Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2t $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界$\iff \abs{\cos\theta}\neq 1 \iff  X\nin \ha  $である．
+  $r = \tanh t$，$h = \tanh s$であるから\Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2t $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界であることと$ \abs{\cos\theta}\neq 1 \iff  X\nin \ha  $であることが同値である．
 \end{npfwn}
 
 \begin{rem}\label{rem:su11-by-angle}
@@ -271,20 +276,21 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$に対して\Cref{prob:1121}は正しい．より具体的には次の\Cref{thm:1018-main}が成り立つ．
 \end{cor}
 \begin{thm}\label{thm:1018-main}
-  % $\SO(n,1)/\SO(n) $を {\Poincare} ball model で実現したとき， 
+  % $\SO(n,1)/\SO(n) $を {\Poincare} ball model で実現したとき，
+  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$とする．
   $
   \begin{cases}
-    \ds Y(X) &= \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta ]\frac{\pr(X)}{\norm{\pr(X)}},\quad X\in \pe\setminus (\per{\solie(k,1)}\cap \pe) \\
-    \ds Y(X)&= 0,\qquad \qquad\qquad\qquad\qquad\qquad\qquad\quad \ X\in  \per{(\solie(k,1))}\cap \pe
+    \ds Y(X) &= \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta ]\frac{\pr(X)}{\norm{\pr(X)}},\quad X\in \pe\setminus (\per{\ha}\cap \pe) \\
+    \ds Y(X)&= 0,\qquad \qquad\qquad\qquad\qquad\qquad\qquad\quad \ X\in  \per{(\ha)}\cap \pe
   \end{cases}
   $である．
 \end{thm}
 \begin{cor}
-  $X\in \pe\setminus \solie(k,1) $
+  $X\in \pe\setminus \ha $
   % $ e^{X}\cdot o_K\nin \SO(k,1)\cdot o_K $
   のとき，$0 \leq \cos \theta\neq 1$であり，\\
-  $Y(\real X) = \lbig\{s\frac{\pr(X)}{\norm{\pr(X)}} \mid  -\frac{\inv{\tanh}(\cos\theta)}{4} < s < \frac{\inv{\tanh}(\cos\theta)}{4} \rbig\} $ (if $X\in \pe\setminus (\per{\solie(k,1)}\cap \pe)$) \\
-  あるいは$Y(\real X) = \{\bm{0}\}$ (if $X\in  \per{(\solie(k,1))}\cap \pe$) より，$\solie(k,1)\cap \pe $内で有界である．
+  $Y(\real X) = \lbig\{s\frac{\pr(X)}{\norm{\pr(X)}} \mid  -\frac{\inv{\tanh}(\cos\theta)}{4} < s < \frac{\inv{\tanh}(\cos\theta)}{4} \rbig\} $ (if $X\in \pe\setminus (\per{\ha}\cap \pe)$) \\
+  あるいは$Y(\real X) = \{\bm{0}\}$ (if $X\in  \per{(\ha)}\cap \pe$) より，$\ha\cap \pe $内で有界である．
 \end{cor}
 
 \vspace{-1em}
@@ -292,7 +298,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
   \begin{easylist}[itemize]
     @ {\Poincare} ball の計量は$4\dfrac{\sum_i dx_i^2}{(1-x_i^2)^2} $とする．
-    @ $\pr\colon \pe = (\solie(k,1)\cap \pe)\oplus (\per{(\solie(k,1) )}\cap \pe) \to (\solie(k,1)\cap \pe)$を直交射影とする．
+    @ $\pr\colon \pe = (\ha\cap \pe)\oplus (\per{(\ha )}\cap \pe) \to (\ha\cap \pe)$を直交射影とする．
     @ $\cos \theta \defeq \frac{\lyama X, \pr(X)\ryama }{\norm{X}\, \norm{\pr(X)}} \geq 0 $，ただし$\lyama{-},{-}\ryama  $は$\solie(n,1) $の Killing form とする．
   \end{easylist}  
 \end{defi}

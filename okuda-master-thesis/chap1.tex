@@ -27,16 +27,23 @@
   \end{itemize}  
 \end{nttdef}
 
-以下の\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe$に対し，$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義する．
+以下の\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe$に対し，
+\begin{align*}
+{(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)}
+\end{align*}
+と定義する．
 \begin{thm}(\cite[Lemma~6.1]{kob89})\label{thm:kob89-lem6.1}
-  $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
+  \begin{align*}
+\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K
+  \end{align*}
+  は上への微分同相である．
 \end{thm}
 
 
 ここで，$Y(\real X) $の有界性について，次の\Cref{prob:1121}が小林俊行氏によって提起された．
 
 
-\begin{prob}(by T.~Kobayashi)\label{prob:1121}  
+\begin{prob}(by T.~Kobayashi)\label{prob:1121}
   ${\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}}  $と定めるとき，
   \begin{enumerate}
   \item \begin{align}
@@ -92,7 +99,7 @@ $Y(\real X) $の有界性は$\Ad(k) $-不変である．具体的には\Cref{lem
 \end{npfwn}
 
 
-$Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
+$Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}と比較して$Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
 
 \begin{thm}(\cite[Lemmma~5.4]{kob97})\label{thm:kob97}
   $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$である．ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の元がなす角度の最小値${0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2}} $であり，$X\in \pe\setminus \ha \iff \phi(X,\ha\cap \pe)\neq 0 $である．
@@ -271,14 +278,24 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{npfwn}
 
 
-\subsection{\Cref{prob:1121} の観察: \Cref{prob:1121}の仮定を外した場合の成り立たない例}
+\subsection{\Cref{prob:1121} の観察: 類似の問いとその反例}
 
-\Cref{prob:1121}に似た予想として$\ha\cap\pe$を$\ha$に置き換えた次の予想が立てられる．
+\Cref{prob:1121}は，$G$の実階数が1の場合は
+\begin{prob}\label{prob:1121-2}
+
+  $\pe_{H,\bdd} = \{X\in \pe\mid [X,(\ha\cap\pe)]\neq \{0\} \text{ あるいは } X\perp (\ha\cap\pe)\text{ である．}  \}  $となるか？
+  
+\end{prob}
+と同値であった．しかし，この問題には$G$の実階数が2の場合の反例が存在する．
+\input{chap3.tex}
+
+
+$G$が実階数1の場合に限っても\Cref{prob:1121-2}と類似の問題はいくつか考えられる．例えば$\ha\cap\pe$を$\ha$に置き換えた次の問題が立てられる．
 \begin{prob}\label{prob:1101}
-  $\pe_{H,\bdd} = \{X\in \pe\mid  [X,\ha]\neq \{0\} \text{ あるいは } X\perp \ha \text{ である．}\}  $
+  $\pe_{H,\bdd} = \{X\in \pe\mid  [X,\ha]\neq \{0\} \text{ あるいは } X\perp \ha \text{ である．}\}  $となるか？
 \end{prob}
 
-しかし\Cref{prob:1101}には反例が存在する．
+しかし\Cref{prob:1101}にも反例が存在する．
 \begin{lem}\label{lem:1118-main}
   $G = \SL(3,\real) $，$Y_1\defeq \diag(1,1,-2)$，$Y_2 \defeq \begin{pmatrix}
     0 & 1 & 0\\
@@ -301,5 +318,5 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 つまり\Cref{prob:1101}の右辺を次の\Cref{prob:1101-2}のように少し弱めても\Cref{lem:1118-main}はその反例になっている．
 \begin{prob}\label{prob:1101-2}
-  $\pe_{H,\bdd} = \{X\in \pe\mid  [X,\ha]\neq \{0\} \text{ あるいは } X\perp (\ha\cap\pe) \text{ である．} \}  $
+  $\pe_{H,\bdd} = \{X\in \pe\mid  [X,\ha]\neq \{0\} \text{ あるいは } X\perp (\ha\cap\pe) \text{ である．} \}  $となるか？
 \end{prob}

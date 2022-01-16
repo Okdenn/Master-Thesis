@@ -158,33 +158,13 @@ Riemann対称空間上における測地線の簡約部分Lie代数への射影�
 
 $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」であり，$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
 
-\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．
-
-まずいくつか用語を準備する．$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左$G$不変測度$\mu_{G/H} $が存在するとする．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次を満たすことである．
-  \begin{enumerate}
-  \item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}
-  \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
-  \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
-  \item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
-  \end{enumerate}
-  properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
-
-  $G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．$e$のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X,\   \inv{C_B} < m_X(Bx) < C_{B}$である．
-  
-  $d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
-
-  $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\beta$を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．
-
-ここで$G$が$G = KAH$という Cartan 分解を持つときに，$G/H$がランク$d \defeq \dim A$となる可能性がある条件の1つを$X\in \ah$に対する$\ha$射影$Y(\real X) $の有界性として定式化することができる．これが本修士論文の背景である．\footnote{「」部分は 正確に定式化する予定です \& もうすこしちゃんと\cite{ber88}を復習します． 2022/01/10}
-
-
 以下では$(G,H) $がどのような場合に，どのような証明方法でを示したかを具体的に述べる．
 
 $G = \SU(1,2) $，$H= \SO(1,1)$の場合がトイモデルとなって$G$が実階数1の場合の\Cref{prob:1121}に対する肯定的な結果が得られた．
 
 $G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; 例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $なるとき，$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度の最小値が非零であることに矛盾し，\Cref{prob:1121}と同値な「$X\in \{0\}\cup \pe\setminus\ha $であることと$ Y(\real X) $が有界であることが同値である」ということが証明できる．
 
-これを踏まえて$G$が実階数1，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて\Cref{prob:1121}に対して肯定的な結果を得た．
+これを踏まえて$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて\Cref{prob:1121}に対して肯定的な結果を得た．
 
 \begin{prop-a}
   $G$を実階数1の実半単純Lie群とする．任意の$0\neq Y\in \ha\cap\pe $と任意の$X\in \pe\setminus \real Y$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
@@ -193,9 +173,32 @@ $G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体�
 \end{prop-a}
 この命題は{$\SU(2,1) $-reduction}，\cite{hel01}と\cite{yos38}の定理を併せて示される．
 
+$G$が実階数1のLie群の積であり，$\ha\cap \pe $の各成分が1次元であるときも，成分ごとに見ることで$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $
+の場合に帰着でき，\Cref{prob:1121}に対する肯定的な結果を得られる．
+
+\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．
+
+まずいくつか用語を準備する．$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次を満たすことである．
+  \begin{enumerate}
+  \item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}
+  \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
+  \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
+  \item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
+  \end{enumerate}
+  properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
+
+  $G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．単位元のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X,\   \inv{C_B} < m_X(Bx) < C_{B}$である．
+  
+  $d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
+  
+  $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$-絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
+  \begin{prop-a}(\cite[p.~678]{ber88})
+    $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．このとき，$\Hom_{G}() $
+  \end{prop-a}
+
+ここで$G$が$G = KAH$という Cartan 分解を持つときに，$G/H$がランク$d \defeq \dim A$となる可能性がある条件の1つを$X\in \ah$に対する$\ha$射影$Y(\real X) $の有界性として定式化することができる．これが本修士論文の表現論的な背景である．
 
 
-$G$が実階数1のLie群の積である場合も，成分ごとに見れば$G$の実階数が1の場合と同様であるから，こちらも$\ha\cap \pe $の各成分が1次元であれば
 
 \clearpage
 \begin{thebibliography}{99}

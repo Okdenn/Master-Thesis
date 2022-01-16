@@ -116,7 +116,11 @@
   $[[X_{\alpha}, \theta Y_{\alpha}], X_{2\alpha}] = 0$である．
 \end{lem}
 \begin{npfwn}[\Cref{lem:3.5}]
-  \bluetext{\Cref{lem:3.2}--\ref{lem:3.4}とJacobi恒等式による．}
+  \Cref{lem:3.2}--\ref{lem:3.4}とJacobi恒等式による．具体的には，$T\defeq [X_{\alpha},\theta Y_{\alpha}] $とすると，\Cref{lem:3.3}より$[T, X_{\alpha}] \in \real Y_{\alpha} $であり，\Cref{lem:3.4}より$[T, Y_{\alpha}] \in \real X_{\alpha} $である．Jacobi恒等式より
+  \begin{align*}
+    [T, [X_{\alpha},Y_{\alpha}]] = -[X_{\alpha},[Y_{\alpha},T]] - [Y_{\alpha},[X_{\alpha},T]]
+  \end{align*}
+  であるから，\Cref{lem:3.2}を用いることで\Cref{lem:3.5}の主張を得る．
 \end{npfwn}
 
 \begin{lem}\label{lem:3.6}

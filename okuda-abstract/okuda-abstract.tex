@@ -158,14 +158,15 @@ Riemann対称空間上における測地線の簡約部分Lie代数への射影�
 
 $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」であり，$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
 
-\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．\footnote{もう少し自然な言い回しを考えます．2022/01/11}\bluetext{$G$を実簡約Lie群，$H$を$G$の閉部分群とする．$r\colon G\to \real_{\geq 0} $がradial functionであるとは，$r$が次を満たすことである．
+\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．\footnote{もう少し自然な言い回しを考えます．2022/01/11}\bluetext{$G$を実簡約Lie群，$H$を$G$の閉部分群とする．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次を満たすことである．
   \begin{enumerate}
-  \item $e\in G$を単位元とするとき$r(e) = 0 $である．
+  \item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}
   \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
-  \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq  $
+  \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
+  \item 任意の$R\geq 0$に対し，$B(R)\defeq  $
   \end{enumerate}
-  radial function$r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$
-
+  radial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
+  
   「$\real^d $と同じ増大度」を持つとき，$G/H$のランクが$d$であると言う．
 
   $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\alpha$の「双対」を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．
@@ -177,7 +178,7 @@ $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下�
 
 $G = \SU(1,2) $，$H= \SO(1,1)$の場合がトイモデルとなって$G$が実階数1の場合の\Cref{prob:1121}に対する肯定的な結果が得られた．
 
-$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; 例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $なるとき，$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度の最小値が非零であることに矛盾し，\Cref{prob:1121}と同値な「$X = 0 \lor X\in \pe\setminus\ha $であることと$ Y(\real X) $が有界であることが同値である」ということが証明できる．
+$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; 例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $なるとき，$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度の最小値が非零であることに矛盾し，\Cref{prob:1121}と同値な「$X\in \{0\}\cup \pe\setminus\ha $であることと$ Y(\real X) $が有界であることが同値である」ということが証明できる．
 
 これを踏まえて$G$が実階数1，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて\Cref{prob:1121}に対して肯定的な結果を得た．
 

@@ -41,11 +41,12 @@
   $c \defeq 2\alpha(A_{\alpha})B(X_{\alpha},\theta X_{\alpha}) $とすると，$[X_{\alpha}, Y_{\alpha}] = cX_{2\alpha} $である．特に$0\neq Y_{\alpha}\neq X_{\alpha} $である．
 \end{lem}
 \begin{npfwn}[\Cref{lem:3.2}]
-  Jacobi恒等式より
+  Jacobi恒等式と$Y_{\alpha}$の定義より
   \begin{align*}
-    [X_{\alpha},[\theta X_{\alpha}, X_{2\alpha}]] + [\theta X_{\alpha},[X_{2\alpha}, X_{\alpha}]] + [X_{2\alpha},[X_{\alpha}, \theta X_{\alpha}]] = 0
+    0 &= [X_{\alpha},[\theta X_{\alpha}, X_{2\alpha}]] + [\theta X_{\alpha},[X_{2\alpha}, X_{\alpha}]] + [X_{2\alpha},[X_{\alpha}, \theta X_{\alpha}]] \\
+      &= [X_{\alpha}, Y_{\alpha}] + [X_{2\alpha},B(X_{\alpha},\theta X_{\alpha})A_{\alpha}]
   \end{align*}
-  であり，$3\alpha\nin \Sigma(\ge,\ah) $より第二項が0となることから従う．
+  であり，$3\alpha\nin \Sigma(\ge,\ah) $より第二項が0となることから\Cref{lem:3.2}が従う．
 \end{npfwn}
 
 \begin{lem}\label{lem:3.3}
@@ -84,7 +85,7 @@
 \end{lem}
 
 \begin{npfwn}[\Cref{lem:3.4}]
-  $[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}]  \in \real X_{\alpha} $を示せば，\Cref{lem:3.3} と併せて \Cref{lem:3.4} が従う．
+  $[[X_{\alpha}, \theta Y_{\alpha}], Y_{\alpha}]  \in \real X_{\alpha} $を示せば，\Cref{lem:3.3}と併せて\Cref{lem:3.4}が従う．
 
   
   \begin{align*}
@@ -121,10 +122,10 @@
     [T, X_{\alpha}] \in \real Y_{\alpha} ,\ [T, Y_{\alpha}] \in \real X_{\alpha}\label{eq:lem3.5}
   \end{align}
   である．Jacobi恒等式より
-  \begin{align*}
-    [T, [X_{\alpha},Y_{\alpha}]] = -[X_{\alpha},[Y_{\alpha},T]] - [Y_{\alpha},[X_{\alpha},T]]
-  \end{align*}
-  であり，\Cref{eq:lem3.5}から，\Cref{lem:3.2}を用いることで\Cref{lem:3.5}の主張を得る．
+  \begin{align}
+    [T, [X_{\alpha},Y_{\alpha}]] = -[X_{\alpha},[Y_{\alpha},T]] - [Y_{\alpha},[X_{\alpha},T]]\label{eq:lem3.5-2}
+  \end{align}
+  であり，\Cref{eq:lem3.5}より\Cref{eq:lem3.5-2}の右辺は0となる．\Cref{lem:3.2}より$[X_{\alpha}, Y_{\alpha}] = cX_{2\alpha} $であり，これを用いることで\Cref{lem:3.5}の主張を得る．
 \end{npfwn}
 
 \begin{lem}\label{lem:3.6}
@@ -261,8 +262,12 @@
   $\ge$のCartan対合$\theta$に対して$\ge_0 = \theta\ge_0$であり，$\ge_0 $への$\theta$の制限は$\ge_0$のCartan分解を与える．
 \end{lem}
 
-\begin{lem}(\cite[p.~82]{yos38})\Cref{cor:sub-lie-alg}の$\ge_0$の$G$における解析的部分群を$G_0$とする．$G_0 $は$G$の閉部分群である．
+\begin{lem}(\cite[p.~82]{yos38})
+  $G$を線型Lie群，$\ha\subset \ge$は実半単純な部分Lie環とする．このとき$\ha$の$G$における解析的部分群は閉部分群である．
 \end{lem}
+\begin{cor}
+  \Cref{cor:sub-lie-alg}の$\ge_0$の$G$における解析的部分群を$G_0$とする．$G_0 $は$G$の閉部分群である．
+\end{cor}
 
 
 \begin{lem}(\cite[p.~409, Lemma~2.3]{hel01}) \Cref{cor:sub-lie-alg}の$\ge_0$の$G$における解析的部分群を$G_0$とする．$G = KAN$を$G$の岩澤分解，$G_0 = K_0A_0N_0$を$G$の岩澤分解とするとき，

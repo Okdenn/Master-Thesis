@@ -133,7 +133,7 @@
 本修士論文では，小林俊行氏による$\ha$射影の有界性に対する次の\Cref{prob:1121}について，$G$の実階数や$H$の次元が低い場合に肯定的な結果を得た ($\ha$射影の定義や記号は後述する)．
 
 \begin{prob-a}(小林俊行氏による)\label{prob:1121}
-  $X\in \pe$に対し$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと「$X\in \per{\ha}\cap\pe $もしくは『$ [X_1, X_2]\neq 0 $かつ$\ze_{\ze(\ha)}(X) = 0$であること』」は同値であるか？
+  $X\in \pe$に対し$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと「$X\in \per{\ha}\cap\pe $もしくは『$ [X_1, X_2]\neq 0 $かつ$\pe\cap\ze_{\ze(\ha)}(X) = 0$であること』」は同値であるか？
 
   ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
 \end{prob-a}
@@ -142,10 +142,10 @@
 
 
 この論文の基本設定は以下の通りである．
-\begin{nttdef-a}
+\begin{nttdef-a}\label{nttdef:setting}
   \leavevmode\vspace{-1em}
   \begin{itemize}
-  \item $G$を非コンパクト実簡約Lie 群，$H$は$G$の非コンパクトな閉部分群で，$G$のCartan対合$\Theta$に対して$H = \Theta H$を満たすものとする．
+  \item $G$を非コンパクト実簡約Lie 群，$H$は$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$H = \Theta H$を満たすものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
   \item $\lyama{-},{-} \ryama$を，$\ge$上の$G$-不変な非退化対称双線型形式で，「$\ka$上負定値，$\pe$上正定値で$\ka\perp \pe$」なるものとし，$\per{\ha}\ \defeq \{W\in \ge\mid \lyama W, \ha\ryama = \{0\}\} $とする．
@@ -155,7 +155,7 @@
 
 本修士論文の主題である$X\in \pe$の$\ha$射影$Y(X)\in \ha\cap \pe $は，次の\Cref{thm:kob89-lem6.1}により${(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)}$と定義される．
 \begin{thm-a}(\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1})
-  $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
+  \Cref{nttdef:setting}の設定において$\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
 \end{thm-a}
 
 $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」であり，$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
@@ -196,7 +196,7 @@ $d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\l
 
 $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$-絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
 \begin{prop-a}(\cite[p.~678]{ber88})
-  $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．同型写像$\Hom_{G}((C_c(G/H))^{\infty}, V )\to \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V$ただし任意の$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $に対し$ \lyama v,\alpha_V(\phi)\ryama_{V} = \dint_{G/H}\beta_V(v)\phi d\mu_X  $が存在する．
+  $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．次の同型写像が存在する．$\Hom_{G}((C_c(G/H))^{\infty}, V )\to \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V$ただし任意の$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $に対し$ \lyama v,\alpha_V(\phi)\ryama_{V} = \dint_{G/H}\beta_V(v)\phi d\mu_X  $である．
 \end{prop-a}
 
 $G$を実簡約Lie群，$H$を$G$の閉部分群とし，ある可換部分群$B\subset G$が存在して$G = KBH $というCartan分解を持つとする．任意の$X\in \Lie B$に対して$Y(\real X) $が有界であれば，$G/H$がランク$d \defeq \dim B $となるための条件のうちの1つである，「ある定数$C > 0$が存在して，任意の$X\in \Lie B$に対し，$d_{G/K}(\exp(-X)\cdot o_K, o_K )  - \inf\{d_{G/K}(\exp(-X)\cdot o_K,h\cdot o_K ) \mid h\in H\}\leq C$であること」が満たされる．

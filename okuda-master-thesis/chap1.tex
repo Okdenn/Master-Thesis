@@ -103,7 +103,7 @@ $Y(\real X) $の有界性は$\Ad(k) $-不変である．具体的には\Cref{lem
 $Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}と比較して$Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
 
 \begin{thm}(\cite[Lemmma~5.4]{kob97})\label{thm:kob97}
-  $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$である．ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の元がなす角度の最小値${0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2}} $であり，$X\in \pe\setminus \ha \iff \phi(X,\ha\cap \pe)\neq 0 $である．
+  $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$である．ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の0でない元がなす角度の最小値${0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2}} $であり，$X\in \pe\setminus \ha $と$ \phi(X,\ha\cap \pe)\neq 0 $は同値である．
 \end{thm}
 
 \Cref{thm:kob97}より，$X\in \ha $と$Z(\real X) $が有界であることが同値である．
@@ -252,7 +252,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \begin{align*}
     -\epsilon < \measuredangle_{o_K}(e^{s_tY}e^{r_t Z}\cdot o_K, e^{s_tY}\cdot o_K) < \epsilon < \phi(X,\ha)
   \end{align*}
-  となる．しかし定義より$\measuredangle_{o_K}(e^{s_tY}e^{r_t Z}\cdot o_K, e^{s_tY}\cdot o_K) = \measuredangle_{o_K}(e^{tX}\cdot o_K, e^{Y(tX) }\cdot o_K) $であり，$\measuredangle_{o_K}(e^{tX}\cdot o_K, e^{Y(tX) }\cdot o_K) = \phi(X,\ha)$であるから矛盾する．
+  となる．しかし定義より$\measuredangle_{o_K}(e^{s_tY}e^{r_t Z}\cdot o_K, e^{s_tY}\cdot o_K) = \measuredangle_{o_K}(e^{tX}\cdot o_K, e^{Y(tX) }\cdot o_K) $であり，$\measuredangle_{o_K}(e^{tX}\cdot o_K, e^{Y(tX) }\cdot o_K) = \phi(X,\ha\cap\pe)$であるから矛盾する． 
 
   
 \end{rem}

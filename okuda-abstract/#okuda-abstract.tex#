@@ -167,7 +167,7 @@ $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下�
   \end{enumerate}
   properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
 
-  $G/H$にはstandard measure $m_X $
+  $G/H$にはstandard measure $m_X $と呼ばれる次の性質
   「$\real^d $と同じ増大度」を持つとき，$G/H$のランクが$d$であると言う．
 
   $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\alpha$の「双対」を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．

@@ -158,7 +158,9 @@ Riemann対称空間上における測地線の簡約部分Lie代数への射影�
 
 $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」であり，$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
 
-\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．\footnote{もう少し自然な言い回しを考えます．2022/01/11}\bluetext{$G$を実簡約Lie群，$H$を$G$の閉部分群とする．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次を満たすことである．
+\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．
+
+まずいくつか用語を準備する．$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左$G$不変測度$\mu_{G/H} $が存在するとする．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次を満たすことである．
   \begin{enumerate}
   \item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}
   \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
@@ -167,18 +169,13 @@ $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下�
   \end{enumerate}
   properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
 
-  $G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．$e$のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して
-  \begin{align*}
-    g\cdot m_X &\leq C_B m_X,\\
-    \inv{C_B} &< m_X(Bx) < C_{B}
-  \end{align*}
-  である．
+  $G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．$e$のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X,\   \inv{C_B} < m_X(Bx) < C_{B}$である．
   
-  $d = \inf{d'\geq 0\mid m_X(B(r))\leq (1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
+  $d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
 
-  $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\alpha$の「双対」を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．
+  $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\beta$を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．
 
-ここで$G$が$G = KAH$という Cartan 分解を持つときに，$G/H$がランク$d \defeq \dim A$となる可能性がある条件の1つを$X\in \ah$に対する$\ha$射影$Y(\real X) $の有界性として定式化することができる．これが本修士論文の背景である．\footnote{「」部分は 正確に定式化する予定です \& もうすこしちゃんと\cite{ber88}を復習します． 2022/01/10}}
+ここで$G$が$G = KAH$という Cartan 分解を持つときに，$G/H$がランク$d \defeq \dim A$となる可能性がある条件の1つを$X\in \ah$に対する$\ha$射影$Y(\real X) $の有界性として定式化することができる．これが本修士論文の背景である．\footnote{「」部分は 正確に定式化する予定です \& もうすこしちゃんと\cite{ber88}を復習します． 2022/01/10}
 
 
 以下では$(G,H) $がどのような場合に，どのような証明方法でを示したかを具体的に述べる．

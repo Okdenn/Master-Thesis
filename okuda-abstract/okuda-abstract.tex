@@ -167,8 +167,14 @@ $e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下�
   \end{enumerate}
   properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
 
-  $G/H$にはstandard measure $m_X $
-  「$\real^d $と同じ増大度」を持つとき，$G/H$のランクが$d$であると言う．
+  $G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．$e$のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して
+  \begin{align*}
+    g\cdot m_X &\leq C_B m_X,\\
+    \inv{C_B} &< m_X(Bx) < C_{B}
+  \end{align*}
+  である．
+  
+  $d = \inf{d'\geq 0\mid m_X(B(r))\leq (1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
 
   $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\alpha$の「双対」を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．
 

@@ -268,8 +268,39 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{rem}
 
 \begin{cor}\label{cor:prob-eg}
-  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$に対して\Cref{prob:1121}は正しい．
+  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$に対して\Cref{prob:1121}は正しい．より具体的には次の\Cref{thm:1018-main}が成り立つ．
 \end{cor}
+\begin{thm}\label{thm:1018-main}
+  % $\SO(n,1)/\SO(n) $を {\Poincare} ball model で実現したとき， 
+  $
+  \begin{cases}
+    \ds Y(X) &= \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta ]\frac{\pr(X)}{\norm{\pr(X)}},\quad X\in \pe\setminus (\per{\solie(k,1)}\cap \pe) \\
+    \ds Y(X)&= 0,\qquad \qquad\qquad\qquad\qquad\qquad\qquad\quad \ X\in  \per{(\solie(k,1))}\cap \pe
+  \end{cases}
+  $である．
+\end{thm}
+\begin{cor}
+  $X\in \pe\setminus \solie(k,1) $
+  % $ e^{X}\cdot o_K\nin \SO(k,1)\cdot o_K $
+  のとき，$0 \leq \cos \theta\neq 1$であり，\\
+  $Y(\real X) = \lbig\{s\frac{\pr(X)}{\norm{\pr(X)}} \mid  -\frac{\inv{\tanh}(\cos\theta)}{4} < s < \frac{\inv{\tanh}(\cos\theta)}{4} \rbig\} $ (if $X\in \pe\setminus (\per{\solie(k,1)}\cap \pe)$) \\
+  あるいは$Y(\real X) = \{\bm{0}\}$ (if $X\in  \per{(\solie(k,1))}\cap \pe$) より，$\solie(k,1)\cap \pe $内で有界である．
+\end{cor}
+
+\vspace{-1em}
+\begin{defi}\textcolor{white}{hoge}
+
+  \begin{easylist}[itemize]
+    @ {\Poincare} ball の計量は$4\dfrac{\sum_i dx_i^2}{(1-x_i^2)^2} $とする．
+    @ $\pr\colon \pe = (\solie(k,1)\cap \pe)\oplus (\per{(\solie(k,1) )}\cap \pe) \to (\solie(k,1)\cap \pe)$を直交射影とする．
+    @ $\cos \theta \defeq \frac{\lyama X, \pr(X)\ryama }{\norm{X}\, \norm{\pr(X)}} \geq 0 $，ただし$\lyama{-},{-}\ryama  $は$\solie(n,1) $の Killing form とする．
+  \end{easylist}  
+\end{defi}
+
+\begin{lem}\label{lem:1018}
+  $Z\in \pe$に対し，$e^Z \cdot o_K $が$o_K$から Euclid 距離で$\tanh p$，$p \geq 0$の位置にある場合，$\norm{Z} = \frac{p}{2} $である．
+\end{lem}
+
 
 
 \begin{npfwn}[{\Cref{cor:prob-eg}}]\bluetext{make it precise}
@@ -285,6 +316,8 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \end{figure}
   
   この断面に現れるのは\Cref{fig:prob-eg-1}と同じであるから，同様の計算により\Cref{cor:prob-eg}を得る．
+
+  よって\Cref{lem:1018}より，$\norm{Y(X)} = \frac{s}{2} = \frac{1}{4}\inv{\tanh}(\cos\theta \tanh 2t) $を得る．再び\Cref{lem:1018}より$4\norm{X} = 2t $であるから，$\norm{Y(X)} = \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta] $を得，\Cref{thm:1018-main}の主張が従う．  
 \end{npfwn}
 
 

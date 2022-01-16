@@ -1,10 +1,10 @@
 \subsection{$ G$の実階数が1の場合}
 
 \begin{thm}\label{thm:1216-main}
-  $G$を実階数1の実半単純Lie群，$H$を$G$の非コンパクトな閉部分Lie群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$かつ$\dim \ha = 1$とするとき，\Cref{prob:1121}が成り立つ．
+  $G$を実階数1の実半単純Lie群，$H$を$G$の非コンパクトな閉部分Lie群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$かつ$\dim \ha\cap\pe = 1$とするとき，\Cref{prob:1121}が成り立つ．
 \end{thm}
 
-\begin{thm}\label{thm:0810}(\cite[p.~409, Theorem~3.1]{hel01})
+\begin{thm}\label{thm:0810}(\cite[p.~409, Theorem~3.1]{hel01}，$\SU(2,1) $-reduction)
   $\ge = \ka \oplus \pe$を実半単純Lie環$\ge$のCartan対合$\theta$に対する Cartan分解とし，$\alpha,2\alpha\in \Sigma(\ge,\ah) $と仮定する．$0\neq X_{\alpha}\in \ge_{\alpha} $，$0\neq X_{2\alpha}\in \ge_{2\alpha} $を任意に固定したとき，$X_{\alpha},X_{2\alpha}, \theta X_{\alpha}, \theta X_{2\alpha} $から生成されるLie環$\ge^{*} $は$\sulie(2,1)$と同型である．
   
 \end{thm}
@@ -211,7 +211,7 @@
 \end{npfwn}
 
 \begin{cor}\label{cor:sub-lie-alg}
-  $G$を実階数1の実半単純Lie群とする．任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
+  $G$を実階数1の実半単純Lie群とする．任意の$0\neq Y\in \pe\cap\ha$と任意の$X\in \pe\setminus \ha$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
 \end{cor}
 
 \begin{npfwn}[\Cref{cor:sub-lie-alg}]
@@ -245,7 +245,8 @@
 \end{npfwn}
 
 \Cref{cor:sub-lie-alg}で定めた$\ge_0$とその$G$における解析部分群$G_0$について次の3つが成り立つ．
-\begin{lem}\cite[p.~409, Lemma~2.2]{hel01}$\ge$のCartan対合$\theta$に対して$\ge_0 = \theta\ge_0$であり，$\ge_0 $への$\theta$の制限は$\ge_0$のCartan分解を与える．
+\begin{lem}(\cite[p.~409, Lemma~2.2]{hel01})
+  $\ge$のCartan対合$\theta$に対して$\ge_0 = \theta\ge_0$であり，$\ge_0 $への$\theta$の制限は$\ge_0$のCartan分解を与える．
 \end{lem}
 
 \begin{lem}(\cite[p.~82]{yos38})\Cref{cor:sub-lie-alg}の$\ge_0$の$G$における解析的部分群を$G_0$とする．$G_0 $は$G$の閉部分群である．
@@ -260,56 +261,50 @@
   
 \end{lem}
 
-以上のことを用いて，$G$が実階数1の場合を$\SU(1,2) $ないし$\SU(1,1) $に帰着させることにより\Cref{thm:1216-main}を示す．
+以上のことを用いて，$G$が実階数1，$\dim \ha\cap\pe = 1 $の場合を$\SU(1,2) $ないし$\SU(1,1) $に帰着させることにより\Cref{thm:1216-main}を示す．
 
-\begin{npfwn}[\Cref{thm:1216-main}]\bluetext{おそらく$\dim H = 1$出ない場合も背理法で示せる気がする．}
-  $\ge$の極大分裂可換部分代数$\ha$の定めるルート系を$\Sigma(\ge,\ha) $とし，$\Sigma(\ge,\ha) $の形によって2通りに場合分けして証明する．
+\begin{npfwn}[\Cref{thm:1216-main}]\bluetext{おそらく$\dim H = 1$でない場合も背理法で示せる気がする．}
+  $\ge$の極大分裂可換部分代数$\ha\cap\pe$の定めるルート系を$\Sigma(\ge,\ha) $とし，$\Sigma(\ge,\ha) $の形によって2通りに場合分けして証明する．
   
-  \begin{case}
-    $\Sigma(\ge,\ha) = \{\pm\alpha \}$のとき
-    
-    \Cref{cor:sub-lie-alg}により$X$と$\ha $を含む部分Lie環$\ge' \subset \ge $で$\sulie(1,1) $に同型なものが存在する．$\ge' $に対応する$G$の解析的部分群を$G'$とし，その岩澤分解を$G' = K'A'N' $とする．このとき$e^{Z(t X)}\cdot o_K = e^{-Y(tX)}e^{tX}\cdot o_K\in G'/K $であるから$Z(tX)\in \ge'\cap \per{\ha}\cap \pe\subset  $であり，$Y(\real X) $の有界性は全測地的的な部分Riemann多様体$G'/K'\subset G/K$に対して行えば良いことがわかる．したがって\Cref{prop:prob-eg}により$X\in\pe_{H,\bdd}\iff X = 0 $あるいは$X\in \pe\setminus\ha $が言え，\Cref{thm:1216-main}が示された．
-    
-    % 任意の固定した$\tau \in \real$に対し$\ah_{\tau} \defeq \real Y(\tau X)$が定める制限ルート系も，ある$\alpha_{\tau} \in \ah_{\tau}^{*}$，$ \norm{\alpha_{\tau}} = 1 $により$\Sigma(\ge,\ah_{\tau}) = \{\pm\alpha_{\tau} \}$となる．任意の$\tau,\tau'\in \real$に対し，ある$k\in K$が存在して$k\cdot \alpha_{\tau}  = \alpha_{\tau'} $であるから，$\norm{\alpha} \defeq \norm{\alpha_{\tau}} $は$\tau\in \real$に依らない．
+  \textbf{$\Sigma(\ge,\ha) = \{\pm\alpha \}$のとき}
+  
+  \Cref{cor:sub-lie-alg}により$X$と$\ha\cap\pe $を含む部分Lie環$\ge' \subset \ge $で$\sulie(1,1) $に同型なものが存在する．$\ge' $に対応する$G$の解析的部分群を$G'$とし，その岩澤分解を$G' = K'A'N' $とする．このとき$e^{Z(t X)}\cdot o_K = e^{-Y(tX)}e^{tX}\cdot o_K\in G'/K $であるから$Z(tX)\in \ge'\cap \per{\ha}\cap \pe\subset \ge'\cap\pe $であり，$Y(\real X) $の有界性は全測地的的な部分Riemann多様体$G'/K'\subset G/K$に対して行えば良いことがわかる．したがって\Cref{prop:prob-eg}により$X\in\pe_{H,\bdd}$であることと$ X = 0 $あるいは$X\in \pe\setminus\ha $が同値であることが言え，\Cref{thm:1216-main}が示された．
+  
+  % 任意の固定した$\tau \in \real$に対し$\ah_{\tau} \defeq \real Y(\tau X)$が定める制限ルート系も，ある$\alpha_{\tau} \in \ah_{\tau}^{*}$，$ \norm{\alpha_{\tau}} = 1 $により$\Sigma(\ge,\ah_{\tau}) = \{\pm\alpha_{\tau} \}$となる．任意の$\tau,\tau'\in \real$に対し，ある$k\in K$が存在して$k\cdot \alpha_{\tau}  = \alpha_{\tau'} $であるから，$\norm{\alpha} \defeq \norm{\alpha_{\tau}} $は$\tau\in \real$に依らない．
 
-    
-    
-    % \bluetext{定数を確認せよ $A_{\alpha}\in \ha $を任意の$H\in \ha $に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とすると， 任意の固定した$\tau \in \real$に対し，$Y(\tau X) $に対応する$\ge_{\tau} $の元は$\inlineequation[eq:corresp]{\dfrac{B(Y(\tau X), A_{\alpha}) }{\norm{A_{\alpha}}}
-    % \begin{pmatrix}
-    %   0 & 1 \\
-    %   1 & 0 
-    % \end{pmatrix}}
-    % $である．}
-    
-    % $Y(\real X) $の非有界性より，適当に列$\{t_{n}\in \real\}_{n\in \nat} $，$t_n\underset{n\to \infty}{\longrightarrow} \infty$を取ると$0 <  \norm{Y(t_n X)} = s_n $，$\forall n\in \nat$かつ$s_n\to \infty$，$n\to \infty$とできる．% さらに$Z(t_n X) = r_n Z_n $，$Z_n\in \per{\ha}\cap \pe $，$\norm{Z_n} = 1 $，$r_n\in \real$と書くと，\Cref{thm:kob97}より$\abs{r_n}\to \infty$，$n\to \infty$である．$\norm{Z_n} = 1 $より，必要なら$\{t_{n}\in \real\}_{n\in \nat} $の部分列を取ることで$\lim_{n\to \infty}Z_n = Z_{\infty}\in \per{\ha}\cap \pe $，$\norm{Z_{\infty} } = 1$なる$Z_{\infty}$が存在する．
+  
+  
+  % \bluetext{定数を確認せよ $A_{\alpha}\in \ha $を任意の$H\in \ha $に対して$B(H,A_{\alpha}) = \alpha(H) $を満たす元とすると， 任意の固定した$\tau \in \real$に対し，$Y(\tau X) $に対応する$\ge_{\tau} $の元は$\inlineequation[eq:corresp]{\dfrac{B(Y(\tau X), A_{\alpha}) }{\norm{A_{\alpha}}}
+  % \begin{pmatrix}
+  %   0 & 1 \\
+  %   1 & 0 
+  % \end{pmatrix}}
+  % $である．}
+  
+  % $Y(\real X) $の非有界性より，適当に列$\{t_{n}\in \real\}_{n\in \nat} $，$t_n\underset{n\to \infty}{\longrightarrow} \infty$を取ると$0 <  \norm{Y(t_n X)} = s_n $，$\forall n\in \nat$かつ$s_n\to \infty$，$n\to \infty$とできる．% さらに$Z(t_n X) = r_n Z_n $，$Z_n\in \per{\ha}\cap \pe $，$\norm{Z_n} = 1 $，$r_n\in \real$と書くと，\Cref{thm:kob97}より$\abs{r_n}\to \infty$，$n\to \infty$である．$\norm{Z_n} = 1 $より，必要なら$\{t_{n}\in \real\}_{n\in \nat} $の部分列を取ることで$\lim_{n\to \infty}Z_n = Z_{\infty}\in \per{\ha}\cap \pe $，$\norm{Z_{\infty} } = 1$なる$Z_{\infty}$が存在する．
 
-    % 必要ならpositive systemを取り替えることで$B(Y(t_n X), A_{\alpha}) > 0$と仮定する．このとき$B(Y(t_n X), A_{\alpha}) = s_n$であるから，\Cref{eq:corresp}より$\ge'\simeq \sulie(1,1) $の同型において$Y(t_n X)  $は$s_n\begin{pmatrix}
-    %   0 & 1 \\
-    %   1 & 0 
-    % \end{pmatrix}$に対応する．
+  % 必要ならpositive systemを取り替えることで$B(Y(t_n X), A_{\alpha}) > 0$と仮定する．このとき$B(Y(t_n X), A_{\alpha}) = s_n$であるから，\Cref{eq:corresp}より$\ge'\simeq \sulie(1,1) $の同型において$Y(t_n X)  $は$s_n\begin{pmatrix}
+  %   0 & 1 \\
+  %   1 & 0 
+  % \end{pmatrix}$に対応する．
 
-    % 以上の性質を満たす$\{t_n\}_{n\in \nat} $，$\{s_n\}_{n\in \nat}  $% ，$\{r_n \}_{n\in \nat} $，$\{Z_{n} \}_{n\in \nat} $，$Z_{\infty} $
-    % に対して
+  % 以上の性質を満たす$\{t_n\}_{n\in \nat} $，$\{s_n\}_{n\in \nat}  $% ，$\{r_n \}_{n\in \nat} $，$\{Z_{n} \}_{n\in \nat} $，$Z_{\infty} $
+  % に対して
 
-    
-    
-  \end{case}
+  
+  \textbf{$\Sigma(\ge,\ah) = \{\pm\alpha,\pm 2\alpha \}$のとき}
 
-  \begin{case}
-    $\Sigma(\ge,\ah) = \{\pm\alpha,\pm 2\alpha \}$のとき
-
-    \Cref{cor:sub-lie-alg}により$X$と$\ha $を含む部分Lie環$\ge^* \subset \ge $で$\sulie(2,1) $に同型なものが存在する．$\ge^* $に対応する$G$の解析的部分群を$G^* $とし，その岩澤分解を$G^* = K^*A^*N^* $とする．このとき$e^{Z(t X)}\cdot o_K = e^{-Y(tX)}e^{tX}\cdot o_K\in G'/K $であるから$Z(tX)\in \ge^* \cap \per{\ha}\cap \pe\subset  $であり，$Y(\real X) $の有界性は全測地的的な部分Riemann多様体$G^*/K^* \subset G/K$に対して行えば良いことがわかる．したがって\Cref{prop:classical-rank-one}により$X\in\pe_{H,\bdd}\iff X = 0 $あるいは$X\in \pe\setminus\ha $が言え，\Cref{thm:1216-main}が示された．
+  \Cref{cor:sub-lie-alg}により$X$と$\ha \cap\pe$を含む部分Lie環$\ge^* \subset \ge $で$\sulie(2,1) $に同型なものが存在する．$\ge^* $に対応する$G$の解析的部分群を$G^* $とし，その岩澤分解を$G^* = K^*A^*N^* $とする．このとき$e^{Z(t X)}\cdot o_K = e^{-Y(tX)}e^{tX}\cdot o_K\in G'/K $であるから$Z(tX)\in \ge^* \cap \per{\ha}\cap \pe\subset \ge^*\cap\pe $であり，$Y(\real X) $の有界性は全測地的的な部分Riemann多様体$G^*/K^* \subset G/K$に対して行えば良いことがわかる．したがって\Cref{prop:classical-rank-one}により$X\in\pe_{H,\bdd}$であることと$ X = 0 $あるいは$X\in \pe\setminus\ha $が同値であることが言え，\Cref{thm:1216-main}が示された．
+\end{npfwn}
 
     % 場合1と同様に，任意の固定した$\tau \in \real$に対し$\ah_{\tau} \defeq \real Y(\tau X)$が定める制限ルート系も，ある$\alpha_{\tau} \in \ah_{\tau}^{*}$，$ \norm{\alpha_{\tau}} = 1 $により$\Sigma(\ge,\ah_{\tau}) = \{\pm\alpha_{\tau}, \pm 2\alpha_{\tau} \}$となるが，$Y(\real X) $の非有界性より，ある$T\in \real$で$\abs{\alpha_{t}(Y(tX))} >  $\bluetext{埋めよ}，$\forall t \geq T$なるものが存在する．
     
     
-  \end{case}  
-\end{npfwn}
+
 
 
 \subsubsection{補足: \Cref{thm:1216-main}の微分幾何的側面}
-\begin{defi}{\cite[Definition~1.3]{e72-1}}\label{def:visibility}
-
+\begin{defi}({\cite[Definition~1.3]{e72-1}})\label{def:visibility}
   $M$が完備かつ非正曲率をもつ1-連結Riemann多様体であるとき，$M$をHadamard多様体といい，Hadamard多様体$M$が visibility manifold であるとは，$\forall p\in M, \forall \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が任意の$ t\in [t_0, t_1]$に対し$d_{M}(p, \gamma(t))\geq r(p,\epsilon) $を満たすならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
 \end{defi}
 
@@ -326,8 +321,7 @@
 \end{figure}
 
 
-\begin{thm}{\cite[p.~296, 9.33~Theorem]{bh99}, originally \cite[Theorem~4.1]{e72-2}}\label{thm:visibility-and-rank}
-  
+\begin{thm}({\cite[p.~296, 9.33~Theorem]{bh99}, originally \cite[Theorem~4.1]{e72-2}})\label{thm:visibility-and-rank}  
   $\exists C\cptsub M\st M = \bigcup\{f(C)\mid f\in \isom(M) \}  $なるHadamard多様体$M$に対し，次は同値である．
   \vspace{-1em}
   \begin{enumerate}

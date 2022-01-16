@@ -229,8 +229,9 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
   さらに下の紫色の三角形に対して余弦定理を用いて${R^2 = (R+h)^2 + r^2 - 2r(R+h)\cos\theta }$を得，
   \begin{align*}
-    R^2 &= (R+h)^2 + r^2 - 2(R+h) \cos\theta = R^2 +  1 + r^2 - 2r(R+h) \cos\theta                                   \\
-                                            &= R^2 +  1 + r^2 - 2r\dfrac{1+h^2}{2h} \cos\theta  
+    R^2 &= (R+h)^2 + r^2 - 2(R+h) \cos\theta \\
+        &= R^2 +  1 + r^2 - 2r(R+h) \cos\theta \\
+        &= R^2 +  1 + r^2 - 2r\dfrac{1+h^2}{2h} \cos\theta  
   \end{align*}
   より
   \begin{align}
@@ -277,32 +278,34 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{cor}
 \begin{prop}\label{thm:1018-main}
   % $\SO(n,1)/\SO(n) $を {\Poincare} ball model で実現したとき，
-  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$とする．
-  $ Y(X) =
-  \begin{cases}
-    \ds  \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta ]\frac{\pr(X)}{\norm{\pr(X)}}, &X\in \pe\setminus (\per{\ha}\cap \pe) \\
-    \ds  0, &X\in  \per{(\ha)}\cap \pe
+  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$，とする．
+  \begin{align*}
+    Y(X) =
+    \begin{cases}
+      \ds  \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta ]\frac{X_1}{\norm{X_1}}, &X\in \pe\setminus \per{\ha} \\
+    \ds  0, &X\in  \per{\ha}\cap \pe
   \end{cases}
-  $である．
+  \end{align*}
+  である．
 \end{prop}
 \begin{cor}
-  $X\in \pe\setminus \ha $
-  % $ e^{X}\cdot o_K\nin \SO(k,1)\cdot o_K $
-  のとき，$0 \leq \cos \theta\neq 1$であり，$X\in \pe\setminus (\per{\ha}\cap \pe)$ならば
+  % $X\in \pe\setminus \ha $
+  % % $ e^{X}\cdot o_K\nin \SO(k,1)\cdot o_K $
+  % に対し$0 \leq \cos \theta\neq 1$であり，
+  $X\in \pe\setminus\per{\ha}$ならば$0 < \cos \theta \leq 1$であり，
   \begin{align*}
-    Y(\real X) = \lbig\{s\frac{\pr(X)}{\norm{\pr(X)}} \relmiddle|  -\frac{\inv{\tanh}(\cos\theta)}{4} < s < \frac{\inv{\tanh}(\cos\theta)}{4} \rbig\}
-  \end{align*}  
-  あるいは$Y(\real X) = \{0\}$ (if $X\in  \per{(\ha)}\cap \pe$) より，$\ha\cap \pe $内で有界である．
+    Y(\real X) = \lbig\{s\frac{X_1}{\norm{X_1}} \relmiddle|  -\frac{\inv{\tanh}(\cos\theta)}{4} < s < \frac{\inv{\tanh}(\cos\theta)}{4} \rbig\}
+  \end{align*}
+  であるから，$X\nin \pe_{H,\bdd} $と$X\in \ha\cap \pe $は同値である．したがってこの場合も$\pe_{H,\bdd} =\{0\}\cup\pe\setminus\ha $である．
+  % あるいは$Y(\real X) = \{0\}$ (if $X\in  \per{(\ha)}\cap \pe$) より，$\ha\cap \pe $内で有界である．
 \end{cor}
 
-\vspace{-1em}
-\begin{defi}\textcolor{white}{hoge}
-
-  \begin{easylist}[itemize]
-    @ {\Poincare} ball の計量は$4\dfrac{\sum_i dx_i^2}{(1-x_i^2)^2} $とする．
-    @ $\pr\colon \pe = (\ha\cap \pe)\oplus (\per{(\ha )}\cap \pe) \to (\ha\cap \pe)$を直交射影とする．
-    @ $\ds \cos \theta \defeq \frac{\lyama X, \pr(X)\ryama }{\norm{X}\, \norm{\pr(X)}} \geq 0 $，ただし$\lyama{-},{-}\ryama  $は$\solie(n,1) $の Killing form とする．
-  \end{easylist}  
+\begin{defi}
+  \leavevmode\vspace{-1em}
+  \begin{itemize}
+    \item {\Poincare} ball の計量は$4\dfrac{\sum_i dx_i^2}{(1-x_i^2)^2} $とする．
+    \item $\ds \cos \theta \defeq \frac{\lyama X, \pr(X)\ryama }{\norm{X}\, \norm{\pr(X)}} \geq 0 $，ただし$\lyama{-},{-}\ryama  $は$\solie(n,1) $の Killing 形式とする．
+  \end{itemize} 
 \end{defi}
 
 \begin{lem}\label{lem:1018}

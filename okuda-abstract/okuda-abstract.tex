@@ -120,7 +120,7 @@
 \noindent\underline{修士論文題目}
 
 \begin{center}
-Riemann 対称空間上における測地線の簡約部分 Lie 代数への射影に対する有界性
+Riemann対称空間上における測地線の簡約部分Lie代数への射影に対する有界性
 
 ---低階数・低次元の場合---
 \end{center}
@@ -129,61 +129,62 @@ Riemann 対称空間上における測地線の簡約部分 Lie 代数への射�
 
 \vspace{1em}
 
-本修士論文では，小林俊行氏による$\ha$射影の有界性に対する次の\Cref{prob:1121}を，$G$の実階数や$H$の次元が低い場合に証明した ($\ha$射影の定義や記号は後述する)．
+本修士論文では，小林俊行氏による$\ha$射影の有界性に対する次の\Cref{prob:1121}について，$G$の実階数や$H$の次元が低い場合に肯定的な結果を得た ($\ha$射影の定義や記号は後述する)．
 
-\begin{prob-a}(by T.~Kobayashi)\label{prob:1121}
-  
-  $Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと「$   [X_1, X_2]\neq 0 $あるいは$X_1 = 0$である」ことは同値である．
+\begin{prob-a}(小林俊行氏による)\label{prob:1121}
+  $X\in \pe$に対し$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと「$X\in \per{\ha}\cap\pe $もしくは『$ [X_1, X_2]\neq 0 $かつ$\ze_{\ze(\ha)}(X) = 0$であること』」は同値であるか？
 
-  ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\ha\cap\pe)\oplus(\per{\ha}\cap\pe) $に対応する$X\in \pe$の分解とする．
+  ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
 \end{prob-a}
 
+ここで$G$が実階数1のとき，「$X\in \per{\ha}\cap\pe $もしくは『$ [X_1, X_2]\neq 0 $かつ$\ze_{\ze(\ha)}(X) = 0$であること』」と$X\in \{0\}\cup\pe\setminus\ha $は同値である．
+
+
 この論文の基本設定は以下の通りである．
-\begin{nttdef*}\textcolor{white}{hoge}
-  
-  \vspace{-1em}
+\begin{nttdef-a}
+  \leavevmode\vspace{-1em}
   \begin{itemize}
-  \item $G$を非コンパクト実半単純Lie 群，$H$は$G$の非コンパクトな閉部分実半単純Lie群で，$G$のCartan対合$\Theta$に対して$H = \Theta H$を満たすものとする．
+  \item $G$を非コンパクト実簡約Lie 群，$H$は$G$の非コンパクトな閉部分群で，$G$のCartan対合$\Theta$に対して$H = \Theta H$を満たすものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
   \item $B$を$\ge$のKilling形式とし，$\per{\ha}\cap \pe \defeq \{W\in \pe\mid B(W, \ha\cap \pe) = \{0\}\} $とする．
-  \end{itemize}
-  
-\end{nttdef*}
+  \end{itemize}  
+\end{nttdef-a}
 
 本修士論文の主題である$X\in \pe$の$\ha$射影$Y(X)\in \ha\cap \pe $は，次の\Cref{thm:kob89-lem6.1}により${(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)}$と定義される．
-\begin{thm-a}\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1}
-
+\begin{thm-a}(\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1})
   $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
 \end{thm-a}
 
-$Y(X)$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」であり，$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
+$e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」であり，$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
 
-\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．\footnote{もう少し自然な言い回しを考えます．2022/01/11}\bluetext{，$G$を実簡約Lie群，$H$を$G$の閉部分群とする．$G/H$が$eH$を中心とするradial function $r$に対して「$\real^d $と同じ増大度」を持つとき，$G/H$のランクが$d$であると言い，$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\alpha$の「双対」を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．
+\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容のごく一部を述べる．\footnote{もう少し自然な言い回しを考えます．2022/01/11}\bluetext{$G$を実簡約Lie群，$H$を$G$の閉部分群とする．$r\colon G/H\to \real_{\geq 0} $がradial functionであるとは，$r$が次を満たすことである．
+
+  「$\real^d $と同じ増大度」を持つとき，$G/H$のランクが$d$であると言う．
+
+  $G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha\colon (C_c(G/H))^{\infty}\to V $が存在し，$\alpha$の「双対」を$\beta\colon V^{\infty}\to C(G/H)^{\infty} $とすると，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．
 
 ここで$G$が$G = KAH$という Cartan 分解を持つときに，$G/H$がランク$d \defeq \dim A$となる可能性がある条件の1つを$X\in \ah$に対する$\ha$射影$Y(\real X) $の有界性として定式化することができる．これが本修士論文の背景である．\footnote{「」部分は 正確に定式化する予定です \& もうすこしちゃんと\cite{ber88}を復習します． 2022/01/10}}
 
 
 以下では$(G,H) $がどのような場合に，どのような証明方法でを示したかを具体的に述べる．
 
-$G$が実階数1の場合の\Cref{prob:1121}の証明方針は$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明がトイモデルとなっている．
+$G = \SU(1,2) $，$H= \SO(1,1)$の場合がトイモデルとなって$G$が実階数1の場合の\Cref{prob:1121}に対する肯定的な結果が得られた．
 
 $G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．具体的には次のとおりである; 例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $なるとき，$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度の最小値が非零であることに矛盾し，\Cref{prob:1121}と同値な「$X = 0 \lor X\in \pe\setminus\ha $であることと$ Y(\real X) $が有界であることが同値である」ということが証明できる．
 
-これを踏まえて$G$が実階数1の場合には次の命題を用いて証明した．
+これを踏まえて$G$が実階数1，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて\Cref{prob:1121}に対して肯定的な結果を得た．
 
-この命題は{$\SU(2,1) $-reduction}，\cite{hel01}と\cite{yos38}の定理を用いて証明した．
 \begin{prop-a}
-  $G$を実階数1の実半単純Lie群とする．任意の$Y\in \ha\setminus\{0\} $と任意の$X\in \pe\setminus \ah$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
+  $G$を実階数1の実半単純Lie群とする．任意の$0\neq Y\in \ha\cap\pe $と任意の$X\in \pe\setminus \ah$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $か$\ge_0\simeq \sulie(2,1)$なるものが存在する．
 
   また，$\ge_0$の$G$における解析的部分群$G_0$は$G$の閉部分群である．
 \end{prop-a}
+この命題は{$\SU(2,1) $-reduction}，\cite{hel01}と\cite{yos38}の定理を併せて示される．
 
 
 
-
-
-$G$が実階数1のLie群の積である場合も，成分ごとに見れば$G$の実階数が1の場合と同様である．
+$G$が実階数1のLie群の積である場合も，成分ごとに見れば$G$の実階数が1の場合と同様であるから，こちらも$\ha\cap \pe $の各成分が1次元であれば
 
 \clearpage
 \begin{thebibliography}{99}

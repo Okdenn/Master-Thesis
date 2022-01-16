@@ -13,7 +13,7 @@
   \leavevmode\vspace{-1em}
   \begin{itemize}
   \item $\nat,\real, \cpx,\quat$をそれぞれ0を含む自然数全体，実数全体，複素数全体，四元数全体の集合とする．
-  \item $G$を非コンパクト実半単純Lie 群，$H$を$G$の非コンパクトな部分Lie群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なる実半単純Lie群とする．
+  \item $G$を非コンパクト実簡約Lie 群，$H$を$G$の非コンパクトな閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item $\ze(\ha)\defeq \{Y\in \ha\mid [Y,\ha] = \{0\} \} $とする．
   \item $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
@@ -37,10 +37,10 @@
 
 
 \begin{prob}(by T.~Kobayashi)\label{prob:1121}  
-  $\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}  $と定めるとき，
+  ${\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}}  $と定めるとき，
   \begin{enumerate}
   \item \begin{align}
-          \pe_{H,\bdd} = (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ }\pe\cap \ze_{\ze(\ha)}(X)  = \{0\} \text{ である．} \}\label{eq:prob-1121}
+          \pe_{H,\bdd} = {(\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ }\pe\cap \ze_{\ze(\ha)}(X)  = \{0\} \text{ である．} \}} \label{eq:prob-1121}
         \end{align}
         であるか？
       \item $G$が実半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $は測度0であるか？
@@ -52,7 +52,7 @@
 \begin{lem}\label{lem:basic-prob}
   \leavevmode\vspace{-1em}
   \begin{enumerate}
-  \item $\pe_{H,\bdd} \subset (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ }\pe\cap \ze_{\ze(\ha)}(X) = \{0\}  \text{ である．} \}$が成り立つ．
+  \item ${\pe_{H,\bdd} \subset (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ }\pe\cap \ze_{\ze(\ha)}(X) = \{0\}  \text{ である．} \}}$が成り立つ．
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
   % \item 1，2より\Cref{prob:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
   \item $G$が実階数1ならば，\Cref{prob:1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
@@ -64,7 +64,7 @@
   \begin{enumerate}
   \item $X\nin\per{\ha}\cap \pe $なる$X\in \pe$に対し，$[X_1,X_2] = 0$ならば$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．
 
-    また，$X\nin\per{\ha}\cap \pe $なる$X$で$\pe\cap \ze_{\ze(\ha)}(X) \neq 0$なるものが存在するならば，ある$0\neq W \in \ze(\ha)\cap\pe\subset \ha\cap \pe $で$[X, W] = [X_2, W] = 0 $である．$W\in \pe\cap(\ha\setminus\{0\}) $であるから，$W + X_2\nin \per{\ha}\cap \pe $である．以上より任意の$t$に対し$e^{t(W+X_2)}\cdot o_K = e^{tW}e^{tX_2}\cdot o_K $であるから$Y(t(W+X_2)) = \real W $となり，
+
   \item $X_1 = 0$であることと$ X\in \per{\ha}\cap\pe $であることが同値であることから従う．
   \item 次を示せばよい．
     \begin{align}
@@ -273,14 +273,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 \subsection{\Cref{prob:1121} の観察: \Cref{prob:1121}の仮定を外した場合の成り立たない例}
 
-\Cref{prob:1121}と次の\Cref{prob:1121-2}は同値である．
-\begin{prob}\label{prob:1121-2}
-
-  $\pe_{H,\bdd} = \{X\in \pe\mid [X,(\ha\cap\pe)]\neq \{0\} \text{ あるいは } X\perp (\ha\cap\pe)\text{ である．}  \}  $
-  
-\end{prob}
-
-ここで似た予想として$\ha\cap\pe$を$\ha$に置き換えた次の予想が立てられる．
+\Cref{prob:1121}に似た予想として$\ha\cap\pe$を$\ha$に置き換えた次の予想が立てられる．
 \begin{prob}\label{prob:1101}
   $\pe_{H,\bdd} = \{X\in \pe\mid  [X,\ha]\neq \{0\} \text{ あるいは } X\perp \ha \text{ である．}\}  $
 \end{prob}

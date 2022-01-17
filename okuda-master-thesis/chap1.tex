@@ -13,11 +13,11 @@
 \subsection{記号の設定}
 本論文の基本的な設定は次のとおりであり，この他に必要な条件は都度明示することとする．
 
-\begin{nttdef}
+\begin{nttdef}\label{nttdef:fund}
   \leavevmode\vspace{-1em}
   \begin{itemize}
   \item $\nat,\real, \cpx,\quat$をそれぞれ0を含む自然数全体，実数全体，複素数全体，四元数全体の集合とする．
-  \item $G$を非コンパクト実簡約Lie 群，$H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
+  \item $G$を非コンパクト実線型簡約Lie 群，$H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item $\ze(\ha)\defeq \{Y\in \ha\mid [Y,\ha] = \{0\} \} $とする．
   \item $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
@@ -91,11 +91,20 @@
 \end{npfwn}
 
 \begin{lem}\label{lem:0117-closed}
-  $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ge_{s}'\cap\ha $の$G$における解析的部分群とする．このとき$(G_s, H_s) $は$G$の閉部分群であり
+  $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ge_{s}'\cap\ha $の$G$における解析的部分群とする．このとき$(G_s, H_s) $は$G$の閉部分群であり，\Cref{nttdef:fund}の設定を満たす．
 \end{lem}
 \begin{npfwn}[\Cref{lem:0117-closed}]
-  
+  $\ge_s $，$\ha_s $は実半単純Lie環であり，$G$は線型Lie群であるから，後述の\Cref{thm:yos83}より$G_s$，$H_s$は$G$の閉部分群である．
+
+  $\ge_{s}$と$\ha $は共に$\theta$不変より$\theta \ha_s = \ha_s $であるから
 \end{npfwn}
+
+\Cref{lem:0117-closed}により，$(G_s, H_s) $に対して\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe\cap\ge_{s} $に対し，
+\begin{align*}
+{(Y_s(X), Z_s(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha_s\cap\pe)\oplus (\per{\ha_s}\cap \pe)}
+\end{align*}
+と定義できる．
+
 
 \begin{lem}\label{lem:0117-decomp}
   \Cref{lem:0117-perp}の仮定のもとで $X = X_c + X_s \in \ge' $と任意の$t\in \real$に対し$Y(tX) = tX_c + Y_s(tX_s) $である．

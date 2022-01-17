@@ -195,7 +195,7 @@ $G$が実階数1の実線型半単純Lie群の有限個の積であり，$\ha\ca
   \begin{itemize}
   \item 局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次の4条件を満たすことである．
     \begin{enumerate}
-    \item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}\footnote{これは\cite{ber88}には明示されていません．}
+    \item $e\in G$を単位元とするとき$r(e) = 0 $である．
     \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
     \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
     \item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
@@ -219,13 +219,14 @@ $G$が実階数1の実線型半単純Lie群の有限個の積であり，$\ha\ca
   $G/H$のランクが$d$であるとき，$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，かつ任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．% ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
 \end{thm-a}
 
-$L^2(G/H)$の既約分解に現れる表現を\Cref{thm:plancherel}を用いて分析するためには$G/H$のランクを知る必要がある．
+$L^2(G/H)$の既約分解に現れる表現を\Cref{thm:plancherel}を用いて分析するためには$G/H$のランクを知る必要があり，$Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}にはこのような表現論的背景もある．
 
+% 以上が本修士論文の表現論的な背景である．
 % $(G,H)$が対称対の場合には
 % 任意の$X\in \Lie B$に対して$Y(\real X) $が有界であれば，$G/H$がランク$d \defeq \dim \ah$となるための必要条件のうちの1つが満たされる．
 % 「ある定数$C > 0$が存在して，任意の$X\in \Lie B$に対し，$d_{G/K}(\exp(-X)\cdot o_K, o_K )  - \inf\{d_{G/K}(\exp(-X)\cdot o_K,h\cdot o_K ) \mid h\in H\}\leq C$であること」が満たされる．
 
-以上が本修士論文の表現論的な背景である．
+
 
 % $(G,H)$が対称対の場合に
 % \begin{def-a}(\cite[p.~151]{kk16})\label{def:symm-case}

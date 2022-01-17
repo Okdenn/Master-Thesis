@@ -164,7 +164,7 @@
 \begin{npfwn}[\Cref{lem:basic-prob}]
   \leavevmode\vspace{-1em}
   \begin{enumerate}[label=\textbf{\arabic*.}]
-  \item \redtext{次が測度0であることを示せば十分である．}\footnote{示せていません．}
+  \item % \redtext{次が測度0であることを示せば十分である．}\footnote{示せていません．}
     
   \item $X\in \pe$が\Cref{cond:0117}を満たさないとき，$X\in \pe\setminus\pe_{H,\bdd} $であることを示せば良い．
     
@@ -376,48 +376,48 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{rem}
 
 \begin{cor}\label{cor:prob-eg}
-  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$に対して\Cref{prob:1121}は正しい．より具体的には次の\Cref{thm:1018-main}が成り立つ．
+  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$に対して\Cref{prob:1121}は正しい．% より具体的には次の\Cref{thm:1018-main}が成り立つ．
 \end{cor}
-\begin{prop}\label{thm:1018-main}
-  % $\SO(n,1)/\SO(n) $を {\Poincare} ball model で実現したとき，
-  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$，とする．
-  \begin{align*}
-    Y(X) =
-    \begin{cases}
-      \ds  \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta ]\frac{X_1}{\norm{X_1}}, &X\in \pe\setminus \per{\ha} \\
-    \ds  0, &X\in  \per{\ha}\cap \pe
-  \end{cases}
-  \end{align*}
-  である．
-\end{prop}
-\begin{cor}
-  % $X\in \pe\setminus \ha $
-  % % $ e^{X}\cdot o_K\nin \SO(k,1)\cdot o_K $
-  % に対し$0 \leq \cos \theta\neq 1$であり，
-  $X\in \pe\setminus\per{\ha}$ならば$0 < \cos \theta \leq 1$であり，
-  \begin{align*}
-    Y(\real X) = \lbig\{s\frac{X_1}{\norm{X_1}} \relmiddle|  -\frac{\inv{\tanh}(\cos\theta)}{4} < s < \frac{\inv{\tanh}(\cos\theta)}{4} \rbig\}
-  \end{align*}
-  であるから，$X\nin \pe_{H,\bdd} $と$X\in \ha\cap \pe $は同値である．したがってこの場合も$\pe_{H,\bdd} =\{0\}\cup\pe\setminus\ha $である．
-  % あるいは$Y(\real X) = \{0\}$ (if $X\in  \per{(\ha)}\cap \pe$) より，$\ha\cap \pe $内で有界である．
-\end{cor}
+% \begin{prop}\label{thm:1018-main}
+%   % $\SO(n,1)/\SO(n) $を {\Poincare} ball model で実現したとき，
+%   $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$，とする．
+%   \begin{align*}
+%     Y(X) =
+%     \begin{cases}
+%       \ds  \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta ]\frac{X_1}{\norm{X_1}}, &X\in \pe\setminus \per{\ha} \\
+%     \ds  0, &X\in  \per{\ha}\cap \pe
+%   \end{cases}
+%   \end{align*}
+%   である．
+% \end{prop}
+% \begin{cor}
+%   % $X\in \pe\setminus \ha $
+%   % % $ e^{X}\cdot o_K\nin \SO(k,1)\cdot o_K $
+%   % に対し$0 \leq \cos \theta\neq 1$であり，
+%   $X\in \pe\setminus\per{\ha}$ならば$0 < \cos \theta \leq 1$であり，
+%   \begin{align*}
+%     Y(\real X) = \lbig\{s\frac{X_1}{\norm{X_1}} \relmiddle|  -\frac{\inv{\tanh}(\cos\theta)}{4} < s < \frac{\inv{\tanh}(\cos\theta)}{4} \rbig\}
+%   \end{align*}
+%   であるから，$X\nin \pe_{H,\bdd} $と$X\in \ha\cap \pe $は同値である．したがってこの場合も$\pe_{H,\bdd} =\{0\}\cup\pe\setminus\ha $である．
+%   % あるいは$Y(\real X) = \{0\}$ (if $X\in  \per{(\ha)}\cap \pe$) より，$\ha\cap \pe $内で有界である．
+% \end{cor}
 
-\begin{defi}
-  \leavevmode\vspace{-1em}
-  \begin{itemize}
-    \item {\Poincare} ball の計量は$4\dfrac{\sum_i dx_i^2}{(1-x_i^2)^2} $とする．
-    \item $\ds \cos \theta \defeq \frac{\lyama X, \pr(X)\ryama }{\norm{X}\, \norm{\pr(X)}} \geq 0 $，ただし$\lyama{-},{-}\ryama  $は$\solie(n,1) $の Killing 形式とする．
-  \end{itemize} 
-\end{defi}
+% \begin{defi}
+%   \leavevmode\vspace{-1em}
+%   \begin{itemize}
+%     \item {\Poincare} ball の計量は$4\dfrac{\sum_i dx_i^2}{(1-x_i^2)^2} $とする．
+%     \item $\ds \cos \theta \defeq \frac{\lyama X, \pr(X)\ryama }{\norm{X}\, \norm{\pr(X)}} \geq 0 $，ただし$\lyama{-},{-}\ryama  $は$\solie(n,1) $の Killing 形式とする．
+%   \end{itemize} 
+% \end{defi}
 
-\begin{lem}\label{lem:1018}
-  $Z\in \pe$に対し，$e^Z \cdot o_K $が$o_K$から Euclid 距離で$\tanh p$，$p \geq 0$の位置にある場合，$\norm{Z} = \frac{p}{2} $である．
-\end{lem}
+% \begin{lem}\label{lem:1018}
+%   $Z\in \pe$に対し，$e^Z \cdot o_K $が$o_K$から Euclid 距離で$\tanh p$，$p \geq 0$の位置にある場合，$\norm{Z} = \frac{p}{2} $である．
+% \end{lem}
 
 
 
-\begin{npfwn}[{\Cref{cor:prob-eg}}]\bluetext{make it precise}
-  $\SO(1,n)/\SO(n)$の開球としての実現を考える．「$e^X\cdot o_K $と$o_K$を結ぶ直線」と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
+\begin{skpfwn}{\Cref{cor:prob-eg}}% \bluetext{make it precise}
+  $\SO(1,n)/\SO(n)$の開球としての実現を考える．$e^X\cdot o_K $と$o_K$を結ぶ直線と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
   \begin{figure}[H]
     \centering
     % \raggedleft
@@ -430,8 +430,8 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   
   この断面に現れるのは\Cref{fig:prob-eg-1}と同じであるから，同様の計算により\Cref{cor:prob-eg}を得る．
 
-  よって\Cref{lem:1018}より，$\norm{Y(X)} = \frac{s}{2} = \frac{1}{4}\inv{\tanh}(\cos\theta \tanh 2t) $を得る．再び\Cref{lem:1018}より$4\norm{X} = 2t $であるから，$\norm{Y(X)} = \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta] $を得，\Cref{thm:1018-main}の主張が従う．  
-\end{npfwn}
+  % よって\Cref{lem:1018}より，$\norm{Y(X)} = \frac{s}{2} = \frac{1}{4}\inv{\tanh}(\cos\theta \tanh 2t) $を得る．再び\Cref{lem:1018}より$4\norm{X} = 2t $であるから，$\norm{Y(X)} = \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta] $を得，\Cref{thm:1018-main}の主張が従う．  
+\end{skpfwn}
 
 
 \subsection{\Cref{prob:1121} の観察: 類似の問いとその反例}

@@ -9,7 +9,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     0 & 0 & 0
   \end{pmatrix}$の場合にのみ示す．その他の場合も全く同様の議論である．
 \begin{prop}\label{prop:1127-main}
-  $G = \Sp(1,2) $，$H = \SO(1,1)$，$X\in \pe$に対し，$Y(\real X) $が有界$\iff X\in \pe\setminus \ha  $ or $X = 0$である．
+  $G = \Sp(1,2) $，$H = \SO(1,1)$，$X\in \pe$に対し，$Y(\real X) $が有界であることと$ X\in \{0\}\cup \pe\setminus \ha  $であることは同値である．
 \end{prop}
 
 ただし，$H$は$G$の左上に入っている．すなわち，$\Lie H = \ha = \real Y $，$Y\defeq \begin{pmatrix}
@@ -20,7 +20,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
 \begin{nttdef}
   
-  $\quat$を四元数体とする．$\Sp(1,2)\defeq \{g\in \GL(3,\quat)\mid \bar{\trans{g}}\; I_{1,2}g = I_{1,2}  \} $，$I_{1,2} \defeq \diag(-1,1,1) $とし，$\Sp(1,2) $の$\quat^3 $への自然表現を，$
+  $\quat$を四元数体とする．${\Sp(1,2)\defeq \{g\in \GL(3,\quat)\mid \bar{\trans{g}}\; I_{1,2}g = I_{1,2}  \}} $，$I_{1,2} \defeq \diag(-1,1,1) $とし，$\Sp(1,2) $の$\quat^3 $への自然表現を，$
   \begin{pmatrix}
     x_{11} & x_{12} & x_{13}\\ x_{21} & x_{22} & x_{23}\\ x_{31} & x_{32} & x_{33}
   \end{pmatrix}\cdot
@@ -73,7 +73,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   %   1 & 0 & 0\\
   %   0 & 0 & 0
   % \end{pmatrix}$とする．
-  $X = 0\Rightarrow Y(\real X) = \{0\} $と$X\in \ha\setminus\{0\} $のときに$Y(\real X) $が非有界であることは明らかであるから，$X\nin \ha $の場合にのみ議論すればよい．% つまり
+  $X = 0$ならば$ Y(\real X) = \{0\} $と$X\in \ha\setminus\{0\} $のときに$Y(\real X) $が非有界であることは明らかであるから，$X\nin \ha $の場合にのみ議論すればよい．% つまり
   % $X =
   % \begin{pmatrix}
   %   0 & z & w \\
@@ -82,7 +82,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   % \end{pmatrix}
   % \in \pe\setminus\ha $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $を任意に1つ固定して議論して一般性を失わない．このとき，$X\in\pe\setminus \ha $より$\re z \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．
 
-  $G$の Cartan 対合を$\Theta(g) = \inv{(g^{*})} $ ($g^{*}$は$g$の共役転置) とするとき，$\Theta(e^{Y(tX)}e^{Z(tX)})\cdot o_K = e^{-Y(tX)}e^{-Z(tX)}\cdot o_K = \Theta(e^{X})\cdot o_K = e^{-X}\cdot o_K $より，「$Y(\real X) $が非有界$\iff Y(\real X)\subset \real Y $が上に非有界」である．
+  $G$の Cartan 対合を$\Theta(g) = \inv{(g^{*})} $ ($g^{*}$は$g$の共役転置) とするとき，$\Theta(e^{Y(tX)}e^{Z(tX)})\cdot o_K = e^{-Y(tX)}e^{-Z(tX)}\cdot o_K = \Theta(e^{X})\cdot o_K = e^{-X}\cdot o_K $より，$Y(\real X) $が非有界であることと$ Y(\real X)\subset \real Y $が上に非有界であることは同値である．
 
   したがって，$Y (\real X) $が非有界であるとき，列$\{t_n \in \real \}_{n\in \nat} $で，$s_n\to \infty,\; n\to \infty$，ただし$Y(t_n X) = s_n Y$，なるものが存在する．
 
@@ -159,17 +159,19 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     \bar{w_0} & 0 & 0 
   \end{pmatrix}$，$z_0,w_0\in \quat \st \abs{z_0}^2 +\abs{w_0}^2  = 1 $とするとき$J_n = \dfrac{\bar{z_0}}{r_0}\tanh (tr_0) $，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $であり，$X\nin \ha \iff z_0\neq 1$より$\lim_{n\to \infty}J_n = \dfrac{\bar{z_0}}{r_0}\neq 1 $である．
 
-  以上2つの議論を合わせると$e^{s_n Y}e^{r_n Z_n}\cdot o_K = e^{t_n X}\cdot o_K\implies 1 = \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n \neq 1 $となり矛盾する．
+  $e^{s_n Y}e^{r_n Z_n}\cdot o_K = e^{t_n X}\cdot o_K$より$ \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n  $であるが，以上2つの議論を合わせると$\lim_{n\to \infty} I_n= 1$，$\lim_{n\to \infty}J_n \neq 1 $であるから矛盾する．
   
 
-  以上より「$X\in \pe\setminus\ha \Rightarrow Y(\real X) $有界」，したがって \Cref{prop:1127-main} を得る．
-  
+  以上より「$X\in \pe\setminus\ha$ならば$Y(\real X) $有界」，したがって \Cref{prop:1127-main} を得る．  
 \end{npfwn}
 
 
 \begin{ncalcof}[\Cref{prop:1127-main}]
-  
-  $\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } - 1} = 0$を示せば主張が得られる．具体的に計算すると，
+    
+  \begin{align*}
+    \lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } - 1} = 0
+  \end{align*}
+  を示せば主張が得られる．具体的に計算すると，
   \begin{align}
     &\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } - 1}\notag \\
     % &\qquad\qquad\qquad \text{($\text{(この極限)} = 0$を示せば良い)} \\
@@ -188,7 +190,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
       0 = \lim_{n\to \infty}(1-\tanh s_n)\frac{\min\{\abs{-1\pm \re z_n} \}}{\sqrt{5}}  &\leq \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}}\\
       &\leq \lim_{n\to \infty}(1-\tanh s_n)\frac{\sqrt{5}}{\min\{\abs{1\pm \re z_n} \}} = 0
     \end{align*}
-    より，\Cref{eq:-1} が成り立つ．
+    を得，\Cref{eq:-1} が成り立つ．
 \end{ncalcof}
 
 

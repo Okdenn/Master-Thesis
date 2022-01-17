@@ -24,7 +24,8 @@ $G = \SU(1,1) $，$H = \SO(1,1) $とするとき，$t\in \real$に対し，$Y(tX
 \begin{prob*}(小林俊行氏による)
   $X\in  \pe$に対して，$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと次の条件は同値であるか？
   \begin{cond*}
-    \leavevmode\vspace{-1em}
+    \leavevmode
+    % \vspace{-1em}
     \begin{itemize}
     \item $X\in \per{\ha}\cap\pe $
     \item[] もしくは
@@ -38,7 +39,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) $とするとき，$t\in \real$に対し，$Y(tX
   記号は次のとおりとする．
   \begin{itemize}
   \item $X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
-  \item $\ge ' $は$\ha$と$X$が生成する$\ge$の部分Lie環とする．$\ha = \theta \ha$より$\theta \ge' = \ge'$であるから$\ge'_{s} \defeq [\ge',\ge'] $，$\ze(\ge') $を$\ge'$の中心とすると$\ge' = \ze(\ge') \oplus \ge'_{s} $と分解される．
+  \item $\ge ' $は$\ha$と$X$が生成する$\ge$の部分Lie環とする．$\ha = \theta \ha$より$\theta \ge' = \ge'$であるから$\ge'_{s} \defeq [\ge',\ge'] $，$\ze(\ge') $を$\ge'$の中心とすると$\ge' = \ze(\ge') \oplus \ge'_{s} $である．
   \end{itemize}
 \end{prob*}
 
@@ -48,24 +49,38 @@ $G = \SU(1,1) $，$H = \SO(1,1) $とするとき，$t\in \real$に対し，$Y(tX
 
 \Cref{prob:1121}の背景を説明するために\cite{ber88}の内容についてふれる．
 
-まずいくつか用語を準備する．$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次の4条件を満たすことである．
-\begin{enumerate}
-\item $e\in G$を単位元とするとき$r(e) = 0 $である．
-\item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
-\item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
-\item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
-\end{enumerate}
-properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
+まずいくつか用語と命題を準備する．以下では$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．
+\begin{defi*}(\cite{ber88})
+  \leavevmode\vspace{-1em}
+  \begin{itemize}
+  \item 局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次の4条件を満たすことである．
+    \begin{enumerate}
+    \item $e\in G$を単位元とするとき$r(e) = 0 $である．
+    \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
+    \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
+    \item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
+    \end{enumerate}
+  \item properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
+  \item $d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
+  \item $G$の連続表現$\cal{V} $のsmooth vector全体の集合を$\cal{V}^{\infty} $とする．
+  \end{itemize}
+\end{defi*}
+\begin{thmdef*}(\cite[p.~683]{ber88})
+  $G/H$には次を満たす非自明なBorel 測度$m_X $ (standard measure) が定数倍を除いて一意的に存在する．
 
-$G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．単位元のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X$，$ \inv{C_B} < m_X(Bx) < C_{B}$である．
+  単位元のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X$，$ \inv{C_B} < m_X(Bx) < C_{B}$である．
+\end{thmdef*}
+\begin{thmdef*}(\cite[p.~678]{ber88})
+  $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．次の同型写像が存在する．$\Hom_{G}((C_c(G/H))^{\infty}, V )\simarrow \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V$ただし任意の$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $に対し$ \lyama v,\alpha_V(\phi)\ryama_{V} = \dint_{G/H}\beta_V(v)\phi d\mu_X  $である．
+\end{thmdef*}
 
-$d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
 
-$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$-絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$-絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
-\begin{prop*}(\cite[p.~678]{ber88})
-  $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．次の同型写像が存在する．$\Hom_{G}((C_c(G/H))^{\infty}, V )\to \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V$ただし任意の$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $に対し$ \lyama v,\alpha_V(\phi)\ryama_{V} = \dint_{G/H}\beta_V(v)\phi d\mu_X  $である．
-\end{prop*}
+\begin{thm*}(\cite[pp.~665--6]{ber88})\label{thm:plancherel}
+  $G/H$のランクが$d$であるとき，$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，かつ任意の$v\in V^{\infty} $，$d' > d$に対して
+  \begin{align}
+    \dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty\label{eq:ber88}
+  \end{align}
+  なることである．% ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
+\end{thm*}
 
-% $G$を実簡約Lie群，$H$を$G$の閉部分群とし，ある可換部分群$B\subset G$が存在して$G = KBH $というCartan分解を持つとする．任意の$X\in \Lie B$に対して$Y(\real X) $が有界であれば，$G/H$がランク$d \defeq \dim B $となるための条件のうちの1つである，「ある定数$C > 0$が存在して，任意の$X\in \Lie B$に対し，$d_{G/K}(\exp(-X)\cdot o_K, o_K )  - \inf\{d_{G/K}(\exp(-X)\cdot o_K,h\cdot o_K ) \mid h\in H\}\leq C$であること」が満たされる．
-
-以上が本修士論文の表現論的な背景である．
+$L^2(G/H)$の既約分解に現れる表現を\Cref{eq:ber88}を用いて分析するためには$G/H$のランクを知る必要があり，$Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}にはこのような表現論的背景もある．

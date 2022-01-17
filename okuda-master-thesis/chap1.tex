@@ -8,7 +8,7 @@
 
 \newcommand*\ccircled[4]{\tikz[baseline=(char.base)]{
     \node[shape=circle, fill=#2, draw=#3, text=#4, inner sep=1pt] (char) {#1};}}
-\newcommand{\cnum}[1]{\, \ccircled{#1}{MediumTurquoise!40}{MediumTurquoise!40}{black}\,}
+\newcommand{\cnum}[1]{\ccircled{#1}{MediumTurquoise!40}{MediumTurquoise!40}{black}}
 
 \subsection{記号の設定}
 本論文の基本的な設定は次のとおりであり，この他に必要な条件は都度明示することとする．
@@ -104,13 +104,13 @@
     
   \item $X\in \pe$が\Cref{cond:0117}を満たさないとき，$X\in \pe\setminus\pe_{H,\bdd} $であることを示せば良い．
     
-    $X\in \pe$が\Cref{cond:0117}の\cnum{1}を満たさないことから$X\in\pe\setminus\per{\ha} $である．
+    $X\in \pe$が\Cref{cond:0117}の \cnum{1} を満たさないことから$X\in\pe\setminus\per{\ha} $である．
 
     $X\in \pe\setminus\per{\ha} $なる$X$に対し$[X_1,X_2] = 0$ならば$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．つまり$X\nin\pe_{H,\bdd} $である．
 
     次に$X\in \pe\setminus \per{\ha} $かつ$[X_1,X_2] \neq 0$なる$X$を考える．
 
-    このとき\Cref{cond:0117}の\cnum{2}，\cnum{3}が成り立たないことから$X\nin \ge_{s}' $かつ$\pe\cap \ze(\ge')\subset \ha $である．このとき$X = X_c + X_s $に対し$X_c\neq 0$であるから\Cref{lem:0117-decomp}より$Y(\real X)$は非有界であり，$X\nin\pe_{H,\bdd} $である．
+    このとき\Cref{cond:0117}の \cnum{2}，\cnum{3} が成り立たないことから$X\nin \ge_{s}' $かつ$\pe\cap \ze(\ge')\subset \ha $である．このとき$X = X_c + X_s $に対し$X_c\neq 0$であるから\Cref{lem:0117-decomp}より$Y(\real X)$は非有界であり，$X\nin\pe_{H,\bdd} $である．
 
     % $\pe\cap \ze_{\ze(\ha)}(X) \neq \{0\} $なる$X$に対し，$0\neq W\in\pe\cap \ze_{\ze(\ha)}(X)\subset \ha\cap \pe $を任意に1つ取る．このとき$X_2 \defeq  X - \dfrac{\lyama X, W\ryama }{\lyama W, W\ryama}W \in \per{\ha}\cap \pe $であり，$[X, W] = 0 $ より$[X_2, W] = 0$である．よって$X_1 \defeq \dfrac{\lyama X, W\ryama }{\lyama W, W\ryama}W $とすると，任意の$t\in \real$に対し$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K $である．よって$Y(\real X) = \real X_1 $より$X\nin\pe_{H,\bdd} $である．
 
@@ -120,19 +120,19 @@
 
     $X\in\ha\setminus\{0\} $ならば\Cref{cond:0117}を満たさ\textbf{ない}ことは明らかであるから，\Cref{cond:0117}を満たさ\textbf{ない}ならば$X\in\ha\setminus\{0\} $であることを示せば良い．
 
-    $G$の実階数が1かつ$H$が非コンパクトであるから$\ha\cap\pe$は極大分裂可換部分代数である．
     
-    \Cref{cond:0117}を満たさない$X\in \pe$を任意に1つ固定する．\Cref{cond:0117}の\cnum{1}が成り立たないことから$X\nin \pe\setminus\per{\ha}$である．また$X$は\Cref{cond:0117}の\cnum{2}，\cnum{3}を満たさない．もし$[X_1, X_2] = 0 $ ならば$X\in\ha\cap \pe $であるから，$X\in \ha\setminus\{0\} $が言える．
+    
+    \Cref{cond:0117}を満たさない$X\in \pe$を任意に1つ固定する．\Cref{cond:0117}の \cnum{1} が成り立たないことから$X\nin \pe\setminus\per{\ha}$である．また$X$は\Cref{cond:0117}の \cnum{2}，\cnum{3} を満たさない．もし$[X_1, X_2] = 0 $ ならば$X\in\ha\cap \pe $であるから，$X\in \ha\setminus\{0\} $が言える．
 
-    以上より$[X_1,X_2] \neq 0$かつ$X\nin \pe\setminus\per{\ha}$なる$X$のみを考えれば十分である．このときさらに$X\nin \ge_{s}' $かつ$\pe\cap\ze(\ge')\subset \ha $である．後者より$X  = X_c + X_s $に対し，後者より$X_s\in \pe\cap\ze(\ge')\subset \ha $
+    以上より$[X_1,X_2] \neq 0$かつ$X\nin \pe\setminus\per{\ha}$なる$X$のみを考えれば十分である．このとき$X$は\Cref{cond:0117}の \cnum{2}，\cnum{3} を満たさないことからさらに$X\nin \ge_{s}' $かつ$\pe\cap\ze(\ge')\subset \ha $である．$X  = X_c + X_s $に対し，前者より$X_c\neq 0 $であり，後者より$X_c\in \pe\cap\ze(\ge')\subset \ze_{\ha\cap\pe}(X) $である．しかし，$G$の実階数が1かつ$H$が非コンパクトであるから$\ha\cap\pe$は極大分裂可換部分代数であることから，$X\nin\ha\setminus\{0\} $ならば$[X \ha\cap\pe ] \neq  \{0\}$より，$0 = X_c \in \ze_{\ha\cap\pe}(X) $とならざるを得ず，
     
     \Cref{lem:basic-prob}が示された．
   \end{enumerate}  
 \end{npfwn}
 
-$Y(\real X) $の有界性は$\Ad(k) $-不変である．具体的には\Cref{lem:1101}が成り立つ．
+$Y(\real X) $の有界性は$\Ad(k) $不変である．具体的には\Cref{lem:1101}が成り立つ．
 \begin{lem}\label{lem:1101}
-  $k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．
+  任意の$k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．
 
   このとき$Y(\real X)$が有界であることと$ Y'(\real X') $が有界であることは同値である．
 \end{lem}

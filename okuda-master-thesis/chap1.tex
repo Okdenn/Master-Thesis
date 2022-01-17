@@ -90,23 +90,22 @@
   $\ha\subset \ge' $であり，両者とも$\theta$不変であるから，
   \begin{align}
     \ha &= (\ge'_s\cap \ha)\oplus (\ze(\ge')\cap\ha )\notag \\
-        &= \ha_s\oplus (\ze(\ge')\cap\ha\cap\ka )\oplus (\ze(\ge')\cap\ha\cap\pe ) \label{eq:0117-perp}
+        &= \ha_s\oplus (\ze(\ge')\cap\ha\cap\ka )\oplus (\ze(\ge')\cap\ha\cap\pe ) \\
+        &= \ha_s\oplus (\ze(\ge')\cap\ha\cap\ka )\oplus (\ze(\ge')\cap\pe ) \label{eq:0117-perp}
   \end{align}
-  である．
+  である．最後の等式には$\pe\cap \ze(\ge')\subset \ha $を用いた．
 
   任意の$X\in \per{\ha_s}\cap \ge'_s\cap\pe $と$Z\in \per{\ha}\cap\pe $の元を取る．$Z$を\Cref{eq:0117-perp}の分解に対応して$Z = Z_s + Z_{\ka} + Z_{c} $と分解する．
   
   $\ka\perp\pe $であるから
   \begin{align*}
-    \lyama X, Z\ryama &= \lyama X, Z_s + Z_{\ka} + Z_{c}\ryama\\
-                      &= \lyama X,   Z_{c}\ryama
+    \lyama X, Z\ryama &= \lyama X, Z_s + Z_{\ka} + Z_{c}\ryama = \lyama X,   Z_{c}\ryama
   \end{align*}
   である．$X\in \ge_{s}' = [\ge', \ge'] $より，ある$T,\ S\in \ge'$が存在して$X = [T, S] $である．$\lyama {-}, {-}\ryama $は$G$不変であるから
-  \begin{align*}
-    \lyama X,   Z_{c}\ryama = \lyama [T, S],   Z_{c}\ryama = -\lyama S,   [T, Z_{c}]\ryama
-  \end{align*}
-  である．ここで$Z_c\in \ze(\ge') $より$[T, Z_c ]= 0$であるから
-  
+  \begin{align}
+    \lyama X, Z\ryama &= \lyama X,   Z_{c}\ryama = \lyama [T, S],   Z_{c}\ryama = -\lyama S,   [T, Z_{c}]\ryama\label{eq:0117-perp-2}
+  \end{align}
+  である．ここで$Z_c\in \ze(\ge') $より$[T, Z_c ]= 0$であるから\Cref{eq:0117-perp-2}の左辺は0となり，\Cref{lem:0117-perp}の主張を得る．
 \end{npfwn}
 
 \begin{lem}\label{lem:0117-closed}

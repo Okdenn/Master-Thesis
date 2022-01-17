@@ -94,29 +94,41 @@
   $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ha_s\defeq \ge_{s}'\cap\ha $の$G$における解析的部分群とする．このとき$(G_s, H_s) $は$G$の閉部分群であり，$\Theta H_s = H_s $である．
 \end{lem}
 \begin{npfwn}[\Cref{lem:0117-closed}]
-  $\ge_s $，$\ha_s $は実半単純Lie環であり，$G$は線型Lie群であるから，後述の\Cref{thm:yos38}より$G_s$，$H_s$は$G$の閉部分群である．
+  $\ge_s' $，$\ha_s $は実半単純Lie環であり，$G$は線型Lie群であるから，後述の\Cref{thm:yos38}より$G_s$，$H_s$は$G$の閉部分群である．
 
-  $\ge_{s}$と$\ha $は共に$\theta$不変より$\theta \ha_s = \ha_s $であるから$H_s$の非コンパクト性を除いて\Cref{nttdef:fund}の条件すべてが成り立つ．
+  $\ge_{s}'$と$\ha $は共に$\theta$不変より$\theta \ha_s = \ha_s $であるから$H_s$の非コンパクト性を除いて\Cref{nttdef:fund}の条件すべてが成り立つ．
 \end{npfwn}
 
 \begin{defi}
 
-  $G_s\supset H_s$，$X\in \pe\cap\ge_{s} $に対し，$Y_s(X)\in \ha_s\cap\pe \subset \ha\cap \pe $と$Z_s(X)\in \per{\ha_s}\cap \pe \subset \per{\ha}\cap \pe $を次のように定める．
+  $G_s\supset H_s$，$X\in \pe\cap\ge_{s}' $に対し，$Y_s(X)\in \ha_s\cap\pe \subset \ha\cap \pe $と$Z_s(X)\in \per{\ha_s}\cap \pe \subset \per{\ha}\cap \pe $を次のように定める．
   
-  $H_s $が非コンパクトならば\Cref{lem:0117-closed}により，$(G_s, H_s) $に対して\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe\cap\ge_{s} $に対し
+  $H_s $が非コンパクトならば\Cref{lem:0117-closed}により，$(G_s, H_s) $に対して\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe\cap\ge_{s}' $に対し
   \begin{align*}
     {(Y_s(X), Z_s(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha_s\cap\pe)\oplus (\per{\ha_s}\cap \pe)}
   \end{align*}
   と定義する．
 
 
-  $H_s $がコンパクトな場合は$\ha_s\subset \ka $より$H_s\subset K $であるから，$X\in \pe\cap\ge_{s} $に対し，$Y_s(X) = 0 $，$Z_s(X) = X $と定義する．
+  $H_s $がコンパクトな場合は$\ha_s\subset \ka $より$H_s\subset K $であるから，$X\in \pe\cap\ge_{s}' $に対し，$Y_s(X) = 0 $，$Z_s(X) = X $と定義する．
 \end{defi}
 
 \begin{lem}\label{lem:0117-decomp}
-  \Cref{lem:0117-perp}の仮定のもとで任意の$X = X_c + X_s \in \ge' $に対し$Y(X) = X_c + Y_s(X_s) $である．
+  \Cref{lem:0117-perp}の仮定のもとで任意の$X = X_c + X_s \in \ge'\cap\pe $に対し$Y(X) = X_c + Y_s(X_s) $である．
 \end{lem}
 \begin{npfwn}[\Cref{lem:0117-decomp}]
+
+  $[X_c, X_s] = 0 $より$\exp(X)\cdot o_K = \exp(X_c)\exp(X_s)\cdot o_K $であり，$\ze(\ge')\cap \ge_s' = \emptyset $より$\exp(X_c)\exp(X_s)\cdot o_K = \exp(X_c')\exp(X_s')\cdot o_K $ならば$X_c = X_c' $，$X_s = X_s'$である．
+  
+  $Y(X)\in \ha\cap\pe\subset \ge' $，$Z(X)\in \ha\cap\pe\subset \ge' $より$Y(X) = Y(X)_c + Y(X)_s $，$Z(X) = Z(X)_c + Z(X)_s $，$Y(X)_c,\ Z(X)_c \in \ze(\ge')\cap\pe  $，$Y(X)_s,\ Z(X)_s\in \ha_s\cap\pe $と分解できる．
+
+  このとき，
+  \begin{align*}
+    e^{X_c}e^{X_s}\cdot o_K &= e^{X}\cdot o_K \\
+                            &= e^{Y(X)}e^{Z(X)}\cdot o_K\\
+                            &= e^{Y(X)_s + Z(X)_s}e^{Y(X)_c + Z(X)_c}\cdot o_K
+  \end{align*}
+  であるから，$X_c = Y(X)_s + Z(X)_s $，
   
 \end{npfwn}
 

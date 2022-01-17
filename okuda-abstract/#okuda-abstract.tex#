@@ -1,0 +1,269 @@
+\RequirePackage{plautopatch}
+\plautopatchdisable{eso-pic} % https://oku.edu.mie-u.ac.jp/tex/mod/forum/discuss.php?d=2956, pdfpages との相性を良くする
+\documentclass[12pt,dvipdfmx,uplatex]{jsarticle}
+% \documentclass[11pt,autodetect-engine,dvi=dvipdfmx,ja=standard,
+% label-section=modern, % モダーン！(Theorem Appendix A.3 みたいなアホがない)
+% a4paper]{bxjsarticle}
+
+\input{../../../preamble-j-a}
+\input{../../../pikachu}
+\input{../../../colorsforprint.tex}
+\usepackage{pdfpages} % at the final compile, delete the option "demo"
+\usepackage[top=10truemm,bottom=20truemm,left=18truemm,right=18truemm]{geometry} %DO NOT option ``a4paper", it changes the size of outputed PDF
+
+\DeclareMathOperator{\ballsub}{\underset{\text{ball}}{\subset}}
+\renewcommand{\dx}{\; dx}
+\newcommand{\uah}{\underline{\ah}}
+\newcommand{\MJ}{MJ}
+\newcommand{\img}{\sqrt{-1}}
+% \DeclareMathOperator{\MJ}{MJ}
+
+\newcommand{\bigzero}{\mbox{\Large\textbf{0}}}
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+\makeatletter
+\newcommand{\neutralize}[1]{\expandafter\let\csname c@#1\endcsname\count@}
+\makeatother
+
+\newenvironment{claimbis}[1]
+{\renewcommand{\thethm}{\ref{#1}$'$}%
+  \neutralize{claim}\phantomsection
+  \begin{claim}}
+  {\end{claim}}
+
+% \begin{align*}
+%   \begin{array}{ccc}
+%     M & \stackrel{\phi}{\longrightarrow} & M' \\
+%     \rotatebox{90}{$\in$} & & \rotatebox{90}{$\in$} \\
+%     p & \longmapsto & \phi(p)
+%   \end{array}
+% \end{align*}
+
+% \begin{figure}[H]
+%   \centering
+%   \begin{tikzpicture}
+%     \node (ef) at (0, 1.2) {$E\times F$};
+%     \node (g) at (1.2, 1.2) {$G$};
+%     \node (m) at (0, 0) {$M$};
+%     \draw[->] (ef) to node[above] {$\scriptstyle b$} (g);
+%     \draw[->] (ef) to node[left] {$\scriptstyle \phi$} (m);
+%     \draw[->] (m) to node[right] {$\scriptstyle \exists !\tilde{b}$} (g);
+%     \node (a) at (0.4, 0.7) {$\scriptstyle \circlearrowleft$};
+%   \end{tikzpicture}
+% \end{figure}
+
+% \begin{empheq}[left={|x|=\empheqlbrace}]{alignat*=2}
+%   x & \quad (x\geq 0) \\
+%   -x & \quad (otherwise) 
+% \end{empheq}
+
+% easylist
+% \ListProperties(Margin2=2em,Space1*=0em,FinalMark={)}, Style2*=\textbullet, Hide2=2)
+
+% inline eqs. w/. numbering
+% e.g.
+% \inlineequation[eq:matsushima-p191-1]{\forall X\in\ge,\ \ad(X)\circ J = J\circ \ad(X)}
+
+% \begin{figure}[H]
+%   \centering
+%   %   \raggedleft
+%   %   \raggedrightp
+%   %   \includegraphics[scale=0.08]{graph/fig1.jpg}
+%   \includegraphics[scale=0.08]{graph/fig1-2.jpg}
+%   \label{fig:fig1}
+% \end{figure}
+
+
+% % \maketitleの余白を調整
+% \makeatletter
+% \renewcommand{\@maketitle}{\newpage
+%   % \null
+%   % \vskip 2em 
+% \begin{center}
+%   {\LARGE \@title \par} % \vskip 1.5em
+%   {\large \lineskip .5em
+%   \begin{tabular}[t]{c}\@author
+%   \end{tabular}\par
+% }
+%     %   \vskip 1em
+%     %   {\large \@date}
+% \end{center}
+%   % \par
+%   % \vskip 0.5em
+% }
+%   \makeatother
+
+\usepackage{advdate} % \AdvanceDate[-1]\today の進捗報告，みたいな
+
+% \setnewcounter{hoge}
+% \newtheorem{theorem}{Theorem}[hoge]
+\newcounter{countabst}
+\setcounter{countabst}{0}
+\newtheorem{yosou-a}[countabst]{予想}
+\newtheorem{prob-a}[countabst]{問}
+\newtheorem{nttdef-a}[countabst]{記号と定義}
+\newtheorem{thmdef-a}[countabst]{定理と定義}
+\newtheorem{thm-a}[countabst]{定理}
+\newtheorem{lem-a}[countabst]{補題}
+\newtheorem{prop-a}[countabst]{命題}
+\newtheorem{cor-a}[countabst]{系}
+\newtheorem{def-a}[countabst]{定義}
+\newtheorem{cond-a}[countabst]{条件}
+\newcommand{\nsubset}{\not\subset}
+\begin{document}
+
+% \input{okuda-title}
+\begin{center}
+  論文内容の要旨
+\end{center}
+
+\noindent\underline{修士論文題目}
+\vspace{-1em}
+\begin{center}
+  Riemann対称空間上における測地線の簡約部分Lie代数への射影に対する有界性
+
+  ---低階数・低次元の場合---
+\end{center}
+\vspace{-0.5em}
+
+\noindent 氏名: 奥田 堯子
+
+\vspace{0.5em}
+
+本修士論文には小林俊行氏による$\ha$射影の有界性に対する次の\Cref{prob:1121}について，$G$の実階数や$H$の次元が低い場合に肯定的な結果をいくつか記した ($\ha$射影や記号の定義は後述する)．
+
+\begin{prob-a}(小林俊行氏による)\label{prob:1121}
+  $X\in \pe$に対し$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと次の条件は同値であるか？
+  \begin{cond-a}\label{cond:a}
+    $X\in \per{\ha}\cap\pe $，もしくは$[X_1, X_2] \neq 0 $かつ$X\in \ge_{s}' $，もしくは$[X_1, X_2] \neq 0 $かつ$\pe\cap \ze(\ge') \nsubset \ha  $である．
+  \end{cond-a}
+
+  ただし
+  \begin{itemize}
+    % \leavevmode
+    \vspace{-1em}
+  \item $X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
+  \item $\ge ' $は$\ha$と$X$が生成する$\ge$の部分Lie環とし，$\ge'_{s} \defeq [\ge',\ge'] $，$\ze(\ge') $は$\ge'$の中心とする．
+  \end{itemize}
+\end{prob-a}
+\vspace{-0.5em}
+ここで$G$が実階数1のとき，\Cref{cond:a}と$X\in \{0\}\cup\pe\setminus\ha $は同値である．
+
+
+この論文の基本設定は以下の通りである．
+\begin{nttdef-a}\label{nttdef:setting}
+  \leavevmode\vspace{-1em}
+  \begin{itemize}
+  \item $G$を非コンパクト実簡約Lie 群，$H$は$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$H = \Theta H$を満たすものとする．
+  \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
+  \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
+  \item $\lyama{-},{-} \ryama$を，$\ge$上の$G$不変な非退化対称双線型形式で，$\ka$上負定値，$\pe$上正定値で$\ka\perp \pe$なるものとし，$\per{\ha}\ \defeq \{W\in \ge\mid \lyama W, \ha\ryama = \{0\}\} $とする．
+  \end{itemize}  
+\end{nttdef-a}
+\vspace{-0.5em}
+
+本修士論文の主題である$X\in \pe$の$\ha$射影$Y(X)\in \ha\cap \pe $は，次の\Cref{thm:kob89-lem6.1}により${(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)}$と定義される．
+\begin{thm-a}(\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1})
+  \Cref{nttdef:setting}の設定において$\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
+\end{thm-a}
+
+$e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」という幾何学的意味を持つ．したがって$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
+
+以下では$(G,H) $がどのような場合に\Cref{prob:1121}が肯定的であったかとその証明方法を具体的に述べる．
+
+$G$が実階数1の実線型半単純lie群，$\dim \ha\cap \pe = 1$の場合は$G = \SU(1,2) $，$H= \SO(1,1)$の場合に帰着することで\Cref{prob:1121}が肯定的であることを証明した．
+
+$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明の流れを荒っぽく述べる．$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界であるとすると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して「$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線」が「$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線」が$o_K$でなす角が$\epsilon $未満となる．しかしこれは$X$と$(\ha\cap\pe)\setminus\{0\} $の元がなす角度の最小値が非零であることに矛盾する．したがって$X\in \pe\setminus\ha $ならば$Y(\real X) $は有界であることが言える．
+
+これを踏まえて$G$が実階数1の実線型半単純Lie群，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて$G = \SU(1,2) $，$H= \SO(1,1)$の場合に帰着した．
+
+\begin{prop-a}\label{prop:reduction}
+  $G$を実階数1の実線型半単純Lie群とする．任意の$0\neq Y\in \ha\cap\pe $と任意の$X\in \pe\setminus \real Y$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $あるいは$\ge_0\simeq \sulie(2,1)$なるものが存在する．また$\ge_0$の$G$における解析的部分群$G_0$は$G$の閉部分群である．
+\end{prop-a}
+\vspace{-0.5em}
+\Cref{prop:reduction}は\cite[p.~409]{hel01}の{$\SU(2,1) $-reduction}と\cite{yos38}の定理をあわせて示される．
+
+$G$が実階数1の実線型半単純Lie群の有限個の積であり，$\ha\cap \pe $の各成分が1次元であるときも\Cref{prob:1121}に対する肯定的な結果を得られる．なぜならば成分ごとに見ることで$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $の場合に帰着できるためである．
+
+\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容についてふれる．
+
+まずいくつか用語と命題を準備する．以下では$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．
+\begin{def-a}(\cite{ber88})
+  \leavevmode\vspace{-1em}
+  \begin{itemize}
+  \item 局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次の4条件を満たすことである．
+    \begin{enumerate}
+    \item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}\footnote{これは\cite{ber88}には明示されていません．}
+    \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
+    \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
+    \item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
+    \end{enumerate}
+  \item properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
+  \item $d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
+  \item $G$の連続表現$\cal{V} $のsmooth vector全体の集合を$\cal{V}^{\infty} $とする．
+  \end{itemize}
+\end{def-a}
+\begin{thmdef-a}(\cite[p.~683]{ber88})
+  $G/H$には次を満たす非自明なBorel 測度$m_X $ (standard measure) が定数倍を除いて一意的に存在する．
+
+  単位元のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X$，$ \inv{C_B} < m_X(Bx) < C_{B}$である．
+\end{thmdef-a}
+\begin{thmdef-a}(\cite[p.~678]{ber88})
+  $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．次の同型写像が存在する．$\Hom_{G}((C_c(G/H))^{\infty}, V )\simarrow \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V$ただし任意の$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $に対し$ \lyama v,\alpha_V(\phi)\ryama_{V} = \dint_{G/H}\beta_V(v)\phi d\mu_X  $である．
+\end{thmdef-a}
+
+
+\begin{thm-a}(\cite[pp.~665--6]{ber88})
+  $G/H$のランクが$d$であるとき，$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，かつ任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．% ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
+\end{thm-a}
+
+
+$G$を実簡約Lie群，$H$を$G$の閉部分群とし，ある可換部分群$B\subset G$が存在して$G = KBH $というCartan分解を持つとする．このとき
+
+任意の$X\in \Lie B$に対して$Y(\real X) $が有界であれば，$G/H$がランク$d \defeq \dim B $となるための条件のうちの1つである，「ある定数$C > 0$が存在して，任意の$X\in \Lie B$に対し，$d_{G/K}(\exp(-X)\cdot o_K, o_K )  - \inf\{d_{G/K}(\exp(-X)\cdot o_K,h\cdot o_K ) \mid h\in H\}\leq C$であること」が満たされる．
+
+以上が本修士論文の表現論的な背景である．
+
+
+% \clearpage
+\begin{thebibliography}{99}
+  \vspace{-0.5em}
+\bibitem[Ber88]{ber88} J.~N.~Bernstein, \textit{On the support of Plancherel measure}, J.~Geom.~Phys., Vol. 5, n. 4, 1988, pp. 663--710.
+  % \bibitem[BH99]{bh99} M.~R.~Bridson and A.~Haefliger, Metric Spaces of Non-Positive Curvature, Grundlehren der mathematischen Wissensschaften, Vol.~319, Springer, 1999.
+  % \bibitem[Ebe72a]{e72-1} P.~Eberlien, \textit{Geodesic Flows on Negatively Curved Manifolds I}, Ann.~of~Math.~(2), Vol.~95, 1972, pp.~492--510.
+  % \bibitem[Ebe72b]{e72-2} P.~Eberlien, \textit{Geodesic Flow in Certain Manifolds without Conjugate Points}, Trans.~Amer.~Math.~Soc., Vol.~167, 1972, pp.~151--70.
+\bibitem[Hel01]{hel01} S. Helgason, Differential Geometry, Lie Groups, and Symmetric Spaces, GSM, Vol. 34, AMS, 2001.
+\bibitem[KK16]{kk16} F. Kassel and T. Kobayashi, \textit{{\Poincare} series for non-Riemannian locally symmetric spaces}, Adv. Math., Vol. 287, 2016, pp. 123--236.
+\bibitem[Kob89]{kob89} T.~Kobayashi, 
+  \textit{Proper action on a homogeneous space of reductive type},
+  Math.~Ann., Vol. 285, Issue. 2, 1989, pp. 249--263.
+\bibitem[小林95]{kobayashi95} 小林俊行，球等質多様体上の調和解析入門，第3回整数論サマースクール `等質空間と保型形式' 所収，佐藤文広 編，長野，1995，pp. 22-41．
+\bibitem[Kob97]{kob97} T.~Kobayashi, \textit{Invariant mesures on homogeneous manifolds of reductive type}, J.~Reine~Angew.~Math., Vol. 1997, No. 490--1, 1997, pp. 37--54.
+\bibitem[Yos38]{yos38} K.~Yosida, \textit{A Theorem concerning the Semi-Simple Lie Groups}, \\Tohoku~Mathematical~Journal, First Series, Vol.~44, 1938, pp.~81--84.
+\end{thebibliography}
+
+
+\begin{comment}
+  \begin{def-a}{\cite[Definition~1.3]{e72-1}}\label{def:visibility}
+
+    $M$が完備かつ非正曲率をもつ1-連結Riemann多様体であるとき，$M$をHadamard多様体といい，Hadamard多様体$M$が visibility manifold であるとは，任意の$ p\in M$と任意の$ \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が$d_{M}(p, \gamma(t))\geq r(p,\epsilon) $，$t\in [t_0, t_1]$ならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
+  \end{def-a}
+
+  \bluetext{$M$がvisibility manifold であるとは，幾何的に見れば}\footnote{図をつけようと思っています．2022/01/10}
+
+  \begin{thm-a}{\cite[p.~296, 9.33~Theorem]{bh99}, originally \cite[Theorem~4.1]{e72-2}}\label{thm:visibility-and-rank}
+    
+    ある$C\cptsub M$が存在して$ M = \bigcup\{f(C)\mid f\in \isom(M) \}  $なるHadamard多様体$M$に対し，次は同値である．
+    \vspace{-1em}
+    \begin{enumerate}
+      \renewcommand{\labelenumi}{(\roman{enumi})}
+    \item $M$はvisibility manifoldである．
+    \item 全測地的な部分Riemann多様体$M'\subset M$で$\real^2$と等長同型なものが存在しない．
+    \end{enumerate}
+  \end{thm-a}
+
+  ここでRiemann対称空間はHadamard多様体であり，\Cref{thm:visibility-and-rank}の (ii) は$G$の実階数が1以下であることと同値である．したがって$G$の実階数が1の場合$G/K$はvisibility manifoldであり，$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明と全く同様にして背理法により\Cref{prob:1121}が示される．
+\end{comment}
+\end{document}

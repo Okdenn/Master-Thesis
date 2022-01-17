@@ -186,7 +186,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 \end{npfwn}
 
 
-\begin{ncalcof}[\Cref{prop:1127-main}]
+\begin{ncalcof}[\Cref{prop:1127-main}，\Cref{eq:-1}]
     
   \begin{align*}
     \lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } - 1} = 0
@@ -198,7 +198,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     = & \lim_{n\to \infty}\lbig|\frac{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})(1 \pm z_n \tanh\abs{r_n}\tanh s_n )}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} - 1 \rbig|\notag \\    
     = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}\label{eq:ast} \tag{$\ast$}
   \end{align}
-  である．ここで$ z_n'\defeq 1 \pm z_n\tanh\abs{r_n}\tanh s_n$とすると，
+  である．ここで$ z_n'\defeq 1 \pm z_n\tanh\abs{r_n}\tanh s_n$とおくと，
   \begin{align*}
     (\ast) &= \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}\\
     = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )z_n'}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} \\
@@ -207,7 +207,8 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   であり，
   $0 < \min{\abs{1\pm \re z_n}}\leq  \abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}\leq \sqrt{2^2 + 1^2} = \sqrt{5} $と$\min\{\abs{-1\pm \re z_n } \}  \leq \abs{-1\pm\bar{z_n}\tanh \abs{r_n} } \leq \sqrt{5} $であることと$\lim_{n\to \infty} \re z_n = \re z_{\infty} \neq \pm 1$より，
     \begin{align*}
-      0 = \lim_{n\to \infty}(1-\tanh s_n)\frac{\min\{\abs{-1\pm \re z_n} \}}{\sqrt{5}}  &\leq \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}}\\
+      0 &= \lim_{n\to \infty}(1-\tanh s_n)\frac{\min\{\abs{-1\pm \re z_n} \}}{\sqrt{5}} \\
+        &\leq \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}}\\
       &\leq \lim_{n\to \infty}(1-\tanh s_n)\frac{\sqrt{5}}{\min\{\abs{1\pm \re z_n} \}} = 0
     \end{align*}
     を得，\Cref{eq:-1} が成り立つ．

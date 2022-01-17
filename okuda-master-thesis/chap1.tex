@@ -136,7 +136,7 @@
                             &= e^{Y(X)}e^{Z(X)}\cdot o_K\\
                             &= e^{Y(X)_c + Z(X)_c}e^{Y(X)_s}e^{Z(X)_s}\cdot o_K
   \end{align*}
-  であるから，補助補題1，2より$X_c = Y(X)_c + Z(X)_c $，$e^{X_s}\cdot o_K = e^{Y(X)_s}e^{Z(X)_s}\cdot o_K $である．
+  であるから，補助補題1と2より$X_c = Y(X)_c + Z(X)_c $，$e^{X_s}\cdot o_K = e^{Y(X)_s}e^{Z(X)_s}\cdot o_K $である．
 
   前者より$e^{X_c} \cdot o_K = e^{Y(X)_c}e^{Z(X)_c}\cdot o_K $であり，\Cref{lem:0117-perp}の仮定より$Y(X)_c \in \ha\cap \pe$，$  Z(X)_c \in \per{\ha}\cap \pe$であるから$Y(X_c) = Y(X)_c $を得る．さらに\Cref{lem:0117-perp}の仮定より$X_c\in \ze(\ge')\cap \pe\subset \ha \cap \pe $であるから$Y(X_c) = X_c = Y(X)_c $を得る．
 
@@ -304,7 +304,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     % \raggedleft
     % \raggedrightp
     % \includegraphics[scale=0.08]{../graph/prob-eg-1.jpg}
-    \includegraphics[scale=0.3]{../graph/prob-eg-2.pdf}
+    \includegraphics[scale=0.35]{../graph/prob-eg-2.pdf}
     \caption{}
     \label{fig:prob-eg-1}
   \end{figure}
@@ -418,10 +418,15 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 \subsection{\Cref{prob:1121} の観察: 類似の問いとその反例}
 
-\Cref{prob:1121}は，$G$の実階数が1の場合は
+\Cref{lem:basic-prob}より\Cref{prob:1121}は$G$の実階数が1の場合には
 \begin{prob}\label{prob:1121-2}
 
-  $\pe_{H,\bdd} = \{X\in \pe\mid [X,(\ha\cap\pe)]\neq \{0\} \text{ あるいは } X\perp (\ha\cap\pe)\text{ である．}  \}  $となるか？
+  \begin{align}
+    \pe_{H,\bdd} &= \{0\}\cup \pe\setminus\ha\notag \\
+                 &= \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X\in \per{\ha}\cap\pe \text{ である．}  \}\label{eq:prob-1121-2}\\
+                 &= \{X\in \pe\mid [X, (\ha\cap \pe)]\neq 0 \text{ あるいは } X\in \per{\ha}\cap\pe \text{ である．}  \}\notag
+  \end{align}
+  となるか？
   
 \end{prob}
 と同値であった．しかし\Cref{prob:1121-2}には$G$の実階数が2の場合の反例が存在する．

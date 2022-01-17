@@ -84,14 +84,33 @@
 
 いくつか補題を用意してから\Cref{lem:basic-prob}を示す．以下$\ha_s\defeq \ge_{s}'\cap\ha $とする．
 \begin{lem}\label{lem:0117-perp}
-  $\pe\cap \ze(\ge')\subset \ha $ならば$\ge'_s\cap\pe $における$\ha_s\cap \pe$の直交補空間は$\per{\ha} $に含まれる．
+  $\pe\cap \ze(\ge')\subset \ha $ならば$\ge'_s\cap\pe $における$\ha_s\cap \pe$の直交補空間は$\per{\ha}\cap\pe $に含まれる．
 \end{lem}
 \begin{npfwn}[\Cref{lem:0117-perp}]
+  $\ha\subset \ge' $であり，両者とも$\theta$不変であるから，
+  \begin{align}
+    \ha &= (\ge'_s\cap \ha)\oplus (\ze(\ge')\cap\ha )\notag \\
+        &= \ha_s\oplus (\ze(\ge')\cap\ha\cap\ka )\oplus (\ze(\ge')\cap\ha\cap\pe ) \label{eq:0117-perp}
+  \end{align}
+  である．
+
+  任意の$X\in \per{\ha_s}\cap \ge'_s\cap\pe $と$Z\in \per{\ha}\cap\pe $の元を取る．$Z$を\Cref{eq:0117-perp}の分解に対応して$Z = Z_s + Z_{\ka} + Z_{c} $と分解する．
+  
+  $\ka\perp\pe $であるから
+  \begin{align*}
+    \lyama X, Z\ryama &= \lyama X, Z_s + Z_{\ka} + Z_{c}\ryama\\
+                      &= \lyama X,   Z_{c}\ryama
+  \end{align*}
+  である．$X\in \ge_{s}' = [\ge', \ge'] $より，ある$T,\ S\in \ge'$が存在して$X = [T, S] $である．$\lyama {-}, {-}\ryama $は$G$不変であるから
+  \begin{align*}
+    \lyama X,   Z_{c}\ryama = \lyama [T, S],   Z_{c}\ryama = -\lyama S,   [T, Z_{c}]\ryama
+  \end{align*}
+  である．ここで$Z_c\in \ze(\ge') $より$[T, Z_c ]= 0$であるから
   
 \end{npfwn}
 
 \begin{lem}\label{lem:0117-closed}
-  $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ha_s\defeq \ge_{s}'\cap\ha $の$G$における解析的部分群とする．このとき$(G_s, H_s) $は$G$の閉部分群であり，$\Theta H_s = H_s $である．
+  $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ha_s $の$G$における解析的部分群とする．このとき$(G_s, H_s) $は$G$の閉部分群であり，$\Theta H_s = H_s $である．
 \end{lem}
 \begin{npfwn}[\Cref{lem:0117-closed}]
   $\ge_s' $，$\ha_s $は実半単純Lie環であり，$G$は線型Lie群であるから，後述の\Cref{thm:yos38}より$G_s$，$H_s$は$G$の閉部分群である．

@@ -109,6 +109,7 @@
 \newtheorem{prop-a}[countabst]{命題}
 \newtheorem{cor-a}[countabst]{系}
 \newtheorem{def-a}[countabst]{定義}
+\newtheorem{cond-a}[countabst]{条件}
 
 \begin{document}
 
@@ -130,15 +131,26 @@
 
 \vspace{0.5em}
 
-本修士論文では，小林俊行氏による$\ha$射影の有界性に対する次の\Cref{prob:1121}について，$G$の実階数や$H$の次元が低い場合に肯定的な結果を得た ($\ha$射影の定義や記号は後述する)．
+本修士論文には小林俊行氏による$\ha$射影の有界性に対する次の\Cref{prob:1121}について，$G$の実階数や$H$の次元が低い場合に肯定的な結果をいくつか記した ($\ha$射影や記号の定義は後述する)．
 
 \begin{prob-a}(小林俊行氏による)\label{prob:1121}
-  $X\in \pe$に対し$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと「$X\in \per{\ha}\cap\pe $もしくは『$ [X_1, X_2]\neq 0 $かつ$\pe\cap\ze_{\ze(\ha)}(X) = 0$であること』」は同値であるか？
+  $X\in \pe$に対し$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと次の条件は同値であるか？
+  \begin{cond-a}\label{cond:a}
+    \leavevmode\vspace{-1em}
+    \begin{itemize}
+    \item $X\in \per{\ha}\cap\pe $
+    \item[] もしくは
+    \item $[X_1, X_2] \neq 0 $かつ$X\in \ge_{s}' $，
+    \item[] もしくは
+    \item $[X_1, X_2] \neq 0 $かつ$\pe\cap \ze(\ge') \nsubset \ha  $
+    \end{itemize}
+    である．
+  \end{cond-a}
 
   ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
 \end{prob-a}
 \vspace{-0.5em}
-ここで$G$が実階数1のとき，「$X\in \per{\ha}\cap\pe $もしくは『$ [X_1, X_2]\neq 0 $かつ$\ze_{\ze(\ha)}(X) = 0$であること』」と$X\in \{0\}\cup\pe\setminus\ha $は同値である．
+ここで$G$が実階数1のとき，\Cref{cond:a}と$X\in \{0\}\cup\pe\setminus\ha $は同値である．
 
 
 この論文の基本設定は以下の通りである．

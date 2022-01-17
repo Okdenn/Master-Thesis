@@ -16,7 +16,7 @@
 \begin{nttdef}\label{nttdef:fund}
   \leavevmode\vspace{-1em}
   \begin{itemize}
-  \item $\nat,\real, \cpx,\quat$をそれぞれ0を含む自然数全体，実数全体，複素数全体，四元数全体の集合とする．
+  \item $\nat,\real, \cpx,\quat$をそれぞれ0以上の整数全体，実数全体，複素数全体，四元数全体の集合とする．
   \item $G$を非コンパクト実線型簡約Lie 群，$H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item $\ze(\ha)\defeq \{Y\in \ha\mid [Y,\ha] = \{0\} \} $とする．
@@ -24,7 +24,7 @@
   \item $\lyama{-},{-} \ryama$を，$\ge$上の$G$-不変な非退化対称双線型形式で，$\ka$上負定値，$\pe$上正定値で$\ka\perp \pe$なるものとする．
   \item $\per{\ha}\ \defeq \{W\in \ge\mid \lyama W, \ha\ryama = \{0\}\} $とする．
   \item $X\in \pe$に対し，ベクトル空間としての分解$\pe =( \ha\cap \pe)\oplus(\per{\ha}\cap \pe) $に対応した分解を$X = X_1 + X_2 $，$X_1 \in \ha\cap \pe$，$X_2\in \per{\ha}\cap \pe$とする．
-  \item $(M,d_M)$を$M$の上の任意の2点に対し一意的な測地線が存在するRiemann多様体と$M$上の計量から定まる距離とする．相異なる点$p,q,r \in M$に対し，
+  \item $(M,d_M)$を$M$上の任意の2点に対し一意的な測地線が存在するRiemann多様体と$M$上の計量から定まる距離とする．相異なる3点$p,q,r \in M$に対し，
     \begin{itemize}
     \item $\gamma_{p,q}\colon [0, d_{M}(p,q)] \to M$を，$\gamma(0) =  p$，$\gamma(d_{M}(p,q)) = q $なる測地線とする．
     \item $\measuredangle_{p}(q, r)$を$\gamma_{p,q} $と$\gamma_{p,r} $が$p$においてなす角とする．
@@ -51,7 +51,7 @@
 \begin{prob}(小林俊行氏による)\label{prob:1121}
   ${\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}}  $と定めるとき，
   \begin{enumerate}
-  \item $G$が実半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $は測度0であるか？
+  \item $G$が実半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $はLebesgue速度に対して測度0であるか？
   \item $X\in \pe_{H,\bdd}$であることと次の\Cref{cond:0117}は同値であるか？
     \begin{cond}\label{cond:0117}
       $X\in \pe$は次のいずれかを満たす．
@@ -78,7 +78,7 @@
   \item \Cref{prob:1121}において，2.が成り立つならば1.が成り立つ．
   \item $X\in \pe_{H,\bdd} $ならば$X$は\Cref{cond:0117}を満たす．
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
-  \item $G$が実階数1ならば，\Cref{cond:0117}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
+  \item $G$が実階数1ならば，$X\in\pe$が\Cref{cond:0117}を満たすことと$X\in \{0\}\cup \pe\setminus\ha $であることは同値である．
   \end{enumerate}
 \end{lem}
 
@@ -179,7 +179,7 @@
     % $\pe\cap \ze_{\ze(\ha)}(X) \neq \{0\} $なる$X$に対し，$0\neq W\in\pe\cap \ze_{\ze(\ha)}(X)\subset \ha\cap \pe $を任意に1つ取る．このとき$X_2 \defeq  X - \dfrac{\lyama X, W\ryama }{\lyama W, W\ryama}W \in \per{\ha}\cap \pe $であり，$[X, W] = 0 $ より$[X_2, W] = 0$である．よって$X_1 \defeq \dfrac{\lyama X, W\ryama }{\lyama W, W\ryama}W $とすると，任意の$t\in \real$に対し$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K $である．よって$Y(\real X) = \real X_1 $より$X\nin\pe_{H,\bdd} $である．
 
     以上より主張が従う．
-  \item $X_1 = 0$であることと$ X\in \per{\ha}\cap\pe $であることが同値であることから従う．
+  \item $X_1 = 0$であることと$ X\in \per{\ha}\cap\pe $であることが同値であり$X\in \per{\ha}\cap\pe $ならば\Cref{thm:kob89-lem6.1}より$Y(X) = 0 $であることから従う．
   \item $G$が実階数1のときに$X\in \pe$に対して$X\in \{0\}\cup \pe\setminus \ha $であることと\Cref{cond:0117}を満たすことが同値であることを示せば良い．
 
     $X\in(\ha\cap\pe)\setminus\{0\} $ならば\Cref{cond:0117}を満たさ\textbf{ない}ことは明らかであるから，\Cref{cond:0117}を満たさ\textbf{ない}ならば$X\in(\ha\cap\pe)\setminus\{0\} $であることを示せば良い．
@@ -188,13 +188,13 @@
     
     \Cref{cond:0117}を満たさない$X\in \pe$を任意に1つ固定する．\Cref{cond:0117}の \cnum{1} が成り立たないことから$X\nin \pe\setminus\per{\ha}$である．また$X$は\Cref{cond:0117}の \cnum{2}，\cnum{3} を満たさない．もし$[X_1, X_2] = 0 $ ならば$X\in\ha\cap \pe $であるから，$X\in \ha\setminus\{0\} $が言える．
 
-    以上より$[X_1,X_2] \neq 0$かつ$X\nin \pe\setminus\per{\ha}$なる$X$のみを考えれば十分である．このとき$X$は\Cref{cond:0117}の \cnum{2}，\cnum{3} を満たさないことからさらに$X\nin \ge_{s}' $かつ$\pe\cap\ze(\ge')\subset \ha $である．$X  = X_c + X_s $に対し，前者より$X_c\neq 0 $であり，後者より$X_c\in \pe\cap\ze(\ge')\subset \ze_{\ha\cap\pe}(X) $である．しかし，$G$の実階数が1かつ$H$が非コンパクトであるから$\ha\cap\pe$は極大分裂可換部分代数であり，$X\nin\ha\setminus\{0\} $ならば$[X \ha\cap\pe ] \neq  \{0\}$より，$0 = X_c \in \ze_{\ha\cap\pe}(X) $とならざるを得ない．これは$X_c\neq 0 $に矛盾し，したがって$X \in \ha\setminus\{0\}  $である．
+    以上より$[X_1,X_2] \neq 0$かつ$X\nin \pe\setminus\per{\ha}$なる$X$のみを考えれば十分である．このとき$X$は\Cref{cond:0117}の \cnum{2}，\cnum{3} を満たさないことからさらに$X\nin \ge_{s}' $かつ$\pe\cap\ze(\ge')\subset \ha $である．$X  = X_c + X_s $に対し，前者より$X_c\neq 0 $であり，後者より$X_c\in \pe\cap\ze(\ge')\subset \ze_{\ha\cap\pe}(X) $である．しかし，$G$の実階数が1かつ$H$が非コンパクトで$\ha = \theta\ha$であるから$\ha\cap\pe$は極大分裂可換部分代数であり，$X\nin\ha\setminus\{0\} $ならば$[X \ha\cap\pe ] \neq  \{0\}$より，$0 = X_c \in \ze_{\ha\cap\pe}(X) $とならざるを得ない．これは$X_c\neq 0 $に矛盾し，したがって$X \in \ha\setminus\{0\}  $である．
     
     以上の議論から\Cref{lem:basic-prob}が示された．
   \end{enumerate}  
 \end{npfwn}
 
-$Y(\real X) $の有界性は$\Ad(k) $不変である．具体的には\Cref{lem:1101}が成り立つ．
+$Y(\real X) $の有界性は$k\in K$に対して$\Ad(k) $不変な性質である．具体的には\Cref{lem:1101}が成り立つ．
 \begin{lem}\label{lem:1101}
   任意の$k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．
 

@@ -5,10 +5,10 @@
     0 & 0 & \sqrt{2} \\
     0 & \sqrt{2} & -1
   \end{pmatrix}
-  $に対し$Y(\real X) $は非有界である．
+  $に対し$Y(\real X) $は非有界であり，\Cref{eq:prob-1121-2}は成り立たない．
 \end{prop}
 
-
+\Cref{prop:0114}を示す前にこの例が\Cref{eq:prob-1121-2}の右辺に属することを見る．
 $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1 = \diag(1,0,-1)$，$X_2 = \begin{pmatrix}
   0 & 0 & 0 \\
   0 & 0 & \sqrt{2} \\
@@ -17,7 +17,7 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
   0 & 0 & 0 \\
   0 & 0 & \sqrt{2} \\
   0 & -\sqrt{2} & 0
-\end{pmatrix} \neq 0$より$X$は\Cref{eq:prob-1121-2}の右辺の集合の元ではあるが$X\nin \pe_{H,\bdd} $であるから，\Cref{prop:0114}は\Cref{prob:1121}の反例となっている．
+\end{pmatrix} \neq 0$より$X$は\Cref{eq:prob-1121-2}の右辺の集合の元である．% が\Cref{prop:0114}より$X\nin \pe_{H,\bdd} $であるから，\Cref{prop:0114}は\Cref{prob:1121}の反例となっている．
 
 1つ補題を用意してから\Cref{prop:0114}を証明する．
 \begin{lem}\label{lem:0114}
@@ -109,10 +109,11 @@ $\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \}  $であるから$X_1
           \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3} & \dfrac{e^{2t} + 2e^{-4t}}{3}
                  \end{pmatrix}
   \end{align*}
+  を得る．
 \end{npfwn}
 
 \begin{npfwn}[\Cref{prop:0114}]
-  行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$と$G/K$は$gK \mapsto g
+  $G/K$と行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$は$gK \mapsto g
   \begin{pmatrix}
     1 & 0\\ 0 & 1
   \end{pmatrix}

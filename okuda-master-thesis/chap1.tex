@@ -239,7 +239,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 \begin{npfwn}[\Cref{lem:riem-metric-su11}]
   
-  $\ge$の元を$G/K$上の左不変ベクトル場と同一視すると
+  $\pe$の元を$G/K$上の左不変ベクトル場と同一視すると
   \begin{align*}
     X' &\defeq 
          \begin{pmatrix}
@@ -358,17 +358,18 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \end{pmatrix}
   $，$Z \defeq \begin{pmatrix}
     0 & \sqrt{-1} \\ -\sqrt{-1} & 0
-  \end{pmatrix}$とし，角度$\phi $
+  \end{pmatrix}$とし，角度$\phi_{s,t} $は$0\leq \phi_{s,r}\leq \frac{\pi}{2} $の範囲に取ることとする．
   \end{lem}  
 
   \Cref{lem:0106}により\Cref{prop:prob-eg}は次のように証明できる．
   任意の$0\neq s\in \real, r\in \real $に対し，
   \begin{align}
-    \lim_{r\to -\infty}\tan \phi_{\abs{s},r} = \dfrac{-1}{\sinh 2\abs{s}}  \leq \tan \phi_{s,r} \leq  \lim_{r\to \infty}\tan \phi_{\abs{s},r} = \dfrac{1}{\sinh 2\abs{s}}\label{eq:0106}
+    % \lim_{r\to -\infty}\tan \phi_{\abs{s},r} = \dfrac{-1}{\sinh 2\abs{s}} 
+    0 \leq \abs{\tan \phi_{s,r}} \leq  \lim_{r\to \infty}\tan \phi_{\abs{s},r} = \dfrac{1}{\sinh 2\abs{s}}\label{eq:0106}
   \end{align}
   である．$X\nin \real Y $の元に対して$Y(\real X) $が非有界であるとすると，$ 0 <  \epsilon < \phi(X,\ha\cap\pe)$なる$\epsilon$に対し，ある$t\in \real $が存在して，$Y(tX) = s_tY $，$\sinh 2\abs{s_t} > \dfrac{1}{\tan \epsilon} $である．$Z(tX) = r_tZ $とすると\Cref{eq:0106}より$\abs{\tan \phi_{s_t,r_t}} < \tan \epsilon $，したがって
   \begin{align*}
-    -\epsilon < \measuredangle_{o_K}(e^{s_tY}e^{r_t Z}\cdot o_K, e^{s_tY}\cdot o_K) < \epsilon < \phi(X,\ha)
+    0\leq \measuredangle_{o_K}(e^{s_tY}e^{r_t Z}\cdot o_K, e^{s_tY}\cdot o_K) < \epsilon < \phi(X,\ha\cap\pe)
   \end{align*}
   となる．しかし定義より$\measuredangle_{o_K}(e^{s_tY}e^{r_t Z}\cdot o_K, e^{s_tY}\cdot o_K) = \measuredangle_{o_K}(e^{tX}\cdot o_K, e^{Y(tX) }\cdot o_K) $であり，$\measuredangle_{o_K}(e^{tX}\cdot o_K, e^{Y(tX) }\cdot o_K) = \phi(X,\ha\cap\pe)$であるから矛盾する． 
 
@@ -417,7 +418,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 
 \begin{skpfwn}{\Cref{cor:prob-eg}}% \bluetext{make it precise}
-  $\SO(1,n)/\SO(n)$の開球としての実現を考える．$e^X\cdot o_K $と$o_K$を結ぶ直線と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
+  $\SO(1,n) $の$\real^{n+1} $への自然表現を用いて$\SO(1,n)/\SO(n)\simeq \{\trans{(x_1\cldots x_n)} \mid \sum_{1\leq i\leq n}x^2_i  < 1 \} $として実現する．$e^X\cdot o_K $と$o_K$を結ぶ直線と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
   \begin{figure}[H]
     \centering
     % \raggedleft
@@ -434,9 +435,9 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{skpfwn}
 
 
-\subsection{\Cref{prob:1121} の観察: 類似の問いとその反例}
+\subsection{\Cref{prob:1121} の観察: 類似の問とその反例}
 
-\Cref{lem:basic-prob}より\Cref{prob:1121}は$G$の実階数が1の場合には
+\Cref{lem:basic-prob}より\Cref{prob:1121}は$G$の実階数が1の場合には次の問と同値であった．
 \begin{prob}\label{prob:1121-2}
 
   \begin{align}
@@ -444,10 +445,10 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
                  &= \{X\in \pe\mid [X_1, X_2]\neq 0 \text{ あるいは } X\in \per{\ha}\cap\pe \text{ である．}  \}\label{eq:prob-1121-2}\\
                  &= \{X\in \pe\mid [X, (\ha\cap \pe)]\neq 0 \text{ あるいは } X\in \per{\ha}\cap\pe \text{ である．}  \}\notag
   \end{align}
-  となるか？
-  
+  となるか？  
 \end{prob}
-と同値であった．しかし\Cref{prob:1121-2}には$G$の実階数が2の場合の反例が存在する．
+
+ここで$G$の実階数が2の場合には\Cref{eq:prob-1121-2}は成り立たないことがわかっている．
 \input{chap3.tex}
 
 

@@ -62,21 +62,24 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 行列計算により，次が示される．
 \begin{lem}\label{lem:exp-quat}
   
-  任意の$ z,w\in \quat$に対し，$\exp
-  \begin{pmatrix}
-    0 & z & w  \\
-    \bar{z} & 0 & 0\\
-    \bar{w} & 0 & 0
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    \cosh r &  \ast & \ast \\
-    \\
-    \dfrac{\bar{z}}{r} \sinh r &  \ast & \ast \\
-    \\
-    \dfrac{\bar{w}}{r}\sinh r &  \ast & \ast 
-  \end{pmatrix}
-  $である．ただし$r \defeq \sqrt{\abs{z}^2 + \abs{w}^2 } $とする．
+  任意の$ z,w\in \quat$に対し，
+  \begin{align*}
+    \exp
+    \begin{pmatrix}
+      0 & z & w  \\
+      \bar{z} & 0 & 0\\
+      \bar{w} & 0 & 0
+    \end{pmatrix}
+                    =
+                    \begin{pmatrix}
+                      \cosh r &  \dfrac{z}{r} \sinh r & \dfrac{w}{r}\sinh r \\
+                      \\
+                      \dfrac{\bar{z}}{r} \sinh r &  \ast & \ast \\
+                      \\
+                      \dfrac{\bar{w}}{r}\sinh r &  \ast & \ast 
+                    \end{pmatrix}
+  \end{align*}
+  である．ただし$r \defeq \sqrt{\abs{z}^2 + \abs{w}^2 } $とする．
 \end{lem}
 
 \begin{npfwn}[\Cref{prop:1127-main}]
@@ -86,7 +89,11 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   %   1 & 0 & 0\\
   %   0 & 0 & 0
   % \end{pmatrix}$とする．
-  $X = 0$ならば$ Y(\real X) = \{0\} $と$X\in \ha\setminus\{0\} $のときに$Y(\real X) $が非有界であることは明らかであるから，$X\nin \ha $の場合にのみ議論すればよい．% つまり
+  $X = 0$ならば$ Y(\real X) = \{0\} $である．また$X\in \ha\setminus\{0\} $のときに$Y(\real X) $が非有界であることは明らかであるから，$X\nin \ha $の場合にのみ議論すればよい．したがって$\abs{z_0}^2 +\abs{w_0}^2  = 1 $かつ$ z_0 \neq \pm 1 $を満たす$z_0,w_0\in \quat$により$X =  \begin{pmatrix}
+    0 & z_0 & w_0 \\
+    \bar{z_0} & 0 & 0 \\
+    \bar{w_0} & 0 & 0 
+  \end{pmatrix}$と書かれている$X$に対して$Y(\real X) $の有界性を議論して一般性を失わない ($X\nin \ha $であることと$z_0\neq \pm 1$であることは同値である)．以下，$X$はこのような元とする．% つまり
   % $X =
   % \begin{pmatrix}
   %   0 & z & w \\
@@ -99,16 +106,16 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
   したがって，$Y (\real X) $が非有界であるとき，列$\{t_n \in \real \}_{n\in \nat} $で，$s_n\to \infty,\; n\to \infty$，ただし$Y(t_n X) = s_n Y$，なるものが存在する．
 
-  また，任意の$\per{\ha}\cap\pe $の元はある$Z =
+  任意の$\per{\ha}\cap\pe $の元はある$Z =
   \begin{pmatrix}
     0 & z & w \\
     \bar{z} & 0 & 0 \\
     \bar{w} & 0 & 0 
-  \end{pmatrix} \in \per{\ha}\cap\pe $，$z,w\in \quat \st \abs{z}^2 +\abs{w}^2  = 1 $と$r\in \real$により$rZ$と表せる．$Z(t_nX) = r_nZ_n$，$Z_n\defeq \begin{pmatrix}
+  \end{pmatrix} \in \per{\ha}\cap\pe $ (ただし$z,w\in \quat$は$ \abs{z}^2 +\abs{w}^2  = 1 $を満たす) と$r\in \real$により$rZ$と表せる．よって$Z(t_nX) = r_nZ_n$，$Z_n\defeq \begin{pmatrix}
     0 & z_n & w_n \\
     \bar{z_n} & 0 & 0 \\
     \bar{w_n} & 0 & 0 
-  \end{pmatrix} $，$z_n,w_n\in \quat \st \abs{z_n}^2 +\abs{w_n}^2  = 1 $とすると，$X\nin\ha$であるから\Cref{thm:kob97}より$\abs{r_n}\to \infty $である．$z_n,w_n\in \quat \st \abs{z_n}^2 +\abs{w_n}^2  = 1 $より，$\{t_n\} $の部分列を取るとある$Z_{\infty} $が存在して$\lim_{n\to \infty}Z_n = Z_{\infty} =
+  \end{pmatrix} $ (ただし$z_n,w_n\in \quat $は$ \abs{z_n}^2 +\abs{w_n}^2  = 1 $を満たす) の形で表わせる．$X\nin\ha$であるから\Cref{thm:kob97}より$\abs{r_n}\to \infty $，$n\to \infty$である．$z_n,w_n\in \quat $は$ \abs{z_n}^2 +\abs{w_n}^2  = 1 $を満たすから，$\{t_n\} $の部分列を取るとある$Z_{\infty} $が存在して$\lim_{n\to \infty}Z_n = Z_{\infty} =
   \begin{pmatrix}
     0 & z_{\infty} & w_{\infty} \\
     \bar{z_{\infty}} & 0 & 0 \\
@@ -129,9 +136,9 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
               \end{pmatrix}\rbig]\\
     &=  \lbig[ \begin{pmatrix}
       \cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n \\ \sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n \\ \pm \bar{w_n} \tanh \abs{r_n}
-    \end{pmatrix}\rbig],
+    \end{pmatrix}\rbig]
   \end{align*}
-  複号は$r_n$の符号$\pm$と同順，である．このとき$\lim_{n\to \infty}\tanh s_n = 1 = \lim_{n\to \infty}\tanh \abs{r_n} $と$\lim_{n\to \infty} \re z_n = \re z_{\infty} \neq \pm 1$に注意すると次を得る．具体的な計算は後述する．
+  である．ただし複号は$r_n$の符号$\pm$と同順である．このとき$\lim_{n\to \infty}\tanh s_n = 1 = \lim_{n\to \infty}\tanh \abs{r_n} $と$\lim_{n\to \infty} \re z_n = \re z_{\infty} \neq \pm 1$に注意すると次を得る．具体的な計算は後述する．
   \begin{align}
     \lim_{n\to \infty}(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } = 1\label{eq:-1}
   \end{align}
@@ -152,9 +159,9 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   \in \quat\mathbb{H}^2 $から\\
   $ \begin{pmatrix}
     (\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } \\  \ast 
-  \end{pmatrix}\in \quat\mathbb{H}^2 $へのベクトルがなすEuclideanな内積の値を $I_n$とすると，$\lim_{n\to \infty}I_n = 1 $である．
+  \end{pmatrix}\in \quat\mathbb{H}^2 $へのベクトルがなすEuclid内積の値を $I_n$とすると，$\lim_{n\to \infty}I_n = 1 $である．
 
-  しかし，$
+  $
   \begin{pmatrix}
     0 \\ 0 
   \end{pmatrix}
@@ -166,16 +173,16 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   \begin{pmatrix}
     0 \\ 0 
   \end{pmatrix}
-  \in \quat\mathbb{H}^2 $から$e^{t_nX}\cdot o_K \in \quat \mathbb{H}^2 $へのベクトルがなすEuclideanな内積の値$J_n$は，$X \defeq   \begin{pmatrix}
+  \in \quat\mathbb{H}^2 $から$e^{t_nX}\cdot o_K \in \quat \mathbb{H}^2 $へのベクトルがなすEuclid内積の値$J_n$を計算する．$X =   \begin{pmatrix}
     0 & z_0 & w_0 \\
     \bar{z_0} & 0 & 0 \\
     \bar{w_0} & 0 & 0 
-  \end{pmatrix}$，$z_0,w_0\in \quat \st \abs{z_0}^2 +\abs{w_0}^2  = 1 $とするとき$J_n = \dfrac{\bar{z_0}}{r_0}\tanh (tr_0) $，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $であり，$X\nin \ha \iff z_0\neq 1$より$\lim_{n\to \infty}J_n = \dfrac{\bar{z_0}}{r_0}\neq 1 $である．
+  \end{pmatrix}$ (ただし$\abs{z_0}^2 + \abs{w_0}^2 = 1 $かつ$z_0\neq \pm 1 $) と設定したことを思い出すと，$J_n = \dfrac{\bar{z_0}}{r_0}\tanh (tr_0) $，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $であり，$X\nin \ha $であることと$z_0\neq \pm 1$であることは同値であることより$\lim_{n\to \infty}J_n = \dfrac{\bar{z_0}}{r_0}\neq 1 $である．
 
   $e^{s_n Y}e^{r_n Z_n}\cdot o_K = e^{t_n X}\cdot o_K$より$ \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n  $であるが，以上2つの議論を合わせると$\lim_{n\to \infty} I_n= 1$，$\lim_{n\to \infty}J_n \neq 1 $であるから矛盾する．
   
 
-  以上より「$X\in \pe\setminus\ha$ならば$Y(\real X) $有界」，したがって \Cref{prop:1127-main} を得る．  
+  以上より$X\in \pe\setminus\ha$ならば$Y(\real X) $有界であり，\Cref{prop:1127-main} を得る．  
 \end{npfwn}
 
 

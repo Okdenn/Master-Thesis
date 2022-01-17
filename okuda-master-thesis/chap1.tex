@@ -8,6 +8,7 @@
 
 \newcommand*\ccircled[4]{\tikz[baseline=(char.base)]{
     \node[shape=circle, fill=#2, draw=#3, text=#4, inner sep=1pt] (char) {#1};}}
+\newcommand{\cnum}[1]{\ccircled{#1}{MediumTurquoise!40}{MediumTurquoise!40}{black}}
 
 \subsection{記号の設定}
 本論文の基本的な設定は次のとおりであり，この他に必要な条件は都度明示することとする．
@@ -51,15 +52,15 @@
   ${\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}}  $と定めるとき，
   \begin{enumerate}
   \item $G$が実半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $は測度0であるか？
-  \item $X\in \pe_{H,\bdd}$と次の条件は同値であるか？
-    \begin{cond}
-      \leavevmode
+  \item $X\in \pe_{H,\bdd}$であることと次の\Cref{cond:0117}は同値であるか？
+    \begin{cond}\label{cond:0117}
+      $X\in \pe$は次のいずれかを満たす．
       \begin{itemize}
       \item[\ccircled{1}{MediumTurquoise!40}{MediumTurquoise!40}{black}] $X\in \per{\ha}\cap\pe $
-      \item[\ccircled{1}{MediumTurquoise!40}{MediumTurquoise!40}{black}] $[X_1, X_2 ] \neq 0$かつ$X\in \ge_{s}' $である．
-      \item[\ccircled{1}{MediumTurquoise!40}{MediumTurquoise!40}{black}] $[X_1, X_2 ] \neq 0$かつ$\pe\cap \ze(\ge') \nsubset \ha $である．
+      \item[\ccircled{2}{MediumTurquoise!40}{MediumTurquoise!40}{black}] $[X_1, X_2 ] \neq 0$かつ$X\in \ge_{s}' $である．
+      \item[\ccircled{3}{MediumTurquoise!40}{MediumTurquoise!40}{black}] $[X_1, X_2 ] \neq 0$かつ$\pe\cap \ze(\ge') \nsubset \ha $である．
       \end{itemize}
-      ただし$\ge' $は$\ha$と$X$により生成される$\ge'$の部分Lie環であり，$\ge' $は$\theta$不変であるから$\ge_{s}' \defeq [\ge', \ge'] $とすると$\ge  = \ze(\ge') \oplus \ge_{s}' $である．
+      ただし$\ge' $は$\ha$と$X$により生成される$\ge'$の部分Lie環とする．$\ge' $は$\theta$不変であるから$\ge_{s}' \defeq [\ge', \ge'] $とすると$\ge  = \ze(\ge') \oplus \ge_{s}' $である．
     \end{cond}
   \end{enumerate}
 \end{prob}
@@ -69,11 +70,10 @@
 \begin{lem}\label{lem:basic-prob}
   \leavevmode\vspace{-1em}
   \begin{enumerate}
-  \item \Cref{prob:1121}において，2が成り立つならば1が成り立つ．
-  \item ${\pe_{H,\bdd} \subset (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ }\pe\cap \ze_{\ze(\ha)}(X) = \{0\}  \text{ である．} \}}$が成り立つ．
+  \item \Cref{prob:1121}において，2.が成り立つならば1.が成り立つ．
+  \item $X\in \pe_{H,\bdd} $ならば$X$は\Cref{cond:0117}を満たす．
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
-  % \item 1，2より\Cref{prob:1121}と「$X\in \pe$が$[X_1,X_2]\neq 0$ならば$X\in \pe_{H,\bdd} $である」は同値である．
-  \item $G$が実階数1ならば，\Cref{eq:prob-1121}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
+  \item $G$が実階数1ならば，\Cref{cond:0117}と「$\pe_{H,\bdd} =  \{0\}\cup \pe\setminus\ha $」は同値である．
   \end{enumerate}
 \end{lem}
 
@@ -81,14 +81,6 @@
   \leavevmode\vspace{-1em}
   \begin{enumerate}
   \item \redtext{次が測度0であることを示せば十分である．}\footnote{示せていません．}
-    \begin{align*}
-      & (\pe\setminus\per{\ha} ) \setminus \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ }\pe\cap \ze_{\ze(\ha)}(X)  = \{0\} \text{ である．} \}\\
-      =&\ \{X\in \pe\setminus \per{\ha} \mid  [X_1, X_2] = 0 \text{ または }\pe\cap \ze_{\ze(\ha)}(X)  \neq \{0\} \text{ である．} \}\\
-      =&\ \{X\in \pe\setminus \per{\ha} \mid  [X_1, X_2] = 0 \}\cup\{X\in \pe\setminus \per{\ha} \mid \pe\cap \ze_{\ze(\ha)}(X)  \neq \{0\} \text{ である．} \}
-    \end{align*}
-    まず，$\{X\in \pe\mid  [X_1, X_2] = 0\}$と$X\in  \ze_{\pe}(X_1) $は同値である．$\ze_{\pe}(X_1) = \{W\in \pe\mid [X_1,W] = 0  \} $
-
-    $\{X\in \pe\mid \pe\cap \ze_{\ze(\ha)}(X)  \neq \{0\} \text{ である．}\} $は$\{0\}\subsetneq \ze(\ha)\cap\pe$を含む極大分裂可換部分代数を$\ah$とするとき，
     
   \item 次を示せば良い．
     \begin{align}
@@ -100,11 +92,9 @@
 
     以上より\Cref{eq:basic-prop-2}が示され，元の主張が従う．
   \item $X_1 = 0$であることと$ X\in \per{\ha}\cap\pe $であることが同値であることから従う．
-  \item $G$が実階数1として次を示せばよい．
-    \begin{align}
-      \{0\}\cup \pe\setminus \ha = (\per{\ha}\cap\pe) \cup \{X\in \pe\mid  [X_1, X_2]\neq 0 \text{ かつ } \pe\cap \ze_{\ze(\ha)}(X) = \{0\}  \text{ である．} \}\label{eq:basic-prob}
-    \end{align}
-    $G$の実階数が1かつ$H$が非コンパクトであるから$\ha\cap\pe$は極大分裂可換部分代数であり，右辺の2つ目の集合は$\ze(\ha)\cap\pe \subset \real X_{1}\neq \{0\} $より$\{X\in \pe\mid  [X_1, X_2]\neq 0 \}$となる．よって\Cref{eq:basic-prob}の右辺は$\{X\in \pe\mid X_1 = 0\text{ または }  [X_1, X_2]\neq 0 \text{ である．} \}$と同値である．この集合はさらに$X\in \{0\}\cup\pe\setminus\{0\} $と同値であるから\Cref{eq:basic-prob}が示された．
+  \item $G$が実階数1のときに$X\in \{0\}\cup \pe\setminus \ha $であることと\Cref{cond:0117}を満たすことが同値であることを示せば良い．
+    
+    $G$の実階数が1かつ$H$が非コンパクトであるから$\ha\cap\pe$は極大分裂可換部分代数であり，右辺の2つ目の集合は$\ze(\ha)\cap\pe \subset \real X_{1}\neq \{0\} $より$\{X\in \pe\mid  [X_1, X_2]\neq 0 \}$となる．よって\Cref{eq:basic-prob}の右辺は$\{X\in \pe\mid X_1 = 0\text{ または }  [X_1, X_2]\neq 0 \text{ である．} \}$と同値である．この集合はさらに$X\in \{0\}\cup\pe\setminus\{0\} $と同値であるから\Cref{lem:basic-prob}が示された．
   \end{enumerate}  
 \end{npfwn}
 

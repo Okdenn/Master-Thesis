@@ -110,7 +110,7 @@
 \newtheorem{cor-a}[countabst]{系}
 \newtheorem{def-a}[countabst]{定義}
 \newtheorem{cond-a}[countabst]{条件}
-
+\newcommand{\nsubset}{\not\subset}
 \begin{document}
 
 % \input{okuda-title}
@@ -136,18 +136,16 @@
 \begin{prob-a}(小林俊行氏による)\label{prob:1121}
   $X\in \pe$に対し$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと次の条件は同値であるか？
   \begin{cond-a}\label{cond:a}
-    \leavevmode\vspace{-1em}
-    \begin{itemize}
-    \item $X\in \per{\ha}\cap\pe $
-    \item[] もしくは
-    \item $[X_1, X_2] \neq 0 $かつ$X\in \ge_{s}' $，
-    \item[] もしくは
-    \item $[X_1, X_2] \neq 0 $かつ$\pe\cap \ze(\ge') \nsubset \ha  $
-    \end{itemize}
-    である．
+   $X\in \per{\ha}\cap\pe $，もしくは$[X_1, X_2] \neq 0 $かつ$X\in \ge_{s}' $，もしくは$[X_1, X_2] \neq 0 $かつ$\pe\cap \ze(\ge') \nsubset \ha  $である．
   \end{cond-a}
 
-  ただし$X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
+  ただし
+  \begin{itemize}
+    % \leavevmode
+    \vspace{-1em}
+  \item $X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
+  \item $\ge ' $は$\ha$と$X$が生成する$\ge$の部分Lie環とし，$\ge'_{s} \defeq [\ge',\ge'] $，$\ze(\ge') $は$\ge'$の中心とする．
+  \end{itemize}
 \end{prob-a}
 \vspace{-0.5em}
 ここで$G$が実階数1のとき，\Cref{cond:a}と$X\in \{0\}\cup\pe\setminus\ha $は同値である．
@@ -160,7 +158,7 @@
   \item $G$を非コンパクト実簡約Lie 群，$H$は$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$H = \Theta H$を満たすものとする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item  $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
-  \item $\lyama{-},{-} \ryama$を，$\ge$上の$G$-不変な非退化対称双線型形式で，「$\ka$上負定値，$\pe$上正定値で$\ka\perp \pe$」なるものとし，$\per{\ha}\ \defeq \{W\in \ge\mid \lyama W, \ha\ryama = \{0\}\} $とする．
+  \item $\lyama{-},{-} \ryama$を，$\ge$上の$G$不変な非退化対称双線型形式で，$\ka$上負定値，$\pe$上正定値で$\ka\perp \pe$なるものとし，$\per{\ha}\ \defeq \{W\in \ge\mid \lyama W, \ha\ryama = \{0\}\} $とする．
   \end{itemize}  
 \end{nttdef-a}
 \vspace{-0.5em}
@@ -170,24 +168,23 @@
   \Cref{nttdef:setting}の設定において$\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
 \end{thm-a}
 
-$e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」であり，$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
+$e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」という幾何学的意味を持つ．したがって$Y(\real X) $が有界であるか否かという問いは，幾何的には「$e^{tX}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問いに対応する．
 
-以下では$(G,H) $がどのような場合に，どのような証明方法でを示したかを具体的に述べる．
+以下では$(G,H) $がどのような場合に\Cref{prob:1121}が肯定的であったかとその証明方法を具体的に述べる．
 
-$G = \SU(1,2) $，$H= \SO(1,1)$の場合がトイモデルとなって$G$が実階数1の場合の\Cref{prob:1121}に対する肯定的な結果が得られた．
+$G$が実階数1の実線型半単純lie群，$\dim \ha\cap \pe = 1$の場合は$G = \SU(1,2) $，$H= \SO(1,1)$の場合に帰着することで\Cref{prob:1121}が肯定的であることを証明した．
 
 $G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明は背理法による．例えば$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界，より具体的に$Y(t X) = s(t) Y$，$s(t) \to \infty$，$t\to \infty $なるとする．$G/K \simeq \{(z_1,z_2)\in \cpx^2 \mid \abs{z_1}^2 + \abs{z_2}^2 < 1 \} $であることを用いて$e^{Y(tX)}e^{Z(tX)}\cdot o_K $を計算すると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して「$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線」が「$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線」が$o_K$でなす角が$\epsilon $未満となる．これは$X$と$\ha\setminus\{0\} $のなす角度の最小値が非零であることに矛盾し，\Cref{prob:1121}と同値な「$X\in \{0\}\cup \pe\setminus\ha $であることと$ Y(\real X) $が有界であることが同値である」ということが証明できる．
 
-これを踏まえて$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて\Cref{prob:1121}に対して肯定的な結果を得た．
+これを踏まえて$G$が実階数1の実線型半単純Lie群，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて$G = \SU(1,2) $，$H= \SO(1,1)$の場合に帰着した．
 
 \begin{prop-a}\label{prop:reduction}
-  $G$を実階数1の実半単純Lie群とする．任意の$0\neq Y\in \ha\cap\pe $と任意の$X\in \pe\setminus \real Y$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $あるいは$\ge_0\simeq \sulie(2,1)$なるものが存在する．また$\ge_0$の$G$における解析的部分群$G_0$は$G$の閉部分群である．
+  $G$を実階数1の実線型半単純Lie群とする．任意の$0\neq Y\in \ha\cap\pe $と任意の$X\in \pe\setminus \real Y$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $あるいは$\ge_0\simeq \sulie(2,1)$なるものが存在する．また$\ge_0$の$G$における解析的部分群$G_0$は$G$の閉部分群である．
 \end{prop-a}
 \vspace{-0.5em}
-\Cref{prop:reduction}は{$\SU(2,1) $-reduction}，\cite{hel01}と\cite{yos38}の定理を併せて示される．
+\Cref{prop:reduction}は\cite[p.~409]{hel01}の{$\SU(2,1) $-reduction}と\cite{yos38}の定理を併せて示される．
 
-$G$が実階数1のLie群の積であり，$\ha\cap \pe $の各成分が1次元であるときも，成分ごとに見ることで$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $
-の場合に帰着でき，\Cref{prob:1121}に対する肯定的な結果を得られる．
+$G$が実階数1の実線型半単純Lie群の積であり，$\ha\cap \pe $の各成分が1次元であるときも\Cref{prob:1121}に対する肯定的な結果を得られる．成分ごとに見ることで$G$が実階数1の実半単純Lie群，$\dim \ha\cap\pe =1 $の場合に帰着できるためである．
 
 \Cref{prob:1121}の背景を説明するために\cite{ber88}の内容についてふれる．
 
@@ -216,7 +213,7 @@ $G$を実簡約Lie群，$H$を$G$の閉部分群とし，ある可換部分群$B
 以上が本修士論文の表現論的な背景である．
 
 
-\clearpage
+% \clearpage
 \begin{thebibliography}{99}
   \vspace{-0.5em}
 \bibitem[Ber88]{ber88} J.~N.~Bernstein, \textit{On the support of Plancherel measure}, J.~Geom.~Phys., Vol. 5, n. 4, 1988, pp. 663--710.

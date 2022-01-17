@@ -215,16 +215,25 @@ $G$が実階数1の実線型半単純Lie群の有限個の積であり，$\ha\ca
 \end{thmdef-a}
 
 
-\begin{thm-a}(\cite[pp.~665--6]{ber88})
+\begin{thm-a}(\cite[pp.~665--6]{ber88})\label{thm:plancherel}
   $G/H$のランクが$d$であるとき，$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，かつ任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．% ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
 \end{thm-a}
 
-
-$G$を実簡約Lie群，$\Theta$を$G$のCartan対合とする．$H$を$G$の閉部分群とし，$\Theta$と可換な$G$の対合$\sigma$に対して$H = \sigma H$であるとする．極大分裂可換部分代数$\ah \subset \pe $のpositive Weyl chamber$\ah^{+} $を1つ固定すると，任意の$g\in  G $に対し，ある$k\in K$と$h\in H$および一意的な$b_g\in \exp\bar{\be^{+}} $が存在して$g = k_1b_gh$と書ける．この事実を用いてCartan射影$\nu\colon G\to \bar{\be^{+}} $を$\mu(g) = \log b_g $と定める．
+$L^2(G/H)$の既約分解に現れる表現を\Cref{thm:plancherel}を用いて分析するためには$G/H$のランクを知る必要がある．
 
 任意の$X\in \Lie B$に対して$Y(\real X) $が有界であれば，$G/H$がランク$d \defeq \dim \ah$となるための条件のうちの1つである，「ある定数$C > 0$が存在して，任意の$X\in \Lie B$に対し，$d_{G/K}(\exp(-X)\cdot o_K, o_K )  - \inf\{d_{G/K}(\exp(-X)\cdot o_K,h\cdot o_K ) \mid h\in H\}\leq C$であること」が満たされる．
 
 以上が本修士論文の表現論的な背景である．
+
+% $(G,H)$が対称対の場合に
+% \begin{def-a}(\cite[p.~151]{kk16})\label{def:symm-case}
+%   $G$を実簡約Lie群，$\Theta$を$G$のCartan対合とする．$H$を$G$の閉部分群とし，$\Theta$と可換な$G$の対合$\sigma$に対して$H = \sigma H$であるとする．
+
+%   $\qu $を$\ge$内の$d\sigma $の${-1}$固有空間とし，$\ge^{d\sigma\theta} \defeq \{X\in \ge\mid d\sigma\circ\theta(X) = X \} $とする．$\be\subset \qu\cap\pe$を極大可換部分空間として正ルート系$\Sigma(\ge^{d\sigma\theta},\be) $を固定し，対応するpositive Weyl chamberを$\be^{+} $とする．このとき任意の$g\in  G $に対し，ある$k\in K$と$h\in H$および一意的な$b_g\in \exp\bar{\be^{+}} $が存在して$g = k_1b_gh$と書ける．
+
+%   これらの事実を用いてCartan射影$\nu\colon G\to \bar{\be^{+}} $を$\nu(g) = \log b_g $と定める．$\nu$は右$H$不変であるから$\bar{\nu}(gH) = \nu(g) $はwell-definedな$G/H\to \bar{\be^{+}} $への写像である．
+% \end{def-a}
+
 
 
 % \clearpage

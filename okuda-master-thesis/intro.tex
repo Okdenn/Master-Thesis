@@ -24,14 +24,15 @@ $G = \SU(1,1) $，$H = \SO(1,1) $とするとき，$t\in \real$に対し，$Y(tX
 \begin{prob*}(小林俊行氏による)
   $X\in  \pe$に対して，$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと次の条件は同値であるか？
   \begin{cond*}
-    \leavevmode
+    \leavevmode\vspace{-1em}
     \begin{itemize}
     \item $X\in \per{\ha}\cap\pe $
     \item[] もしくは
-    \item $[X_1, X_2] \neq 0 $かつ$X\in \ge_{s}' $
-    \item[] あるいは
-    \item $[X_1, X_2] \neq 0 $かつ$\pe\cap   $
+    \item $[X_1, X_2] \neq 0 $かつ$X\in \ge_{s}' $，
+    \item[] もしくは
+    \item $[X_1, X_2] \neq 0 $かつ$\pe\cap \ze(\ge') \nsubset \ha  $
     \end{itemize}
+    である．
   \end{cond*}
 
   記号は次のとおりとする．
@@ -50,14 +51,12 @@ $G = \SU(1,1) $，$H = \SO(1,1) $とするとき，$t\in \real$に対し，$Y(tX
 \Cref{prob:1121}の背景を説明するために\cite{ber88}の内容についてふれる．
 
 まずいくつか用語を準備する．$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次の4条件を満たすことである．
-\vspace{-1em}
 \begin{enumerate}
 \item \redtext{$e\in G$を単位元とするとき$r(e) = 0 $である．}\footnote{これは\cite{ber88}には明示されていません．}
 \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
 \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
 \item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
 \end{enumerate}
-\vspace{-0.5em}
 properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
 
 $G/H$にはstandard measureと呼ばれる，次を満たす非自明なBorel 測度$m_X $が存在する．単位元のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X$，$ \inv{C_B} < m_X(Bx) < C_{B}$である．

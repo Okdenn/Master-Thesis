@@ -6,6 +6,9 @@
 %%% TeX-PDF-from-DVI: "Dvipdfmx"
 %%% End:
 
+\newcommand*\ccircled[4]{\tikz[baseline=(char.base)]{
+    \node[shape=circle, fill=#2, draw=#3, text=#4, inner sep=1pt] (char) {#1};}}
+
 \subsection{記号の設定}
 本論文の基本的な設定は次のとおりであり，この他に必要な条件は都度明示することとする．
 
@@ -48,9 +51,17 @@
   ${\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}}  $と定めるとき，
   \begin{enumerate}
   \item $G$が実半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $は測度0であるか？
-  \item $X\in \pe_{H,\bdd}$と
-        となっているか？
-      \end{enumerate}
+  \item $X\in \pe_{H,\bdd}$と次の条件は同値であるか？
+    \begin{cond}
+      \leavevmode
+      \begin{itemize}
+      \item[\ccircled{1}{MediumTurquoise!40}{MediumTurquoise!40}{black}] $X\in \per{\ha}\cap\pe $
+      \item[\ccircled{1}{MediumTurquoise!40}{MediumTurquoise!40}{black}] $[X_1, X_2 ] \neq 0$かつ$X\in \ge_{s}' $である．
+      \item[\ccircled{1}{MediumTurquoise!40}{MediumTurquoise!40}{black}] $[X_1, X_2 ] \neq 0$かつ$\pe\cap \ze(\ge') \nsubset \ha $である．
+      \end{itemize}
+      ただし$\ge' $は$\ha$と$X$により生成される$\ge'$の部分Lie環であり，$\ge' $は$\theta$不変であるから$\ge_{s}' \defeq [\ge', \ge'] $とすると$\ge  = \ze(\ge') \oplus \ge_{s}' $である．
+    \end{cond}
+  \end{enumerate}
 \end{prob}
 
 \Cref{prob:1121}についての基本的な事項を挙げる．

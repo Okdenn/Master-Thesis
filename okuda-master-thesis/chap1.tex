@@ -91,20 +91,21 @@
 \end{npfwn}
 
 \begin{lem}\label{lem:0117-closed}
-  $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ge_{s}'\cap\ha $の$G$における解析的部分群とする．このとき$(G_s, H_s) $は$G$の閉部分群であり，\Cref{nttdef:fund}の設定を満たす．
+  $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ge_{s}'\cap\ha $の$G$における解析的部分群とする．このとき$(G_s, H_s) $は$G$の閉部分群であり，$\Theta H_s = H_s $である．
 \end{lem}
 \begin{npfwn}[\Cref{lem:0117-closed}]
-  $\ge_s $，$\ha_s $は実半単純Lie環であり，$G$は線型Lie群であるから，後述の\Cref{thm:yos83}より$G_s$，$H_s$は$G$の閉部分群である．
+  $\ge_s $，$\ha_s $は実半単純Lie環であり，$G$は線型Lie群であるから，後述の\Cref{thm:yos38}より$G_s$，$H_s$は$G$の閉部分群である．
 
-  $\ge_{s}$と$\ha $は共に$\theta$不変より$\theta \ha_s = \ha_s $であるから
+  $\ge_{s}$と$\ha $は共に$\theta$不変より$\theta \ha_s = \ha_s $であるから$H_s$の非コンパクト性を除いて\Cref{nttdef:fund}の条件すべてが成り立つ．
 \end{npfwn}
 
-\Cref{lem:0117-closed}により，$(G_s, H_s) $に対して\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe\cap\ge_{s} $に対し，
-\begin{align*}
-{(Y_s(X), Z_s(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha_s\cap\pe)\oplus (\per{\ha_s}\cap \pe)}
-\end{align*}
-と定義できる．
-
+\begin{defi}
+  $H_s $が非コンパクトならば\Cref{lem:0117-closed}により，$(G_s, H_s) $に対して\Cref{thm:kob89-lem6.1}を用いて，$X\in \pe\cap\ge_{s} $に対し
+  \begin{align*}
+    {(Y_s(X), Z_s(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha_s\cap\pe)\oplus (\per{\ha_s}\cap \pe)}
+  \end{align*}
+  と定義できる．$H_s $がコンパクトな場合は$\ha_s\subset \ka $より$H_s\subset K $であるから，$X\in \pe\cap\ge_{s} $に対し，$Y_s(X) = 0 $，$Z_s(X) = X $
+\end{defi}
 
 \begin{lem}\label{lem:0117-decomp}
   \Cref{lem:0117-perp}の仮定のもとで $X = X_c + X_s \in \ge' $と任意の$t\in \real$に対し$Y(tX) = tX_c + Y_s(tX_s) $である．

@@ -196,15 +196,13 @@
 
 $Y(\real X) $の有界性は$k\in K$に対して$\Ad(k) $不変な性質である．具体的には\Cref{lem:1101}が成り立つ．
 \begin{lem}\label{lem:1101}
-  任意の$k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．
-
-  このとき$Y(\real X)$が有界であることと$ Y'(\real X') $が有界であることは同値である．
+  任意の$k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．このとき$Y(\real X)$が有界であることと$ Y'(\real X') $が有界であることは同値である．
 \end{lem}
 
 \begin{npfwn}[\Cref{lem:1101}]
   主張は$(X,\ha) $と$(X',\ha')$に対して対称的であるから，$Y(\real X) $が有界ならば$Y'(\real X') $が有界であることのみを示せば十分である．
 
-  任意に$r\in \real$を取る．$e^{rX'}\cdot o_K = e^{Y'(r X')}e^{Z'(r X')}\cdot o_K  $であり，両辺に左から$\inv{k} $を掛けると，$e^{r X} = e^{\Ad(\inv{k})( Y'(r X'))}e^{\Ad(\inv{k})( Z'(r X'))}\cdot o_K  $を得る．ここで$Y'(rX')\in \ha'\cap \pe $，$Z'(r X')\in \per{\ha'}\cap \pe $であるから$\Ad(\inv{k})(Y'(r X'))\in \ha\cap \pe $，$\Ad(\inv{k})(Z'(r X')) \in \per{\ha}\cap \pe $である．
+  任意に$r\in \real$を取る．定義より$e^{rX'}\cdot o_K = e^{Y'(r X')}e^{Z'(r X')}\cdot o_K  $であり，両辺に左から$\inv{k} $を掛けると，$e^{r X} = e^{\Ad(\inv{k})( Y'(r X'))}e^{\Ad(\inv{k})( Z'(r X'))}\cdot o_K  $を得る．ここで$Y'(rX')\in \ha'\cap \pe $，$Z'(r X')\in \per{\ha'}\cap \pe $であるから$\Ad(\inv{k})(Y'(r X'))\in \ha\cap \pe $，$\Ad(\inv{k})(Z'(r X')) \in \per{\ha}\cap \pe $である．
 
   \Cref{thm:kob89-lem6.1}により$\pi$は微分同相であるから，任意の$r\in \real$に対して$\Ad(\inv{k})(Y'(r X')) = Y(rX)  $である．$Y'(\real X) = \Ad(k)(Y(\real X))  $であり，$\Ad(k) $は有限次元空間の間の線型写像であるから有界性を保つ．
 
@@ -215,10 +213,10 @@ $Y(\real X) $の有界性は$k\in K$に対して$\Ad(k) $不変な性質であ�
 $Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}と比較して$Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
 
 \begin{thm}(\cite[Lemmma~5.4]{kob97})\label{thm:kob97}
-  $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$である．ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の0でない元がなす角度の最小値${0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2}} $であり，$X\in \pe\setminus \ha $と$ \phi(X,\ha\cap \pe)\neq 0 $は同値である．
+  $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$が成り立つ．ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の0でない元がなす角度の最小値${0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2}} $であり，$X\in \pe\setminus \ha $と$ \phi(X,\ha\cap \pe)\neq 0 $は同値である．
 \end{thm}
 
-\Cref{thm:kob97}より，$X\in \ha $と$Z(\real X) $が有界であることが同値である．
+\Cref{thm:kob97}より，$X\in \ha\cap\pe $であることと$Z(\real X) $が有界であることが同値である．
 
 
 \subsection{\Cref{prob:1121}の観察: $G = \SU(1,1) $，$H = \SO(1,1) $の場合}
@@ -234,9 +232,9 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{prop}
 
 % \bluetext{$\sulie(1,1) $のKilling形式と$r = \tanh t$の関係を明記せよ．}
-
+\Cref{prop:prob-eg}を示すために補題を1つ用意する．
 \begin{lem}\label{lem:riem-metric-su11}
-  $\ge\defeq \sulie(1,1)$のKilling形式から定まる{\Poincare}円板${G/K =\{x+\sqrt{-1}y\mid  x^2 + y^2 < 1 \} }$の計量は$ \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $である．
+  {\Poincare}円板${G/K =\{x+\sqrt{-1}y\mid  x^2 + y^2 < 1 \} }$の$\ge\defeq \sulie(1,1)$のKilling形式から定まるRiemann計量$g$は$ \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $である．
 \end{lem}
 
 \begin{npfwn}[\Cref{lem:riem-metric-su11}]
@@ -265,7 +263,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     =&\ 8, \\
     &g(d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y'))  = 0
   \end{align*}
-  なるような計量$g $がKilling形式から誘導される計量であるが，それが主張の形であることを示せば良い (これらのベクトルが何を表しているかは\Cref{fig:riem-metric-su11}参照)．
+  なるような計量$g $がKilling形式から誘導される計量であるが，それが主張の形であることを示せば良い (\Cref{fig:riem-metric-su11}参照)．
 
   \begin{figure}[H]
     \centering
@@ -313,7 +311,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \begin{pmatrix}
     0 & 1 \\ 1 & 0
   \end{pmatrix}
-  $なる$s\in \real $を求める．
+  $なる$s\in \real $を以下で求める．
 
 
   
@@ -326,6 +324,8 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     \caption{}
     \label{fig:prob-eg-1}
   \end{figure}
+
+  \Cref{fig:prob-eg-1}では，左の円が{\Poincare}円板$G/K$，右の円は$e^{tX_{\theta}}\cdot o_K $を通り$H\cdot o_K$に垂直に交わる測地線を延長した円を描いた．$G/K$の測地線は境界に直交する円弧であるから，この2つの円は直交している．
 
   右の円の Euclid 距離での半径を$R$とし，$e^{tX_{\theta}}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \dfrac{1-h^2}{2h}$，$R+h = \dfrac{1+h^2}{2h}  $を得る．
 
@@ -341,12 +341,12 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \end{align}
   を得る．
 
-  $r = \tanh t$，$h = \tanh s$であるから\Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2t $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界であることと$ \abs{\cos\theta}\neq 1 \iff  X\nin \ha  $であることが同値である．
+  $r = \tanh t$，$h = \tanh s$であるから\Cref{eq:1018-main} は$\cos\theta \tanh 2t = \tanh 2t $と書き直せる．したがって$X_{\theta}$に対して$Y(\real X) $が有界であることと$ \abs{\cos\theta}\neq 1 $であること，あるいは$ X\nin \ha  $であることが同値である．
 \end{npfwn}
 
 \begin{rem}\label{rem:su11-by-angle}
 
-  \Cref{prop:prob-eg}は角度を用いた議論によっても示すことができる．具体的には，計算により次の\Cref{lem:0106}が示せる．
+  \Cref{prop:prob-eg}は角度を用いた議論によっても示すことができる．具体的には，計算により次の\Cref{lem:0106}が示せる (計算は省略する)．
   \begin{lem}\label{lem:0106}
     $e^{sY}e^{rZ}\cdot o_K =
     \begin{pmatrix}
@@ -358,7 +358,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \end{pmatrix}
   $，$Z \defeq \begin{pmatrix}
     0 & \sqrt{-1} \\ -\sqrt{-1} & 0
-  \end{pmatrix}$とする．
+  \end{pmatrix}$とし，角度$\phi $
   \end{lem}  
 
   \Cref{lem:0106}により\Cref{prop:prob-eg}は次のように証明できる．
@@ -366,7 +366,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \begin{align}
     \lim_{r\to -\infty}\tan \phi_{\abs{s},r} = \dfrac{-1}{\sinh 2\abs{s}}  \leq \tan \phi_{s,r} \leq  \lim_{r\to \infty}\tan \phi_{\abs{s},r} = \dfrac{1}{\sinh 2\abs{s}}\label{eq:0106}
   \end{align}
-  であるから，$X\nin \real Y $の元に対して$Y(\real X) $が非有界であるとすると，$ 0 <  \epsilon < \phi(X,\ha)$なる$\epsilon$に対し，ある$t\in \real $が存在して，$Y(tX) = s_tY $，$\sinh 2\abs{s_t} > \dfrac{1}{\tan \epsilon} $である．$Z(tX) = r_tZ $とすると\Cref{eq:0106}より$\abs{\tan \phi_{s_t,r_t}} < \tan \epsilon $，したがって
+  である．$X\nin \real Y $の元に対して$Y(\real X) $が非有界であるとすると，$ 0 <  \epsilon < \phi(X,\ha\cap\pe)$なる$\epsilon$に対し，ある$t\in \real $が存在して，$Y(tX) = s_tY $，$\sinh 2\abs{s_t} > \dfrac{1}{\tan \epsilon} $である．$Z(tX) = r_tZ $とすると\Cref{eq:0106}より$\abs{\tan \phi_{s_t,r_t}} < \tan \epsilon $，したがって
   \begin{align*}
     -\epsilon < \measuredangle_{o_K}(e^{s_tY}e^{r_t Z}\cdot o_K, e^{s_tY}\cdot o_K) < \epsilon < \phi(X,\ha)
   \end{align*}

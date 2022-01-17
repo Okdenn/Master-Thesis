@@ -20,7 +20,11 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
 \begin{nttdef}
   
-  $\quat$を四元数体とする．${\Sp(1,2)\defeq \{g\in \GL(3,\quat)\mid \bar{\trans{g}}\; I_{1,2}g = I_{1,2}  \}} $，$I_{1,2} \defeq \diag(-1,1,1) $とし，$\Sp(1,2) $の$\quat^3 $への自然表現を，$
+  $\quat$を四元数体とする．${\Sp(1,2)\defeq \{g\in \GL(3,\quat)\mid \bar{\trans{g}}\; I_{1,2}g = I_{1,2}  \}} $，$I_{1,2} \defeq \diag(-1,1,1) $とし，$\Sp(1,2) $の$\quat^3 $への自然表現を，任意の$\begin{pmatrix}
+    x_{11} & x_{12} & x_{13}\\ x_{21} & x_{22} & x_{23}\\ x_{31} & x_{32} & x_{33}
+  \end{pmatrix}\in \Sp(1,2)$と任意の$\begin{pmatrix}
+    a \\ b \\c
+  \end{pmatrix}\in \quat^3 $に対し$
   \begin{pmatrix}
     x_{11} & x_{12} & x_{13}\\ x_{21} & x_{22} & x_{23}\\ x_{31} & x_{32} & x_{33}
   \end{pmatrix}\cdot
@@ -33,23 +37,32 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   \end{pmatrix}
   $により定める．
   
-  $\Sp(1,2)/\Sp(1)\times \Sp(2) \simeq \{(z_1, z_2)\mid z_1,z_2\in \quat ,\; \abs{z_1}^2 + \abs{z_2}^2   < 1 \} =: \quat\mathbb{H}^2 $である．なぜならば$\trans{(1,0,0)} $の自然表現$\Sp(1,2)\leftaction \quat^2 $による軌道を考え，第2，第3成分に第1成分の逆数を右からかけた空間が$\quat\mathbb{H}^2$と微分同相であるためであり，$\Sp(1,2)\leftaction \trans{(1,0,0)} $による軌道上の点$
+  $\Sp(1,2)/(\Sp(1)\times \Sp(2)) \simeq \{(z_1, z_2)\mid z_1,z_2\in \quat ,\; \abs{z_1}^2 + \abs{z_2}^2   < 1 \} =: \quat\mathbb{H}^2 $である．この$\Sp(1,2)/(\Sp(1)\times \Sp(2)) $と$\quat\mathbb{H}^2$の間の微分同相は$\trans{(1,0,0)} $の$\Sp(1,2)$軌道上の点$
   \begin{pmatrix}
     z_0 \\ z_1 \\ z_2 
   \end{pmatrix}
-  $に対応する$\quat\mathbb{H}^2$の点を$
-  \lbig[ \begin{pmatrix}
+  \in \quat^3$に対して$\quat\mathbb{H}^2$の点$\begin{pmatrix}
+    z_1\inv{z_0} \\ z_2 \inv{z_0}
+  \end{pmatrix}$を対応させることで得られる．
+
+  $\trans{(1,0,0)} $の$\Sp(1,2)$軌道上の点$
+  \begin{pmatrix}
     z_0 \\ z_1 \\ z_2 
-  \end{pmatrix}\rbig] = \lbig[ \begin{pmatrix}
-    1 \\ z_1\inv{z_0} \\ z_2\inv{z_0} 
-  \end{pmatrix}\rbig] 
+  \end{pmatrix}
+  \in \quat^3 $に対応する$\quat\mathbb{H}^2$の点を$\lbig[
+  \begin{pmatrix}
+    1 \\ z_1\inv{z_0} \\ z_2 \inv{z_0}
+  \end{pmatrix}\rbig]
   $と書く．
+  
+  % により対応させることで得られる．
+  % $\trans{(1,0,0)} $の自然表現$\Sp(1,2)\leftaction \quat^3 $による軌道を考え，第2，第3成分に第1成分の逆数を右からかけた空間が$\quat\mathbb{H}^2$と微分同相であるためである．対応すると書く．
 \end{nttdef}
 
 行列計算により，次が示される．
 \begin{lem}\label{lem:exp-quat}
   
-  $\forall z,w\in \quat$に対し，$\exp
+  任意の$ z,w\in \quat$に対し，$\exp
   \begin{pmatrix}
     0 & z & w  \\
     \bar{z} & 0 & 0\\
@@ -63,7 +76,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     \\
     \dfrac{\bar{w}}{r}\sinh r &  \ast & \ast 
   \end{pmatrix}
-  $，ただし$r \defeq \sqrt{\abs{z}^2 + \abs{w}^2 } $，である．
+  $である．ただし$r \defeq \sqrt{\abs{z}^2 + \abs{w}^2 } $とする．
 \end{lem}
 
 \begin{npfwn}[\Cref{prop:1127-main}]

@@ -65,6 +65,7 @@
   \end{enumerate}
 \end{prob}
 
+\Cref{cond:0117}で定めた$\ge'$の元$X$に対して次の記法を導入する．
 \begin{defi}
   $X\in \ge' $に対し，ベクトル空間としての分解$\ge' = \ze(\ge') \oplus \ge_{s}' $に対応した分解を$X = X_c + X_s $，$X_c \in \ze(\ge')$，$X_s\in \ge_{s}'$とする．
 \end{defi}
@@ -81,6 +82,21 @@
   \end{enumerate}
 \end{lem}
 
+いくつか補題を用意してから\Cref{lem:basic-prob}を示す．
+\begin{lem}\label{lem:0117-perp}
+  $\pe\cap \ze(\ge')\subset \ha $ならば$\ge'_s $における$\ge_{s}'\cap\ha $の直交補空間は$\per{\ha} $に含まれる．
+\end{lem}
+\begin{npfwn}[\Cref{lem:0117-perp}]
+  
+\end{npfwn}
+
+\begin{lem}\label{lem:0117-decomp}
+  $X = X_c + X_s \in \ge' $と任意の$t\in \real$に対し$Y(tX) = tX_c + Y(tX_s) $である．
+\end{lem}
+\begin{npfwn}[\Cref{lem:0117-decomp}]
+  
+\end{npfwn}
+
 \begin{npfwn}[\Cref{lem:basic-prob}]
   \leavevmode\vspace{-1em}
   \begin{enumerate}
@@ -92,7 +108,9 @@
 
     $X\in \pe\setminus\per{\ha} $なる$X$に対し$[X_1,X_2] = 0$ならば$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K$である．したがって\Cref{thm:kob89-lem6.1}より$Y(tX) = tX_1 $，$Z(tX) = tX_2 $であることから$Y(\real X) = \real X_1 $となり，$X_1\neq 0$より$Y(\real X)$は有界集合とならない．つまり$X\nin\pe_{H,\bdd} $である．
 
-    次に$X\in \pe\setminus \per{\ha} $かつ$[X_1,X_2] \neq 0$なる$X$を考える．$X\nin \ge_{s}' $ならば$X\in \ze(\ge')\subset \ze(\ha\cap\pe) $である．したがって$[X, X_1] = [X_2, X_1] = 0 $となる．
+    次に$X\in \pe\setminus \per{\ha} $かつ$[X_1,X_2] \neq 0$なる$X$を考える．
+
+    このとき\cnum{2}，\cnum{3}が成り立たないことから$X\nin \ge_{s}' $ならば$X = X_c + X_s $に対し$X_c\neq 0$であるから\Cref{lem:0117-decomp}より
 
     % $\pe\cap \ze_{\ze(\ha)}(X) \neq \{0\} $なる$X$に対し，$0\neq W\in\pe\cap \ze_{\ze(\ha)}(X)\subset \ha\cap \pe $を任意に1つ取る．このとき$X_2 \defeq  X - \dfrac{\lyama X, W\ryama }{\lyama W, W\ryama}W \in \per{\ha}\cap \pe $であり，$[X, W] = 0 $ より$[X_2, W] = 0$である．よって$X_1 \defeq \dfrac{\lyama X, W\ryama }{\lyama W, W\ryama}W $とすると，任意の$t\in \real$に対し$e^{tX_1}e^{tX_2}\cdot o_K = e^{t(X_1 + X_2)}\cdot o_K = e^{tX}\cdot o_K $である．よって$Y(\real X) = \real X_1 $より$X\nin\pe_{H,\bdd} $である．
 

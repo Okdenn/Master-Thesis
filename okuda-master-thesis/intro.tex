@@ -50,7 +50,7 @@ $t\in \real$に対し$e^{Y(tX)}K $は$e^{tX}K $から$eK$の$H$軌道に下ろ�
 
 
 
-\Cref{prob:1121}の背景を説明するために\cite{ber88}の内容についてふれる．
+\Cref{prob:1121}の表現論的背景を説明するために\cite{ber88}の内容についてふれる．
 
 まずいくつか用語と命題を準備する．以下では$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．
 \begin{defi*}(\cite{ber88})
@@ -86,12 +86,20 @@ $t\in \real$に対し$e^{Y(tX)}K $は$e^{tX}K $から$eK$の$H$軌道に下ろ�
   なることである．% ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
 \end{thm*}
 
-$L^2(G/H)$の既約分解に現れる表現を\Cref{eq:ber88}を用いて分析するためには$G/H$のランクを知る必要がある．
+$L^2(G/H)$の既約分解に現れる表現を\Cref{eq:ber88}を用いて分析するためにはまず$G/H$のランクを知る必要がある．
 
 % $G,H$が対称対であるときを考える．
-$H$を実線型簡約Lie群$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
+$(G,H)$が対称対の場合に$G/H$のランクと$Y(\real X) $の有界性の関係を述べる．
+\begin{setting*}
+  $H$を実線型簡約Lie群$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．今さらに$\Theta $と可換な$G$の対合$\sigma$に対して$G_{\sigma}\defeq \{g\in G \mid \sigma g = g \} $とし，$H$は$G_{\sigma} $の開部分群であるとし，$\ge = \ha\oplus \qu $を$d\sigma $は$\ha$上1，$\qu$上${-1}$であるような$d\sigma$の固有空間分解とする．
 
-今さらに$\Theta $と可換な$G$の対合$\sigma$に対して$G_{\sigma}\defeq \{g\in G \mid \sigma g = g \} $とし，$H$は$G_{\sigma} $の開部分群であるとし，$\ge = \ha\oplus \qu $を$d\sigma $は$\ha$上1，$\qu$上${-1}$であるような$d\sigma$の固有空間分解とする．このとき極大可換部分空間$\ah\subset \pe\cap \qu $と正ルートの集合$\Sigma^{+}() $
+  以上の設定のもとで極大可換部分空間$\ah\subset \pe\cap \qu $と正ルートの集合$\Sigma^{+}((\ka\cap\ka)\oplus(\pe\cap \qu), \ah ) $を固定し，$\bar{\be^{+}} $を対応するpositive Weyl chamberとする．
+\end{setting*}
+\begin{thmdef*}
+  任意の$g\in G$に対して，ある$k\in K$，$h\in H$と一意的な$b_g\in \exp\bar{\be^{+}} $が存在して$g = kb_gh$である．この事実を用いて$\nu\colon G\to \bar{\be^{+}} $を$\nu(g) = \log b_{g} $と定める．
+
+  $\nu$は右$H$不変であるから$\bar{\nu}\colon G/H\to \bar{\be^{+}} $$\bar{\nu}(gH) \defeq \nu(g) $はwell-definedである．
+\end{thmdef*}
 
 
 $Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}にはこのような表現論的背景もある．

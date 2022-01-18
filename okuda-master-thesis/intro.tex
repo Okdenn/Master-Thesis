@@ -95,18 +95,19 @@ $(G,H)$が対称対の場合に$G/H$のランクと$Y(\real X) $の有界性の�
 
   以上の設定のもとで極大可換部分空間$\be\subset \pe\cap \qu $と正ルートの集合$\Sigma^{+}((\ka\cap\ka)\oplus(\pe\cap \qu), \be ) $を固定し，$\bar{\be^{+}} $を対応するpositive Weyl chamberとする．
 \end{setting*}
-\begin{thmdef*}
+\begin{thmdef*}(\cite[p.~151]{kk16})
   任意の$g\in G$に対して，ある$k\in K$，$h\in H$と一意的な$b_g\in \exp\bar{\be^{+}} $が存在して$g = kb_gh$である．この事実を用いて$\nu\colon G\to \bar{\be^{+}} $を$\nu(g) = \log b_{g} $と定める．
-
-  $\nu$は右$H$不変であるから$\bar{\nu}\colon G/H\to \bar{\be^{+}} $，$\bar{\nu}(gH) \defeq \nu(g) $はwell-definedである．
 \end{thmdef*}
+
+$\nu$は右$H$不変であるから$\bar{\nu}\colon G/H\to \bar{\be^{+}} $，$\bar{\nu}(gH) \defeq \nu(g) $はwell-definedである．
 
 以上の設定と定義のもとで，次の条件は$G/H$のランクが$\dim \be $である可能性を与える．
 \begin{cond*}
-  ある$C$が存在し，任意の$ W\in \be$に対し
+  ある$C$が存在し，任意の$ W\in \bar{\be^{+}} $に対し
   \begin{align*}
-    &\norm{\bar{\nu}(\exp(W) )} - \inf\{ \norm{\bar{\nu}(\exp(W))}\mid h\in H\} \\
-    =&\ \norm{\mu(\exp(W) ) } - \inf\{ \norm{\nu(\exp(W) h)}\mid h\in H\} \\
+    &\inf\{d_{G/K}(eK,  h\exp(-W)K)\mid h\in H \}  \\
+    &\inf\{d_{G/K}(\inv{h}K,  \exp(-W)K)\mid h\in H \}  \\
+    =&\ \norm{\bar{\nu}(he^{-W})} \\
     \leq&\ C
   \end{align*}
   である．

@@ -12,7 +12,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   $G = \Sp(1,2) $，$H = \SO(1,1)$，$X\in \pe$に対し，$Y(\real X) $が有界であることと$ X\in \{0\}\cup \pe\setminus \ha  $であることは同値である．
 \end{prop}
 
-ただし，$H$は$G$の左上に入っている．すなわち，$\Lie H = \ha = \real Y $，$Y\defeq \begin{pmatrix}
+ただし，$H$は$G$の左上に入っている．すなわち，$\ha = \real Y $，$Y\defeq \begin{pmatrix}
   0 & 1 & 0 \\
   1 & 0 & 0\\
   0 & 0 & 0
@@ -24,34 +24,36 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     x_{11} & x_{12} & x_{13}\\ x_{21} & x_{22} & x_{23}\\ x_{31} & x_{32} & x_{33}
   \end{pmatrix}\in \Sp(1,2)$と任意の$\begin{pmatrix}
     a \\ b \\c
-  \end{pmatrix}\in \quat^3 $に対し$
-  \begin{pmatrix}
-    x_{11} & x_{12} & x_{13}\\ x_{21} & x_{22} & x_{23}\\ x_{31} & x_{32} & x_{33}
-  \end{pmatrix}\cdot
-  \begin{pmatrix}
-    a \\ b \\c
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    x_{11}a + x_{12}b + x_{13}c\\ x_{21}a + x_{22}b + x_{23}c\\ x_{31}a + x_{32}b + x_{33}c\\    
-  \end{pmatrix}
-  $により定める．
+  \end{pmatrix}\in \quat^3 $に対し
+  \begin{align*}
+    \begin{pmatrix}
+      x_{11} & x_{12} & x_{13}\\ x_{21} & x_{22} & x_{23}\\ x_{31} & x_{32} & x_{33}
+    \end{pmatrix}\cdot
+                                                                              \begin{pmatrix}
+                                                                                a \\ b \\c
+                                                                              \end{pmatrix}
+    =
+    \begin{pmatrix}
+      x_{11}a + x_{12}b + x_{13}c\\ x_{21}a + x_{22}b + x_{23}c\\ x_{31}a + x_{32}b + x_{33}c\\    
+    \end{pmatrix}
+  \end{align*}
+  により定める．
   
   $\Sp(1,2)/(\Sp(1)\times \Sp(2)) \simeq \{(z_1, z_2)\mid z_1,z_2\in \quat ,\; \abs{z_1}^2 + \abs{z_2}^2   < 1 \} =: \quat\mathbb{H}^2 $である．この$\Sp(1,2)/(\Sp(1)\times \Sp(2)) $と$\quat\mathbb{H}^2$の間の微分同相は$\trans{(1,0,0)} $の$\Sp(1,2)$軌道上の点$
   \begin{pmatrix}
-    z_0 \\ z_1 \\ z_2 
+    \zeta_0 \\ \zeta_1 \\ \zeta_2 
   \end{pmatrix}
   \in \quat^3$に対して$\quat\mathbb{H}^2$の点$\begin{pmatrix}
-    z_1\inv{z_0} \\ z_2 \inv{z_0}
+    \zeta_1\inv{\zeta_0} \\ \zeta_2 \inv{\zeta_0}
   \end{pmatrix}$を対応させることで得られる．
 
   $\trans{(1,0,0)} $の$\Sp(1,2)$軌道上の点$
   \begin{pmatrix}
-    z_0 \\ z_1 \\ z_2 
+    \zeta_0 \\ \zeta_1 \\ \zeta_2 
   \end{pmatrix}
   \in \quat^3 $に対応する$\quat\mathbb{H}^2$の点を$\lbig[
   \begin{pmatrix}
-    1 \\ z_1\inv{z_0} \\ z_2 \inv{z_0}
+    1 \\ \zeta_1\inv{\zeta_0} \\ \zeta_2 \inv{\zeta_0}
   \end{pmatrix}\rbig]
   $と書く．
   
@@ -93,7 +95,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     0 & z_0 & w_0 \\
     \bar{z_0} & 0 & 0 \\
     \bar{w_0} & 0 & 0 
-  \end{pmatrix}$と書かれている$X$に対して$Y(\real X) $の有界性を議論して一般性を失わない ($X\nin \ha $であることと$z_0\neq \pm 1$であることは同値である)．以下，$X$はこのような元とする．% つまり
+  \end{pmatrix}$と書かれている$X$に対して$Y(\real X) $の有界性を議論して一般性を失わない ($\abs{z_0}^2 +\abs{w_0}^2  = 1 $を仮定したとき$X\nin \ha $であることと$z_0\neq \pm 1$であることは同値である)．以下，$X$はこのように書ける元とする．% つまり
   % $X =
   % \begin{pmatrix}
   %   0 & z & w \\
@@ -115,13 +117,13 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     0 & z_n & w_n \\
     \bar{z_n} & 0 & 0 \\
     \bar{w_n} & 0 & 0 
-  \end{pmatrix} $ (ただし$z_n,w_n\in \quat $は$ \abs{z_n}^2 +\abs{w_n}^2  = 1 $を満たす) の形で表わせる．$X\nin\ha$であるから\Cref{thm:kob97}より$\abs{r_n}\to \infty $，$n\to \infty$である．$z_n,w_n\in \quat $は$ \abs{z_n}^2 +\abs{w_n}^2  = 1 $を満たすから，$\{t_n\} $の部分列を取るとある$Z_{\infty} $が存在して$\lim_{n\to \infty}Z_n = Z_{\infty} =
+  \end{pmatrix} $ (ただし$z_n,w_n\in \quat $は$ \abs{z_n}^2 +\abs{w_n}^2  = 1 $を満たし，$r_n\in \real$とする) の形で表わせる．$X\nin\ha$であるから\Cref{thm:kob97}より$\abs{r_n}\to \infty $，$n\to \infty$である．$z_n,w_n\in \quat $は$ \abs{z_n}^2 +\abs{w_n}^2  = 1 $を満たすから，$\{t_n\} $の部分列を取るとある$Z_{\infty} $が存在して$Z_{\infty}\defeq \lim_{n\to \infty}Z_n  =
   \begin{pmatrix}
     0 & z_{\infty} & w_{\infty} \\
     \bar{z_{\infty}} & 0 & 0 \\
     \bar{w_{\infty}} & 0 & 0 
   \end{pmatrix}
-  \in \per{\ha}\cap\pe $なるようにできる．$Z\in\pe\setminus \ha $より$\re z_{\infty} \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．
+  \in \per{\ha}\cap\pe $，$\abs{z_{\infty}}^2 +\abs{w_{\infty} }^2  = 1$なるようにできる．$Z\in\pe\setminus \ha $より$\re z_{\infty} \neq \pm 1$であることに注意する ($\re\colon \quat\ni a+bi+cj+dk\mapsto a\in \real$とする)．
 
   \Cref{lem:exp-quat}より， 
   \begin{align*}
@@ -138,13 +140,13 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
       \cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n \\ \sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n \\ \pm \bar{w_n} \tanh \abs{r_n}
     \end{pmatrix}\rbig]
   \end{align*}
-  である．ただし複号は$r_n$の符号$\pm$と同順である．このとき$\lim_{n\to \infty}\tanh s_n = 1 = \lim_{n\to \infty}\tanh \abs{r_n} $と$\lim_{n\to \infty} \re z_n = \re z_{\infty} \neq \pm 1$に注意すると次を得る．具体的な計算は後述する．
+  である．ただし複号は$r_n$の符号$\pm$と同順である．このとき$\lim_{n\to \infty}\tanh s_n = 1 = \lim_{n\to \infty}\tanh \abs{r_n} $と$\lim_{n\to \infty} \re z_n = \re z_{\infty} \neq \pm 1$に注意すると次を得る．
   \begin{align}
     \lim_{n\to \infty}(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } = 1\label{eq:-1}
   \end{align}
-  である．
+  である．\Cref{eq:-1}を得るための具体的な計算は後述する．
 
-  したがって，$
+  \Cref{eq:-1}より$
   \begin{pmatrix}
     0 \\ 0 
   \end{pmatrix}
@@ -177,7 +179,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     0 & z_0 & w_0 \\
     \bar{z_0} & 0 & 0 \\
     \bar{w_0} & 0 & 0 
-  \end{pmatrix}$ (ただし$\abs{z_0}^2 + \abs{w_0}^2 = 1 $かつ$z_0\neq \pm 1 $) と設定したことを思い出すと，$J_n = \dfrac{\bar{z_0}}{r_0}\tanh (tr_0) $，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $であり，$X\nin \ha $であることと$z_0\neq \pm 1$であることは同値であることより$\lim_{n\to \infty}J_n = \dfrac{\bar{z_0}}{r_0}\neq 1 $である．
+  \end{pmatrix}$ (ただし$\abs{z_0}^2 + \abs{w_0}^2 = 1 $かつ$z_0\neq \pm 1 $) と設定したことを思い出すと，$J_n = \bar{z_0}\tanh (t_n) $であり，$X\nin \ha $であることと$z_0\neq \pm 1$であることは同値であることより$\lim_{n\to \infty}J_n = \bar{z_0}\neq 1 $である．% ，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $
 
   $e^{s_n Y}e^{r_n Z_n}\cdot o_K = e^{t_n X}\cdot o_K$より$ \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n  $であるが，以上2つの議論を合わせると$\lim_{n\to \infty} I_n= 1$，$\lim_{n\to \infty}J_n \neq 1 $であるから矛盾する．
   

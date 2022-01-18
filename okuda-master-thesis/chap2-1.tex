@@ -331,7 +331,7 @@
 \begin{defi}({\cite[Definition~1.3]{e72-1}})\label{def:visibility}
   $M$が完備かつ非正の断面曲率をもつ連結かつ単連結なRiemann多様体であるとき，$M$をHadamard多様体という．
 
-  Hadamard多様体$M$が visibility manifold であるとは，任意の$ p\in M$と任意の$ \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が任意の$ t\in [t_0, t_1]$に対し$r(p,\epsilon) \leq d_{M}(p, \gamma(t))$を満たすならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
+  Hadamard多様体$M$がvisibility manifoldであるとは，任意の$ p\in M$と任意の$ \epsilon > 0$に対し，ある$r(p,\epsilon) >0 $が存在して，測地線$\gamma\colon [t_0, t_1]\to X $が任意の$ t\in [t_0, t_1]$に対し$r(p,\epsilon) \leq d_{M}(p, \gamma(t))$を満たすならば，$\measuredangle_{p}(\gamma(t_0), \gamma(t_1)) \leq \epsilon $であることである．
 \end{defi}
 
 後に示すように{\Poincare}円板はvisibility manifoldであるが，\Cref{lem:0106}よりその片鱗を見ることはできる．具体的には$ 0 <  \epsilon  < \frac{\pi}{2} $に対し$t_{\epsilon} \defeq \dfrac{1}{2}\inv{\sinh}\dfrac{1}{\abs{\tan \epsilon}} $とし，測地線$\gamma_{\epsilon}(s) = e^{t_{\epsilon} Y}e^{sZ}\cdot o_K $とすると，\Cref{lem:0106}より任意の$s_0,s_1\in \real$に対し$\measuredangle_{o_K}(\gamma_{\epsilon} (s_0), \gamma_{\epsilon} (s_1)) \leq \epsilon $である．この様子を図示すると\Cref{fig:visibility}のようになる．
@@ -360,4 +360,4 @@
   \end{enumerate}
 \end{thm}
 
-ここでRiemann対称空間はcocompactなHadamard多様体であり，\Cref{thm:visibility-and-rank}の (ii) は$G$の実階数が1以下であることと同値であるから$G$の実階数が1の場合$G/K$はvisibility manifoldである．よって\Cref{thm:1216-main}の設定のもとでは角度を用いた$G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明\Cref{rem:su11-by-angle}と全く同様に，$X\in \pe\setminus\ha $の場合に$Y(\real X) $が非有界であると仮定して矛盾を示す議論で$\pe_{H,\bdd} =\{0\}\cup\pe\setminus\{0\} $が示される．
+ここでRiemann対称空間はcocompactなHadamard多様体であり，\Cref{thm:visibility-and-rank}の (ii) は$G$の実階数が1以下であることと同値であるから$G$の実階数が1の場合$G/K$はvisibility manifoldである．よって\Cref{thm:1216-main}の設定のもとでは角度を用いた$G = \SU(1,2) $，$H= \SO(1,1)$の場合の$\pe_{H,\bdd} = \{0\}\cup\pe\setminus\ha $の証明である\Cref{rem:su11-by-angle}と全く同様に，$X\in \pe\setminus\ha $の場合に$Y(\real X) $が非有界であると仮定して矛盾を示す議論で$\pe_{H,\bdd} =\{0\}\cup\pe\setminus\ha $が示される．

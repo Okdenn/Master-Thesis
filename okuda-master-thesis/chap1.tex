@@ -100,26 +100,26 @@
   \end{align}
   である．最後の等式には$\pe\cap \ze(\ge')\subset \ha $を用いた．
 
-  任意の$X\in \per{\ha_s}\cap \ge'_s\cap\pe $と$Z\in \per{\ha}\cap\pe $の元を取る．$Z$を\Cref{eq:0117-perp}の分解に対応して$Z = Z_s + Z_{\ka} + Z_{c} $と分解する．
+  任意の$X\in \per{\ha_s}\cap \ge'_s\cap\pe $と$Y\in \ha\cap\pe $の元を取る．$Y$を\Cref{eq:0117-perp}の分解に対応して$Y = Y_s + Y_{\ka} + Y_{c} $と分解する．
   
-  $\ka\perp\pe $であるから
+  $X\in\per{\ha_s}\cap \pe $と$\ka\perp\pe $であるから
   \begin{align*}
-    \lyama X, Z\ryama &= \lyama X, Z_s + Z_{\ka} + Z_{c}\ryama = \lyama X,   Z_{c}\ryama
+    \lyama X, Y\ryama &= \lyama X, Y_s + Y_{\ka} + Y_{c}\ryama = \lyama X,   Y_{c}\ryama
   \end{align*}
   である．$X\in \ge_{s}' = [\ge', \ge'] $より，ある$T,\ S\in \ge'$が存在して$X = [T, S] $である．$\lyama {-}, {-}\ryama $は$G$不変であるから
   \begin{align}
-    \lyama X, Z\ryama &= \lyama X,   Z_{c}\ryama = \lyama [T, S],   Z_{c}\ryama = -\lyama S,   [T, Z_{c}]\ryama\label{eq:0117-perp-2}
+    \lyama X, Y\ryama &= \lyama X,   Y_{c}\ryama = \lyama [T, S],   Y_{c}\ryama = -\lyama S,   [T, Y_{c}]\ryama\label{eq:0117-perp-2}
   \end{align}
-  である．ここで$Z_c\in \ze(\ge') $より$[T, Z_c ]= 0$であるから\Cref{eq:0117-perp-2}の左辺は0となり，\Cref{lem:0117-perp}の主張を得る．
+  である．ここで$Y_c\in \ze(\ge') $より$[T, Y_c ]= 0$であるから\Cref{eq:0117-perp-2}の左辺は0となり，\Cref{lem:0117-perp}の主張を得る．
 \end{npfwn}
 
 \begin{lem}\label{lem:0117-closed}
-  $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ha_s $の$G$における解析的部分群とする．このとき$(G_s, H_s) $は$G$の閉部分群であり，$\Theta H_s = H_s $である．
+  $G_s $を$\ge_{s}' $の$G$における解析的部分群，$H_s $を$\ha_s $の$G$における解析的部分群とする．このとき$G_s$，$H_s$はともに$G$の閉部分群であり，$\Theta H_s = H_s $である．
 \end{lem}
 \begin{npfwn}[\Cref{lem:0117-closed}]
   $\ge_s' $，$\ha_s $は実半単純Lie環であり，$G$は線型Lie群であるから，後述の\Cref{thm:yos38}より$G_s$，$H_s$は$G$の閉部分群である．
 
-  $\ge_{s}'$と$\ha $は共に$\theta$不変より$\theta \ha_s = \ha_s $であるから\Cref{lem:0117-perp}，特に$H_s$の非コンパクト性を除いて\Cref{nttdef:fund}の条件すべてが成り立つ．
+  $\ge_{s}'$と$\ha $はともに$\theta$不変より$\theta \ha_s = \ha_s $であるから\Cref{lem:0117-perp}，特に$H_s$の非コンパクト性を除いて\Cref{nttdef:fund}の条件すべてが成り立つ．
 \end{npfwn}
 
 \begin{defi}
@@ -133,7 +133,7 @@
   と定義する．
 
 
-  $H_s $がコンパクトな場合は$\ha_s\subset \ka $より$H_s\subset K $であるから，$X\in \pe\cap\ge_{s}' $に対し，$Y_s(X) = 0 $，$Z_s(X) = X $と定義する．
+  $H_s $がコンパクトな場合は$\ha_s = \theta \ha_s$より$\ha_s\subset \ka $，したがって$H_s\subset K $であるから，$X\in \pe\cap\ge_{s}' $に対し，$Y_s(X) = 0 $，$Z_s(X) = X $と定義する．
 \end{defi}
 
 \begin{lem}\label{lem:0117-decomp}
@@ -151,7 +151,7 @@
     $X,\ X'\in \ge'\cap\pe $に対し$\exp(X_c)\exp(X_s)\cdot o_K = \exp(X_c')\exp(X_s')\cdot o_K $ならば$\exp(X_c-X_c'+X_s)\cdot o_K = \exp(X_s')\cdot o_K $である．$\ze(\ge')\cap \ge_s' = \{0\} $より$X_c = X_c' $，$\exp(X_s)\cdot o_K = \exp(X_s')\cdot o_K$である．
   \end{itembox}
   
-  $Y(X)\in \ha\cap\pe\subset \ge' $，$Z(X)\in \ha\cap\pe\subset \ge' $より$Y(X) = Y(X)_c + Y(X)_s $，$Z(X) = Z(X)_c + Z(X)_s $，$Y(X)_c,\ Z(X)_c \in \ze(\ge')\cap\pe  $，$Y(X)_s,\ Z(X)_s\in \ha_s\cap\pe $と分解できる．
+  $Y(X)\in \ha\cap\pe\subset \ge' $，$Z(X)\in \per{\ha}\cap\pe\subset \ge' $より$Y(X) = Y(X)_c + Y(X)_s $，$Z(X) = Z(X)_c + Z(X)_s $，$Y(X)_c,\ Z(X)_c \in \ze(\ge')\cap\pe  $，$Y(X)_s,\ Z(X)_s\in \ha_s\cap\pe $と分解できる．
 
   このとき，$[X_c, X_s] = 0 $，$[X_c', X_s'] = 0$より$\exp(X)\cdot o_K = \exp(X_c)\exp(X_s)\cdot o_K $，$\exp(X')\cdot o_K = \exp(X_c')\exp(X_s')\cdot o_K $であるから
   \begin{align*}

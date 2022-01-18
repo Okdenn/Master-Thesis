@@ -9,7 +9,7 @@
 \input{../../../pikachu}
 \input{../../../colorsforprint.tex}
 \usepackage{pdfpages} % at the final compile, delete the option "demo"
-\usepackage[top=10truemm,bottom=20truemm,left=18truemm,right=18truemm]{geometry} %DO NOT option ``a4paper", it changes the size of outputed PDF
+\usepackage[top=10truemm,bottom=15truemm,left=18truemm,right=18truemm]{geometry} %DO NOT option ``a4paper", it changes the size of outputed PDF
 
 \DeclareMathOperator{\ballsub}{\underset{\text{ball}}{\subset}}
 \renewcommand{\dx}{\; dx}
@@ -118,7 +118,7 @@
 \begin{center}
   論文内容の要旨
 \end{center}
-
+\vspace{-0.5em}
 \noindent\underline{修士論文題目}
 \vspace{-1em}
 \begin{center}
@@ -139,8 +139,8 @@
   \begin{cond-a}\label{cond:a}
     $X\in \per{\ha}\cap\pe $，もしくは$[X_1, X_2] \neq 0 $かつ$X\in \ge_{s}' $，もしくは$[X_1, X_2] \neq 0 $かつ$\pe\cap \ze(\ge') \nsubset \ha  $である．
   \end{cond-a}
-
-  ただし
+  
+  ただし  
   \begin{itemize}
     % \leavevmode
     \vspace{-1em}
@@ -164,20 +164,20 @@
 \end{nttdef-a}
 \vspace{-0.5em}
 
-本修士論文の主題である$X\in \pe$の$\ha$射影$Y(X)\in \ha\cap \pe $は，次の\Cref{thm:kob89-lem6.1}により${(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)}$と定義される．
+本修士論文の主題である$X\in \pe$の$\ha$射影$Y(X)\in \ha\cap \pe $は，次の\Cref{thm:kob89-lem6.1}の$\pi$を用いて$(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)$と定義される．
 \begin{thm-a}(\cite[Lemma~6.1]{kob89}\label{thm:kob89-lem6.1})
   \Cref{nttdef:setting}の設定において$\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}\cdot o_K \in G/K $は上への微分同相である．
 \end{thm-a}
 
-$e^{Y(X)}\cdot o_K$は「$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足」という幾何学的意味を持つ．したがって$Y(\real X) $が有界であるか否かという問は，幾何的には「$e^{\real X}\cdot o_K$上の点から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか」という問に対応する．
+$e^{Y(X)}\cdot o_K$は$e^{X}\cdot o_K$から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足という幾何学的意味を持つ．したがって$Y(\real X) $が有界であるか否かという問は，幾何的には$e^{\real X}\cdot o_K$上の点から$e^{\ha\cap\pe}\cdot o_K $に下ろした垂線の足全体の集合が有界であるか否かという問に対応する．
 
-以下では$(G,H) $がどのような場合に\Cref{prob:1121}が肯定的であったかとその証明方法を具体的に述べる．
+以下では$(G,H) $がどのような場合が\Cref{prob:1121}の肯定的な例であったかとその証明方法を具体的に述べる．
 
-$G$が実階数1の実線型半単純Lie群，$\dim \ha\cap \pe = 1$の場合は$G = \SU(1,2) $，$H= \SO(1,1)$の場合に帰着することで\Cref{prob:1121}が肯定的であることを証明した．
+まず$G$が実階数1の実線型半単純Lie群，$\dim \ha\cap \pe = 1$の場合は$G = \SU(1,2) $，$H= \SO(1,1)$あるいは$G = \SU(1,1) $，$H= \SO(1,1)$の場合に帰着することで\Cref{prob:1121}の肯定的な例であることを証明した．
 
 $G = \SU(1,2) $，$H= \SO(1,1)$の場合の証明の流れを荒っぽく述べる．$X\in \pe\setminus\ha $に対して$Y(\real X) $が非有界であるとすると，任意の$\epsilon > 0$に対して，ある$t_{\epsilon}\in \real$が存在して「$ e^{Y(t_{\epsilon} X)}e^{Z(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線」と「$e^{Y(t_{\epsilon} X)}\cdot o_K $と$o_K$を結ぶ測地線」が$o_K$でなす角が$\epsilon $未満となる．しかしこれは$X$と$(\ha\cap\pe)\setminus\{0\} $の元が$\pe$においてなす角度の最小値が非零であることに矛盾する．したがって$X\in \pe\setminus\ha $ならば$Y(\real X) $は有界であることが言える．
 
-これを踏まえて$G$が実階数1の実線型半単純Lie群，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて$G = \SU(1,2) $，$H= \SO(1,1)$の場合に帰着した．
+これを踏まえて$G$が実階数1の実線型半単純Lie群，$\dim \ha\cap\pe =1 $の場合には次の命題を用いて$G = \SU(1,2) $，$H= \SO(1,1)$あるいは$G = \SU(1,1) $，$H= \SO(1,1)$の場合に帰着した．
 
 \begin{prop-a}\label{prop:reduction}
   $G$を実階数1の実線型半単純Lie群とする．任意の$0\neq Y\in \ha\cap\pe $と任意の$X\in \pe\setminus \real Y$を固定したとき，$X,Y$を含む部分Lie環$\ge_0\subset \ge$で，$\ge_0\simeq \sulie(1,1) $あるいは$\ge_0\simeq \sulie(2,1)$なるものが存在する．また$\ge_0$の$G$における解析的部分群$G_0$は$G$の閉部分群である．
@@ -219,7 +219,7 @@ $G$が実階数1の実線型半単純Lie群の有限個の積であり，$\ha\ca
   $G/H$のランクが$d$であるとき，$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，かつ任意の$v\in V^{\infty} $，$d' > d$に対して$\dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty $なることである．% ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
 \end{thm-a}
 
-$L^2(G/H)$の既約分解に現れる表現を\Cref{thm:plancherel}を用いて分析するためには$G/H$のランクを知る必要があり，$Y(\real X) $の有界性と$G/H$の判定には関係がある．% $Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}にはこのような表現論的背景もある．
+$L^2(G/H)$の既約分解に現れる表現を\Cref{thm:plancherel}を用いて分析するためには$G/H$のランクを知る必要があり，$Y(\real X) $の有界性と$G/H$のランクの判定には関係がある．% $Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}にはこのような表現論的背景もある．
 
 % 以上が本修士論文の表現論的な背景である．
 % $(G,H)$が対称対の場合には

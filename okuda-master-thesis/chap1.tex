@@ -17,16 +17,16 @@
   \leavevmode\vspace{-1em}
   \begin{itemize}
   \item $\nat,\real, \cpx,\quat$をそれぞれ0以上の整数全体，実数全体，複素数全体，四元数全体の集合とする．
-  \item $G$を非コンパクト実線型簡約Lie 群，$H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
+  \item $G$を非コンパクト実線型簡約Lie 群とし，$H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．
 
     % この定義は\cite[(2.6.1)]{kob89}に連結成分有限個の仮定を付け加えたものであるが，\cite[Definition-Lemma 2.6]{kob89}より．本論文ではこのような$H$を$G$の簡約な部分群と呼ぶことにする．
   \item $\ge \defeq \Lie G,\; \ha \defeq \Lie H$とし，$\ge = \ka\oplus \pe$を $\theta \defeq d\Theta$ によるCartan分解とする．
   \item $\ze(\ha)\defeq \{Y\in \ha\mid [Y,\ha] = \{0\} \} $とする．
   \item $e$を$G$の単位元とし，$o_K \defeq eK\in G/K$とする．
-  \item $\lyama{-},{-} \ryama$を，$\ge$上の$G$-不変な非退化対称双線型形式で，$\ka$上負定値，$\pe$上正定値で$\ka\perp \pe$なるものとする．
+  \item $\lyama{-},{-} \ryama$を，$\ge$上の$G$-不変な非退化対称双線型形式で，$\ka$上負定値，$\pe$上正定値で$\ka$と$ \pe$が直交するものとする．
   \item $\per{\ha}\ \defeq \{W\in \ge\mid \lyama W, \ha\ryama = \{0\}\} $とする．
   \item $X\in \pe$に対し，ベクトル空間としての分解$\pe =( \ha\cap \pe)\oplus(\per{\ha}\cap \pe) $に対応した分解を$X = X_1 + X_2 $，$X_1 \in \ha\cap \pe$，$X_2\in \per{\ha}\cap \pe$とする．
-  \item $(M,d_M)$を$M$上の任意の2点に対し一意的な測地線が存在するRiemann多様体と$M$上の計量から定まる距離とする．相異なる3点$p,q,r \in M$に対し，
+  \item $(M,d_M)$を$M$上の任意の2点に対しその2点をつなぐ一意的な測地線が存在するRiemann多様体と$M$上のRiemann計量から定まる距離とする．相異なる3点$p,q,r \in M$に対し，
     \begin{itemize}
     \item $\gamma_{p,q}\colon [0, d_{M}(p,q)] \to M$を，$\gamma(0) =  p$，$\gamma(d_{M}(p,q)) = q $なる測地線とする．
     \item $\measuredangle_{p}(q, r)$を$\gamma_{p,q} $と$\gamma_{p,r} $が$p$においてなす角とする．
@@ -38,7 +38,8 @@
 \begin{align*}
 {(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot o_K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)}
 \end{align*}
-と定義する．
+と定義し，本稿ではこの$Y\colon \pe\to \ha\cap \pe $を``$\ha$射影''と呼ぶことにする．
+
 \begin{thm}(\cite[Lemma~6.1]{kob89})\label{thm:kob89-lem6.1}
   $H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．このとき
   \begin{align*}
@@ -76,7 +77,7 @@
 \subsection{\Cref{prob:1121}の基本性質}
 \Cref{prob:1121}についての基本的な事項を挙げる．
 
-\begin{lem}\label{lem:basic-prob}
+\begin{prop}\label{lem:basic-prob}
   \leavevmode\vspace{-1em}
   \begin{enumerate}[label=\textbf{\arabic*.}]
   % \item \Cref{prob:1121}において，2が成り立つならば1が成り立つ．
@@ -84,7 +85,7 @@
   \item $X \in \pe $が$X_1 = 0$を満たすならば$X\in \pe_{H,\bdd} $である．
   \item $G$が実階数1ならば，$X\in\pe$が\Cref{cond:0117}を満たすことと$X\in \{0\}\cup \pe\setminus\ha $であることは同値である．
   \end{enumerate}
-\end{lem}
+\end{prop}
 
 いくつか補題を用意してから\Cref{lem:basic-prob}を示す．以下$\ha_s\defeq \ge_{s}'\cap\ha $とする．
 \begin{lem}\label{lem:0117-perp}
@@ -200,15 +201,15 @@
 
 $Y(\real X) $の有界性は$k\in K$に対して$\Ad(k) $不変な性質である．具体的には\Cref{lem:1101}が成り立つ．
 \begin{lem}\label{lem:1101}
-  任意の$k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．$Y'(X'), Z'(X') $を，微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．このとき$Y(\real X)$が有界であることと$ Y'(\real X') $が有界であることは同値である．
+  任意の$k\in K$，$X\in \pe$に対し，$X'\defeq \Ad(k)X $，$\ha'\defeq \Ad(k)\ha $とする．微分同相$\pi'\colon (\ha'\cap \pe)\oplus (\per{\ha'}\cap \pe)\ni (Y',Z')\mapsto e^{Y'}e^{Z'}\cdot o_K  $を用いて，$X'\in \pe$に対し，$(Y'(X'), Z'(X')) = \inv{\pi'}(e^{X'}\cdot o_K) $と定める．このとき$Y(\real X)$が有界であることと$ Y'(\real X') $が有界であることは同値である．
 \end{lem}
 
 \begin{npfwn}[\Cref{lem:1101}]
   主張は$(X,\ha) $と$(X',\ha')$に対して対称的であるから，$Y(\real X) $が有界ならば$Y'(\real X') $が有界であることのみを示せば十分である．
 
-  任意に$r\in \real$を取る．定義より$e^{rX'}\cdot o_K = e^{Y'(r X')}e^{Z'(r X')}\cdot o_K  $であり，両辺に左から$\inv{k} $を掛けると，$e^{r X} = e^{\Ad(\inv{k})( Y'(r X'))}e^{\Ad(\inv{k})( Z'(r X'))}\cdot o_K  $を得る．ここで$Y'(rX')\in \ha'\cap \pe $，$Z'(r X')\in \per{\ha'}\cap \pe $であるから$\Ad(\inv{k})(Y'(r X'))\in \ha\cap \pe $，$\Ad(\inv{k})(Z'(r X')) \in \per{\ha}\cap \pe $である．
+  任意に$r\in \real$を取る．定義より$e^{rX'}\cdot o_K = e^{Y'(r X')}e^{Z'(r X')}\cdot o_K  $であり，両辺に左から$\inv{k} $を掛けると，$e^{r X} = e^{\Ad(\inv{k})( Y'(r X'))}e^{\Ad(\inv{k})( Z'(r X'))}\cdot o_K  $を得る．$Y'(rX')\in \ha'\cap \pe $，$Z'(r X')\in \per{\ha'}\cap \pe $であるから$\Ad(\inv{k})(Y'(r X'))\in \ha\cap \pe $，$\Ad(\inv{k})(Z'(r X')) \in \per{\ha}\cap \pe $である．
 
-  \Cref{thm:kob89-lem6.1}により$\pi$は微分同相であるから，任意の$r\in \real$に対して$\Ad(\inv{k})(Y'(r X')) = Y(rX)  $である．$Y'(\real X) = \Ad(k)(Y(\real X))  $であり，$\Ad(k) $は有限次元空間の間の線型写像であるから有界性を保つ．
+  \Cref{thm:kob89-lem6.1}により$\pi$は微分同相であるから，任意の$r\in \real$に対して$\Ad(\inv{k})(Y'(r X')) = Y(rX)  $である．したがって$Y'(\real X) = \Ad(k)(Y(\real X))  $であり，$\Ad(k) $は有限次元空間の間の線型写像であるから有界性を保つ．
 
   以上から\Cref{lem:1101}が示された．  
 \end{npfwn}
@@ -217,7 +218,7 @@ $Y(\real X) $の有界性は$k\in K$に対して$\Ad(k) $不変な性質であ�
 $Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}と比較して$Z(\real X) $の有界性については次の定理が知られており，有界性の判定はLie環の言葉のみで行える．
 
 \begin{thm}(\cite[Lemmma~5.4]{kob97})\label{thm:kob97}
-  $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$が成り立つ．ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の0でない元がなす角度の最小値${0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2}} $であり，$X\in \pe\setminus \ha $と$ \phi(X,\ha\cap \pe)\neq 0 $は同値である．
+  $X\in \pe$に対し，$\norm{Z(X)}\geq \norm{X} \sin\phi(X, \ha\cap\pe)$が成り立つ．ここに$\phi(X,\ha\cap \pe) $は$X$と$\ha\cap \pe$の0でない元が$\pe$においてなす角度の最小値${0\leq \phi(X,\ha\cap \pe) \leq \frac{\pi}{2}} $であり，$X\in \pe\setminus \ha $と$ \phi(X,\ha\cap \pe)\neq 0 $は同値である．
 \end{thm}
 
 \Cref{thm:kob97}より，$X\in \ha\cap\pe $であることと$Z(\real X) $が有界であることが同値である．
@@ -232,7 +233,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \relmiddle| t\in \real \rbig\} $は\Cref{prob:1121}の肯定的な例である．具体的には$\pe_{H,\bdd} = \{0\}\cup \pe\setminus\ha $である．
 
 \begin{prop}\label{prop:prob-eg}
-  $G = \SU(1,1) $，$H = \SO(1,1) $のとき\Cref{prob:1121}は正しい．
+  $G = \SU(1,1) $，$H = \SO(1,1) $のとき$\pe_{H,\bdd} = \{0\}\cup \pe\setminus\ha $である．
 \end{prop}
 
 % \bluetext{$\sulie(1,1) $のKilling形式と$r = \tanh t$の関係を明記せよ．}
@@ -254,7 +255,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
            0 & \sqrt{-1} \\ -\sqrt{-1} & 0
          \end{pmatrix} = \dfrac{\del}{\del y}
   \end{align*}
-  である．$\ge$のKilling形式$B$から定まる$\pe$上のノルム$\norm{-} $に対して$\norm{X'}^2 = \norm{Y'}^2 = 8 $，$B(X', Y' ) = 0$であって，$0\in G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \}  $で主張が成り立つ．
+  である．$\ge$のKilling形式$B$から定まる$\pe$上のノルム$\norm{-} $に対して$\norm{X'}^2 = \norm{Y'}^2 = 8 $，$B(X', Y' ) = 0$であるから$0\in G/K =\{x+\sqrt{-1}y\mid x^2 + y^2 < 1 \}  $で主張が成り立つ．
 
   したがって$k_{\theta} \defeq \diag(e^{\sqrt{-1}\theta},e^{-\sqrt{-1}\theta}) $，$a_r\defeq
   \begin{pmatrix}
@@ -267,7 +268,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
     =&\ 8, \\
     &g(d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})X'), d\tau(k_{\theta/2}a_r)(d\tau(k_{-\theta/2})Y'))  = 0
   \end{align*}
-  なるような計量$g $がKilling形式から誘導される計量であるが，それが主張の形であることを示せば良い (\Cref{fig:riem-metric-su11}参照)．
+  なるような計量$g $がKilling形式から誘導される計量である．$g$が主張の形であることを示す (\Cref{fig:riem-metric-su11}参照)．
 
   \begin{figure}[H]
     \centering
@@ -280,27 +281,27 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
   \end{figure}
 
 
-  $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を与える曲線は
+  $t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X'$を与える曲線として
   \begin{align*}
     \gamma_x(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta} \tanh t + \cosh r}
   \end{align*}
-  であるから，
+  が考えられるから
   \begin{align*}
     \lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_x(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})X' = (1 - \tanh^2 r)\dfrac{\del}{\del x} = (1-x^2-y^2)\dfrac{\del}{\del x}
   \end{align*}
   である．
 
-  同様に$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y'$を与える曲線は
+  同様に$t = 0$での接ベクトルが$d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y'$を与える曲線として
   \begin{align*}
     \gamma_y(t) \defeq  e^{\sqrt{-1} \theta}\dfrac{\cosh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \sinh r }{\sinh r\cdot e^{-\sqrt{-1}\theta}\sqrt{-1} \tanh t + \cosh r}
   \end{align*}
-  であるから，
+  が考えられるから
   \begin{align*}
     \lbig.\dfrac{d}{dt}\rbig|_{t=0}\gamma_y(t) = d\tau(k_{\theta/2}a_r)d\tau(k_{-\theta/2})Y' = (1 - \tanh^2 r)\dfrac{\del}{\del y} = (1-x^2-y^2)\dfrac{\del}{\del y}
   \end{align*}
   である．
 
-  以上より$g  =  \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $が示された．
+  以上より$g  =  \dfrac{8(dx^2 + dy^2)}{(1 - x^2 - y^2)^2} $が得られる．
 \end{npfwn}
 
 

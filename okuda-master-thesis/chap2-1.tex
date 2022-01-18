@@ -1,7 +1,7 @@
 \subsection{$ G$の実階数が1の場合}
 
 \begin{thm}\label{thm:1216-main}
-  $G$を実階数1の実線型半単純Lie群，$H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．さらに$\dim \ha\cap\pe = 1$なるとき，\Cref{prob:1121}が成り立つ．
+  $G$を実階数1の実線型半単純Lie群，$H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．さらに$\dim \ha\cap\pe = 1$なるとき，$\pe_{H,\bdd} = \{0\}\cup\pe\setminus\ha $である．
 \end{thm}
 
 \begin{thm}\label{thm:0810}(\cite[p.~409, Theorem~3.1]{hel01}，$\SU(2,1) $-reduction)
@@ -235,11 +235,11 @@
 \end{cor}
 
 \begin{npfwn}[\Cref{cor:sub-lie-alg}]
-  $G$は実階数1より，極大分裂可換部分代数$\ah\defeq \real Y\subset \ge$に対しある$\alpha\in \ah^{*} $が存在して$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であるから，それぞれ\Cref{thm:0810}と\Cref{lem:su11}より\Cref{cor:sub-lie-alg}の主張が従う．以下で$\Sigma(\ge,\ah)$の形で場合分けしてこの議論をを確認する．
+  $G$は実階数1より，極大分裂可換部分代数$\ah\defeq \real Y\subset \ge$に対しある$\alpha\in \ah^{*} $が存在して$\Sigma(\ge,\ah) = \{\pm\alpha\} $あるいは$\Sigma(\ge,\ah)  = \{\pm\alpha, \pm 2\alpha \} $であり，それぞれ\Cref{thm:0810}と\Cref{lem:su11}より\Cref{cor:sub-lie-alg}の主張が従う．以下で$\Sigma(\ge,\ah)$の形で場合分けしてこの議論をを確認する．
   \begin{case}
     \textbf{$\Sigma(\ge,\ah) = \{\pm\alpha\} $の場合}
 
-    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} $，$\ge_0 \defeq \ze_{\ge}(\ah) $より$X\in  \pe\setminus \ah$をこの分解に対応して$X = X_0 + X_{\alpha} + X_{-\alpha} $と分解すると，$X\in \pe\setminus \ah$より$ X_{-\alpha} = -\theta X_{\alpha}\neq 0 $である．$Y\in \real [X_{\alpha}, \theta X_{\alpha}] $であるからこの$X_{\alpha}\neq 0 $に\Cref{lem:su11}を適用することにより$\ge_0\simeq \sulie(1,1)$で$X,Y\in \ge_0 $なるものが存在する．
+    $\ge = \ge_{0} \oplus \ge_{\alpha}\oplus \ge_{-\alpha} $，$\ge_0 \defeq \ze_{\ge}(\ah) $より$X\in  \pe\setminus \ah$をこの分解に対応して$X = X_0 + X_{\alpha} + X_{-\alpha} $と分解すると，$X\in \pe\setminus \ah$より$ X_{-\alpha} = -\theta X_{\alpha}\neq 0 $である．\Cref{lem:su11}の証明より$Y\in \real [X_{\alpha}, \theta X_{\alpha}] \neq \{0\}$であるからこの$X_{\alpha}\neq 0 $に\Cref{lem:su11}を適用することにより$\ge_0\simeq \sulie(1,1)$で$X,Y\in \ge_0 $なるものが存在する．
     
   \end{case}
   
@@ -285,14 +285,14 @@
   
 \end{lem}
 
-以上のことを用いて，$G$が実階数1，$\dim \ha\cap\pe = 1 $の場合を$\SU(1,2) $ないし$\SU(1,1) $に帰着させることにより\Cref{thm:1216-main}を示す．
+以上のことを用いて，$G$が実階数1の実線型半単純Lie群，$\dim \ha\cap\pe = 1 $の場合を$\SU(1,2) $ないし$\SU(1,1) $に帰着させることにより\Cref{thm:1216-main}を示す．
 
 \begin{npfwn}[\Cref{thm:1216-main}]% \bluetext{おそらく$\dim H = 1$でない場合も背理法で示せる気がする．}
   $\ge$の極大分裂可換部分代数$\ha\cap\pe$の定める制限ルート系を$\Sigma(\ge,\ha\cap\pe) $とし，$\Sigma(\ge,\ha\cap\pe) $の形によって2通りに場合分けして証明する．
   
   \textbf{$\Sigma(\ge,\ha\cap\pe) = \{\pm\alpha \}$のとき}
   
-  \Cref{cor:sub-lie-alg}により$X$と$\ha\cap\pe $を含む部分Lie環$\ge' \subset \ge $で$\sulie(1,1) $に同型なものが存在する．$\ge' $に対応する$G$の解析的部分群を$G'$とし，その岩澤分解を$G' = K'A'N' $とする．このとき$e^{Z(t X)}\cdot o_K = e^{-Y(tX)}e^{tX}\cdot o_K\in G'/K $であるから$Z(tX)\in \ge'\cap \per{\ha}\cap \pe\subset \ge'\cap\pe $であり，$Y(\real X) $の有界性は全測地的的な部分Riemann多様体$G'/K'\subset G/K$に対して行えば良いことがわかる．したがって\Cref{prop:prob-eg}により$X\in\pe_{H,\bdd}$であることと$ X = 0 $あるいは$X\in \pe\setminus\ha $が同値であることが言え，\Cref{thm:1216-main}が示された．
+  \Cref{cor:sub-lie-alg}により$X$と$\ha\cap\pe $を含む部分Lie環$\ge' \subset \ge $で$\sulie(1,1) $に同型なものが存在する．$\ge' $に対応する$G$の解析的部分群を$G'$とし，その岩澤分解を$G' = K'A'N' $とする．このとき$e^{Z(t X)}\cdot o_K = e^{-Y(tX)}e^{tX}\cdot o_K\in G'/K $であるから$Z(tX)\in \ge'\cap \per{\ha}\cap \pe\subset \ge'\cap\pe $であり，$Y(\real X) $の有界性の議論は全測地的的な部分Riemann多様体$G'/K'\subset G/K$に対して行えば良いことがわかる．したがって\Cref{prop:prob-eg}により$X\in\pe_{H,\bdd}$であることと$ X = 0 $あるいは$X\in \pe\setminus\ha $が同値であることが言え，\Cref{thm:1216-main}が示された．
   
   % 任意の固定した$\tau \in \real$に対し$\ah_{\tau} \defeq \real Y(\tau X)$が定める制限ルート系も，ある$\alpha_{\tau} \in \ah_{\tau}^{*}$，$ \norm{\alpha_{\tau}} = 1 $により$\Sigma(\ge,\ah_{\tau}) = \{\pm\alpha_{\tau} \}$となる．任意の$\tau,\tau'\in \real$に対し，ある$k\in K$が存在して$k\cdot \alpha_{\tau}  = \alpha_{\tau'} $であるから，$\norm{\alpha} \defeq \norm{\alpha_{\tau}} $は$\tau\in \real$に依らない．
 
@@ -318,7 +318,7 @@
   
   \textbf{$\Sigma(\ge,\ha\cap\pe) = \{\pm\alpha,\pm 2\alpha \}$のとき}
 
-  \Cref{cor:sub-lie-alg}により$X$と$\ha \cap\pe$を含む部分Lie環$\ge^* \subset \ge $で$\sulie(2,1) $に同型なものが存在する．$\ge^* $に対応する$G$の解析的部分群を$G^* $とし，その岩澤分解を$G^* = K^*A^*N^* $とする．このとき$e^{Z(t X)}\cdot o_K = e^{-Y(tX)}e^{tX}\cdot o_K\in G^*/K $であるから$Z(tX)\in \ge^* \cap \per{\ha}\cap \pe\subset \ge^*\cap\pe $であり，$Y(\real X) $の有界性は全測地的的な部分Riemann多様体$G^*/K^* \subset G/K$に対して行えば良いことがわかる．したがって\Cref{prop:classical-rank-one}により$X\in\pe_{H,\bdd}$であることと$ X = 0 $あるいは$X\in \pe\setminus\ha $が同値であることが言え，\Cref{thm:1216-main}が示された．
+  \Cref{cor:sub-lie-alg}により$X$と$\ha \cap\pe$を含む部分Lie環$\ge^* \subset \ge $で$\sulie(2,1) $に同型なものが存在する．$\ge^* $に対応する$G$の解析的部分群を$G^* $とし，その岩澤分解を$G^* = K^*A^*N^* $とする．このとき$e^{Z(t X)}\cdot o_K = e^{-Y(tX)}e^{tX}\cdot o_K\in G^*/K $であるから$Z(tX)\in \ge^* \cap \per{\ha}\cap \pe\subset \ge^*\cap\pe $であり，$Y(\real X) $の有界性の議論は全測地的的な部分Riemann多様体$G^*/K^* \subset G/K$に対して行えば良いことがわかる．したがって\Cref{prop:classical-rank-one}により$X\in\pe_{H,\bdd}$であることと$ X = 0 $あるいは$X\in \pe\setminus\ha $が同値であることが言え，\Cref{thm:1216-main}が示された．
 \end{npfwn}
 
     % 場合1と同様に，任意の固定した$\tau \in \real$に対し$\ah_{\tau} \defeq \real Y(\tau X)$が定める制限ルート系も，ある$\alpha_{\tau} \in \ah_{\tau}^{*}$，$ \norm{\alpha_{\tau}} = 1 $により$\Sigma(\ge,\ah_{\tau}) = \{\pm\alpha_{\tau}, \pm 2\alpha_{\tau} \}$となるが，$Y(\real X) $の非有界性より，ある$T\in \real$で$\abs{\alpha_{t}(Y(tX))} >  $\bluetext{埋めよ}，$\forall t \geq T$なるものが存在する．

@@ -106,7 +106,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
 
   $G$の Cartan 対合を$\Theta(g) = \inv{(g^{*})} $ ($g^{*}$は$g$の共役転置) とするとき，$\Theta(e^{Y(tX)}e^{Z(tX)})\cdot o_K = e^{-Y(tX)}e^{-Z(tX)}\cdot o_K = \Theta(e^{X})\cdot o_K = e^{-X}\cdot o_K $より，$Y(\real X) $が非有界であることと$ Y(\real X)\subset \real Y $が上に非有界であることは同値である．
 
-  したがって，$Y (\real X) $が非有界であるとき，列$\{t_n \in \real \}_{n\in \nat} $で，$s_n\to \infty,\; n\to \infty$，ただし$Y(t_n X) = s_n Y$，なるものが存在する．
+  したがって，$Y (\real X) $が非有界であるとき，必要なら部分列を取り，$Y$の符号を入れ替えて，列$\{t_n \in \real_{\geq 0} \}_{n\in \nat} $で，$t_n\to \infty$かつ$s_n\to \infty$，$ n\to \infty$，ただし$Y(t_n X) = s_n Y$，なるものが存在する．
 
   任意の$\per{\ha}\cap\pe $の元はある$Z =
   \begin{pmatrix}
@@ -179,7 +179,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
     0 & z_0 & w_0 \\
     \bar{z_0} & 0 & 0 \\
     \bar{w_0} & 0 & 0 
-  \end{pmatrix}$ (ただし$\abs{z_0}^2 + \abs{w_0}^2 = 1 $かつ$z_0\neq \pm 1 $) と設定したことを思い出すと，$J_n = \bar{z_0}\tanh (t_n) $であり，$X\nin \ha $であることと$z_0\neq \pm 1$であることは同値であることより$\lim_{n\to \infty}J_n = \bar{z_0}\neq 1 $である．% ，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $
+  \end{pmatrix}$ (ただし$\abs{z_0}^2 + \abs{w_0}^2 = 1 $かつ$z_0\neq \pm 1 $) と設定したことを思い出すと，$J_n = \bar{z_0}\tanh t_n $である．$X\nin \ha $であることと$z_0\neq \pm 1$であることは同値であることと$t_n\to \infty$，$n\to \infty$より$\lim_{n\to \infty}J_n = \bar{z_0}\neq 1 $である．% ，$r_0\defeq \sqrt{\abs{z_0}^2 + \abs{w_0}^2 } $
 
   $e^{s_n Y}e^{r_n Z_n}\cdot o_K = e^{t_n X}\cdot o_K$より$ \lim_{n\to \infty} I_n = \lim_{n\to \infty}J_n  $であるが，以上2つの議論を合わせると$\lim_{n\to \infty} I_n= 1$，$\lim_{n\to \infty}J_n \neq 1 $であるから矛盾する．
   
@@ -197,12 +197,12 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   \begin{align}
     &\lim_{n\to \infty}\abs{(\sinh s_n \pm \bar{z_n} \tanh \abs{r_n} \cosh s_n)\inv{(\cosh s_n \pm \bar{z_n} \tanh \abs{r_n} \sinh s_n) } - 1}\notag \\
     % &\qquad\qquad\qquad \text{($\text{(この極限)} = 0$を示せば良い)} \\
-    = & \lim_{n\to \infty}\lbig|\frac{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})(1 \pm z_n \tanh\abs{r_n}\tanh s_n )}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} - 1 \rbig|\notag \\    
-    = & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}\label{eq:ast} \tag{$\ast$}
+    = & \lim_{n\to \infty}\lbig|\frac{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})(1 \pm z_n \tanh\abs{r_n}\tanh s_n )}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} - 1 \rbig|\label{eq:ast} \tag{$\ast$}  
   \end{align}
   である．ここで$ z_n'\defeq 1 \pm z_n\tanh\abs{r_n}\tanh s_n$とおくと，
   \begin{align*}
-    (\ast) &= \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}\\
+    (\ast)= & \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}\\
+            &= \lim_{n\to \infty}\frac{\abs{(\tanh s_n\pm \bar{z_n}\tanh \abs{r_n})z_n' - (1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )z_n' }}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2}\\
     = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )z_n'}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}^2} \\
     = & \lim_{n\to \infty}\frac{\abs{(1-\tanh s_n)(-1\pm \bar{z_n}\tanh \abs{r_n} )}}{\abs{(1 \pm \bar{z_n} \tanh\abs{r_n}\tanh s_n )}} 
   \end{align*}

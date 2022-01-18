@@ -103,15 +103,36 @@ $\nu$は右$H$不変であるから$\bar{\nu}\colon G/H\to \bar{\be^{+}} $，$\b
 
 以上の設定と定義のもとで，次の条件は$G/H$のランクが$\dim \be $である可能性を与える．
 \begin{cond*}
-  ある$C$が存在し，任意の$ W\in \bar{\be^{+}} $に対し
+  ある$C$が存在し，任意の$X \in \be $に対し
   \begin{align*}
-    &\inf\{d_{G/K}(eK,  h\exp(-W)K)\mid h\in H \}  \\
-    &\inf\{d_{G/K}(\inv{h}K,  \exp(-W)K)\mid h\in H \}  \\
-    =&\ \norm{\bar{\nu}(he^{-W})} \\
+    &\inf\{d_{G/K}(eK,  he^{-X}K)\mid h\in H \}  \\
+    &\inf\{d_{G/K}(\inv{h}K,  e^{-X}K)\mid h\in H \}  \\
+    =&\ \norm{\bar{\nu}(he^{-X})} \\
     \leq&\ C
   \end{align*}
   である．
 \end{cond*}
 
+ここで次の補題より
+\begin{align*}
+\inf\{d_{G/K}(\inv{h}K,  e^{-X}K)\mid h\in H \} = d_{G/K}(e^{Y(-X)}K, e^{-X} K)
+\end{align*}
+であることがわかる．
+\begin{lem*}(\cite[p. 190]{lee2018})% \label{lem:lee}
+  
+  $M$を連結な完備 Riemann 多様体，$S\subset M$を正則な閉部分多様体とする．任意の$p\in M\setminus S$に対し，ある$q_0\in S$で，$\inf\{d_M(p,q)\mid q\in S \} = d_M(p,q_0) $なるものが存在し，$p$から$q_0$への最短測地線は$q_0$で$S$に直交する．
+\end{lem*}
 
-$Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}にはこのような表現論的背景もある．
+したがって任意の$X\in \be $で$\norm{X} = 1 $なるものに対して$Y(\real X) $が有界ならばある$C $
+\begin{align*}
+  C\defeq \max\{d_{G/K} (\inv{h}K, e^{-X} K)\mid h\in \bar{e^{Y(\real X)}} \}
+\end{align*}
+が存在して
+\begin{align*}
+  \inf\{d_{G/K}(\inv{h}K,  e^{-X} K)\mid h\in H \} &= d_{G/K}(e^{Y(-X)}K, e^{-X} K)\\
+                                                   &\leq \max\{d_{G/K} (\inv{h}K, e^{-X} K)\mid h\in \bar{e^{Y(\real X)}} \} \\
+  &\leq C
+\end{align*}
+を得る．
+
+このように$G/H$の$Y(\real X) $の有界性を判定しようとする\Cref{prob:1121}にはこのような表現論的背景もある．

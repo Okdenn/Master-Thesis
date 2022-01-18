@@ -334,7 +334,11 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
   右の円の Euclid 距離での半径を$R$とし，$e^{tX_{\theta}}\cdot o_K $から$H\cdot o_K$への垂線の足の$o_K$からの Euclid 距離を$h$とするとき，外側の青色の直角三角形に対して三平方の定理を用いて$(h+R)^2 = R^2 +  1 $より$R = \dfrac{1-h^2}{2h}$，$R+h = \dfrac{1+h^2}{2h}  $を得る．
 
-  さらに下の紫色の三角形に対して余弦定理を用いて${R^2 = (R+h)^2 + r^2 - 2r(R+h)\cos\theta }$を得，
+  さらに下の紫色の三角形に対して余弦定理を用いて
+  \begin{align*}
+    {R^2 = (R+h)^2 + r^2 - 2r(R+h)\cos\theta }
+  \end{align*}
+  を得，
   \begin{align*}
     R^2 &= (R+h)^2 + r^2 - 2(R+h) \cos\theta \\
         &= R^2 +  1 + r^2 - 2r(R+h) \cos\theta \\
@@ -351,13 +355,13 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 \begin{rem}\label{rem:su11-by-angle}
 
-  \Cref{prop:prob-eg}は角度を用いた議論によっても示すことができる．具体的には，計算により次の\Cref{lem:0106}が示せる (計算は省略する)．
+  \Cref{prop:prob-eg}は角度を用いた議論によっても示すことができる．具体的には，座標を用いた計算により次の\Cref{lem:0106}が示せる (計算は省略する)．
   \begin{lem}\label{lem:0106}
     $e^{sY}e^{rZ}\cdot o_K =
     \begin{pmatrix}
       \cosh s & \sinh s\\ \sinh s & \cosh s
-    \end{pmatrix}
-    \sqrt{-1}\tanh r \in \SU(1,1)/\U(1) $，$s > 0$，$r\in \real$に対し，$\phi_{s,r}\defeq \measuredangle_{o_K}(e^{sY}e^{rZ}\cdot o_K, e^{sY}\cdot o_K) $は，$\tan \phi_{s,r} = \dfrac{\tanh 2r}{\sinh 2s} $を満たす．ただし$Y \defeq
+    \end{pmatrix}\,
+    \sqrt{-1}\tanh r \in \SU(1,1)/\U(1) $，$s > 0$，$r\in \real$に対し，$\phi_{s,r}\defeq \measuredangle_{o_K}(e^{sY}e^{rZ}\cdot o_K,\ e^{sY}\cdot o_K) $は，$\tan \phi_{s,r} = \dfrac{\tanh 2r}{\sinh 2s} $を満たす．ただし$Y \defeq
   \begin{pmatrix}
     0 & 1\\ 1 & 0
   \end{pmatrix}
@@ -423,7 +427,9 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 
 \begin{skpfwn}{\Cref{cor:prob-eg}}% \bluetext{make it precise}
-  $\SO(1,n) $の$\real^{n+1} $への自然表現を用いて$\SO(1,n)/\SO(n)\simeq \{\trans{(x_1\cldots x_n)} \mid \sum_{1\leq i\leq n}x^2_i  < 1 \} $として実現する (後述する\Cref{nttdef:1127-main}と同様)．$e^X\cdot o_K $と$o_K$を結ぶ直線と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
+  $\SO(1,n) $の$\real^{n+1} $への自然表現を用いて$\SO(1,n)/\SO(n)\simeq \{\trans{(x_1\cldots x_n)} \in \real^n \mid \sum_{1\leq i\leq n}x^2_i  < 1 \} $として実現する (後述する\Cref{nttdef:1127-main}と同様)．この実現において$\SO(1,k)/\SO(n) \simeq \{\trans{(x_1\cldots x_n)}\in \real^n \mid x_{k+1} = \cdots = x_n \text{ かつ } \sum_{1\leq i\leq n}x^2_i  < 1 \} $である．
+
+  $e^X\cdot o_K $と$o_K$を結ぶ直線と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
   \begin{figure}[H]
     \centering
     % \raggedleft

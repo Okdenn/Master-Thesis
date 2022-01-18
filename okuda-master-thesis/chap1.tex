@@ -10,7 +10,7 @@
     \node[shape=circle, fill=#2, draw=#3, text=#4, inner sep=1pt] (char) {#1};}}
 \newcommand{\cnum}[1]{\ccircled{#1}{MediumTurquoise!40}{MediumTurquoise!40}{black}}
 
-\subsection{記号の設定}
+\subsection{設定と$\ha$射影の定義}
 本論文の基本的な設定は次のとおりであり，この他に必要な条件は都度明示することとする．
 
 \begin{nttdef}\label{nttdef:fund}
@@ -54,7 +54,7 @@
 \begin{prob}(小林俊行氏による)\label{prob:1121}
   ${\pe_{H,\bdd}\defeq \{X\in \pe\mid Y(\real X)\text{ が } \ha\cap \pe \text{ の有界集合である．}  \}}  $と定めるとき，
   \begin{enumerate}
-  \item $G$が実半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $はLebesgue速度に対して測度0であるか？
+  \item $G$が実線型半単純Lie群ならば$\pe\setminus\pe_{H,\bdd} $はLebesgue測度に対して測度0であるか？
   \item $X\in \pe_{H,\bdd}$であることと次の\Cref{cond:0117}は同値であるか？
     \begin{cond}\label{cond:0117}
       $X\in \pe$は次のいずれかを満たす．
@@ -73,6 +73,7 @@
   $X\in \ge' $に対し，ベクトル空間としての分解$\ge' = \ze(\ge') \oplus \ge_{s}' $に対応した分解を$X = X_c + X_s $，$X_c \in \ze(\ge')$，$X_s\in \ge_{s}'$とする．
 \end{defi}
 
+\subsection{\Cref{prob:1121}の基本性質}
 \Cref{prob:1121}についての基本的な事項を挙げる．
 
 \begin{lem}\label{lem:basic-prob}
@@ -93,7 +94,7 @@
   $\ha\subset \ge' $であり，両者とも$\theta$不変であるから，
   \begin{align}
     \ha &= (\ge'_s\cap \ha)\oplus (\ze(\ge')\cap\ha )\notag \\
-        &= \ha_s\oplus (\ze(\ge')\cap\ha\cap\ka )\oplus (\ze(\ge')\cap\ha\cap\pe ) \\
+        &= \ha_s\oplus (\ze(\ge')\cap\ha\cap\ka )\oplus (\ze(\ge')\cap\ha\cap\pe ) \notag\\
         &= \ha_s\oplus (\ze(\ge')\cap\ha\cap\ka )\oplus (\ze(\ge')\cap\pe ) \label{eq:0117-perp}
   \end{align}
   である．最後の等式には$\pe\cap \ze(\ge')\subset \ha $を用いた．

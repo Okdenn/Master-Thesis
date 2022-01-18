@@ -386,7 +386,7 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \end{rem}
 
 \begin{cor}\label{cor:prob-eg}
-  $G = \SO(1,n) $，$H = \SO(1,k) $，$1\leq k\leq n-1$は\Cref{prob:1121}の肯定的な例である．具体的には$\pe_{H,\bdd} = \{0\}\cup \pe\setminus\ha $である．% より具体的には次の\Cref{thm:1018-main}が成り立つ．
+  $G = \SO(1,n) $，$H = \SO(1,l) $，$1\leq l\leq n-1$は\Cref{prob:1121}の肯定的な例である．具体的には$\pe_{H,\bdd} = \{0\}\cup \pe\setminus\ha $である．% より具体的には次の\Cref{thm:1018-main}が成り立つ．
 \end{cor}
 % \begin{prop}\label{thm:1018-main}
 %   % $\SO(n,1)/\SO(n) $を {\Poincare} ball model で実現したとき，
@@ -427,15 +427,29 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 
 
 \begin{skpfwn}{\Cref{cor:prob-eg}}% \bluetext{make it precise}
-  $\SO(1,n) $の$\real^{n+1} $への自然表現を用いて$\SO(1,n)/\SO(n)\simeq \{\trans{(x_1\cldots x_n)} \in \real^n \mid \sum_{1\leq i\leq n}x^2_i  < 1 \} $として実現する (後述する\Cref{nttdef:1127-main}と同様)．この実現において$\SO(1,k)/\SO(n) \simeq \{\trans{(x_1\cldots x_n)}\in \real^n \mid x_{k+1} = \cdots = x_n \text{ かつ } \sum_{1\leq i\leq n}x^2_i  < 1 \} $である．
+  $\SO(1,n) $の$\real^{n+1} $への自然表現を用いて$\SO(1,n)/\SO(n)\simeq \{\trans{(x_1\cldots x_n)} \in \real^n \mid \sum_{1\leq i\leq n}x^2_i  < 1 \} $として実現する (後述する\Cref{nttdef:1127-main}と同様)．この実現において$\SO(1,l)/\SO(n) \simeq \{\trans{(x_1\cldots x_n)}\in \real^n \mid x_{l+1} = \cdots = x_n \text{ かつ } \sum_{1\leq i\leq n}x^2_i  < 1 \} $である．
 
-  $e^X\cdot o_K $と$o_K$を結ぶ直線と$H\cdot o_K$で張られる超平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
+  \Cref{lem:1101}より$X$を任意の$k\in K$に対し$\Ad(k) X$に取り替えて$Y(\real X) $の有界性を議論して一般性を失わないから，$X =
+  \begin{pmatrix}
+    0 & p_1 & 0 & \cdots & 0 & p_{l+1} & \cdots & p_{n}\\
+    p_1 &  &  &  &  &  &  \\
+    0 &  &  &  &  &  &  \\
+    \vdots &  &  &  &  &  &  \\
+    0&  &  &  &  &  &  \\
+    p_{l+1}  &  &  &  &  &  &  \\
+    \vdots &  &  &  &  &  &  \\
+    p_{n}  &  &  &  &  &  &  \\
+  \end{pmatrix}
+  $ (空白部分はすべて0) としてよい．このときある$q_{l+1}\cldots q_{n}$によって$e^{X}\cdot o_K \in \SO(1,n)/\SO(n) $は$ \trans{(\tanh p_1,0\cldots 0, q_{l+1}\cldots q_{n})} $に対応する．
+  
+
+  $\trans{(\tanh p_1,0\cldots 0, q_{l+1}\cldots q_{n})} $と$\bm{0} $を結ぶ直線と$ \trans{(\tanh p_1,0\cldots 0, q_{l+1}\cldots q_{n})}$で張られる2次元平面で$\SO(1,n)/\SO(n)$を切った際の断面を考える．
   \begin{figure}[H]
     \centering
     % \raggedleft
     % \raggedrightp
     % \includegraphics[scale=0.08]{../graph/fig1.jpg}
-    \includegraphics[scale=0.2]{../graph/son1-3.jpeg}
+    \includegraphics[scale=0.4]{../graph/son1-5.pdf}
     \caption{}
     \label{fig:son1}
   \end{figure}

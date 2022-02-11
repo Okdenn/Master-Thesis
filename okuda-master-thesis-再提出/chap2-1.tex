@@ -329,7 +329,7 @@
   なぜならば，$G$の中心$Z$ (離散群) の部分群で割ったときの$G/Z$は$G$と局所同型であるから，次の\Cref{lem:loc-isom}より$G$が線型の場合に帰着される．
 
   \begin{defi}
-    実半単純Lie群$G_1$，$G_2$が局所同型であることを，それぞれのLie環$\ge_1$，$\ge_2$の間の同型写像$\phi\colon \ge_1\to \ge_2$とそのCartan分解$\ge_i = \ka_i\oplus \pe_i $とKilling形式に対し，$\phi(\ka_1) = \ka_2 $，$\phi(\pe_1) = \pe_2 $かつ$\pe_1$と$\pe_2$が等長同型であることを言う．
+    実半単純Lie群$G_1$，$G_2$が局所同型であることを，それぞれのLie環$\ge_1$，$\ge_2$の間の同型写像$\phi\colon \ge_1\to \ge_2$とそのCartan分解$\ge_i = \ka_i\oplus \pe_i $とKilling形式に対し，$\phi(\ka_1) = \ka_2 $，$\phi(\pe_1) = \pe_2 $かつ$\phi|_{\pe_1} \colon \pe_1\to \pe_2$が内積を保つことを言う．
   \end{defi}
 
   \begin{lem}\label{lem:loc-isom}
@@ -339,6 +339,8 @@
     $\phi\colon \ge_1\to \ge_2$に対応する$G_1$と$G_2$の準同型を$\Phi\colon G_1\to G_2$とする．$\phi(\ka_1) = \ka_2 $より$\Phi(K_1) = K_2 $であるから，$\bar{\Phi}\colon G_1/K_1\to G_2/K_2 $がwell-definedに定まる．
 
     このとき，任意の$X\in \pe_1$に対し，$\bar{\Phi}(e^X\cdot o_{K_1}) = e^{\phi(X)}\cdot o_{K_2} $であり，$\bar{\Phi}(e^{Y(X)}e^{Z(X)}\cdot o_{K_1}) = e^{\phi(Y(X))}e^{\phi(Z(X))}\cdot o_{K_2} $である．
+
+    $\phi|_{\pe_1} \colon \pe_1\to \pe_2$が内積を保つ
   \end{npfwn}
 \end{rem}
 

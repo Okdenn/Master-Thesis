@@ -1,0 +1,138 @@
+$G$を非コンパクトな実線型半単純Lie群，$K$を$G$の極大コンパクト部分群で$G$のCartan対合$\Theta$に対して$K = \Theta K $なるものとする．$\ge = \ka \oplus \pe $を$\Theta$の微分$d\Theta$による$\ge$のCartan分解とするとき，$G/K$は$\pe$と$\pe \ni X\mapsto e^{X}K\in G/K $により微分同相である．
+
+$H$を$G$の非コンパクトかつ連結成分有限個の閉部分群で，$H = \Theta H$を満たすものとする．$\ge$のKilling形式を$B$とし，$\per{\ha}\defeq \{W\in \ge\mid B(W, \ha) = \{0\} \} $とするとき，$G/K$と$\pe$の微分同相についてより強い次の構造定理が知られている．
+
+\begin{thm*}(\cite[Lemma~6.1]{kob89})\label{thm:kob89-lem6.1}  
+  $\pi\colon  (\ha\cap\pe)\oplus (\per{\ha}\cap \pe) \ni (Y, Z)\mapsto e^{Y}e^{Z}K \in G/K $は上への微分同相である．
+\end{thm*}
+この定理を用いて$X\in \pe$に対し，${(Y(X), Z(X))\defeq \inv{\pi}(e^X\cdot K)\in (\ha\cap\pe)\oplus (\per{\ha}\cap \pe)}$と定義する．
+
+$G/K$に$\ge$のKilling形式$B$から定まるRiemann計量によってRiemann多様体の構造を定める．このとき$G$の単位元の$G/K$での像$eK$を通る$G/K$上の任意の極大測地線は$B(X, X) = 1 $なる$X\in \pe$と$t\in \real$によって$e^{tX}K $と書ける．\Cref{thm:kob89-lem6.1}より任意の$t\in \real$に対して$e^{tX}K = e^{Y(tX)}e^{Z(tX)}K $である．
+
+$t\in \real$に対し$e^{Y(tX)}K $は$e^{tX}K $から$eK$の$H$軌道に下ろした垂線の足であるという幾何学的な捉え方ができる．\Cref{fig:y-and-z}は具体的に$G = \SU(1,1) $，$H = \SO(1,1) $としたとき，{\Poincare}円板$G/K$における$e^{Y(X)}K $などの位置関係を示したものである．\Cref{fig:y-and-z}において測地線$e^{\real X}K$ (赤色の斜め線) とその上の一点$e^{tX}K$から$eK$の$H$軌道 (中央の直線) に下ろした垂線の足 (緑の丸) が$e^{Y(tX)}K $である．
+
+
+
+\begin{figure}[H]
+  \centering
+  %   \raggedleft
+  %   \raggedrightp
+  %   \includegraphics[scale=0.08]{graph/fig1.jpg}
+  \includegraphics[scale=0.3]{../graph/y-and-z.pdf}
+  \caption{{\Poincare}円板における$Y(tX) $の幾何学的意味}
+  \label{fig:y-and-z}
+\end{figure}
+
+本論文では小林俊行氏による次の問題 (後述の\Cref{prob:1121}) について考察し，$G$が実階数1の実線型半単純Lie群，$\dim\ha\cap \pe=1$の場合に肯定的な結果を得た．
+\begin{prob*}(小林俊行氏による)
+  $X\in  \pe$に対して，$Y(\real X)$が$ \ha\cap \pe$の有界な部分集合であることと次の条件は同値であるか？
+  \begin{cond*}
+    \leavevmode
+    % \vspace{-1em}
+    \begin{itemize}
+    \item $X\in \per{\ha}\cap\pe $
+    \item[] もしくは
+    \item $[X_1, X_2] \neq 0 $かつ$X\in \ge_{s}' $，
+    \item[] もしくは
+    \item $[X_1, X_2] \neq 0 $かつ$\pe\cap \ze(\ge') \nsubset \ha  $
+    \end{itemize}
+    である．
+  \end{cond*}
+
+  記号は次のとおりとする．
+  \begin{itemize}
+  \item $X = X_1 + X_2 $はベクトル空間としての分解$\pe =(\pe\cap \ha)\oplus(\pe\cap\per{\ha}) $に対応する$X\in \pe$の分解とする．
+  \item $\ge ' $は$\ha$と$X$が生成する$\ge$の部分Lie環とする．$\ha = \theta \ha$より$\theta \ge' = \ge'$であるから$\ge'_{s} \defeq [\ge',\ge'] $，$\ze(\ge') $を$\ge'$の中心とすると$\ge' = \ze(\ge') \oplus \ge'_{s} $である．
+  \end{itemize}
+\end{prob*}
+
+ここで$G$が実階数1のとき，上の条件と$X\in \{0\}\cup\pe\setminus\ha $は同値である (後述する\Cref{lem:basic-prob}の3)．
+
+
+
+\Cref{prob:1121}に関連する話題として\cite{ber88}の内容についてふれる．
+
+まずいくつか用語と命題を準備する．以下では$G$を実簡約Lie群，$H$を$G$の閉部分群とし，$G/H$には左Haar測度$\mu_{G/H} $が存在すると仮定する．
+\begin{defi*}(\cite{ber88})
+  \leavevmode\vspace{-1em}
+  \begin{itemize}
+  \item 局所有界関数$r\colon G\to \real_{\geq 0} $がproperなradial functionであるとは，$r$が次の4条件を満たすことである．
+    \begin{enumerate}
+    \item $e\in G$を単位元とするとき$r(e) = 0 $である．
+    \item 任意の$g\in G$に対し$r(g) = r(\inv{g})\geq 0  $である．
+    \item 任意の$g_1,g_2\in G$に対し$r(g_1g_2)\leq r(g_1) + r(g_2)  $である．
+    \item 任意の$R\geq 0$に対し，$B(R)\defeq \{g\in G\mid r(g)\leq R \} $は$G$の相対コンパクト集合である．
+    \end{enumerate}
+  \item properなradial function $r\colon G\to \real_{\geq 0} $から$r_{G/H}(gH)\defeq \inf_{h\in H}\{r(gh) \}$により定まる${r_{G/H}\colon G/H\to \real_{\geq 0}}$を$G/H$上のradial functionという．
+  \item $d = \inf\{d'\geq 0\mid \text{ある } C > 0\text{が存在して }  m_X(B(r))\leq C(1+r)^{d'}\} $であるとき，$G/H$のランクは$d$であると言う．
+  \item $G$の連続表現$\cal{V} $のsmooth vector全体の集合を$\cal{V}^{\infty} $とする．
+  \end{itemize}
+\end{defi*}
+\begin{thmdef*}(\cite[p.~683]{ber88})
+  $G/H$には次の条件を満たす非自明な正則Borel測度$m_X $ (standard measure) が定数倍を除いて一意的に存在する．
+
+  単位元のコンパクトな近傍で$B = \inv{B} $なる任意の$B\subset G$と任意の$g\in B$，$x\in G/H$に対し，ある定数$C_B\geq 0 $が存在して$g\cdot m_X \leq C_B m_X$，$ \inv{C_B} < m_X(Bx) < C_{B}$である．
+\end{thmdef*}
+\begin{thmdef*}(\cite[p.~678]{ber88})
+  $G/H$の左Haar測度$\mu_{G/H} $を1つ固定する．次の同型写像が存在する．$\Hom_{G}((C_c(G/H))^{\infty}, V )\simarrow \Hom_{G}(V^{\infty}, C(G/H)^{\infty}) $，$\alpha_V\mapsto \beta_V$ただし任意の$v\in V$，$\phi \in  (C_c(G/H))^{\infty} $に対し$ \lyama v,\alpha_V(\phi)\ryama_{V} = \dint_{G/H}\beta_V(v)\phi d\mu_X  $である．
+\end{thmdef*}
+
+
+\begin{thm*}(\cite[pp.~665--6]{ber88})\label{thm:plancherel}
+  $G/H$のランクが$d$であるとき，$G$の既約ユニタリ表現$V$が$G$の正則表現$L^2(G/H)$の既約分解に出現する必要条件は，非自明な$G$絡作用素$\alpha_V\colon (C_c(G/H))^{\infty}\to V $が存在し，かつ任意の$v\in V^{\infty} $，$d' > d$に対して
+  \begin{align}
+    \dint_{G/H}\lbig|\beta_V(v)(x)(1+r(x))^{-d/2} \rbig|^2\; dx < \infty\label{eq:ber88}\tag{$\bigstar$}
+  \end{align}
+  なることである．% ただし$\beta_V $は次の命題により$\alpha_V $と対応する$G$絡作用素$\beta_V\colon V^{\infty}\to C(G/H)^{\infty}  $とする．
+\end{thm*}
+
+$L^2(G/H)$の既約分解に現れる表現を\Cref{eq:ber88}を用いて分析するためにはまず$G/H$のランクを知る必要がある．
+
+% $G,H$が対称対であるときを考える．
+$(G,H)$が対称対の場合に$G/H$のランクと$Y(\real X) $の有界性の関係を述べる．
+\begin{setting*}
+  $H$を実線型簡約Lie群$G$の非コンパクトかつ連結成分有限個の閉部分群で，$G$のCartan対合$\Theta$に対して$\Theta H = H$なるものとする．今さらに$\Theta $と可換な$G$の対合$\sigma$に対して$G_{\sigma}\defeq \{g\in G \mid \sigma g = g \} $とし，$H$は$G_{\sigma} $の開部分群であると仮定する．$\ge = \ha\oplus \qu $を$d\sigma $が$\ha$上1，$\qu$上${-1}$であるような$d\sigma$の固有空間分解とする．
+
+  以上の設定のもとで極大可換部分空間$\be\subset \pe\cap \qu $と正ルートの集合$\Sigma^{+}((\ka\cap\ha)\oplus(\pe\cap \qu), \be ) $を固定し，$\bar{\be^{+}} $を対応するpositive Weyl chamberとする．
+\end{setting*}
+\begin{thmdef*}(\cite[p.~151]{kk16})
+  任意の$g\in G$に対して，ある$k\in K$，$h\in H$と一意的な$b_g\in \exp\bar{\be^{+}} $が存在して$g = kb_gh$である．この事実を用いて$\nu\colon G\to \bar{\be^{+}} $を$\nu(g) = \log b_{g} $と定める．
+\end{thmdef*}
+
+$\nu$は右$H$不変であるから$\bar{\nu}\colon G/H\to \bar{\be^{+}} $，$\bar{\nu}(gH) \defeq \nu(g) $はwell-definedである．
+
+以上の設定と定義のもとで，次の条件は$G/H$のランクが$\dim \be $である可能性を与える．
+\begin{cond*}
+  ある$C$が存在し，任意の$X \in \be $に対し
+  \begin{align*}
+    &\inf\{d_{G/K}(eK,  he^{-X}K)\mid h\in H \}  \\
+    &\inf\{d_{G/K}(\inv{h}K,  e^{-X}K)\mid h\in H \}  \\
+    =&\ \norm{\nu(he^{-X})} \\
+    \leq&\ C
+  \end{align*}
+  である．
+\end{cond*}
+
+ここで次の補題より
+\begin{align*}
+\inf\{d_{G/K}(\inv{h}K,  e^{-X}K)\mid h\in H \} = d_{G/K}(e^{Y(-X)}K, e^{-X} K)
+\end{align*}
+であることがわかる．
+\begin{lem*}(\cite[p. 190]{lee2018})% \label{lem:lee}
+  
+  $M$を連結な完備 Riemann 多様体，$S\subset M$を正則な閉部分多様体とする．任意の$p\in M\setminus S$に対し，ある$q_0\in S$で，$\inf\{d_M(p,q)\mid q\in S \} = d_M(p,q_0) $なるものが存在し，$p$から$q_0$への最短測地線は$q_0$で$S$に直交する．
+\end{lem*}
+
+したがって任意の$X\in \be $で$\norm{X} = 1 $なるものに対して$Y(\real X) $が有界ならば
+\begin{align*}
+  C\defeq \max\{ \max\{d_{G/K} (\inv{h}K, e^{-X} K)\mid h\in \bar{e^{Y(\real X)}} \}\mid X\in \be\text{ かつ } \norm{X} =1 \}
+\end{align*}
+が存在して
+\begin{align*}
+  \inf\{d_{G/K}(\inv{h}K,  e^{-X} K)\mid h\in H \} &= d_{G/K}(e^{Y(-X)}K, e^{-X} K)\\
+                                                   &\leq \max\{d_{G/K} (\inv{h}K, e^{-X} K)\mid h\in \bar{e^{Y(\real X)}} \} \\
+  &\leq C
+\end{align*}
+を得る．
+
+以上のように$G/H$のランクを求めることと$Y(\real X) $の有界性の判定には関係がある．

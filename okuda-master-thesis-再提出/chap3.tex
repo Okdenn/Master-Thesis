@@ -1,0 +1,188 @@
+\begin{prop}\label{prop:0114}
+  $G = \SL(3,\real) $，$H = \{\diag(e^a,e^b,e^c)\mid a,b,c\in \real,\ a+ b + c = 0 \} $，$X\defeq
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 0 & \sqrt{2} \\
+    0 & \sqrt{2} & -1
+  \end{pmatrix}
+  $に対し$Y(\real X) $は非有界であり，\Cref{eq:prob-1121-2}は成り立たない．
+\end{prop}
+
+\Cref{prop:0114}を示す前にこの例が\Cref{eq:prob-1121-2}の右辺に属することを見る．
+
+${\ha = \{\diag(a,b,c)\mid a,b,c\in \real,\ a +b + c = 0 \} } $であるから$X_1 = \diag(1,0,-1)$，$X_2 = \begin{pmatrix}
+  0 & 0 & 0 \\
+  0 & 0 & \sqrt{2} \\
+  0 & \sqrt{2} & 0
+\end{pmatrix}$であり，$[X_1, X_2] = \begin{pmatrix}
+  0 & 0 & 0 \\
+  0 & 0 & \sqrt{2} \\
+  0 & -\sqrt{2} & 0
+\end{pmatrix} \neq 0$より$X$は\Cref{eq:prob-1121-2}の右辺の集合の元である．% が\Cref{prop:0114}より$X\nin \pe_{H,\bdd} $であるから，\Cref{prop:0114}は\Cref{prob:1121}の反例となっている．
+
+1つ補題を用意してから\Cref{prop:0114}を証明する．
+\begin{lem}\label{lem:0114}
+  任意の$t\in \real$に対し
+  \begin{align*}
+    \exp\lbig(2t\begin{pmatrix}
+      0 & \sqrt{2} \\
+      \sqrt{2} & -1 
+    \end{pmatrix}\rbig) &=
+                 \begin{pmatrix}
+                   \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3}\\
+                   \\
+                   \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                 \end{pmatrix}
+  \end{align*}
+  である．
+\end{lem}
+
+\begin{npfwn}[\Cref{lem:0114}]
+
+  $ \theta $を$\cos 2\theta = \dfrac{1}{3} $，$\sin 2\theta = \dfrac{-2\sqrt{2}}{3} $を満たす実数として任意に1つ固定する．このとき
+  \begin{align*}
+    \cos^2 \theta &= \dfrac{1 +\cos 2\theta}{2} = \dfrac{2}{3},\\
+    \sin^2 \theta &= \dfrac{1-\cos 2\theta}{2} = \dfrac{1}{3}
+  \end{align*}
+  である．$k \defeq
+  \begin{pmatrix}
+    \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta
+  \end{pmatrix}
+  $とすると，
+  \begin{align*}
+    k
+    \begin{pmatrix}
+      0 & \sqrt{2} \\
+      \sqrt{2} & -1 
+    \end{pmatrix}\inv{k} &=
+                           \begin{pmatrix}
+                             -2\sqrt{2}\sin\theta \cos\theta  - \sin^2\theta & \sqrt{2}(\cos^2 \theta - \sin^2\theta) + \cos\theta \sin\theta \\
+                             \sqrt{2}(\cos^2 \theta - \sin^2\theta) + \cos\theta \sin\theta  & 2\sqrt{2}\sin\theta \cos\theta  - \cos^2\theta
+                           \end{pmatrix}\\
+        &=
+          \begin{pmatrix}
+            -\sqrt{2}\sin 2\theta  - \sin^2\theta & \sqrt{2}\cos 2\theta + \dfrac{\sin 2\theta}{2} \\
+            \sqrt{2}\cos 2\theta + \dfrac{\sin 2\theta}{2}  &\sqrt{2}\sin 2 \theta - \cos^2\theta
+          \end{pmatrix}\\
+        &=
+          \begin{pmatrix}
+            1  &  0\\ 0 & -2
+          \end{pmatrix}
+  \end{align*}
+  である．
+
+  したがって
+  \begin{align*}
+    k\exp\lbig(2t\begin{pmatrix}
+      0 & \sqrt{2} \\
+      \sqrt{2} & -1 
+    \end{pmatrix}\rbig)\inv{k} &= \exp
+                                 \begin{pmatrix}
+                                   2t & 0 \\ 0 & -4t
+                                 \end{pmatrix}
+  \end{align*}
+  であるから，
+  \begin{align*}
+    \exp\lbig(2t\begin{pmatrix}
+      0 & \sqrt{2} \\
+      \sqrt{2} & -1 
+    \end{pmatrix}\rbig) &= \inv{k} \exp\lbig(
+                                 \begin{pmatrix}
+                                   2t & 0 \\ 0 & -4t
+                                 \end{pmatrix}\rbig)k\\
+        &=
+          \begin{pmatrix}
+            \cos \theta  & \sin \theta \\ -\sin \theta & \cos \theta
+          \end{pmatrix}
+                                                         \begin{pmatrix}
+                                                           e^{2t} & 0 \\ 0 & e^{-4t}
+                                                         \end{pmatrix}
+                                                                             \begin{pmatrix}
+                                                                               \cos \theta  & -\sin \theta \\ \sin \theta & \cos \theta
+                                                                             \end{pmatrix}\\
+        &=
+          \begin{pmatrix}
+            e^{2t}\cos^2\theta + e^{-4t}\sin^2 \theta  & (e^{-4t} - e^{2t})\sin\theta \cos\theta \\ (e^{-4t} - e^{2t})\sin\theta \cos\theta  & e^{2t}\sin^2\theta +e^{-4t}\cos^2\theta
+          \end{pmatrix}\\
+        &= \begin{pmatrix}
+          \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3}\\
+          \\
+          \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                 \end{pmatrix}
+  \end{align*}
+  を得る．
+\end{npfwn}
+
+\begin{npfwn}[\Cref{prop:0114}]
+  $G/K$と行列式1の$3\times 3$正定値実対称行列全体の集合$\Symm^{+}(3)$は$gK \mapsto g
+  \begin{pmatrix}
+    1 & 0\\ 0 & 1
+  \end{pmatrix}
+  \trans{g} $により微分同相である．以下，$\Symm^{+}(3) $の元と$G/K $の元をこの写像により同一視する．
+  
+  \Cref{lem:0114}より
+  \begin{align}
+    e^{tX}\cdot o_K &= e^{tX}\; \trans{(e^{tX})} = e^{2tX}\notag\\
+                    &= \begin{pmatrix}
+                      e^{2t} & 0 & 0 \\
+                      0 & \dfrac{2e^{2t} + e^{-4t}}{3} &  \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3}\\
+                      % \\
+                      0 & \dfrac{\sqrt{2} (e^{2t} - e^{-4t})}{3} & \dfrac{e^{2t} + 2e^{-4t}}{3}
+                    \end{pmatrix}\label{eq:0114-1}
+  \end{align}
+  である．
+
+  $Y \defeq \diag(a,b,c)  $ (ただし$a + b + c = 0$)，$Z \defeq
+  \begin{pmatrix}
+    0 & 0 & 0\\
+    0 & 0 & 1\\
+    0 & 1 & 0
+  \end{pmatrix}
+  $とすると，$r\in \real$に対し，
+  \begin{align}
+    e^{Y}e^{rZ}\cdot o_K &= e^{Y}e^{2rZ}e^{Y}\notag\\
+                         &=
+                           \begin{pmatrix}
+                             e^{a} & 0 & 0 \\
+                             0 & e^{b} & 0\\
+                             0 & 0 & e^{c}
+                           \end{pmatrix}
+                                     \begin{pmatrix}
+                                       1 & 0 & 0\\
+                                       0 & \cosh 2r & \sinh 2r \\
+                                       0 & \sinh 2r & \cosh 2r
+                                     \end{pmatrix}
+                                                      \begin{pmatrix}
+                                                        e^{a} & 0 & 0 \\
+                                                        0 & e^{b} & 0\\
+                                                        0 & 0 & e^{c}
+                                                      \end{pmatrix}\notag\\
+                         &=
+                           \begin{pmatrix}
+                             e^{2a} & 0 & 0\\
+                             0 & e^{2b}\cosh 2r & e^{b+c}\sinh 2r \\
+                             0 & e^{b+c}\sinh 2r & e^{2c}\cosh 2r
+                           \end{pmatrix}\notag\\
+                         &= \begin{pmatrix}
+                             e^{2a} & 0 & 0\\
+                             0 & e^{2b}\cosh 2r & e^{-a}\sinh 2r \\
+                             0 & e^{-a}\sinh 2r & e^{-2a-2b}\cosh 2r
+                           \end{pmatrix}\label{eq:0114-2}
+  \end{align}
+  である．ただし最後の変形には$a + b + c = 0$を用いた．
+
+  \Cref{eq:0114-1}と\Cref{eq:0114-2}を比較すると，
+  \begin{align*}
+    a &= t,\\
+    \sinh 2r &= \dfrac{2\sqrt{2}}{3}\sinh 3t, \\
+    e^{2b} &= \dfrac{2e^{2t} + e^{-4t}}{\sqrt{9 + 8\sinh^2 3t}}
+  \end{align*}
+  を得，このとき$e^{Y}e^{rZ}\cdot o_K = e^{tX}\cdot o_K $である．つまり任意の$t\in \real$に対し
+  \begin{itemize}
+  \item $Y(tX) = \diag(a(t) ,b(t) ,-a(t) -b(t) ) $
+
+    ただし$a(t) = t$，$b(t) =\dfrac{1}{2} \log \lbig(\dfrac{2e^{2t} + e^{-4t}}{\sqrt{9 + 8\sinh^2 3t}}\rbig) $，
+  \item $Z(tX) = r(t)Z  $ただし$r(t) = \dfrac{1}{2} \inv{\sinh}\lbig( \dfrac{2\sqrt{2}}{3}\sinh 3t\rbig) $
+  \end{itemize}
+  であるから，$Y(\real X) $は非有界である．  
+\end{npfwn}

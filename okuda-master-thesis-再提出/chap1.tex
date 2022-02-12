@@ -437,31 +437,35 @@ $G = \SU(1,1) $，$H = \SO(1,1) \defeq\lbig\{
 \begin{skpfwn}{\Cref{cor:prob-eg}}% \bluetext{make it precise}
   $\SO(1,n) $の$\real^{n+1} $への自然表現を用いて$\SO(1,n)/\SO(n)\simeq \{\trans{(x_1\cldots x_n)} \in \real^n \mid \sum_{1\leq i\leq n}x^2_i  < 1 \} $として実現する (後述する\Cref{nttdef:1127-main}と同様)．この実現において$\SO(1,l)/\SO(n)\cap\SO(1,l) \simeq \{\trans{(x_1\cldots x_n)}\in \real^n \mid x_{l+1} = \cdots = x_n = 0 \text{ かつ } \sum_{1\leq i\leq n}x^2_i  < 1 \} $である．
 
-  \Cref{lem:1101}より$X$を任意の$k\in K$で$\Ad(k)\ha = \ha $なる$k$に対し$\Ad(k) X$に取り替えて$Y(\real X) $の有界性を議論して一般性を失わないから，$k\in \SO(1,l)\cap\SO(n) $を適当に取ることにより$X =
-  \begin{pmatrix}
-    0 & p_1 & 0 & \cdots & 0 & p_{l+1} & \cdots & p_{n}\\
-    p_1 &  &  &  &  &  &  \\
-    0 &  &  &  &  &  &  \\
-    \vdots &  &  &  &  &  &  \\
-    0&  &  &  &  &  &  \\
-    p_{l+1}  &  &  &  &  &  &  \\
-    \vdots &  &  &  &  &  &  \\
-    p_{n}  &  &  &  &  &  &  \\
-  \end{pmatrix}
-  $ (空白部分はすべて0) としてよい．さらに
+  \Cref{lem:1101}より$X$を任意の$k\in K$で$\Ad(k)\ha = \ha $なる$k$に対し$\Ad(k) X$に取り替えて$Y(\real X) $の有界性を議論して一般性を失わないから，$k\in \SO(1,l)\cap\SO(n) $を適当に取ることにより
+  \begin{align}
+    X =
+    \begin{pmatrix}
+      0 & p_1 & 0 & \cdots & 0 & p_{l+1} & \cdots & p_{n}\\
+      p_1 &  &  &  &  &  &  \\
+      0 &  &  &  &  &  &  \\
+      \vdots &  &  &  &  &  &  \\
+      0&  &  &  &  &  &  \\
+      p_{l+1}  &  &  &  &  &  &  \\
+      \vdots &  &  &  &  &  &  \\
+      p_{n}  &  &  &  &  &  &  \\
+    \end{pmatrix} \label{eq:X-1}
+  \end{align}
+  (空白部分はすべて0) としてよい．さらに適当な$A\in \SO(n-l) $に対し，
   \begin{align*}
      \left(
     \begin{array}{cccc|cc}
-      &&&&0&0\\
-      % &&&&0&0\\
+      &&&&&\\
+      &&&&&\\
       &\mbox{\smash{\Huge $I_{l+1}$}}&&&&\\
-      &&&&e\\ \hline
-      0&0&0&0&\mbox{\smash{\Huge $I_{l+1}$}}\\
-      0&0&0&0&
+      &&&&\\ \hline
+      &&&&\\
+      &&&&&\mbox{\smash{\huge $A$}}\\
+      &&&&&
     \end{array}
                \right)
   \end{align*}
-  
+  (空白部分はすべて0) を\Cref{eq:X-1}の$X$に作用させることにより
 
   このときある$q_1,q_{l+1}\cldots q_{n}\in \real$によって$e^{X}\cdot o_K \in \SO(1,n)/\SO(n) $は$ \trans{( q_1,0\cldots 0, q_{l+1}\cldots q_{n})} $に対応する．
   

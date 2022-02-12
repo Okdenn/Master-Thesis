@@ -326,12 +326,15 @@
 \begin{rem}
   \Cref{thm:1216-main}では$G$の線型性を仮定したが，この仮定は不要である．つまり，$G$を線型とは限らない実半単純Lie群としても\Cref{thm:1216-main}が成り立つ．
 
-  なぜならば，任意の線型とは限らない実半単純Lie群$G$に対し，$G$と次の\Cref{def:loc-isom}の意味で局所同型な実線型半単純Lie群$G_L$が存在し，次の\Cref{lem:loc-isom}より$G$が線型の場合に帰着されるためである．
+  なぜならば，任意の線型とは限らない実半単純Lie群$G$に対し，$G$と次の\Cref{thm:loc-isom-linear}の意味で局所同型な実線型半単純Lie群$G_L$が存在し (\Cref{thm:yos38})，次の\Cref{lem:loc-isom}より$G$が線型の場合に帰着されるためである．
   % の中心$Z$ (離散群) の部分群$Z_0$で割ったときの$G/Z_0$は$G$と局所同型であるから，
 
-  \begin{thm}(\cite[pp. 219--20]{kando})
-    任意の実半単純Lie環$\ge$に対し，線型Lie群$G_L$で，
+  \begin{thm}\label{thm:loc-isom-linear}
+    任意の実半単純Lie環$\ge$に対し，ある$n\in \nat$と閉部分群$G_L\subset \GL(n,\real) $で$\ge\simeq \Lie G_L$なるものが存在する．
   \end{thm}
+  \begin{npfwn}[\Cref{thm:loc-isom-linear}]
+    Ado--岩澤の定理 (\cite[Theorem 5.61]{kando}) より，$\ge_{L}\simeq \ge$なる実半単純部分Lie環$\ge_{L} \subset \glie(n,\real) $が存在する．このとき，$\GL(n,\real) $での$\ge_{L} $の解析的部分群$G_{L}$は\Cref{thm:yos38}により閉部分群である．したがって\Cref{thm:loc-isom-linear}が示された．
+  \end{npfwn}
   
   \begin{defi}\label{def:loc-isom}
     実半単純Lie群$G_1$，$G_2$が局所同型であることを，それぞれのLie環$\ge_1$，$\ge_2$の間の同型写像$\phi\colon \ge_1\to \ge_2$とそのCartan分解$\ge_i = \ka_i\oplus \pe_i $とKilling形式に対し，$\phi(\ka_1) = \ka_2 $，$\phi(\pe_1) = \pe_2 $かつ$\phi|_{\pe_1} \colon \pe_1\to \pe_2$が内積を保つことを言う．

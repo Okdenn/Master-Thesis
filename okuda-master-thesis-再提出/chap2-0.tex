@@ -274,7 +274,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
       p_{l+2}  &  &  &  &  &  &  \\
       \vdots &  &  &  &  &  &  \\
       p_{n}  &  &  &  &  &  &  \\
-    \end{pmatrix},\ p_1,p_{l+2}\in \real \label{eq:X-1}
+    \end{pmatrix},\ p_1,p_{l+2}\cldots p_n \in \real \label{eq:X-1}
   \end{align}
   (空白部分はすべて0) としてよい．さらに適当な$A\in \SO(n-l) $に対し，
   \begin{align*}
@@ -304,7 +304,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
       0  &  &  &  &  &  &  \\
       \vdots &  &  &  &  &  &  \\
       0  &  &  &  &  &  &  \\
-    \end{pmatrix} \label{eq:X-2}
+    \end{pmatrix},\ p_1, p_{l+2}\in \real \label{eq:X-2}
   \end{align}
   (空白部分はすべて0) と仮定して良い．
 
@@ -337,10 +337,10 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
       0& 0 &  &    &  \\
     \end{pmatrix}
   \end{align*}
-  (2つ目の行列の1は$(1,l+2)$，$(l+2,1)$成分，2つ目の行列の$\pm 1$は$(1,l+2)$，$(l+2,2)$成分である) が生成する$\ge$の部分Lie環は$\solie(1,2) $に同型である．
+  (2つ目の行列の1は$(1,l+2)$と$(l+2,1)$成分，2つ目の行列の$\pm 1$は$(1,l+2)$と$(l+2,2)$成分である) が生成する$\ge$の部分Lie環は$\solie(1,2) $に同型である．
 
-  したがって$G = \SO(1,2) $，$H = \SO(1,1) $の場合に$\pe_{H,\bdd} = \{0\}\cup \pe\setminus\ha $を示した\Cref{prop:classical-rank-one}と後述の\Cref{thm:yos38}により，$Y(\real X)$が非有界であることと\Cref{eq:X-2}において$p_{l+1} = 0$かつ$p_1 \neq 0$であること，つまり$X\in \ha\setminus\{0\} $であることが同値である．よって\Cref{cor:prob-eg}が示された．
-
+  したがって$G = \SO(1,2) $，$H = \SO(1,1) $の場合に$\pe_{H,\bdd} = \{0\}\cup \pe\setminus\ha $を示した\Cref{prop:classical-rank-one}と後述の\Cref{thm:yos38}により，$Y(\real X)$が非有界であることと\Cref{eq:X-2}において$p_{l+2} = 0$かつ$p_1 \neq 0$であること，つまり$X\in \ha\setminus\{0\} $であることが同値である．よって\Cref{cor:prob-eg}が示された．
+\end{npfwn}
   % このときある$q_1,q_{l+1}\cldots q_{n}\in \real$によって$e^{X}\cdot o_K \in \SO(1,n)/\SO(n) $は$ \trans{( q_1,0\cldots 0, q_{l+1}\cldots q_{n})} $に対応する．
   
 
@@ -358,7 +358,7 @@ $G = \Sp(1,2) $，$\ha = \real \begin{pmatrix}
   % この断面に現れるのは\Cref{fig:prob-eg-1}と同様の{\Poincare}円板 (Riemann計量は定数倍で変わりうる) であるから，同様の計算により\Cref{cor:prob-eg}を得る．
 
   % よって\Cref{lem:1018}より，$\norm{Y(X)} = \frac{s}{2} = \frac{1}{4}\inv{\tanh}(\cos\theta \tanh 2t) $を得る．再び\Cref{lem:1018}より$4\norm{X} = 2t $であるから，$\norm{Y(X)} = \frac{1}{4}\inv{\tanh}[\tanh(4\norm{X})\cos\theta] $を得，\Cref{thm:1018-main}の主張が従う．  
-\end{npfwn}
+
 
 
 %%% Local Variables:
